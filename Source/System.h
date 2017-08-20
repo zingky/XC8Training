@@ -1,23 +1,11 @@
-/* 
- * File:   System.h
- * Author: dungl
- *
- * Created on August 19, 2017, 12:16 AM
- */
-
 #ifndef SYSTEM_H
 #define	SYSTEM_H
 
-#ifdef	__cplusplus
-extern "C" {
+#include <stdint.h>
+#include <stdbool.h>
+
+#define _XTAL_FREQ 32000000
+
+void System_Config();
+
 #endif
-
-
-
-
-#ifdef	__cplusplus
-}
-#endif
-
-#endif	/* SYSTEM_H */
-

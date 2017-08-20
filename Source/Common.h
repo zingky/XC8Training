@@ -1,23 +1,23 @@
-/* 
- * File:   Common.h
- * Author: dungl
- *
- * Created on August 19, 2017, 12:15 AM
- */
-
 #ifndef COMMON_H
 #define	COMMON_H
 
-#ifdef	__cplusplus
-extern "C" {
+#include <xc.h>
+#include "MCUConfig.h"
+#include "ADC.h"
+#include "DAC.h"
+#include "DataConvert.h"
+#include "DataCrypto.h"
+#include "I2C.h"
+#include "IO.h"
+#include "IntManager.h"
+#include "SPI.h"
+#include "System.h"
+#include "TMR.h"
+#include "UART.h"
+#include "UserDef.h"
+#include "SegLCD.h"
+
+void AppInit();
+void AppTask();
+
 #endif
-
-
-
-
-#ifdef	__cplusplus
-}
-#endif
-
-#endif	/* COMMON_H */
-

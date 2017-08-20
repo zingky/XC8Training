@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/Users/dungl/Documents/GitHub/XC8Training/Source/IntManager.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/I2C.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DAC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/ADC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/IO.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SPI.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/TMR.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/UART.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataCrypto.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/Users/dungl/Documents/GitHub/XC8Training/Source/IntManager.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/I2C.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DAC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/ADC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/IO.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SPI.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/TMR.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/UART.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataCrypto.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/91294600/IntManager.p1 ${OBJECTDIR}/_ext/91294600/I2C.p1 ${OBJECTDIR}/_ext/91294600/DAC.p1 ${OBJECTDIR}/_ext/91294600/ADC.p1 ${OBJECTDIR}/_ext/91294600/IO.p1 ${OBJECTDIR}/_ext/91294600/SPI.p1 ${OBJECTDIR}/_ext/91294600/TMR.p1 ${OBJECTDIR}/_ext/91294600/UART.p1 ${OBJECTDIR}/_ext/91294600/System.p1 ${OBJECTDIR}/_ext/91294600/DataConvert.p1 ${OBJECTDIR}/_ext/91294600/DataCrypto.p1 ${OBJECTDIR}/_ext/91294600/Main.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/91294600/IntManager.p1.d ${OBJECTDIR}/_ext/91294600/I2C.p1.d ${OBJECTDIR}/_ext/91294600/DAC.p1.d ${OBJECTDIR}/_ext/91294600/ADC.p1.d ${OBJECTDIR}/_ext/91294600/IO.p1.d ${OBJECTDIR}/_ext/91294600/SPI.p1.d ${OBJECTDIR}/_ext/91294600/TMR.p1.d ${OBJECTDIR}/_ext/91294600/UART.p1.d ${OBJECTDIR}/_ext/91294600/System.p1.d ${OBJECTDIR}/_ext/91294600/DataConvert.p1.d ${OBJECTDIR}/_ext/91294600/DataCrypto.p1.d ${OBJECTDIR}/_ext/91294600/Main.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/91294600/IntManager.p1 ${OBJECTDIR}/_ext/91294600/I2C.p1 ${OBJECTDIR}/_ext/91294600/DAC.p1 ${OBJECTDIR}/_ext/91294600/ADC.p1 ${OBJECTDIR}/_ext/91294600/IO.p1 ${OBJECTDIR}/_ext/91294600/SPI.p1 ${OBJECTDIR}/_ext/91294600/TMR.p1 ${OBJECTDIR}/_ext/91294600/UART.p1 ${OBJECTDIR}/_ext/91294600/DataConvert.p1 ${OBJECTDIR}/_ext/91294600/DataCrypto.p1 ${OBJECTDIR}/_ext/91294600/Main.p1 ${OBJECTDIR}/_ext/91294600/System.p1 ${OBJECTDIR}/_ext/91294600/SegLCD.p1 ${OBJECTDIR}/_ext/91294600/GPIO.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/91294600/IntManager.p1.d ${OBJECTDIR}/_ext/91294600/I2C.p1.d ${OBJECTDIR}/_ext/91294600/DAC.p1.d ${OBJECTDIR}/_ext/91294600/ADC.p1.d ${OBJECTDIR}/_ext/91294600/IO.p1.d ${OBJECTDIR}/_ext/91294600/SPI.p1.d ${OBJECTDIR}/_ext/91294600/TMR.p1.d ${OBJECTDIR}/_ext/91294600/UART.p1.d ${OBJECTDIR}/_ext/91294600/DataConvert.p1.d ${OBJECTDIR}/_ext/91294600/DataCrypto.p1.d ${OBJECTDIR}/_ext/91294600/Main.p1.d ${OBJECTDIR}/_ext/91294600/System.p1.d ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d ${OBJECTDIR}/_ext/91294600/GPIO.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/91294600/IntManager.p1 ${OBJECTDIR}/_ext/91294600/I2C.p1 ${OBJECTDIR}/_ext/91294600/DAC.p1 ${OBJECTDIR}/_ext/91294600/ADC.p1 ${OBJECTDIR}/_ext/91294600/IO.p1 ${OBJECTDIR}/_ext/91294600/SPI.p1 ${OBJECTDIR}/_ext/91294600/TMR.p1 ${OBJECTDIR}/_ext/91294600/UART.p1 ${OBJECTDIR}/_ext/91294600/System.p1 ${OBJECTDIR}/_ext/91294600/DataConvert.p1 ${OBJECTDIR}/_ext/91294600/DataCrypto.p1 ${OBJECTDIR}/_ext/91294600/Main.p1
+OBJECTFILES=${OBJECTDIR}/_ext/91294600/IntManager.p1 ${OBJECTDIR}/_ext/91294600/I2C.p1 ${OBJECTDIR}/_ext/91294600/DAC.p1 ${OBJECTDIR}/_ext/91294600/ADC.p1 ${OBJECTDIR}/_ext/91294600/IO.p1 ${OBJECTDIR}/_ext/91294600/SPI.p1 ${OBJECTDIR}/_ext/91294600/TMR.p1 ${OBJECTDIR}/_ext/91294600/UART.p1 ${OBJECTDIR}/_ext/91294600/DataConvert.p1 ${OBJECTDIR}/_ext/91294600/DataCrypto.p1 ${OBJECTDIR}/_ext/91294600/Main.p1 ${OBJECTDIR}/_ext/91294600/System.p1 ${OBJECTDIR}/_ext/91294600/SegLCD.p1 ${OBJECTDIR}/_ext/91294600/GPIO.p1
 
 # Source Files
-SOURCEFILES=C:/Users/dungl/Documents/GitHub/XC8Training/Source/IntManager.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/I2C.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DAC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/ADC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/IO.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SPI.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/TMR.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/UART.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataCrypto.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c
+SOURCEFILES=C:/Users/dungl/Documents/GitHub/XC8Training/Source/IntManager.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/I2C.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DAC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/ADC.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/IO.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SPI.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/TMR.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/UART.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataCrypto.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c
 
 
 CFLAGS=
@@ -157,14 +157,6 @@ ${OBJECTDIR}/_ext/91294600/UART.p1: C:/Users/dungl/Documents/GitHub/XC8Training/
 	@-${MV} ${OBJECTDIR}/_ext/91294600/UART.d ${OBJECTDIR}/_ext/91294600/UART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/91294600/System.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
-	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/System.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c 
-	@-${MV} ${OBJECTDIR}/_ext/91294600/System.d ${OBJECTDIR}/_ext/91294600/System.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/System.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/_ext/91294600/DataConvert.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
 	@${RM} ${OBJECTDIR}/_ext/91294600/DataConvert.p1.d 
@@ -188,6 +180,30 @@ ${OBJECTDIR}/_ext/91294600/Main.p1: C:/Users/dungl/Documents/GitHub/XC8Training/
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/Main.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c 
 	@-${MV} ${OBJECTDIR}/_ext/91294600/Main.d ${OBJECTDIR}/_ext/91294600/Main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/Main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/System.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/System.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/System.d ${OBJECTDIR}/_ext/91294600/System.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/System.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/SegLCD.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/SegLCD.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/SegLCD.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/SegLCD.d ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/GPIO.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/GPIO.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/GPIO.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=icd3  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/GPIO.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/GPIO.d ${OBJECTDIR}/_ext/91294600/GPIO.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/GPIO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/_ext/91294600/IntManager.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/IntManager.c  nbproject/Makefile-${CND_CONF}.mk
@@ -254,14 +270,6 @@ ${OBJECTDIR}/_ext/91294600/UART.p1: C:/Users/dungl/Documents/GitHub/XC8Training/
 	@-${MV} ${OBJECTDIR}/_ext/91294600/UART.d ${OBJECTDIR}/_ext/91294600/UART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/91294600/System.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
-	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1 
-	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/System.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c 
-	@-${MV} ${OBJECTDIR}/_ext/91294600/System.d ${OBJECTDIR}/_ext/91294600/System.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/System.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 ${OBJECTDIR}/_ext/91294600/DataConvert.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/DataConvert.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
 	@${RM} ${OBJECTDIR}/_ext/91294600/DataConvert.p1.d 
@@ -285,6 +293,30 @@ ${OBJECTDIR}/_ext/91294600/Main.p1: C:/Users/dungl/Documents/GitHub/XC8Training/
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/Main.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/Main.c 
 	@-${MV} ${OBJECTDIR}/_ext/91294600/Main.d ${OBJECTDIR}/_ext/91294600/Main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/Main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/System.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/System.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/System.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/System.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/System.d ${OBJECTDIR}/_ext/91294600/System.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/System.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/SegLCD.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/SegLCD.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/SegLCD.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/SegLCD.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/SegLCD.d ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/SegLCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/91294600/GPIO.p1: C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/91294600" 
+	@${RM} ${OBJECTDIR}/_ext/91294600/GPIO.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/91294600/GPIO.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_GPIO=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-osccal,-resetbits,-download,-stackcall,+clib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/_ext/91294600/GPIO.p1  C:/Users/dungl/Documents/GitHub/XC8Training/Source/GPIO.c 
+	@-${MV} ${OBJECTDIR}/_ext/91294600/GPIO.d ${OBJECTDIR}/_ext/91294600/GPIO.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/91294600/GPIO.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
