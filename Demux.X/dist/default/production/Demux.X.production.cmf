@@ -14,7 +14,7 @@
 $dist/default/production\Demux.X.production.obj
 cinit CODE 0 7A6 7A6 5A 2
 cstackCOMMON COMMON 1 70 70 4 1
-$C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+$C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -99,11 +99,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Demux.X.production.obj
-7A6 cinit CODE >1102:C:\Users\dungl\AppData\Local\Temp\s6dg.
-7A6 cinit CODE >1105:C:\Users\dungl\AppData\Local\Temp\s6dg.
-7A6 cinit CODE >1111:C:\Users\dungl\AppData\Local\Temp\s6dg.
-7A6 cinit CODE >1113:C:\Users\dungl\AppData\Local\Temp\s6dg.
-7A7 cinit CODE >1114:C:\Users\dungl\AppData\Local\Temp\s6dg.
+7A6 cinit CODE >1102:C:\Users\dungl\AppData\Local\Temp\s6nk.
+7A6 cinit CODE >1105:C:\Users\dungl\AppData\Local\Temp\s6nk.
+7A6 cinit CODE >1111:C:\Users\dungl\AppData\Local\Temp\s6nk.
+7A6 cinit CODE >1113:C:\Users\dungl\AppData\Local\Temp\s6nk.
+7A7 cinit CODE >1114:C:\Users\dungl\AppData\Local\Temp\s6nk.
 7A8 cinit CODE >12:C:\Users\dungl\Documents\GitHub\XC8Training\Demux.X\main.c
 7A8 cinit CODE >14:C:\Users\dungl\Documents\GitHub\XC8Training\Demux.X\main.c
 7AA cinit CODE >19:C:\Users\dungl\Documents\GitHub\XC8Training\Demux.X\main.c
@@ -175,20 +175,20 @@ _LATE 110 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _PLLR 4D6 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _WPUB 20D 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _WPUE 210 0 ABS 0 - dist/default/production\Demux.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 _main F50 0 CODE 0 cinit dist/default/production\Demux.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Demux.X.production.obj
-start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 _DemuxSetChannel F80 0 CODE 0 cinit dist/default/production\Demux.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -205,7 +205,7 @@ _OSCCON 99 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __size_of_DemuxSetChannel 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __end_of_SYSTEM_Initialize FB2 0 CODE 0 cinit dist/default/production\Demux.X.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production\Demux.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -342,7 +342,7 @@ __CFG_PLLEN$ON 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _SYSTEM_Initialize FA8 0 CODE 0 cinit dist/default/production\Demux.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __end_of_PIN_MANAGER_Initialize FEC 0 CODE 0 cinit dist/default/production\Demux.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
@@ -378,8 +378,8 @@ __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
 _LATBbits 10D 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\Demux.X.production.obj
-stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s6dg.obj
-stacklo 2000 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s6dg.obj
+stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s6nk.obj
+stacklo 2000 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s6nk.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production\Demux.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -

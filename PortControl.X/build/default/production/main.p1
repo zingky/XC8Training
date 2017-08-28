@@ -1,18 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"67 mcc_generated_files/mcc.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "2185 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f1936.h
 [v _LATA `Vuc ~T0 @X0 0 e@268 ]
 "2247
 [v _LATB `Vuc ~T0 @X0 0 e@269 ]
 "2309
 [v _LATC `Vuc ~T0 @X0 0 e@270 ]
-[v F3157 `(v ~T0 @X0 1 tf1`ul ]
-"152 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic.h
-[v __delay `JF3157 ~T0 @X0 0 e ]
-[p i __delay ]
-[p mainexit ]
-"67 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"1220 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f1936.h
+"1220
 [v _TRISA `Vuc ~T0 @X0 0 e@140 ]
 "1282
 [v _TRISB `Vuc ~T0 @X0 0 e@141 ]
@@ -22,6 +18,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
 "3127
 [v _ANSELB `Vuc ~T0 @X0 0 e@397 ]
+[v F3157 `(v ~T0 @X0 1 tf1`ul ]
+"152 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic.h
+[v __delay `JF3157 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3058,386 +3058,129 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 67: void SYSTEM_Initialize(void);
 [; ;mcc.h: 80: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 93: void WDT_Initialize(void);
-"4 main.c
-[v _i `uc ~T0 @X0 1 e ]
-[v _data `uc ~T0 @X0 1 e ]
-[; ;main.c: 4: uint8_t i, data;
-"6
-[v _Ef1 `(v ~T0 @X0 1 ef ]
-"7
-{
-[; ;main.c: 6: void Ef1()
-[; ;main.c: 7: {
-[e :U _Ef1 ]
-[f ]
-[; ;main.c: 8: for(i=0; i<10; i++)
-"8
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 10 `i 350  ]
-[e $U 351  ]
-"9
-[e :U 350 ]
-[; ;main.c: 9: {
-{
-[; ;main.c: 10: LATA=~LATA;
-"10
-[e = _LATA -> ~ -> _LATA `i `uc ]
-[; ;main.c: 11: LATB=~LATB;
-"11
-[e = _LATB -> ~ -> _LATB `i `uc ]
-[; ;main.c: 12: LATC=~LATC;
-"12
-[e = _LATC -> ~ -> _LATC `i `uc ]
-[; ;main.c: 13: _delay((unsigned long)((100)*(32000000/4000.0)));
-"13
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"14
-}
-"8
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 10 `i 350  ]
-[e :U 351 ]
-"14
-}
-[; ;main.c: 14: }
-[; ;main.c: 15: }
-"15
-[e :UE 349 ]
-}
-"17
-[v _Ef2 `(v ~T0 @X0 1 ef ]
-"18
-{
-[; ;main.c: 17: void Ef2()
-[; ;main.c: 18: {
-[e :U _Ef2 ]
-[f ]
-[; ;main.c: 19: for(i=0, data=0x01; i<8; i++)
-"19
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 1 `i `uc ]
-[e $U 357  ]
-"20
-[e :U 354 ]
-[; ;main.c: 20: {
-{
-[; ;main.c: 21: LATA=data;
-"21
-[e = _LATA _data ]
-[; ;main.c: 22: data<<=1;
-"22
-[e =<< _data -> 1 `i ]
-[; ;main.c: 23: _delay((unsigned long)((100)*(32000000/4000.0)));
-"23
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"24
-}
-"19
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 357 ]
-[e $ < -> _i `i -> 8 `i 354  ]
-[e :U 355 ]
-"24
-}
-[; ;main.c: 24: }
-[; ;main.c: 25: LATA=0;
-"25
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 27: for(i=0, data=0x01; i<8; i++)
-"27
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 1 `i `uc ]
-[e $U 361  ]
-"28
-[e :U 358 ]
-[; ;main.c: 28: {
-{
-[; ;main.c: 29: LATB=data;
-"29
-[e = _LATB _data ]
-[; ;main.c: 30: data<<=1;
-"30
-[e =<< _data -> 1 `i ]
-[; ;main.c: 31: _delay((unsigned long)((100)*(32000000/4000.0)));
-"31
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"32
-}
-"27
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 361 ]
-[e $ < -> _i `i -> 8 `i 358  ]
-[e :U 359 ]
-"32
-}
-[; ;main.c: 32: }
-[; ;main.c: 33: LATB=0;
-"33
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 35: for(i=0, data=0x01; i<8; i++)
-"35
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 1 `i `uc ]
-[e $U 365  ]
-"36
-[e :U 362 ]
-[; ;main.c: 36: {
-{
-[; ;main.c: 37: LATC=data;
-"37
-[e = _LATC _data ]
-[; ;main.c: 38: data<<=1;
-"38
-[e =<< _data -> 1 `i ]
-[; ;main.c: 39: _delay((unsigned long)((100)*(32000000/4000.0)));
-"39
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"40
-}
-"35
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 365 ]
-[e $ < -> _i `i -> 8 `i 362  ]
-[e :U 363 ]
-"40
-}
-[; ;main.c: 40: }
-[; ;main.c: 41: LATC=0;
-"41
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 42: }
-"42
-[e :UE 353 ]
-}
-"44
-[v _Ef3 `(v ~T0 @X0 1 ef ]
-"45
-{
-[; ;main.c: 44: void Ef3()
-[; ;main.c: 45: {
-[e :U _Ef3 ]
-[f ]
-[; ;main.c: 46: for(i=0, data=0x80; i<8; i++)
-"46
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 128 `i `uc ]
-[e $U 370  ]
-"47
-[e :U 367 ]
-[; ;main.c: 47: {
-{
-[; ;main.c: 48: LATC=data;
-"48
-[e = _LATC _data ]
-[; ;main.c: 49: data>>=1;
-"49
-[e =>> _data -> 1 `i ]
-[; ;main.c: 50: _delay((unsigned long)((100)*(32000000/4000.0)));
-"50
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"51
-}
-"46
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 370 ]
-[e $ < -> _i `i -> 8 `i 367  ]
-[e :U 368 ]
-"51
-}
-[; ;main.c: 51: }
-[; ;main.c: 52: LATC=0;
-"52
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 54: for(i=0, data=0x80; i<8; i++)
-"54
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 128 `i `uc ]
-[e $U 374  ]
-"55
-[e :U 371 ]
-[; ;main.c: 55: {
-{
-[; ;main.c: 56: LATB=data;
-"56
-[e = _LATB _data ]
-[; ;main.c: 57: data>>=1;
-"57
-[e =>> _data -> 1 `i ]
-[; ;main.c: 58: _delay((unsigned long)((100)*(32000000/4000.0)));
-"58
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"59
-}
-"54
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 374 ]
-[e $ < -> _i `i -> 8 `i 371  ]
-[e :U 372 ]
-"59
-}
-[; ;main.c: 59: }
-[; ;main.c: 60: LATB=0;
-"60
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 62: for(i=0, data=0x80; i<8; i++)
-"62
-{
-[e ; = _i -> -> 0 `i `uc = _data -> -> 128 `i `uc ]
-[e $U 378  ]
-"63
-[e :U 375 ]
-[; ;main.c: 63: {
-{
-[; ;main.c: 64: LATA=data;
-"64
-[e = _LATA _data ]
-[; ;main.c: 65: data>>=1;
-"65
-[e =>> _data -> 1 `i ]
-[; ;main.c: 66: _delay((unsigned long)((100)*(32000000/4000.0)));
-"66
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"67
-}
-"62
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 378 ]
-[e $ < -> _i `i -> 8 `i 375  ]
-[e :U 376 ]
-"67
-}
-[; ;main.c: 67: }
-[; ;main.c: 68: LATA=0;
-"68
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 69: }
-"69
-[e :UE 366 ]
-}
-"71
-[v _Ef4 `(v ~T0 @X0 1 ef ]
-"72
-{
-[; ;main.c: 71: void Ef4()
-[; ;main.c: 72: {
-[e :U _Ef4 ]
-[f ]
-[; ;main.c: 73: LATA=0b10101010;
-"73
-[e = _LATA -> -> 170 `i `uc ]
-[; ;main.c: 74: LATB=0b10101010;
-"74
-[e = _LATB -> -> 170 `i `uc ]
-[; ;main.c: 75: LATC=0b10101010;
-"75
-[e = _LATC -> -> 170 `i `uc ]
-[; ;main.c: 76: for(i=0; i<10; i++)
-"76
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 10 `i 380  ]
-[e $U 381  ]
-"77
-[e :U 380 ]
-[; ;main.c: 77: {
-{
-[; ;main.c: 78: _delay((unsigned long)((100)*(32000000/4000.0)));
-"78
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-[; ;main.c: 79: LATA=~LATA;
-"79
-[e = _LATA -> ~ -> _LATA `i `uc ]
-[; ;main.c: 80: LATB=~LATB;
-"80
-[e = _LATB -> ~ -> _LATB `i `uc ]
-[; ;main.c: 81: LATC=~LATC;
-"81
-[e = _LATC -> ~ -> _LATC `i `uc ]
-"82
-}
-"76
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 10 `i 380  ]
-[e :U 381 ]
-"82
-}
-[; ;main.c: 82: }
-[; ;main.c: 83: LATA=0x00;
-"83
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 84: LATB=0x00;
-"84
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 85: LATC=0x00;
-"85
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 86: }
-"86
-[e :UE 379 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"88
-[v _main `(v ~T0 @X0 1 ef ]
+"88 main.c
+[v _rotateleft `(uc ~T0 @X0 1 ef2`uc`uc ]
 "89
 {
-[; ;main.c: 88: void main(void)
+[; ;main.c: 88: uint8_t rotateleft(uint8_t data, uint8_t nbit)
 [; ;main.c: 89: {
+[e :U _rotateleft ]
+"88
+[v _data `uc ~T0 @X0 1 r1 ]
+[v _nbit `uc ~T0 @X0 1 r2 ]
+"89
+[f ]
+[; ;main.c: 90: return (uint8_t)((data<<nbit)|(data>>(8-nbit)));
+"90
+[e ) -> | << -> _data `i _nbit >> -> _data `i - -> 8 `i -> _nbit `i `uc ]
+[e $UE 349  ]
+[; ;main.c: 91: }
+"91
+[e :UE 349 ]
+}
+"93
+[v _rotateright `(uc ~T0 @X0 1 ef2`uc`uc ]
+"94
+{
+[; ;main.c: 93: uint8_t rotateright(uint8_t data, uint8_t nbit)
+[; ;main.c: 94: {
+[e :U _rotateright ]
+"93
+[v _data `uc ~T0 @X0 1 r1 ]
+[v _nbit `uc ~T0 @X0 1 r2 ]
+"94
+[f ]
+[; ;main.c: 95: return (uint8_t)((data>>nbit)|(data<<(8-nbit)));
+"95
+[e ) -> | >> -> _data `i _nbit << -> _data `i - -> 8 `i -> _nbit `i `uc ]
+[e $UE 350  ]
+[; ;main.c: 96: }
+"96
+[e :UE 350 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"98
+[v _main `(v ~T0 @X0 1 ef ]
+"99
+{
+[; ;main.c: 98: void main(void)
+[; ;main.c: 99: {
 [e :U _main ]
 [f ]
-[; ;main.c: 90: SYSTEM_Initialize();
-"90
+[; ;main.c: 100: SYSTEM_Initialize();
+"100
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 91: LATA=0x00;
-"91
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 92: LATB=0x00;
-"92
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 93: LATC=0x00;
-"93
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 94: TRISA=0x00;
-"94
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 95: TRISB=0x00;
-"95
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 96: TRISC=0x00;
-"96
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 97: ANSELA=0x00;
-"97
-[e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 98: ANSELB=0x00;
-"98
-[e = _ANSELB -> -> 0 `i `uc ]
-[; ;main.c: 100: while (1)
-"100
-[e :U 385 ]
-[; ;main.c: 101: {
+[; ;main.c: 101: LATA=0x00;
 "101
-{
-[; ;main.c: 102: Ef1();
+[e = _LATA -> -> 0 `i `uc ]
+[; ;main.c: 102: LATB=0x00;
 "102
-[e ( _Ef1 ..  ]
-[; ;main.c: 103: Ef2();
+[e = _LATB -> -> 0 `i `uc ]
+[; ;main.c: 103: LATC=0x00;
 "103
-[e ( _Ef2 ..  ]
-[; ;main.c: 104: Ef3();
+[e = _LATC -> -> 0 `i `uc ]
+[; ;main.c: 104: TRISA=0x00;
 "104
-[e ( _Ef3 ..  ]
-[; ;main.c: 105: Ef4();
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;main.c: 105: TRISB=0x00;
 "105
-[e ( _Ef4 ..  ]
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 106: TRISC=0x00;
 "106
-}
-[e :U 384 ]
-"100
-[e $U 385  ]
-[e :U 386 ]
-[; ;main.c: 106: }
-[; ;main.c: 107: }
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;main.c: 107: ANSELA=0x00;
 "107
-[e :UE 383 ]
+[e = _ANSELA -> -> 0 `i `uc ]
+[; ;main.c: 108: ANSELB=0x00;
+"108
+[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 110: while (1)
+"110
+[e :U 353 ]
+[; ;main.c: 111: {
+"111
+{
+"112
+[v _i `uc ~T0 @X0 1 a ]
+[v _data `uc ~T0 @X0 1 a ]
+[; ;main.c: 112: uint8_t i, data=0x55;
+[e = _data -> -> 85 `i `uc ]
+[; ;main.c: 113: for(i=0; i<8; i++)
+"113
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 355  ]
+[e $U 356  ]
+"114
+[e :U 355 ]
+[; ;main.c: 114: {
+{
+[; ;main.c: 115: LATA=rotateleft(data, i);
+"115
+[e = _LATA ( _rotateleft (2 , _data _i ]
+[; ;main.c: 116: LATC=rotateright(data, i);
+"116
+[e = _LATC ( _rotateright (2 , _data _i ]
+[; ;main.c: 117: _delay((unsigned long)((1000)*(32000000/4000.0)));
+"117
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"118
+}
+"113
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 355  ]
+[e :U 356 ]
+"118
+}
+"123
+}
+[e :U 352 ]
+"110
+[e $U 353  ]
+[e :U 354 ]
+[; ;main.c: 118: }
+[; ;main.c: 123: }
+[; ;main.c: 124: }
+"124
+[e :UE 351 ]
 }

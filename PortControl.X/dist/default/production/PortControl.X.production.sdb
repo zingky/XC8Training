@@ -11,15 +11,11 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"6 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\main.c
-[v _Ef1 Ef1 `(v  1 e 1 0 ]
-"17
-[v _Ef2 Ef2 `(v  1 e 1 0 ]
-"44
-[v _Ef3 Ef3 `(v  1 e 1 0 ]
-"71
-[v _Ef4 Ef4 `(v  1 e 1 0 ]
-"88
+"88 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\main.c
+[v _rotateleft rotateleft `(uc  1 e 1 0 ]
+"93
+[v _rotateright rotateright `(uc  1 e 1 0 ]
+"98
 [v _main main `(v  1 e 1 0 ]
 "70 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -37,7 +33,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
 "1406
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S81 . 1 `uc 1 PS0 1 0 :1:0 
+[s S50 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -47,13 +43,13 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1615
-[s S90 . 1 `uc 1 PS 1 0 :3:0 
+[s S59 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S95 . 1 `S81 1 . 1 0 `S90 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES95  1 e 1 @149 ]
+[u S64 . 1 `S50 1 . 1 0 `S59 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES64  1 e 1 @149 ]
 "1726
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1785
@@ -80,13 +76,33 @@
 [v _WPUE WPUE `VEuc  1 e 1 @528 ]
 "7754
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
-"4 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\main.c
-[v _i i `uc  1 e 1 0 ]
-[v _data data `uc  1 e 1 0 ]
-"88
+"98 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"107
+"112
+[v main@i i `uc  1 a 1 7 ]
+[v main@data data `uc  1 a 1 6 ]
+"124
+} 0
+"93
+[v _rotateright rotateright `(uc  1 e 1 0 ]
+{
+[v rotateright@data data `uc  1 a 1 wreg ]
+[v rotateright@data data `uc  1 a 1 wreg ]
+[v rotateright@nbit nbit `uc  1 p 1 0 ]
+"95
+[v rotateright@data data `uc  1 a 1 3 ]
+"96
+} 0
+"88
+[v _rotateleft rotateleft `(uc  1 e 1 0 ]
+{
+[v rotateleft@data data `uc  1 a 1 wreg ]
+[v rotateleft@data data `uc  1 a 1 wreg ]
+[v rotateleft@nbit nbit `uc  1 p 1 0 ]
+"90
+[v rotateleft@data data `uc  1 a 1 3 ]
+"91
 } 0
 "70 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -107,24 +123,4 @@
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "88
-} 0
-"71 C:\Users\dungl\Documents\GitHub\XC8Training\PortControl.X\main.c
-[v _Ef4 Ef4 `(v  1 e 1 0 ]
-{
-"86
-} 0
-"44
-[v _Ef3 Ef3 `(v  1 e 1 0 ]
-{
-"69
-} 0
-"17
-[v _Ef2 Ef2 `(v  1 e 1 0 ]
-{
-"42
-} 0
-"6
-[v _Ef1 Ef1 `(v  1 e 1 0 ]
-{
-"15
 } 0

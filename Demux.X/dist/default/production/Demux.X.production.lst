@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC PRO Macro Assembler V1.43 build -156212558 
-                                                                                               Mon Aug 28 17:17:40 2017
+                                                                                               Mon Aug 28 21:48:00 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (PRO mode) build 201707250354
      1                           	processor	16F1936
@@ -558,12 +558,12 @@ Microchip Technology Omniscient Code Generator v1.43 (PRO mode) build 2017072503
    544  0098                     _OSCTUNE	set	152
    545  0099                     _OSCCON	set	153
    546  04D6                     _PLLR	set	1238
-   547  011D                     _APFCON	set	285
-   548  010E                     _LATC	set	270
-   549  010D                     _LATB	set	269
-   550  010C                     _LATA	set	268
-   551  0110                     _LATE	set	272
-   552  010D                     _LATBbits	set	269
+   547  010D                     _LATBbits	set	269
+   548  011D                     _APFCON	set	285
+   549  010E                     _LATC	set	270
+   550  010D                     _LATB	set	269
+   551  010C                     _LATA	set	268
+   552  0110                     _LATE	set	272
    553  018C                     _ANSELA	set	396
    554  018D                     _ANSELB	set	397
    555  020D                     _WPUB	set	525
@@ -1197,7 +1197,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Mon Aug 28 17:17:40 2017
+Symbol Table                                                                                   Mon Aug 28 21:48:00 2017
 
                     __CFG_CP$OFF 0000                               l20 07FA                               u37 07B3  
                     __CFG_LVP$ON 0000                              l567 07FD                              l585 07AB  
