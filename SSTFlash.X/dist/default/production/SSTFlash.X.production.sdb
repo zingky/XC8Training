@@ -1,0 +1,346 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1936 ]
+[d frameptr 6 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/TickTMR.c
+[e E3196 . `uc
+US 0
+MS 1
+SEC 2
+RESET 3
+]
+"14 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\main.c
+[e E3222 . `uc
+US 0
+MS 1
+SEC 2
+RESET 3
+]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"10 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"54
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+"4 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"23 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"33
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"43
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/spi.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+"15
+[v _SPI_RW SPI_RW `(uc  1 e 1 0 ]
+"4 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/TickTMR.c
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+"7 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"25
+[v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
+"40
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+[s S281 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"358 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic16f1936.h
+[s S290 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S295 . 1 `S281 1 . 1 0 `S290 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES295  1 e 1 @11 ]
+[s S325 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"632
+[u S334 . 1 `S325 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES334  1 e 1 @17 ]
+"802
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"821
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"840
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S398 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"862
+[s S407 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S411 . 1 `S398 1 . 1 0 `S407 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES411  1 e 1 @24 ]
+"911
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+"1187
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1248
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1309
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1370
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S50 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1407
+[u S59 . 1 `S50 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES59  1 e 1 @145 ]
+[s S137 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1575
+[s S146 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S151 . 1 `S137 1 . 1 0 `S146 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES151  1 e 1 @149 ]
+"1684
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1742
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1799
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2134
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2195
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2256
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S225 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2273
+[u S234 . 1 `S225 1 . 1 0 ]
+[v _LATCbits LATCbits `VES234  1 e 1 @270 ]
+"2317
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2947
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3002
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3059
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3302
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3321
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3355
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3404
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3436
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+[s S77 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3453
+[u S86 . 1 `S77 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES86  1 e 1 @413 ]
+"3497
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+"3558
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
+"3609
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3678
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"3698
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"3717
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3755
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S204 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3772
+[u S213 . 1 `S204 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES213  1 e 1 @532 ]
+"3816
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S182 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3838
+[u S191 . 1 `S182 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES191  1 e 1 @533 ]
+"7595
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+[s S454 . 9 `uc 1 timeout 1 0 `ul 1 start 4 1 `ul 1 stop 4 5 ]
+"3 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\main.c
+[v _led_tick led_tick `S454  1 e 9 0 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/eusart.c
+[v _eusartRxHead eusartRxHead `VEuc  1 e 1 0 ]
+"6
+[v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
+"7
+[v _eusartRxBuffer eusartRxBuffer `VE[64]uc  1 e 64 0 ]
+"8
+[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/tmr1.c
+[v _count count `ui  1 s 2 count ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"16
+} 0
+"4 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/TickTMR.c
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+{
+[s S454 . 9 `uc 1 timeout 1 0 `ul 1 start 4 1 `ul 1 stop 4 5 ]
+[v Tick_Is_Over@tick tick `*.4S454  1 a 1 wreg ]
+"6
+[v Tick_Is_Over@real_tick real_tick `ul  1 a 4 24 ]
+"4
+[v Tick_Is_Over@tick tick `*.4S454  1 a 1 wreg ]
+[v Tick_Is_Over@t t `ul  1 p 4 10 ]
+[v Tick_Is_Over@unit unit `E3196  1 p 1 14 ]
+"6
+"4
+[v Tick_Is_Over@tick tick `*.4S454  1 a 1 28 ]
+"23
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 2 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"25 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/tmr1.c
+[v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
+{
+"27
+[v TMR1_ReadTimer@readVal readVal `ul  1 a 4 4 ]
+"28
+[v TMR1_ReadTimer@temp temp `ui  1 a 2 8 ]
+"38
+} 0
+"23 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"31
+} 0
+"43
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"7 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"23
+} 0
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/spi.c
+[v _SPI_Initialize SPI_Initialize `(v  1 e 1 0 ]
+{
+"13
+} 0
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"25
+} 0
+"33 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"41
+} 0
+"10 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"32
+} 0
+"4 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"10
+} 0
+"40 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"46
+} 0
+"54 C:\Users\dungl\Documents\GitHub\XC8Training\SSTFlash.X\mcc_generated_files/eusart.c
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+{
+"65
+} 0
