@@ -1,0 +1,182 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1936 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"7 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\main.c
+[v _Max7219_Write Max7219_Write `(v  1 e 1 0 ]
+"43
+[v _Max7219_Init Max7219_Init `(v  1 e 1 0 ]
+"57
+[v _Max7129_Display Max7129_Display `(v  1 e 1 0 ]
+"68
+[v _main main `(v  1 e 1 0 ]
+"70 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"78
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"90
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"52 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"1220 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f1936.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1282
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1344
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1406
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S31 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1615
+[s S40 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S45 . 1 `S31 1 . 1 0 `S40 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES45  1 e 1 @149 ]
+"1726
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1785
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1843
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2185
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S91 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2202
+[u S100 . 1 `S91 1 . 1 0 ]
+[v _LATAbits LATAbits `VES100  1 e 1 @268 ]
+"2247
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2309
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2371
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"3013
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3069
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3127
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3694
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3764
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"7754
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"5 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\main.c
+[v _dg dg `DC[10]uc  1 e 10 0 ]
+"68
+[v _main main `(v  1 e 1 0 ]
+{
+"85
+} 0
+"70 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"90
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"52 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"78 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"88
+} 0
+"43 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\main.c
+[v _Max7219_Init Max7219_Init `(v  1 e 1 0 ]
+{
+"45
+[v Max7219_Init@i i `uc  1 a 1 9 ]
+"55
+} 0
+"57
+[v _Max7129_Display Max7129_Display `(v  1 e 1 0 ]
+{
+[v Max7129_Display@idx idx `uc  1 a 1 wreg ]
+"62
+[v Max7129_Display@temp temp `uc  1 a 1 7 ]
+"59
+[v Max7129_Display@i i `uc  1 a 1 8 ]
+"57
+[v Max7129_Display@idx idx `uc  1 a 1 wreg ]
+[v Max7129_Display@num num `ul  1 p 4 0 ]
+"60
+[v Max7129_Display@idx idx `uc  1 a 1 6 ]
+"66
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"6
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"31
+} 0
+"7 C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_Serial.X\main.c
+[v _Max7219_Write Max7219_Write `(v  1 e 1 0 ]
+{
+[v Max7219_Write@idx idx `uc  1 a 1 wreg ]
+"9
+[v Max7219_Write@j j `uc  1 a 1 6 ]
+[v Max7219_Write@i i `uc  1 a 1 5 ]
+"7
+[v Max7219_Write@idx idx `uc  1 a 1 wreg ]
+[v Max7219_Write@addr addr `uc  1 p 1 0 ]
+[v Max7219_Write@data data `uc  1 p 1 1 ]
+"10
+[v Max7219_Write@idx idx `uc  1 a 1 4 ]
+"41
+} 0
