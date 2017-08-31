@@ -5,7 +5,7 @@
 // Cach nay de xu ly du lieu dau vao (value), nhung xu ly cham nhat
 //void HC595_Write_Idx(uint8_t idx, uint8_t value)// Ghi gia tri value ra IC o vi tri Idx 
 //{
-//    uint8_t value_bk[NUM_OF_595];
+//    static uint8_t value_bk[NUM_OF_595];
 //    value_bk[idx]=value;
 //    uint8_t i, j;
 //    STCP_SetLow();

@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\dungl\AppData\Local\Temp\shi8.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 2 2
 $dist/default/production\MAX7219_CS.X.production.obj
 cinit CODE 0 7FD 7FD 3 2
 text1 CODE 0 5B9 5B9 9 2
@@ -26,10 +30,6 @@ maintext CODE 0 775 775 88 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 B 1
 stringtext1 STRCODE 0 800 800 A 2
-$C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -110,11 +110,11 @@ STRING 80A-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MAX7219_CS.X.production.obj
-7FD cinit CODE >1129:C:\Users\dungl\AppData\Local\Temp\sd0s.
-7FD cinit CODE >1132:C:\Users\dungl\AppData\Local\Temp\sd0s.
-7FD cinit CODE >1138:C:\Users\dungl\AppData\Local\Temp\sd0s.
-7FD cinit CODE >1140:C:\Users\dungl\AppData\Local\Temp\sd0s.
-7FE cinit CODE >1141:C:\Users\dungl\AppData\Local\Temp\sd0s.
+7FD cinit CODE >1129:C:\Users\dungl\AppData\Local\Temp\shi8.
+7FD cinit CODE >1132:C:\Users\dungl\AppData\Local\Temp\shi8.
+7FD cinit CODE >1138:C:\Users\dungl\AppData\Local\Temp\shi8.
+7FD cinit CODE >1140:C:\Users\dungl\AppData\Local\Temp\shi8.
+7FE cinit CODE >1141:C:\Users\dungl\AppData\Local\Temp\shi8.
 6FC text9 CODE >7:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
 6FD text9 CODE >9:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
 6FE text9 CODE >12:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
@@ -215,7 +215,7 @@ $dist/default/production\MAX7219_CS.X.production.obj
 5BC text1 CODE >74:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\mcc_generated_files/mcc.c
 5BF text1 CODE >75:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\mcc_generated_files/mcc.c
 5C1 text1 CODE >76:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\mcc_generated_files/mcc.c
-775 maintext CODE >84:C:\Users\dungl\AppData\Local\Temp\sd0s.
+775 maintext CODE >84:C:\Users\dungl\AppData\Local\Temp\shi8.
 775 maintext CODE >84:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
 775 maintext CODE >86:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
 778 maintext CODE >87:C:\Users\dungl\Documents\GitHub\XC8Training\MAX7219_CS.X\main.c
@@ -261,10 +261,10 @@ _LATE 110 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 _PLLR 4D6 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 _WPUB 20D 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 _WPUE 210 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\shi8.obj
 _main EEA 0 CODE 0 maintext dist/default/production\MAX7219_CS.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
-start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\shi8.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __size_of___llmod 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
@@ -273,12 +273,12 @@ __size_of_Max7129_Display 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.produ
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_Max7219_Write EEA 0 CODE 0 text9 dist/default/production\MAX7219_CS.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\shi8.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 ___llmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MAX7219_CS.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -299,7 +299,7 @@ __end_of_dg 1014 0 STRCODE 0 stringtext1 dist/default/production\MAX7219_CS.X.pr
 __end_of_SYSTEM_Initialize B84 0 CODE 0 text1 dist/default/production\MAX7219_CS.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\MAX7219_CS.X.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\shi8.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -445,7 +445,7 @@ Max7219_Write@addr 70 0 COMMON 1 cstackCOMMON dist/default/production\MAX7219_CS
 Max7219_Write@data 71 0 COMMON 1 cstackCOMMON dist/default/production\MAX7219_CS.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MAX7219_CS.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\shi8.obj
 __size_of_Max7219_Init 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __Lstringtext1 0 0 ABS 0 stringtext1 -
@@ -486,8 +486,8 @@ __end_of_Max7219_Init C26 0 CODE 0 text5 dist/default/production\MAX7219_CS.X.pr
 _LATAbits 10C 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 _LATCbits 10E 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
-stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sd0s.obj
-stacklo 200B 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sd0s.obj
+stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\shi8.obj
+stacklo 200B 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\shi8.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production\MAX7219_CS.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
