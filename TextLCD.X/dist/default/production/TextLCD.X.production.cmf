@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+$C:\Users\dungl\AppData\Local\Temp\slhs.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -123,20 +123,20 @@ STRING 832-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TextLCD.X.production.obj
-7F9 cinit CODE >1549:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7F9 cinit CODE >1552:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7F9 cinit CODE >1572:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7FB cinit CODE >1573:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7FC cinit CODE >1578:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7FD cinit CODE >1584:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7FD cinit CODE >1586:C:\Users\dungl\AppData\Local\Temp\sbcs.
-7FE cinit CODE >1587:C:\Users\dungl\AppData\Local\Temp\sbcs.
-4BA text16 CODE >5:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-4BA text16 CODE >8:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-4BF text16 CODE >9:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-4C3 text16 CODE >11:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-4C7 text16 CODE >12:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-4CC text16 CODE >14:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+7F9 cinit CODE >1549:C:\Users\dungl\AppData\Local\Temp\slhs.
+7F9 cinit CODE >1552:C:\Users\dungl\AppData\Local\Temp\slhs.
+7F9 cinit CODE >1572:C:\Users\dungl\AppData\Local\Temp\slhs.
+7FB cinit CODE >1573:C:\Users\dungl\AppData\Local\Temp\slhs.
+7FC cinit CODE >1578:C:\Users\dungl\AppData\Local\Temp\slhs.
+7FD cinit CODE >1584:C:\Users\dungl\AppData\Local\Temp\slhs.
+7FD cinit CODE >1586:C:\Users\dungl\AppData\Local\Temp\slhs.
+7FE cinit CODE >1587:C:\Users\dungl\AppData\Local\Temp\slhs.
+4BA text16 CODE >4:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+4BA text16 CODE >7:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+4BF text16 CODE >8:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+4C3 text16 CODE >10:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+4C7 text16 CODE >11:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+4CC text16 CODE >13:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
 487 text15 CODE >78:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\mcc_generated_files/mcc.c
 487 text15 CODE >81:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\mcc_generated_files/mcc.c
 48A text15 CODE >83:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\mcc_generated_files/mcc.c
@@ -301,17 +301,17 @@ $dist/default/production\TextLCD.X.production.obj
 7E7 text1 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 7F2 text1 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
 7F3 text1 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
-5E0 maintext CODE >17:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-5E0 maintext CODE >19:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-5E3 maintext CODE >20:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-5E6 maintext CODE >21:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-5F0 maintext CODE >25:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-5F6 maintext CODE >28:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-60B maintext CODE >29:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-618 maintext CODE >30:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-61D maintext CODE >32:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-627 maintext CODE >33:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
-629 maintext CODE >22:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5E0 maintext CODE >16:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5E0 maintext CODE >18:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5E3 maintext CODE >19:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5E6 maintext CODE >20:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5F0 maintext CODE >24:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+5F6 maintext CODE >27:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+60B maintext CODE >28:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+618 maintext CODE >29:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+61D maintext CODE >31:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+627 maintext CODE >32:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
+629 maintext CODE >21:C:\Users\dungl\Documents\GitHub\XC8Training\TextLCD.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -347,10 +347,10 @@ _LATE 110 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 _PLLR 4D6 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 _WPUB 20D 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 _WPUE 210 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\slhs.obj
 _main BC0 0 CODE 0 maintext dist/default/production\TextLCD.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
-start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+start 4 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\slhs.obj
 __end_ofTextLCD_Puts@DDRAM_Start_Address 1008 0 STRCODE 0 stringtext2 dist/default/production\TextLCD.X.production.obj
 TextLCD_CMD@cmd 72 0 COMMON 1 cstackCOMMON dist/default/production\TextLCD.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
@@ -362,12 +362,12 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_TextLCD_Enable 958 0 CODE 0 text10 dist/default/production\TextLCD.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\slhs.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 _TextLCD_Init B30 0 CODE 0 text8 dist/default/production\TextLCD.X.production.obj
@@ -402,7 +402,7 @@ __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\TextLCD.X.produc
 _isdigit$426 70 0 COMMON 1 cstackCOMMON dist/default/production\TextLCD.X.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 _TextLCD_4Bits_Write A36 0 CODE 0 text11 dist/default/production\TextLCD.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\slhs.obj
 __end_of_TextLCD_CMD 9C6 0 CODE 0 text9 dist/default/production\TextLCD.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -557,7 +557,7 @@ _SYSTEM_Initialize 91C 0 CODE 0 text12 dist/default/production\TextLCD.X.product
 __size_of_TextLCD_Enable 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\slhs.obj
 __pdataBANK0 44 0 BANK0 1 dataBANK0 dist/default/production\TextLCD.X.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
@@ -617,8 +617,8 @@ ___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\TextLCD.X.pr
 BT1_Is_Pressed@lat 44 0 BANK0 1 dataBANK0 dist/default/production\TextLCD.X.production.obj
 __size_of_TextLCD_CMD 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
-stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sbcs.obj
-stacklo 2025 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sbcs.obj
+stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\slhs.obj
+stacklo 2025 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\slhs.obj
 TextLCD_Puts@address 7A 0 COMMON 1 cstackCOMMON dist/default/production\TextLCD.X.production.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production\TextLCD.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\TextLCD.X.production.obj

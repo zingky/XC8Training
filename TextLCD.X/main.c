@@ -1,6 +1,5 @@
 #include "mcc_generated_files/mcc.h"
 #include "TextLCD.h"
-#include "stdio.h"
 
 bool BT1_Is_Pressed()
 {

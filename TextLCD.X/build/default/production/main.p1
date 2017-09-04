@@ -3052,9 +3052,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 67: void SYSTEM_Initialize(void);
 [; ;mcc.h: 80: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 93: void WDT_Initialize(void);
-[; ;TextLCD.h: 6: void TextLCD_Init();
-[; ;TextLCD.h: 7: void TextLCD_Clear();
-[; ;TextLCD.h: 8: void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -3085,122 +3082,125 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-"5 main.c
+[; ;TextLCD.h: 6: void TextLCD_Init();
+[; ;TextLCD.h: 7: void TextLCD_Clear();
+[; ;TextLCD.h: 8: void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
+"4 main.c
 [v _BT1_Is_Pressed `(uc ~T0 @X0 1 ef ]
-"6
+"5
 {
-[; ;main.c: 5: bool BT1_Is_Pressed()
-[; ;main.c: 6: {
+[; ;main.c: 4: bool BT1_Is_Pressed()
+[; ;main.c: 5: {
 [e :U _BT1_Is_Pressed ]
 [f ]
-"7
+"6
 [v F3276 `uc ~T0 @X0 1 s lat ]
 [i F3276
 -> -> 1 `i `uc
 ]
-"8
+"7
 [v _state `uc ~T0 @X0 1 a ]
-[; ;main.c: 7: static bool lat=1;
-[; ;main.c: 8: bool state=PORTBbits.RB7;
+[; ;main.c: 6: static bool lat=1;
+[; ;main.c: 7: bool state=PORTBbits.RB7;
 [e = _state . . _PORTBbits 0 7 ]
-[; ;main.c: 9: if(lat!=state)
-"9
+[; ;main.c: 8: if(lat!=state)
+"8
 [e $ ! != -> F3276 `i -> _state `i 351  ]
-[; ;main.c: 10: {
-"10
+[; ;main.c: 9: {
+"9
 {
-[; ;main.c: 11: lat=state;
-"11
+[; ;main.c: 10: lat=state;
+"10
 [e = F3276 _state ]
-[; ;main.c: 12: if(lat) return 1;
-"12
+[; ;main.c: 11: if(lat) return 1;
+"11
 [e $ ! != -> F3276 `i -> -> -> 0 `i `uc `i 352  ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 350  ]
 [e :U 352 ]
-"13
+"12
 }
 [e :U 351 ]
-[; ;main.c: 13: }
-[; ;main.c: 14: return 0;
-"14
+[; ;main.c: 12: }
+[; ;main.c: 13: return 0;
+"13
 [e ) -> -> 0 `i `uc ]
 [e $UE 350  ]
-[; ;main.c: 15: }
-"15
+[; ;main.c: 14: }
+"14
 [e :UE 350 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"17
+"16
 [v _main `(v ~T0 @X0 1 ef ]
-"18
+"17
 {
-[; ;main.c: 17: void main(void)
-[; ;main.c: 18: {
+[; ;main.c: 16: void main(void)
+[; ;main.c: 17: {
 [e :U _main ]
 [f ]
-[; ;main.c: 19: SYSTEM_Initialize();
-"19
+[; ;main.c: 18: SYSTEM_Initialize();
+"18
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 20: TextLCD_Init();
-"20
+[; ;main.c: 19: TextLCD_Init();
+"19
 [e ( _TextLCD_Init ..  ]
-[; ;main.c: 21: TextLCD_Puts(0, 0, (uint8_t *)"LCD1602", 0);
-"21
+[; ;main.c: 20: TextLCD_Puts(0, 0, (uint8_t *)"LCD1602", 0);
+"20
 [e ( _TextLCD_Puts (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> :s 1C `*uc -> -> 0 `i `uc ]
-[; ;main.c: 22: while(1)
-"22
+[; ;main.c: 21: while(1)
+"21
 [e :U 355 ]
-[; ;main.c: 23: {
+[; ;main.c: 22: {
+"22
+{
 "23
-{
-"24
 [v F3281 `uc ~T0 @X0 1 s i ]
-[; ;main.c: 24: static uint8_t i;
-[; ;main.c: 25: if(BT1_Is_Pressed())
-"25
+[; ;main.c: 23: static uint8_t i;
+[; ;main.c: 24: if(BT1_Is_Pressed())
+"24
 [e $ ! != -> ( _BT1_Is_Pressed ..  `i -> -> -> 0 `i `uc `i 357  ]
-[; ;main.c: 26: {
+[; ;main.c: 25: {
+"25
+{
 "26
-{
-"27
 [v _buffer `uc ~T0 @X0 -> 16 `i a ]
-[; ;main.c: 27: uint8_t buffer[16];
-[; ;main.c: 28: sprintf(buffer, "Count=%03d", i++);
-"28
+[; ;main.c: 26: uint8_t buffer[16];
+[; ;main.c: 27: sprintf(buffer, "Count=%03d", i++);
+"27
 [e ( _sprintf (1 , (. , &U _buffer :s 2C -> ++ F3281 -> -> 1 `i `uc `i ]
-[; ;main.c: 29: TextLCD_Puts(1, 5, buffer, 0);
-"29
+[; ;main.c: 28: TextLCD_Puts(1, 5, buffer, 0);
+"28
 [e ( _TextLCD_Puts (4 , , , -> -> 1 `i `uc -> -> 5 `i `uc &U _buffer -> -> 0 `i `uc ]
-[; ;main.c: 30: if(i>10)
-"30
+[; ;main.c: 29: if(i>10)
+"29
 [e $ ! > -> F3281 `i -> 10 `i 358  ]
-[; ;main.c: 31: {
-"31
+[; ;main.c: 30: {
+"30
 {
-[; ;main.c: 32: TextLCD_Puts(1, 0, (uint8_t *)"                ", 0);
-"32
+[; ;main.c: 31: TextLCD_Puts(1, 0, (uint8_t *)"                ", 0);
+"31
 [e ( _TextLCD_Puts (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> :s 3C `*uc -> -> 0 `i `uc ]
-[; ;main.c: 33: i=0;
-"33
+[; ;main.c: 32: i=0;
+"32
 [e = F3281 -> -> 0 `i `uc ]
-"34
+"33
 }
 [e :U 358 ]
-"35
+"34
 }
 [e :U 357 ]
-"36
+"35
 }
 [e :U 354 ]
-"22
+"21
 [e $U 355  ]
 [e :U 356 ]
+[; ;main.c: 33: }
 [; ;main.c: 34: }
 [; ;main.c: 35: }
 [; ;main.c: 36: }
-[; ;main.c: 37: }
-"37
+"36
 [e :UE 353 ]
 }
 [p f _sprintf 8421508 ]

@@ -4276,11 +4276,6 @@ void OSCILLATOR_Initialize(void);
 # 93
 void WDT_Initialize(void);
 
-# 6 "TextLCD.h"
-void TextLCD_Init();
-void TextLCD_Clear();
-void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
-
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.43\include\__size_t.h"
 typedef unsigned size_t;
 
@@ -4344,7 +4339,12 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 5 "main.c"
+# 6 "TextLCD.h"
+void TextLCD_Init();
+void TextLCD_Clear();
+void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
+
+# 4 "main.c"
 bool BT1_Is_Pressed()
 {
 static bool lat=1;

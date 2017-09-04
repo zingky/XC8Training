@@ -1,6 +1,6 @@
 #ifndef TEXTLCD_H
 #define	TEXTLCD_H
-
+#include <stdio.h>
 #define TextLCD_ClearLine(line) TextLCD_Puts(line, 0, (uint8_t *)"                ", 0)
 
 void TextLCD_Init();

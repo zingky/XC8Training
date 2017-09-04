@@ -3047,6 +3047,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 67: void SYSTEM_Initialize(void);
 [; ;mcc.h: 80: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 93: void WDT_Initialize(void);
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
 [; ;TextLCD.h: 6: void TextLCD_Init();
 [; ;TextLCD.h: 7: void TextLCD_Clear();
 [; ;TextLCD.h: 8: void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
@@ -3084,7 +3114,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 0 5 _nib ]
 [; ;TextLCD.c: 13: }
 "13
-[e :UE 349 ]
+[e :UE 350 ]
 }
 "15
 [v _TextLCD_Enable `(v ~T0 @X0 1 ef ]
@@ -3108,7 +3138,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
 [; ;TextLCD.c: 21: }
 "21
-[e :UE 350 ]
+[e :UE 351 ]
 }
 "23
 [v _TextLCD_CMD `(v ~T0 @X0 1 ef1`uc ]
@@ -3135,7 +3165,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _TextLCD_Enable ..  ]
 [; ;TextLCD.c: 29: }
 "29
-[e :UE 351 ]
+[e :UE 352 ]
 }
 "31
 [v _TextLCD_PutChar `(v ~T0 @X0 1 ef1`uc ]
@@ -3159,7 +3189,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 [; ;TextLCD.c: 36: }
 "36
-[e :UE 352 ]
+[e :UE 353 ]
 }
 "38
 [v _TextLCD_Puts `(v ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
@@ -3176,8 +3206,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "39
 [f ]
 "40
-[v F3230 `Cuc ~T0 @X0 -> 4 `i s DDRAM_Start_Address ]
-[i F3230
+[v F3292 `Cuc ~T0 @X0 -> 4 `i s DDRAM_Start_Address ]
+[i F3292
 :U ..
 -> -> 128 `i `uc
 -> -> 192 `i `uc
@@ -3195,7 +3225,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "43
 [v _address `uc ~T0 @X0 1 a ]
 [; ;TextLCD.c: 43: uint8_t address=DDRAM_Start_Address[line]+idx;
-[e = _address -> + -> *U + &U F3230 * -> _line `ux -> -> # *U &U F3230 `ui `ux `i -> _idx `i `uc ]
+[e = _address -> + -> *U + &U F3292 * -> _line `ux -> -> # *U &U F3292 `ui `ux `i -> _idx `i `uc ]
 [; ;TextLCD.c: 44: TextLCD_CMD(address);
 "44
 [e ( _TextLCD_CMD (1 _address ]
@@ -3204,31 +3234,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
 [; ;TextLCD.c: 47: if(length_or_type==0) while(*data!=0) TextLCD_PutChar(*data++);
 "47
-[e $ ! == -> _length_or_type `i -> 0 `i 354  ]
-[e $U 355  ]
-[e :U 356 ]
-[e ( _TextLCD_PutChar (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
-[e :U 355 ]
-[e $ != -> *U _data `i -> 0 `i 356  ]
+[e $ ! == -> _length_or_type `i -> 0 `i 355  ]
+[e $U 356  ]
 [e :U 357 ]
-[e $U 358  ]
+[e ( _TextLCD_PutChar (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+[e :U 356 ]
+[e $ != -> *U _data `i -> 0 `i 357  ]
+[e :U 358 ]
+[e $U 359  ]
 "48
-[e :U 354 ]
+[e :U 355 ]
 [; ;TextLCD.c: 48: else for(address=0; address<length_or_type; address++) TextLCD_PutChar(*data++);
 {
 [e = _address -> -> 0 `i `uc ]
-[e $U 362  ]
-[e :U 359 ]
+[e $U 363  ]
+[e :U 360 ]
 [e ( _TextLCD_PutChar (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
 [e ++ _address -> -> 1 `i `uc ]
-[e :U 362 ]
-[e $ < -> _address `i -> _length_or_type `i 359  ]
-[e :U 360 ]
+[e :U 363 ]
+[e $ < -> _address `i -> _length_or_type `i 360  ]
+[e :U 361 ]
 }
-[e :U 358 ]
+[e :U 359 ]
 [; ;TextLCD.c: 49: }
 "49
-[e :UE 353 ]
+[e :UE 354 ]
 }
 "51
 [v _TextLCD_Clear `(v ~T0 @X0 1 ef ]
@@ -3246,7 +3276,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 [; ;TextLCD.c: 55: }
 "55
-[e :UE 363 ]
+[e :UE 364 ]
 }
 "56
 [v _TextLCD_Init `(v ~T0 @X0 1 ef ]
@@ -3300,5 +3330,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 [; ;TextLCD.c: 72: }
 "72
-[e :UE 364 ]
+[e :UE 365 ]
 }
