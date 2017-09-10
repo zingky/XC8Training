@@ -1,0 +1,95 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"9 Tick_Timer.h
+[s S1 `uc 1 `ul 1 `ul 1 ]
+[n S1 . timeout start stop ]
+"9 mcc_generated_files/tmr1.h
+[v _TMR1_ReadTimer `(ul ~T0 @X0 0 ef ]
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;Tick_Timer.h: 8: typedef struct
+[; ;Tick_Timer.h: 9: {
+[; ;Tick_Timer.h: 10: bool timeout;
+[; ;Tick_Timer.h: 11: uint32_t start;
+[; ;Tick_Timer.h: 12: uint32_t stop;
+[; ;Tick_Timer.h: 13: } tick_timer_t;
+[; ;Tick_Timer.h: 15: bool Tick_Is_Over(tick_timer_t *tick, uint32_t ms);
+[; ;tmr1.h: 8: void TMR1_Initialize(void);
+[; ;tmr1.h: 9: uint32_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 10: void TMR1_ISR(void);
+"4 Tick_timer.c
+[v _Tick_Is_Over `(uc ~T0 @X0 1 ef2`*S1`ul ]
+"5
+{
+[; ;Tick_timer.c: 4: bool Tick_Is_Over(tick_timer_t *tick, uint32_t ms)
+[; ;Tick_timer.c: 5: {
+[e :U _Tick_Is_Over ]
+"4
+[v _tick `*S1 ~T0 @X0 1 r1 ]
+[v _ms `ul ~T0 @X0 1 r2 ]
+"5
+[f ]
+"6
+[v _pre `ul ~T0 @X0 1 a ]
+[; ;Tick_timer.c: 6: uint32_t pre=TMR1_ReadTimer();
+[e = _pre ( _TMR1_ReadTimer ..  ]
+[; ;Tick_timer.c: 7: if(tick->timeout)
+"7
+[e $ ! != -> . *U _tick 0 `i -> -> -> 0 `i `uc `i 3  ]
+[; ;Tick_timer.c: 8: {
+"8
+{
+[; ;Tick_timer.c: 9: tick->start=pre;
+"9
+[e = . *U _tick 1 _pre ]
+[; ;Tick_timer.c: 10: tick->stop=tick->start+ms*8000;
+"10
+[e = . *U _tick 2 + . *U _tick 1 * _ms -> -> -> 8000 `i `l `ul ]
+"11
+}
+[e :U 3 ]
+[; ;Tick_timer.c: 11: }
+[; ;Tick_timer.c: 12: if(tick->stop>tick->start) tick->timeout=(tick->stop<pre);
+"12
+[e $ ! > . *U _tick 2 . *U _tick 1 4  ]
+[e = . *U _tick 0 -> -> < . *U _tick 2 _pre `i `uc ]
+[e $U 5  ]
+"13
+[e :U 4 ]
+[; ;Tick_timer.c: 13: else tick->timeout=((tick->stop<pre)&&(pre<tick->start));
+[e = . *U _tick 0 -> -> && < . *U _tick 2 _pre < _pre . *U _tick 1 `i `uc ]
+[e :U 5 ]
+[; ;Tick_timer.c: 15: return tick->timeout;
+"15
+[e ) . *U _tick 0 ]
+[e $UE 2  ]
+[; ;Tick_timer.c: 16: }
+"16
+[e :UE 2 ]
+}

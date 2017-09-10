@@ -1,0 +1,263 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PIC14E SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1936 ]
+[d frameptr 6 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"4 E:\GitHub\XC8Training\QuetPhim.X\main.c
+[v _GetKey GetKey `(ui  1 e 2 0 ]
+"26
+[v _main main `(v  1 e 1 0 ]
+"70 E:\GitHub\XC8Training\QuetPhim.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"78
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"90
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"52 E:\GitHub\XC8Training\QuetPhim.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"4 E:\GitHub\XC8Training\QuetPhim.X\TextLCD.c
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 e 1 0 ]
+"15
+[v _TextLCD_Enable TextLCD_Enable `(v  1 e 1 0 ]
+"23
+[v _TextLCD_CMD TextLCD_CMD `(v  1 e 1 0 ]
+"31
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+"38
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+"56
+[v _TextLCD_Init TextLCD_Init `(v  1 e 1 0 ]
+"489 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f1936.h
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"1220
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1282
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1344
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1406
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S31 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1615
+[s S40 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S45 . 1 `S31 1 . 1 0 `S40 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES45  1 e 1 @149 ]
+"1726
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1785
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1843
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2185
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2247
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2309
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S129 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2326
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _LATCbits LATCbits `VES138  1 e 1 @270 ]
+"2371
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"3013
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3069
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3127
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3694
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3764
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"7754
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"362 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _hexpowers hexpowers `DC[4]ui  1 s 8 hexpowers ]
+"26 E:\GitHub\XC8Training\QuetPhim.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"34
+[v main@keyCode keyCode `ui  1 a 2 31 ]
+"28
+[v main@str str `[17]uc  1 a 17 14 ]
+"41
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"1500
+[v sprintf@idx idx `uc  1 a 1 6 ]
+"501
+[v sprintf@width width `i  1 a 2 11 ]
+"528
+[v sprintf@val val `ui  1 a 2 7 ]
+"499
+[v sprintf@c c `c  1 a 1 13 ]
+"506
+[v sprintf@prec prec `c  1 a 1 9 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 5 ]
+"494
+[v sprintf@ap ap `[1]*.1v  1 a 1 4 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.25DCuc  1 p 2 7 ]
+"533
+[v sprintf@sp sp `*.4uc  1 a 1 10 ]
+"1541
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"38 E:\GitHub\XC8Training\QuetPhim.X\TextLCD.c
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+{
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+"43
+[v TextLCD_Puts@address address `uc  1 a 1 9 ]
+"38
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+[v TextLCD_Puts@idx idx `uc  1 p 1 3 ]
+[v TextLCD_Puts@data data `*.26uc  1 p 2 4 ]
+[v TextLCD_Puts@length_or_type length_or_type `uc  1 p 1 6 ]
+"40
+[v TextLCD_Puts@DDRAM_Start_Address DDRAM_Start_Address `DC[4]uc  1 s 4 DDRAM_Start_Address ]
+[v TextLCD_Puts@line line `uc  1 a 1 8 ]
+"49
+} 0
+"31
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+{
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+"33
+[v TextLCD_PutChar@data data `uc  1 a 1 2 ]
+"36
+} 0
+"56
+[v _TextLCD_Init TextLCD_Init `(v  1 e 1 0 ]
+{
+"72
+} 0
+"23
+[v _TextLCD_CMD TextLCD_CMD `(v  1 e 1 0 ]
+{
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+"25
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 1 ]
+"29
+} 0
+"15
+[v _TextLCD_Enable TextLCD_Enable `(v  1 e 1 0 ]
+{
+"21
+} 0
+"4
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 e 1 0 ]
+{
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+"6
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 0 ]
+"13
+} 0
+"70 E:\GitHub\XC8Training\QuetPhim.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"90
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"52 E:\GitHub\XC8Training\QuetPhim.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"78 E:\GitHub\XC8Training\QuetPhim.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"88
+} 0
+"4 E:\GitHub\XC8Training\QuetPhim.X\main.c
+[v _GetKey GetKey `(ui  1 e 2 0 ]
+{
+"8
+[v GetKey@pre_state pre_state `ui  1 a 2 2 ]
+"9
+[v GetKey@row row `uc  1 a 1 4 ]
+"6
+[v GetKey@rowcode rowcode `[4]uc  1 s 4 rowcode ]
+"7
+[v GetKey@prv_state prv_state `ui  1 s 2 prv_state ]
+"24
+} 0
