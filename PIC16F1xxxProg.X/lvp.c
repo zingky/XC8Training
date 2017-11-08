@@ -2,47 +2,39 @@
 #include "Tick_Timer.h"
 #include "mcc_generated_files/pin_manager.h"
 
-#define CMD_LOAD_ADDRESS    0x80
-#define CMD_BULK_ERASE      0x18
-#define CMD_ROW_ERASE       0xF0
-#define CMD_LATCH_DATA      0x00
-#define CMD_LATCH_DATA_IA   0x02
-#define CMD_READ_NVM        0xFC
-#define CMD_READ_NVM_IA     0xFE
-#define CMD_INC_ADDR        0xF8
-#define CMD_BEGIN_PROG      0xE0
-
 void ICSP_Init(void)
 {
-    PGD_SetDigitalInput();
-    PGC_SetLow();
-    PGC_SetDigitalOutput();
-    MCLR_SetState(SLAVE_RUN);
-    MCLR_SetDigitalOutput();
+    ICSP_TRIS_DAT=INPUT_PIN;
+    ICSP_CLK=0;
+    ICSP_TRIS_CLK=OUTPUT_PIN;
+    ICSP_nMCLR=SLAVE_RUN;
+    ICSP_TRIS_nMCLR=OUTPUT_PIN;
 }
 
 void ICSP_Release(void)
 {
-    PGD_SetDigitalInput();
-    PGC_SetDigitalInput();
-    MCLR_SetState(SLAVE_RUN);
-    MCLR_SetDigitalOutput();
-    D1_SetLow();
-    D2_SetHigh();
+    ICSP_TRIS_DAT=INPUT_PIN;
+    ICSP_TRIS_CLK=INPUT_PIN;
+    ICSP_nMCLR=SLAVE_RUN;
+    ICSP_TRIS_nMCLR=OUTPUT_PIN;
+    LED_Off(RED_LED);
+    LED_On(GREEN_LED);
 }
 
 void sendCmd(uint8_t b)
 {
     uint8_t i;
-    PGD_SetDigitalOutput();
+    ICSP_TRIS_DAT=OUTPUT_PIN;
     for(i=0; i<8; i++)
     {
-        if((b&0x80)>0) PGD_SetHigh(); // Msb first
-        else PGD_SetLow(); // Msb first
-        PGC_SetHigh();
+        if((b&0x80)>0)
+            ICSP_DAT_WR=1; // Msb first
+        else
+            ICSP_DAT_WR=0; // Msb first
+        ICSP_CLK=1;
         b<<=1;
         Delay_us(1);
-        PGC_SetLow();
+        ICSP_CLK=0;
         Delay_us(1);
     }
     Delay_us(1);
@@ -54,15 +46,17 @@ void sendData(uint16_t data)
     uint32_t w=(uint32_t) data;
 
     w=(w<<1) & 0x7ffffe; // add start and stop bits
-    PGD_SetDigitalOutput();
+    ICSP_TRIS_DAT=OUTPUT_PIN;
     for(i=0; i<24; i++)
     {
-        if((w&0x800000)>0) PGD_SetHigh();// Msb first
-        else PGD_SetLow();
-        PGC_SetHigh();
+        if((w&0x800000)>0) // Msb first
+            ICSP_DAT_WR=1;
+        else
+            ICSP_DAT_WR=0;
+        ICSP_CLK=1;
         w<<=1;
         Delay_us(1);
-        PGC_SetLow();
+        ICSP_CLK=0;
         Delay_us(1);
     }
 }
@@ -70,14 +64,14 @@ void sendData(uint16_t data)
 uint8_t getByte(void)
 {
     uint8_t i, b;
-    PGD_SetDigitalInput();
+    ICSP_TRIS_DAT=INPUT_PIN;
     for(i=0; i<8; i++)
     {
-        PGC_SetHigh();
+        ICSP_CLK=1;
         b<<=1;
         Delay_us(1);
-        b|=PGD_GetValue();
-        PGC_SetLow();
+        b|=ICSP_DAT_RD;
+        ICSP_CLK=0;
         Delay_us(1);
     }
     return b;
@@ -87,14 +81,14 @@ uint16_t getData(void)
 {
     uint8_t i;
     uint16_t w=0;
-    PGD_SetDigitalInput();
+    ICSP_TRIS_DAT=INPUT_PIN;
     for(i=0; i<24; i++)
     {
-        PGC_SetHigh();
+        ICSP_CLK=1;
         w<<=1;
         Delay_us(1);
-        w|=PGD_GetValue();
-        PGC_SetLow();
+        w|=ICSP_DAT_RD;
+        ICSP_CLK=0;
         Delay_us(1);
     }
     return (w>>1);
@@ -102,11 +96,11 @@ uint16_t getData(void)
 
 void LVP_enter(void)
 {
-    D1_SetHigh();
-    D2_SetLow();
+    LED_On(RED_LED);
+    LED_Off(GREEN_LED);
 
     ICSP_Init(); // configure I/Os   
-    MCLR_SetState(SLAVE_RESET); // MCLR = Vil (GND)
+    ICSP_nMCLR=SLAVE_RESET; // MCLR = Vil (GND)
     Delay_ms(10);
     sendCmd('M');
     sendCmd('C');
@@ -122,11 +116,12 @@ void LVP_exit(void)
 
 bool LVP_inProgress(void)
 {
-    return (bool)(MCLR_GetValue()==SLAVE_RESET);
+    return (ICSP_nMCLR==SLAVE_RESET);
 }
 
 void LVP_bulkErase(void)
 {
+    sendCmd(0x18);
     sendCmd(CMD_LOAD_ADDRESS); // enter config area to erase config words too
     sendData(0x8000);
     sendCmd(CMD_BULK_ERASE);
@@ -135,7 +130,10 @@ void LVP_bulkErase(void)
 
 void LVP_skip(uint16_t count)
 {
-    while(count-- >0) sendCmd(CMD_INC_ADDR); // increment address  
+    while(count-- >0)
+    {
+        sendCmd(CMD_INC_ADDR); // increment address     
+    }
 }
 
 void LVP_addressLoad(uint16_t address)
@@ -172,14 +170,4 @@ void LVP_cfgWrite(uint16_t *cfg, uint8_t count)
     }
     sendCmd(CMD_LOAD_ADDRESS); // enter code area 
     sendData(0x0000);
-}
-
-
-uint16_t LVP_ReadNVM(uint16_t address)
-{
-    sendCmd(CMD_READ_NVM);
-    Delay_us(2);
-    sendData(address);
-    Delay_us(2);
-    return getData();
 }
