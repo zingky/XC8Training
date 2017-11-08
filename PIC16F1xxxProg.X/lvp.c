@@ -4,11 +4,13 @@
 
 void ICSP_Init(void)
 {
-    ICSP_TRIS_DAT=INPUT_PIN;
+    ICSP_DAT_WR=0;
+    ICSP_TRIS_DAT=OUTPUT_PIN;
     ICSP_CLK=0;
     ICSP_TRIS_CLK=OUTPUT_PIN;
     ICSP_nMCLR=SLAVE_RUN;
     ICSP_TRIS_nMCLR=OUTPUT_PIN;
+    Delay_ms(100);
 }
 
 void ICSP_Release(void)
@@ -27,15 +29,12 @@ void sendCmd(uint8_t b)
     ICSP_TRIS_DAT=OUTPUT_PIN;
     for(i=0; i<8; i++)
     {
-        if((b&0x80)>0)
-            ICSP_DAT_WR=1; // Msb first
-        else
-            ICSP_DAT_WR=0; // Msb first
         ICSP_CLK=1;
-        b<<=1;
+        ICSP_DAT_WR=(bool) (b); // LSB first
         Delay_us(1);
         ICSP_CLK=0;
         Delay_us(1);
+        b>>=1;
     }
     Delay_us(1);
 }
@@ -49,15 +48,12 @@ void sendData(uint16_t data)
     ICSP_TRIS_DAT=OUTPUT_PIN;
     for(i=0; i<24; i++)
     {
-        if((w&0x800000)>0) // Msb first
-            ICSP_DAT_WR=1;
-        else
-            ICSP_DAT_WR=0;
         ICSP_CLK=1;
-        w<<=1;
+        ICSP_DAT_WR=(bool) w; // LSB first
         Delay_us(1);
         ICSP_CLK=0;
         Delay_us(1);
+        w>>=1;
     }
 }
 
@@ -101,7 +97,7 @@ void LVP_enter(void)
 
     ICSP_Init(); // configure I/Os   
     ICSP_nMCLR=SLAVE_RESET; // MCLR = Vil (GND)
-    Delay_ms(10);
+    Delay_ms(500);
     sendCmd('M');
     sendCmd('C');
     sendCmd('H');
@@ -130,10 +126,7 @@ void LVP_bulkErase(void)
 
 void LVP_skip(uint16_t count)
 {
-    while(count-- >0)
-    {
-        sendCmd(CMD_INC_ADDR); // increment address     
-    }
+    while(count-- >0) sendCmd(CMD_INC_ADDR); // increment address  
 }
 
 void LVP_addressLoad(uint16_t address)

@@ -31,10 +31,11 @@
 
 #define RED_LED             LATEbits.LATE1
 #define GREEN_LED           LATEbits.LATE3
+
 #define LED_On(x)           x=1
 #define LED_Off(x)          x=0
 
-#define  LVP_init()         LVP_exit();
+#define LVP_init()          LVP_exit();
 
 uint8_t getByte(void);
 uint16_t getData(void);

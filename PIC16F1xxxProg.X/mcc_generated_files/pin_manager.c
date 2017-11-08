@@ -66,7 +66,7 @@ void PIN_MANAGER_Initialize(void)
     LATC = 0x0000;
     LATD = 0x0010;
     LATE = 0x0000;
-    LATF = 0x0001;
+    LATF = 0x0000;
     LATG = 0x0200;
 
     /****************************************************************************
@@ -90,7 +90,7 @@ void PIN_MANAGER_Initialize(void)
     CNPDG = 0x0000;
     CNPUB = 0x0100;
     CNPUC = 0x0000;
-    CNPUD = 0x0030;
+    CNPUD = 0x0000;
     CNPUE = 0x0000;
     CNPUF = 0x0001;
     CNPUG = 0x0200;

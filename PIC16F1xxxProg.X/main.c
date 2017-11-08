@@ -4,7 +4,7 @@
 #include <stdio.h>
 #define ACCESSKEY_LEN   8
 
-const uint8_t ACCESSKEY[ACCESSKEY_LEN]="12345678";                              // Bootloader access code
+const uint8_t ACCESSKEY[ACCESSKEY_LEN]="12345678";                              // Programming access code
 const uint8_t PVID[9]="UMB32001";                                               // Device name and firmware version
 
 typedef enum
@@ -43,14 +43,6 @@ struct
 uint32_t dummy;
 uint16_t temp;
 uint8_t i, j;
-
-uint16_t LVP_ReadNVM(uint16_t addr)
-{   
-    sendCmd(CMD_LOAD_ADDRESS);
-    sendData(addr);
-    sendCmd(CMD_READ_NVM);
-    return getData();
-}
 
 void main()
 {
@@ -107,16 +99,9 @@ void main()
 
             case ERASE_USER_APP:
                 LVP_bulkErase();
-                Delay_ms(100);
-                for(temp=0x8000; temp<0x8200; temp++)
-                {
-                    Clear_WDT();
-                    dummy=LVP_ReadNVM(temp);
-                    sprintf(Buf.Dat, "\r\n%04X:%04X", temp, dummy);
-                    UART_Puts(Buf.Dat);
-                }
+                UART_Puts((uint8_t *) "\r\nErased\r\n");
                 Task.Prev=CONVERT;
-                Task.Next=REP_SUCCESS;
+                Task.Next=DEFAULT;                                          //////////////////////
                 break;
 
             case CONVERT:
