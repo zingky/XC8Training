@@ -44,6 +44,14 @@ uint32_t dummy;
 uint16_t temp;
 uint8_t i, j;
 
+uint16_t LVP_ReadNVM(uint16_t addr)
+{   
+    sendCmd(CMD_LOAD_ADDRESS);
+    sendData(addr);
+    sendCmd(CMD_READ_NVM);
+    return getData();
+}
+
 void main()
 {
     SYSTEM_Initialize();
@@ -93,13 +101,13 @@ void main()
                 {
                     UART_Puts((uint8_t *) PVID);
                     LVP_enter();
-                    Delay_ms(100);
                     Task.Next=ERASE_USER_APP;
                 }
                 break;
 
             case ERASE_USER_APP:
-                //LVP_bulkErase();
+                LVP_bulkErase();
+                Delay_ms(100);
                 for(temp=0x8000; temp<0x8200; temp++)
                 {
                     Clear_WDT();
@@ -152,6 +160,7 @@ void main()
                 break;
 
             default:
+                ICSP_Release();
                 Task.Prev=ENTRY_ICSP_MODE;
                 Task.Next=INIT;
                 break;
