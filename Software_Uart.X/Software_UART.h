@@ -8,7 +8,6 @@ typedef struct
 {
     uint8_t SUTX;
     uint8_t SURX;
-    uint16_t SUBCON;
     bool SUBS;
 } software_uart_t;
 
