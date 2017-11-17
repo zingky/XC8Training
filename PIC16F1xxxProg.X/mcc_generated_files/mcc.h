@@ -49,11 +49,10 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "interrupt_manager.h"
 #include "uart4.h"
+#include "interrupt_manager.h"
 
 #define _XTAL_FREQ  48000000UL
-#define Clear_WDT() WDTCONbits.WDTCLR=1
 
 /**
  * @Param

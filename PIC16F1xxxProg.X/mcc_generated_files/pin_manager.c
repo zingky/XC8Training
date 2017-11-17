@@ -67,7 +67,7 @@ void PIN_MANAGER_Initialize(void)
     LATD = 0x0010;
     LATE = 0x0000;
     LATF = 0x0000;
-    LATG = 0x0200;
+    LATG = 0x0000;
 
     /****************************************************************************
      * Setting the GPIO Direction SFR(s)
@@ -76,8 +76,8 @@ void PIN_MANAGER_Initialize(void)
     TRISC = 0xF000;
     TRISD = 0x0FE7;
     TRISE = 0x00E5;
-    TRISF = 0x003A;
-    TRISG = 0x01C0;
+    TRISF = 0x003B;
+    TRISG = 0x03C0;
 
     /****************************************************************************
      * Setting the Weak Pull Up and Weak Pull Down SFR(s)

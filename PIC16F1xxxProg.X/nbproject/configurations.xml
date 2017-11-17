@@ -22,6 +22,8 @@
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
       </logicalFolder>
       <itemPath>lvp.h</itemPath>
+      <itemPath>Buttons.h</itemPath>
+      <itemPath>Data_Convert.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -41,6 +43,8 @@
       <itemPath>main.c</itemPath>
       <itemPath>lvp.c</itemPath>
       <itemPath>Tick_Timer.c</itemPath>
+      <itemPath>Buttons.c</itemPath>
+      <itemPath>Data_Convert.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -60,7 +64,7 @@
         <targetDevice>PIC32MX530F128H</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD3PlatformTool</platformTool>
+        <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.44</languageToolchainVersion>
         <platform>3</platform>
