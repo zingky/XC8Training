@@ -133,6 +133,11 @@ uint8_t EUSART1_Read(void);
 */
 void EUSART1_Write(uint8_t txData);
 
+void UART_TX(uint8_t txChar);
+void UART_Puts(uint8_t *s);
+void UART_Put_Hex(uint8_t *data, uint8_t len);
+bool UART_RX(uint8_t *byte);
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }

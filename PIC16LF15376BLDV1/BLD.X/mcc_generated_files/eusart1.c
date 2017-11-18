@@ -19,7 +19,7 @@
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
         MPLAB             :  MPLAB X 3.40
-*/
+ */
 
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
@@ -41,38 +41,37 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
-*/
+ */
 
 /**
   Section: Included Files
-*/
+ */
 #include "eusart1.h"
 
 /**
   Section: EUSART1 APIs
-*/
+ */
 
 void EUSART1_Initialize(void)
 {
     // Set the EUSART1 module to the options selected in the user interface.
 
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
-    BAUD1CON = 0x08;
+    BAUD1CON=0x08;
 
     // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN disabled; SREN disabled; 
-    RC1STA = 0x90;
+    RC1STA=0x90;
 
     // TX9 8-bit; TX9D 0; SENDB sync_break_complete; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC slave; 
-    TX1STA = 0x24;
+    TX1STA=0x24;
 
     // Baud Rate = 10000; SP1BRGL 31; 
-    SP1BRGL = 0x1F;
+    SP1BRGL=0x1F;
 
     // Baud Rate = 10000; SP1BRGH 3; 
-    SP1BRGH = 0x03;
+    SP1BRGH=0x03;
 
 }
-
 
 uint8_t EUSART1_Read(void)
 {
@@ -81,13 +80,13 @@ uint8_t EUSART1_Read(void)
     {
     }
 
-    
-    if(1 == RC1STAbits.OERR)
+
+    if(1==RC1STAbits.OERR)
     {
         // EUSART1 error - restart
 
-        RC1STAbits.SPEN = 0; 
-        RC1STAbits.SPEN = 1; 
+        RC1STAbits.SPEN=0;
+        RC1STAbits.SPEN=1;
     }
 
     return RC1REG;
@@ -95,12 +94,57 @@ uint8_t EUSART1_Read(void)
 
 void EUSART1_Write(uint8_t txData)
 {
-    while(0 == PIR3bits.TX1IF)
+    while(0==PIR3bits.TX1IF)
     {
     }
 
-    TX1REG = txData;    // Write the data byte to the USART.
+    TX1REG=txData; // Write the data byte to the USART.
 }
+
 /**
   End of File
-*/
+ */
+
+void UART_TX(uint8_t txChar) // <editor-fold defaultstate="collapsed" desc="UART Puts one byte">
+{
+    while(0==PIR3bits.TX1IF);
+    TX1REG=txChar; // Write the data byte to the USART.
+} // </editor-fold>
+
+void UART_Puts(uint8_t *s) // <editor-fold defaultstate="collapsed" desc="UART Puts an ASCII string">
+{
+    while(*s!=0) UART_TX(*s++);
+} // </editor-fold>
+
+void UART_Put_Hex(uint8_t *data, uint8_t len)// <editor-fold defaultstate="collapsed" desc="UART Puts an Hex string">
+{
+    uint8_t Hnib, Lnib, i;
+    i=len;
+    while(len--)
+    {
+        i--;
+        Hnib=data[i]>>4;
+        if(Hnib<0x0A) Hnib+='0';
+        else Hnib+='7';
+        Lnib=data[i]&0x0F;
+        if(Lnib<0x0A) Lnib+='0';
+        else Lnib+='7';
+        UART_TX(Hnib);
+        UART_TX(Lnib);
+    }
+}// </editor-fold>
+
+bool UART_RX(uint8_t *byte) // <editor-fold defaultstate="collapsed" desc="UART Gets one byte">
+{
+    if(1==RC1STAbits.OERR)
+    {
+        RC1STAbits.SPEN=0;
+        RC1STAbits.SPEN=1;
+    }
+    if(PIR3bits.RC1IF)
+    {
+        *byte=RC1REG;
+        return 1;
+    }
+    return 0;
+} // </editor-fold>

@@ -1,0 +1,123 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;Data_Convert.h: 6: uint8_t Make816(uint16_t value, bool idx);
+[; ;Data_Convert.h: 7: uint8_t Make832(uint32_t value, uint8_t idx);
+[; ;Data_Convert.h: 8: uint16_t Make168(uint8_t HByte, uint8_t LByte);
+[; ;Data_Convert.h: 9: uint16_t Make168a(uint8_t *data);
+"3 Data_Convert.c
+[v _Make816 `(uc ~T0 @X0 1 ef2`ui`uc ]
+"4
+{
+[; ;Data_Convert.c: 3: uint8_t Make816(uint16_t value, bool idx)
+[; ;Data_Convert.c: 4: {
+[e :U _Make816 ]
+"3
+[v _value `ui ~T0 @X0 1 r1 ]
+[v _idx `uc ~T0 @X0 1 r2 ]
+"4
+[f ]
+[; ;Data_Convert.c: 5: return ((uint8_t *) &value)[idx];
+"5
+[e ) *U + -> &U _value `*uc * -> _idx `ux -> -> # *U -> &U _value `*uc `ui `ux ]
+[e $UE 1  ]
+[; ;Data_Convert.c: 6: }
+"6
+[e :UE 1 ]
+}
+"8
+[v _Make832 `(uc ~T0 @X0 1 ef2`ul`uc ]
+"9
+{
+[; ;Data_Convert.c: 8: uint8_t Make832(uint32_t value, uint8_t idx)
+[; ;Data_Convert.c: 9: {
+[e :U _Make832 ]
+"8
+[v _value `ul ~T0 @X0 1 r1 ]
+[v _idx `uc ~T0 @X0 1 r2 ]
+"9
+[f ]
+[; ;Data_Convert.c: 10: return ((uint8_t *) &value)[idx];
+"10
+[e ) *U + -> &U _value `*uc * -> _idx `ux -> -> # *U -> &U _value `*uc `ui `ux ]
+[e $UE 2  ]
+[; ;Data_Convert.c: 11: }
+"11
+[e :UE 2 ]
+}
+"13
+[v _Make168 `(ui ~T0 @X0 1 ef2`uc`uc ]
+"14
+{
+[; ;Data_Convert.c: 13: uint16_t Make168(uint8_t HByte, uint8_t LByte)
+[; ;Data_Convert.c: 14: {
+[e :U _Make168 ]
+"13
+[v _HByte `uc ~T0 @X0 1 r1 ]
+[v _LByte `uc ~T0 @X0 1 r2 ]
+"14
+[f ]
+"15
+[v _res `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 15: uint16_t res=HByte;
+[e = _res -> _HByte `ui ]
+[; ;Data_Convert.c: 16: res<<=8;
+"16
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 17: res|=LByte;
+"17
+[e =| _res -> _LByte `ui ]
+[; ;Data_Convert.c: 18: return res;
+"18
+[e ) _res ]
+[e $UE 3  ]
+[; ;Data_Convert.c: 19: }
+"19
+[e :UE 3 ]
+}
+"21
+[v _Make168a `(ui ~T0 @X0 1 ef1`*uc ]
+"22
+{
+[; ;Data_Convert.c: 21: uint16_t Make168a(uint8_t *data)
+[; ;Data_Convert.c: 22: {
+[e :U _Make168a ]
+"21
+[v _data `*uc ~T0 @X0 1 r1 ]
+"22
+[f ]
+[; ;Data_Convert.c: 23: return Make168(&data[0], &data[1]);
+"23
+[e ) ( _Make168 (2 , -> &U *U + _data * -> -> 0 `i `x -> -> # *U _data `i `x `uc -> &U *U + _data * -> -> 1 `i `x -> -> # *U _data `i `x `uc ]
+[e $UE 4  ]
+[; ;Data_Convert.c: 24: }
+"24
+[e :UE 4 ]
+}
