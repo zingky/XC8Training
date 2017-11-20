@@ -1,0 +1,1004 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1454 ]
+[d frameptr 6 ]
+"840 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[e E2324 StandardControlRequest `uc
+GET_STATUS 0
+CLEAR_FEATURE 1
+SET_FEATURE 3
+SET_ADDRESS 5
+GET_DESCRIPTOR 6
+SET_DESCRIPTOR 7
+GET_CONFIGURATION 8
+SET_CONFIGURATION 9
+GET_INTERFACE 10
+SET_INTERFACE 11
+SYNCH_FRAME 12
+]
+"844
+[e E2336 DescriptorTypes `uc
+DESC_DEVICE 1
+DESC_CONFIGURATION 2
+DESC_STRING 3
+DESC_INTERFACE 4
+DESC_ENDPOINT 5
+DESC_DEVICE_QUALIFIER 6
+DESC_OTHER_SPEED_CONFIGURATION 7
+DESC_INTERFACE_POWER 8
+DESC_OTG 9
+DESC_DEBUG 10
+DESC_INTERFACE_ASSOCIATION 11
+]
+"1149
+[e E2319 RequestType `uc
+REQUEST_TYPE_STANDARD 0
+REQUEST_TYPE_CLASS 1
+REQUEST_TYPE_VENDOR 2
+REQUEST_TYPE_RESERVED 3
+]
+"1355
+[e E2296 PID `uc
+PID_OUT 1
+PID_IN 9
+PID_SOF 5
+PID_SETUP 13
+PID_DATA0 3
+PID_DATA1 11
+PID_DATA2 7
+PID_MDATA 15
+PID_ACK 2
+PID_NAK 10
+PID_STALL 14
+PID_NYET 6
+PID_PRE 12
+PID_ERR 12
+PID_SPLIT 8
+PID_PING 4
+PID_RESERVED 0
+]
+"77 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_descriptors.c
+[e E262 DescriptorTypes `uc
+DESC_DEVICE 1
+DESC_CONFIGURATION 2
+DESC_STRING 3
+DESC_INTERFACE 4
+DESC_ENDPOINT 5
+DESC_DEVICE_QUALIFIER 6
+DESC_OTHER_SPEED_CONFIGURATION 7
+DESC_INTERFACE_POWER 8
+DESC_OTG 9
+DESC_DEBUG 10
+DESC_INTERFACE_ASSOCIATION 11
+]
+"163
+[e E348 HIDDescriptorTypes `uc
+DESC_HID 33
+DESC_REPORT 34
+DESC_PHYSICAL 35
+]
+"176
+[e E279 EndpointAttributes `uc
+EP_CONTROL 0
+EP_ISOCHRONOUS 1
+EP_BULK 2
+EP_INTERRUPT 3
+]
+"73 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_hid.c
+[e E57 StandardControlRequest `uc
+GET_STATUS 0
+CLEAR_FEATURE 1
+SET_FEATURE 3
+SET_ADDRESS 5
+GET_DESCRIPTOR 6
+SET_DESCRIPTOR 7
+GET_CONFIGURATION 8
+SET_CONFIGURATION 9
+GET_INTERFACE 10
+SET_INTERFACE 11
+SYNCH_FRAME 12
+]
+"79
+[e E348 HIDDescriptorTypes `uc
+DESC_HID 33
+DESC_REPORT 34
+DESC_PHYSICAL 35
+]
+"106
+[e E352 HIDRequests `uc
+HID_GET_REPORT 1
+HID_GET_IDLE 2
+HID_GET_PROTOCOL 3
+HID_SET_REPORT 9
+HID_SET_IDLE 10
+HID_SET_PROTOCOL 11
+]
+"39 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _main main `(i  1 e 2 0 ]
+"109
+[v _app_set_configuration_callback app_set_configuration_callback `(v  1 e 1 0 ]
+"114
+[v _app_get_device_status_callback app_get_device_status_callback `(ui  1 e 2 0 ]
+"119
+[v _app_endpoint_halt_callback app_endpoint_halt_callback `(v  1 e 1 0 ]
+"124
+[v _app_set_interface_callback app_set_interface_callback `(c  1 e 1 0 ]
+"129
+[v _app_get_interface_callback app_get_interface_callback `(c  1 e 1 0 ]
+"134
+[v _app_out_transaction_callback app_out_transaction_callback `(v  1 e 1 0 ]
+"139
+[v _app_in_transaction_complete_callback app_in_transaction_complete_callback `(v  1 e 1 0 ]
+"144
+[v _app_unknown_setup_request_callback app_unknown_setup_request_callback `(c  1 e 1 0 ]
+"157
+[v _app_unknown_get_descriptor_callback app_unknown_get_descriptor_callback `(i  1 e 2 0 ]
+"162
+[v _app_start_of_frame_callback app_start_of_frame_callback `(v  1 e 1 0 ]
+"167
+[v _app_usb_reset_callback app_usb_reset_callback `(v  1 e 1 0 ]
+"176
+[v _get_report_callback get_report_callback `(v  1 s 1 get_report_callback ]
+"183
+[v _app_get_report_callback app_get_report_callback `(i  1 e 2 0 ]
+"202
+[v _app_set_report_callback app_set_report_callback `(c  1 e 1 0 ]
+"212
+[v _app_get_idle_callback app_get_idle_callback `(uc  1 e 1 0 ]
+"217
+[v _app_set_idle_callback app_set_idle_callback `(c  1 e 1 0 ]
+"223
+[v _app_get_protocol_callback app_get_protocol_callback `(c  1 e 1 0 ]
+"228
+[v _app_set_protocol_callback app_set_protocol_callback `(c  1 e 1 0 ]
+"235
+[v _isr isr `II(v  1 e 1 0 ]
+"449 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _pic16_linear_addr pic16_linear_addr `(ui  1 s 2 pic16_linear_addr ]
+[v i1_pic16_linear_addr pic16_linear_addr `(ui  1 s 2 i1_pic16_linear_addr ]
+"467
+[v _reset_ep0_data_stage reset_ep0_data_stage `(v  1 s 1 reset_ep0_data_stage ]
+[v i1_reset_ep0_data_stage reset_ep0_data_stage `(v  1 s 1 i1_reset_ep0_data_stage ]
+"487
+[v _usb_init usb_init `(v  1 e 1 0 ]
+[v i1_usb_init usb_init `(v  1 e 1 0 ]
+"666
+[v _reset_bd0_out reset_bd0_out `(v  1 s 1 reset_bd0_out ]
+"678
+[v _stall_ep0 stall_ep0 `(v  1 s 1 stall_ep0 ]
+"691
+[v _clear_ep0_stall clear_ep0_stall `(v  1 s 1 clear_ep0_stall ]
+"705
+[v _stall_ep_in stall_ep_in `(v  1 s 1 stall_ep_in ]
+"716
+[v _stall_ep_out stall_ep_out `(v  1 s 1 stall_ep_out ]
+"727
+[v _send_zero_length_packet_ep0 send_zero_length_packet_ep0 `(v  1 s 1 send_zero_length_packet_ep0 ]
+"740
+[v _usb_send_in_buffer_0 usb_send_in_buffer_0 `(v  1 s 1 usb_send_in_buffer_0 ]
+"811
+[v _start_control_return start_control_return `(v  1 s 1 start_control_return ]
+"825
+[v _handle_standard_control_request handle_standard_control_request `T(c  1 s 1 handle_standard_control_request ]
+"1117
+[v _handle_ep0_setup handle_ep0_setup `T(v  1 s 1 handle_ep0_setup ]
+"1207
+[v _handle_ep0_out handle_ep0_out `T(v  1 s 1 handle_ep0_out ]
+"1269
+[v _handle_ep0_in handle_ep0_in `T(v  1 s 1 handle_ep0_in ]
+"1314
+[v _usb_service usb_service `(v  1 e 1 0 ]
+"1427
+[v _usb_get_configuration usb_get_configuration `(uc  1 e 1 0 ]
+"1432
+[v _usb_get_in_buffer usb_get_in_buffer `(*.4uc  1 e 1 0 ]
+"1444
+[v _usb_send_in_buffer usb_send_in_buffer `(v  1 e 1 0 ]
+"1486
+[v _usb_in_endpoint_busy usb_in_endpoint_busy `(uc  1 e 1 0 ]
+"1496
+[v _usb_in_endpoint_halted usb_in_endpoint_halted `(uc  1 e 1 0 ]
+[v i1_usb_in_endpoint_halted usb_in_endpoint_halted `(uc  1 e 1 0 ]
+"1579
+[v _usb_send_data_stage usb_send_data_stage `(v  1 e 1 0 ]
+"238 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_descriptors.c
+[v _usb_application_get_string usb_application_get_string `(i  1 e 2 0 ]
+"280
+[v _usb_application_get_hid_descriptor usb_application_get_hid_descriptor `(i  1 e 2 0 ]
+"290
+[v _usb_application_get_hid_report_descriptor usb_application_get_hid_report_descriptor `(i  1 e 2 0 ]
+"50 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_hid.c
+[v _process_hid_setup_request process_hid_setup_request `(uc  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 1 0 ]
+[v i1_memset memset `(*.39v  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+"174 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _report_buf report_buf `[3]uc  1 s 3 report_buf ]
+[s S177 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 PID 1 0 :4:2 
+`uc 1 reserved 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"193 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[s S183 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 . 1 0 :1:7 
+]
+[u S192 . 1 `S177 1 . 1 0 `S183 1 . 1 0 `uc 1 BDnSTAT 1 0 ]
+[s S196 buffer_descriptor 4 `S192 1 STAT 1 0 `uc 1 BDnCNT 1 1 `ui 1 BDnADR 2 2 ]
+[v _bds bds `[4]S196  1 s 16 bds ]
+[s S204 . 32 `[1][8]uc 1 ep_0_out_buf 8 0 `[1][8]uc 1 ep_0_in_buf 8 8 `[1][8]uc 1 ep_1_out_buf 8 16 `[1][8]uc 1 ep_1_in_buf 8 24 ]
+"291
+[v _ep_buffers ep_buffers `S204  1 s 32 ep_buffers ]
+[s S211 ep0_buf 3 `DC*.4uc 1 out 1 0 `DC*.4uc 1 in 1 1 `uc 1 flags 1 2 ]
+"365
+[v _ep0_buf ep0_buf `S211  1 s 3 ep0_buf ]
+[s S217 ep_buf 5 `DC*.4uc 1 out 1 0 `DC*.4uc 1 in 1 1 `DCuc 1 out_len 1 2 `DCuc 1 in_len 1 3 `uc 1 flags 1 4 ]
+"367
+[v _ep_buf ep_buf `[2]S217  1 s 10 ep_buf ]
+"423
+[v _addr_pending addr_pending `uc  1 s 1 addr_pending ]
+"424
+[v _addr addr `uc  1 s 1 addr ]
+"425
+[v _g_configuration g_configuration `uc  1 s 1 g_configuration ]
+"426
+[v _control_need_zlp control_need_zlp `uc  1 s 1 control_need_zlp ]
+"427
+[v _returning_short returning_short `uc  1 s 1 returning_short ]
+"430
+[v _ep0_data_stage_callback ep0_data_stage_callback `*.37(v  1 s 2 ep0_data_stage_callback ]
+"431
+[v _ep0_data_stage_in_buffer ep0_data_stage_in_buffer `*.26uc  1 s 2 ep0_data_stage_in_buffer ]
+"432
+[v _ep0_data_stage_out_buffer ep0_data_stage_out_buffer `*.1uc  1 s 1 ep0_data_stage_out_buffer ]
+"433
+[v _ep0_data_stage_buf_remaining ep0_data_stage_buf_remaining `ui  1 s 2 ep0_data_stage_buf_remaining ]
+"434
+[v _ep0_data_stage_context ep0_data_stage_context `*.1v  1 s 1 ep0_data_stage_context ]
+"435
+[v _ep0_data_stage_direc ep0_data_stage_direc `uc  1 s 1 ep0_data_stage_direc ]
+[s S387 device_descriptor 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubclass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"74 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_descriptors.c
+[v _this_device_descriptor this_device_descriptor `DCS387  1 e 18 0 ]
+"95
+[v _mouse_report_descriptor mouse_report_descriptor `DC[50]uc  1 s 50 mouse_report_descriptor ]
+[s S417 configuration_descriptor 9 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 wTotalLength 2 2 `uc 1 bNumInterfaces 1 4 `uc 1 bConfigurationValue 1 5 `uc 1 iConfiguration 1 6 `uc 1 bmAttributes 1 7 `uc 1 bMaxPower 1 8 ]
+"133
+[s S855 interface_descriptor 9 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `uc 1 bInterfaceNumber 1 2 `uc 1 bAlternateSetting 1 3 `uc 1 bNumEndpoints 1 4 `uc 1 bInterfaceClass 1 5 `uc 1 bInterfaceSubclass 1 6 `uc 1 bInterfaceProtocol 1 7 `uc 1 iInterface 1 8 ]
+[s S865 hid_descriptor 9 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdHID 2 2 `uc 1 bCountryCode 1 4 `uc 1 bNumDescriptors 1 5 `uc 1 bDescriptorType2 1 6 `ui 1 wDescriptorLength 2 7 ]
+[s S873 endpoint_descriptor 7 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `uc 1 bEndpointAddress 1 2 `uc 1 bmAttributes 1 3 `ui 1 wMaxPacketSize 2 4 `uc 1 bInterval 1 6 ]
+[s S880 configuration_1_packet 41 `S417 1 config 9 0 `S855 1 interface 9 9 `S865 1 hid 9 18 `S873 1 ep 7 27 `S873 1 ep1_out 7 34 ]
+[v _configuration_1 configuration_1 `DCS880  1 s 41 configuration_1 ]
+[s S895 . 4 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 lang 2 2 ]
+"204
+[v _str00 str00 `DCS895  1 s 4 str00 ]
+[s S899 . 48 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `[23]ui 1 chars 46 2 ]
+"210
+[v _vendor_string vendor_string `DCS899  1 s 48 vendor_string ]
+[s S903 . 30 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `[14]ui 1 chars 28 2 ]
+"216
+[v _product_string product_string `DCS903  1 s 30 product_string ]
+[s S417 configuration_descriptor 9 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 wTotalLength 2 2 `uc 1 bNumInterfaces 1 4 `uc 1 bConfigurationValue 1 5 `uc 1 iConfiguration 1 6 `uc 1 bmAttributes 1 7 `uc 1 bMaxPower 1 8 ]
+"272
+[v _usb_application_config_descs usb_application_config_descs `[1]*.25DCS417  1 e 2 0 ]
+[s S19 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"372 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+[s S28 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S33 . 1 `S19 1 . 1 0 `S28 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES33  1 e 1 @11 ]
+[s S493 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ACTIF 1 0 :1:1 
+`uc 1 USBIF 1 0 :1:2 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"589
+[u S500 . 1 `S493 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES500  1 e 1 @18 ]
+[s S325 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ACTIE 1 0 :1:1 
+`uc 1 USBIE 1 0 :1:2 
+`uc 1 BCL1IE 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"1078
+[u S332 . 1 `S325 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES332  1 e 1 @146 ]
+[s S250 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"3635
+[u S258 . 1 `S250 1 . 1 0 ]
+[v _UCONbits UCONbits `VES258  1 e 1 @3726 ]
+[s S446 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PPBI 1 0 :1:1 
+`uc 1 DIR 1 0 :1:2 
+`uc 1 ENDP 1 0 :4:3 
+]
+"3690
+[s S451 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ENDP0 1 0 :1:3 
+`uc 1 ENDP1 1 0 :1:4 
+`uc 1 ENDP2 1 0 :1:5 
+`uc 1 ENDP3 1 0 :1:6 
+]
+[u S457 . 1 `S446 1 . 1 0 `S451 1 . 1 0 ]
+[v _USTATbits USTATbits `VES457  1 e 1 @3727 ]
+"3730
+[v _UIR UIR `VEuc  1 e 1 @3728 ]
+[s S269 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"3746
+[u S277 . 1 `S269 1 . 1 0 ]
+[v _UIRbits UIRbits `VES277  1 e 1 @3728 ]
+[s S224 . 1 `uc 1 PPB 1 0 :2:0 
+`uc 1 FSEN 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 UPUEN 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 UTEYE 1 0 :1:7 
+]
+"3805
+[s S231 . 1 `uc 1 PPB0 1 0 :1:0 
+`uc 1 PPB1 1 0 :1:1 
+]
+[u S234 . 1 `S224 1 . 1 0 `S231 1 . 1 0 ]
+[v _UCFGbits UCFGbits `VES234  1 e 1 @3729 ]
+"3840
+[v _UIE UIE `VEuc  1 e 1 @3730 ]
+[s S289 . 1 `uc 1 URSTIE 1 0 :1:0 
+`uc 1 UERRIE 1 0 :1:1 
+`uc 1 ACTVIE 1 0 :1:2 
+`uc 1 TRNIE 1 0 :1:3 
+`uc 1 IDLEIE 1 0 :1:4 
+`uc 1 STALLIE 1 0 :1:5 
+`uc 1 SOFIE 1 0 :1:6 
+]
+"3856
+[u S297 . 1 `S289 1 . 1 0 ]
+[v _UIEbits UIEbits `VES297  1 e 1 @3730 ]
+"4048
+[v _UADDR UADDR `VEuc  1 e 1 @3734 ]
+"4104
+[v _UEIE UEIE `VEuc  1 e 1 @3735 ]
+"4155
+[v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
+"39 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"85
+[v main@buf buf `*.4uc  1 a 1 5 ]
+"78
+[v main@x_direc x_direc `c  1 a 1 4 ]
+"77
+[v main@delay delay `uc  1 a 1 3 ]
+"76
+[v main@x_count x_count `uc  1 a 1 2 ]
+"106
+} 0
+"1444 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _usb_send_in_buffer usb_send_in_buffer `(v  1 e 1 0 ]
+{
+[v usb_send_in_buffer@endpoint endpoint `uc  1 a 1 wreg ]
+[s S177 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 PID 1 0 :4:2 
+`uc 1 reserved 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1452
+[s S183 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 . 1 0 :1:7 
+]
+[u S192 . 1 `S177 1 . 1 0 `S183 1 . 1 0 `uc 1 BDnSTAT 1 0 ]
+[s S196 buffer_descriptor 4 `S192 1 STAT 1 0 `uc 1 BDnCNT 1 1 `ui 1 BDnADR 2 2 ]
+[v usb_send_in_buffer@bd bd `*.4S196  1 a 1 17 ]
+"1451
+[v usb_send_in_buffer@pid pid `uc  1 a 1 15 ]
+"1444
+[v usb_send_in_buffer@endpoint endpoint `uc  1 a 1 wreg ]
+[v usb_send_in_buffer@len len `ui  1 p 2 11 ]
+"1450
+[v usb_send_in_buffer@endpoint endpoint `uc  1 a 1 16 ]
+"1484
+} 0
+"1496
+[v _usb_in_endpoint_halted usb_in_endpoint_halted `(uc  1 e 1 0 ]
+{
+[v usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 wreg ]
+[v usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 wreg ]
+"1498
+[v usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 10 ]
+"1499
+} 0
+"487
+[v _usb_init usb_init `(v  1 e 1 0 ]
+{
+[s S316 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"586
+[u S322 . 1 `S316 1 . 1 0 ]
+[v usb_init@ep ep `*.39VES322  1 a 2 31 ]
+"489
+[v usb_init@i i `uc  1 a 1 33 ]
+"664
+} 0
+"467
+[v _reset_ep0_data_stage reset_ep0_data_stage `(v  1 s 1 reset_ep0_data_stage ]
+{
+"479
+} 0
+"449
+[v _pic16_linear_addr pic16_linear_addr `(ui  1 s 2 pic16_linear_addr ]
+{
+[v pic16_linear_addr@ptr ptr `*.4v  1 a 1 wreg ]
+"451
+[v pic16_linear_addr@addr addr `ui  1 a 2 26 ]
+[v pic16_linear_addr@low low `uc  1 a 1 25 ]
+[v pic16_linear_addr@high high `uc  1 a 1 23 ]
+"449
+[v pic16_linear_addr@ptr ptr `*.4v  1 a 1 wreg ]
+"452
+[v pic16_linear_addr@ptr ptr `*.4v  1 a 1 24 ]
+"464
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 9 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 5 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 7 ]
+"53
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 1 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 11 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 5 ]
+[v memset@c c `i  1 p 2 7 ]
+[v memset@n n `ui  1 p 2 9 ]
+"22
+} 0
+"1486 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _usb_in_endpoint_busy usb_in_endpoint_busy `(uc  1 e 1 0 ]
+{
+[v usb_in_endpoint_busy@endpoint endpoint `uc  1 a 1 wreg ]
+[v usb_in_endpoint_busy@endpoint endpoint `uc  1 a 1 wreg ]
+"1492
+[v usb_in_endpoint_busy@endpoint endpoint `uc  1 a 1 6 ]
+"1494
+} 0
+"1432
+[v _usb_get_in_buffer usb_get_in_buffer `(*.4uc  1 e 1 0 ]
+{
+[v usb_get_in_buffer@endpoint endpoint `uc  1 a 1 wreg ]
+[v usb_get_in_buffer@endpoint endpoint `uc  1 a 1 wreg ]
+"1440
+[v usb_get_in_buffer@endpoint endpoint `uc  1 a 1 10 ]
+"1442
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 7 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 5 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 8 ]
+"51
+} 0
+"1427 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _usb_get_configuration usb_get_configuration `(uc  1 e 1 0 ]
+{
+"1430
+} 0
+"235 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"240
+} 0
+"1314 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _usb_service usb_service `(v  1 e 1 0 ]
+{
+[s S316 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"1334
+[u S322 . 1 `S316 1 . 1 0 ]
+[v usb_service@ep ep `*.39VES322  1 a 2 0 ]
+"1353
+[v usb_service@pid pid `uc  1 a 1 2 ]
+"1332
+[v usb_service@i i `i  1 a 2 3 ]
+"1425
+} 0
+"487
+[v i1_usb_init usb_init `(v  1 e 1 0 ]
+{
+[s S316 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+[u S322 . 1 `S316 1 . 1 0 ]
+[v i1usb_init@ep usb_init `*.39VES322  1 a 2 13 ]
+[v i1usb_init@i usb_init `uc  1 a 1 15 ]
+"664
+} 0
+"449
+[v i1_pic16_linear_addr pic16_linear_addr `(ui  1 s 2 i1_pic16_linear_addr ]
+{
+[v i1pic16_linear_addr@ptr ptr `*.4v  1 a 1 wreg ]
+[v i1pic16_linear_addr@addr pic16_linear_addr `ui  1 a 2 11 ]
+[v i1pic16_linear_addr@low pic16_linear_addr `uc  1 a 1 10 ]
+[v i1pic16_linear_addr@high pic16_linear_addr `uc  1 a 1 9 ]
+[v i1pic16_linear_addr@ptr ptr `*.4v  1 a 1 wreg ]
+"452
+[v i1pic16_linear_addr@ptr ptr `*.4v  1 a 1 8 ]
+"464
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+{
+[v i1___wmul@product __wmul `ui  1 a 2 4 ]
+[v i1___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v i1___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+[v i1_memset memset `(*.39v  1 e 1 0 ]
+{
+[v i1memset@p memset `*.39uc  1 a 2 6 ]
+[v i1memset@p1 p1 `*.39v  1 p 2 0 ]
+[v i1memset@c c `i  1 p 2 2 ]
+[v i1memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"666 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _reset_bd0_out reset_bd0_out `(v  1 s 1 reset_bd0_out ]
+{
+"676
+} 0
+"1117
+[v _handle_ep0_setup handle_ep0_setup `T(v  1 s 1 handle_ep0_setup ]
+{
+[s S80 . 1 `uc 1 destination 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+"1119
+[u S84 . 1 `S80 1 . 1 0 `uc 1 bmRequestType 1 0 ]
+[s S87 setup_packet 8 `S84 1 REQUEST 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v handle_ep0_setup@setup setup `*.4S87  1 a 1 56 ]
+"1130
+[v handle_ep0_setup@res res `c  1 a 1 55 ]
+"1205
+} 0
+"825
+[v _handle_standard_control_request handle_standard_control_request `T(c  1 s 1 handle_standard_control_request ]
+{
+"1042
+[v handle_standard_control_request@ep_num_692 ep_num `uc  1 a 1 41 ]
+"1043
+[v handle_standard_control_request@ep_dir ep_dir `uc  1 a 1 36 ]
+"970
+[v handle_standard_control_request@ret_685 ret `[2]uc  1 a 2 18 ]
+"969
+[v handle_standard_control_request@flags flags `uc  1 a 1 34 ]
+"883
+[v handle_standard_control_request@desc_670 desc `*.25DCv  1 a 2 37 ]
+"884
+[v handle_standard_control_request@len len `i  1 a 2 28 ]
+"967
+[v handle_standard_control_request@ep_num ep_num `uc  1 a 1 33 ]
+"957
+[v handle_standard_control_request@ret ret `ui  1 a 2 16 ]
+"902
+[v handle_standard_control_request@len_672 len `i  1 a 2 30 ]
+"903
+[v handle_standard_control_request@desc_673 desc `*.1DCv  1 a 1 25 ]
+[s S417 configuration_descriptor 9 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 wTotalLength 2 2 `uc 1 bNumInterfaces 1 4 `uc 1 bConfigurationValue 1 5 `uc 1 iConfiguration 1 6 `uc 1 bmAttributes 1 7 `uc 1 bMaxPower 1 8 ]
+"851
+[v handle_standard_control_request@desc desc `*.25DCS417  1 a 2 26 ]
+"1034
+[v handle_standard_control_request@stall stall `uc  1 a 1 24 ]
+"1009
+[v handle_standard_control_request@ret_689 ret `c  1 a 1 35 ]
+"989
+[v handle_standard_control_request@res_687 res `c  1 a 1 20 ]
+"931
+[v handle_standard_control_request@req req `uc  1 a 1 32 ]
+"842
+[v handle_standard_control_request@descriptor_index descriptor_index `uc  1 a 1 40 ]
+"841
+[v handle_standard_control_request@descriptor descriptor `uc  1 a 1 39 ]
+[s S80 . 1 `uc 1 destination 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+"827
+[u S84 . 1 `S80 1 . 1 0 `uc 1 bmRequestType 1 0 ]
+[s S87 setup_packet 8 `S84 1 REQUEST 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v handle_standard_control_request@setup setup `*.4S87  1 a 1 42 ]
+"828
+[v handle_standard_control_request@res res `c  1 a 1 23 ]
+"1115
+} 0
+"238 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_descriptors.c
+[v _usb_application_get_string usb_application_get_string `(i  1 e 2 0 ]
+{
+[v usb_application_get_string@string_number string_number `uc  1 a 1 wreg ]
+[v usb_application_get_string@string_number string_number `uc  1 a 1 wreg ]
+[v usb_application_get_string@ptr ptr `*.4*.25DCv  1 p 1 0 ]
+"240
+[v usb_application_get_string@string_number string_number `uc  1 a 1 3 ]
+"259
+} 0
+"716 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _stall_ep_out stall_ep_out `(v  1 s 1 stall_ep_out ]
+{
+[v stall_ep_out@ep ep `uc  1 a 1 wreg ]
+[v stall_ep_out@ep ep `uc  1 a 1 wreg ]
+[v stall_ep_out@ep ep `uc  1 a 1 2 ]
+"725
+} 0
+"705
+[v _stall_ep_in stall_ep_in `(v  1 s 1 stall_ep_in ]
+{
+[v stall_ep_in@ep ep `uc  1 a 1 wreg ]
+[v stall_ep_in@ep ep `uc  1 a 1 wreg ]
+[v stall_ep_in@ep ep `uc  1 a 1 7 ]
+"714
+} 0
+"157 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _app_unknown_get_descriptor_callback app_unknown_get_descriptor_callback `(i  1 e 2 0 ]
+{
+[s S80 . 1 `uc 1 destination 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S84 . 1 `S80 1 . 1 0 `uc 1 bmRequestType 1 0 ]
+[s S87 setup_packet 8 `S84 1 REQUEST 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v app_unknown_get_descriptor_callback@pkt pkt `*.4DCS87  1 a 1 wreg ]
+[v app_unknown_get_descriptor_callback@pkt pkt `*.4DCS87  1 a 1 wreg ]
+[v app_unknown_get_descriptor_callback@descriptor descriptor `*.4*.1DCv  1 p 1 0 ]
+"160
+} 0
+"124
+[v _app_set_interface_callback app_set_interface_callback `(c  1 e 1 0 ]
+{
+[v app_set_interface_callback@alt_setting alt_setting `uc  1 p 1 0 ]
+"127
+} 0
+"109
+[v _app_set_configuration_callback app_set_configuration_callback `(v  1 e 1 0 ]
+{
+"112
+} 0
+"129
+[v _app_get_interface_callback app_get_interface_callback `(c  1 e 1 0 ]
+{
+"132
+} 0
+"114
+[v _app_get_device_status_callback app_get_device_status_callback `(ui  1 e 2 0 ]
+{
+"117
+} 0
+"119
+[v _app_endpoint_halt_callback app_endpoint_halt_callback `(v  1 e 1 0 ]
+{
+[v app_endpoint_halt_callback@halted halted `uc  1 p 1 0 ]
+"122
+} 0
+"691 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _clear_ep0_stall clear_ep0_stall `(v  1 s 1 clear_ep0_stall ]
+{
+"702
+} 0
+"144 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _app_unknown_setup_request_callback app_unknown_setup_request_callback `(c  1 e 1 0 ]
+{
+[s S80 . 1 `uc 1 destination 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S84 . 1 `S80 1 . 1 0 `uc 1 bmRequestType 1 0 ]
+[s S87 setup_packet 8 `S84 1 REQUEST 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v app_unknown_setup_request_callback@setup setup `*.4DCS87  1 a 1 wreg ]
+[v app_unknown_setup_request_callback@setup setup `*.4DCS87  1 a 1 wreg ]
+"154
+"144
+[v app_unknown_setup_request_callback@setup setup `*.4DCS87  1 a 1 13 ]
+"155
+} 0
+"50 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_hid.c
+[v _process_hid_setup_request process_hid_setup_request `(uc  1 e 1 0 ]
+{
+[s S80 . 1 `uc 1 destination 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S84 . 1 `S80 1 . 1 0 `uc 1 bmRequestType 1 0 ]
+[s S87 setup_packet 8 `S84 1 REQUEST 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+[v process_hid_setup_request@setup setup `*.4DCS87  1 a 1 wreg ]
+"169
+[v process_hid_setup_request@res_1090 res `c  1 a 1 35 ]
+"157
+[v process_hid_setup_request@res_1088 res `c  1 a 1 43 ]
+"147
+[v process_hid_setup_request@res_1086 res `uc  1 a 1 34 ]
+"146
+[v process_hid_setup_request@report_id_1085 report_id `uc  1 a 1 33 ]
+"145
+[v process_hid_setup_request@duration duration `uc  1 a 1 32 ]
+"135
+[v process_hid_setup_request@res_1082 res `uc  1 a 1 31 ]
+"134
+[v process_hid_setup_request@report_id_1081 report_id `uc  1 a 1 30 ]
+"125
+[v process_hid_setup_request@res res `c  1 a 1 29 ]
+"124
+[v process_hid_setup_request@report_id_1078 report_id `uc  1 a 1 28 ]
+"123
+[v process_hid_setup_request@report_type_1077 report_type `uc  1 a 1 27 ]
+"108
+[v process_hid_setup_request@report_id report_id `uc  1 a 1 26 ]
+"107
+[v process_hid_setup_request@report_type report_type `uc  1 a 1 25 ]
+"77
+[v process_hid_setup_request@len len `i  1 a 2 50 ]
+"76
+[v process_hid_setup_request@desc desc `*.25DCv  1 a 2 48 ]
+"74
+[v process_hid_setup_request@descriptor descriptor `uc  1 a 1 42 ]
+"102
+[v process_hid_setup_request@len_1065 len `i  1 a 2 46 ]
+"103
+[v process_hid_setup_request@callback callback `*.37(v  1 a 2 40 ]
+"54
+[v process_hid_setup_request@interface interface `uc  1 a 1 52 ]
+"104
+[v process_hid_setup_request@context context `*.1v  1 a 1 45 ]
+"101
+[v process_hid_setup_request@desc_1064 desc `*.5DCv  1 a 1 44 ]
+"50
+[v process_hid_setup_request@setup setup `*.4DCS87  1 a 1 wreg ]
+"54
+"50
+[v process_hid_setup_request@setup setup `*.4DCS87  1 a 1 53 ]
+"176
+} 0
+"1579 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _usb_send_data_stage usb_send_data_stage `(v  1 e 1 0 ]
+{
+[v usb_send_data_stage@buffer buffer `*.26uc  1 p 2 13 ]
+[v usb_send_data_stage@len len `ui  1 p 2 15 ]
+"1580
+[v usb_send_data_stage@callback callback `*.37(v  1 p 2 17 ]
+[v usb_send_data_stage@context context `*.1v  1 p 1 19 ]
+"1587
+} 0
+"811
+[v _start_control_return start_control_return `(v  1 s 1 start_control_return ]
+{
+"813
+[v start_control_return@bytes_to_send bytes_to_send `uc  1 a 1 12 ]
+"811
+[v start_control_return@ptr ptr `*.26DCv  1 p 2 0 ]
+[v start_control_return@len len `ui  1 p 2 2 ]
+[v start_control_return@bytes_asked_for bytes_asked_for `ui  1 p 2 4 ]
+"823
+} 0
+"290 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb_descriptors.c
+[v _usb_application_get_hid_report_descriptor usb_application_get_hid_report_descriptor `(i  1 e 2 0 ]
+{
+[v usb_application_get_hid_report_descriptor@ptr ptr `*.4*.25DCv  1 p 1 0 ]
+"294
+} 0
+"280
+[v _usb_application_get_hid_descriptor usb_application_get_hid_descriptor `(i  1 e 2 0 ]
+{
+"284
+[v usb_application_get_hid_descriptor@p p `*.25DCv  1 a 2 3 ]
+"280
+[v usb_application_get_hid_descriptor@ptr ptr `*.4*.25DCv  1 p 1 0 ]
+"287
+} 0
+"202 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _app_set_report_callback app_set_report_callback `(c  1 e 1 0 ]
+{
+[v app_set_report_callback@report_type report_type `uc  1 p 1 0 ]
+"203
+[v app_set_report_callback@report_id report_id `uc  1 p 1 1 ]
+"210
+} 0
+"228
+[v _app_set_protocol_callback app_set_protocol_callback `(c  1 e 1 0 ]
+{
+[v app_set_protocol_callback@report_id report_id `uc  1 p 1 0 ]
+"231
+} 0
+"217
+[v _app_set_idle_callback app_set_idle_callback `(c  1 e 1 0 ]
+{
+[v app_set_idle_callback@report_id report_id `uc  1 p 1 0 ]
+"218
+[v app_set_idle_callback@idle_rate idle_rate `uc  1 p 1 1 ]
+"221
+} 0
+"183
+[v _app_get_report_callback app_get_report_callback `(i  1 e 2 0 ]
+{
+[v app_get_report_callback@report_type report_type `uc  1 p 1 0 ]
+"184
+[v app_get_report_callback@report_id report_id `uc  1 p 1 1 ]
+[v app_get_report_callback@report report `*.4*.5DCv  1 p 1 2 ]
+"185
+[v app_get_report_callback@callback callback `*.4*.1(v  1 p 1 3 ]
+"186
+[v app_get_report_callback@context context `*.4*.1v  1 p 1 4 ]
+"200
+} 0
+"223
+[v _app_get_protocol_callback app_get_protocol_callback `(c  1 e 1 0 ]
+{
+"226
+} 0
+"212
+[v _app_get_idle_callback app_get_idle_callback `(uc  1 e 1 0 ]
+{
+[v app_get_idle_callback@report_id report_id `uc  1 p 1 0 ]
+"215
+} 0
+"1207 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/usb.c
+[v _handle_ep0_out handle_ep0_out `T(v  1 s 1 handle_ep0_out ]
+{
+"1233
+[v handle_ep0_out@bytes_to_copy bytes_to_copy `uc  1 a 1 7 ]
+"1212
+[v handle_ep0_out@pkt_len pkt_len `uc  1 a 1 6 ]
+"1267
+} 0
+"678
+[v _stall_ep0 stall_ep0 `(v  1 s 1 stall_ep0 ]
+{
+"688
+} 0
+"727
+[v _send_zero_length_packet_ep0 send_zero_length_packet_ep0 `(v  1 s 1 send_zero_length_packet_ep0 ]
+{
+"738
+} 0
+"1269
+[v _handle_ep0_in handle_ep0_in `T(v  1 s 1 handle_ep0_in ]
+{
+"1278
+[v handle_ep0_in@bytes_to_send bytes_to_send `uc  1 a 1 2 ]
+"1310
+} 0
+"467
+[v i1_reset_ep0_data_stage reset_ep0_data_stage `(v  1 s 1 i1_reset_ep0_data_stage ]
+{
+"479
+} 0
+"740
+[v _usb_send_in_buffer_0 usb_send_in_buffer_0 `(v  1 s 1 usb_send_in_buffer_0 ]
+{
+"760
+[v usb_send_in_buffer_0@pid pid `uc  1 a 1 9 ]
+"740
+[v usb_send_in_buffer_0@len len `ui  1 p 2 6 ]
+"774
+} 0
+"1496
+[v i1_usb_in_endpoint_halted usb_in_endpoint_halted `(uc  1 e 1 0 ]
+{
+[v i1usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 wreg ]
+[v i1usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 wreg ]
+"1498
+[v i1usb_in_endpoint_halted@endpoint endpoint `uc  1 a 1 5 ]
+"1499
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@product __bmul `uc  1 a 1 3 ]
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v i1___bmul@multiplier multiplier `uc  1 a 1 2 ]
+"51
+} 0
+"176 E:\GitHub\PIC16F1454_USB_Bootloader\example-apps\hid_mouse/main.c
+[v _get_report_callback get_report_callback `(v  1 s 1 get_report_callback ]
+{
+[v get_report_callback@transfer_ok transfer_ok `uc  1 p 1 0 ]
+[v get_report_callback@context context `*.1v  1 p 1 1 ]
+"181
+} 0
+"167
+[v _app_usb_reset_callback app_usb_reset_callback `(v  1 e 1 0 ]
+{
+"170
+} 0
+"162
+[v _app_start_of_frame_callback app_start_of_frame_callback `(v  1 e 1 0 ]
+{
+"165
+} 0
+"134
+[v _app_out_transaction_callback app_out_transaction_callback `(v  1 e 1 0 ]
+{
+"137
+} 0
+"139
+[v _app_in_transaction_complete_callback app_in_transaction_complete_callback `(v  1 e 1 0 ]
+{
+"142
+} 0

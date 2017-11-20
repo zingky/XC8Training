@@ -93,8 +93,8 @@ typedef struct
 
 typedef enum
 {
-    channel_AN0 =  0x0,
-    channel_AN1 =  0x1,
+    VOLTAGE =  0x0,
+    TEMP =  0x1,
     channel_Temp =  0x1D,
     channel_DAC =  0x1E,
     channel_FVR =  0x1F

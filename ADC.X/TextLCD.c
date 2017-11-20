@@ -46,6 +46,7 @@ void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_ty
 
     if(length_or_type==0) while(*data!=0) TextLCD_PutChar(*data++);
     else for(address=0; address<length_or_type; address++) TextLCD_PutChar(*data++);
+    while(16>idx++) TextLCD_PutChar(' ');
 }
 
 void TextLCD_Clear()

@@ -1,0 +1,1369 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\dungl\AppData\Local\Temp\s117c.obj
+reset_vec CODE 0 200 200 3 2
+end_init CODE 0 210 210 2 2
+$dist/default/production\customHID.X.production.obj
+cinit CODE 0 212 212 2E 2
+text1 CODE 0 C48 C48 62 2
+text2 CODE 0 973 973 11 2
+text3 CODE 0 9A8 9A8 13 2
+text4 CODE 0 51F 51F 171 2
+text5 CODE 0 91E 91E A 2
+text6 CODE 0 BA1 BA1 4B 2
+text7 CODE 0 A4F A4F 1C 2
+text8 CODE 0 9E7 9E7 19 2
+text9 CODE 0 996 996 12 2
+text10 CODE 0 A1A A1A 1A 2
+text11 CODE 0 9BB 9BB 14 2
+text12 CODE 0 8E1 8E1 3 2
+text13 CODE 0 D8E D8E 82 2
+text14 CODE 0 984 984 12 2
+text16 CODE 0 F1D F1D E3 2
+text17 CODE 0 690 690 164 2
+text18 CODE 0 B56 B56 4B 2
+text19 CODE 0 A34 A34 1B 2
+text20 CODE 0 9CF 9CF 18 2
+text21 CODE 0 902 902 8 2
+text22 CODE 0 B15 B15 41 2
+text23 CODE 0 240 240 2DF 2
+text24 CODE 0 AE1 AE1 34 2
+text25 CODE 0 A6B A6B 1E 2
+text26 CODE 0 AB2 AB2 2F 2
+text27 CODE 0 8E4 8E4 7 2
+text28 CODE 0 8FA 8FA 8 2
+text29 CODE 0 E10 E10 83 2
+text30 CODE 0 A00 A00 1A 2
+text31 CODE 0 E93 E93 8A 2
+text32 CODE 0 928 928 C 2
+text33 CODE 0 952 952 10 2
+text34 CODE 0 BEC BEC 5C 2
+text35 CODE 0 914 914 A 2
+text36 CODE 0 8F2 8F2 8 2
+text37 CODE 0 D18 D18 76 2
+text38 CODE 0 90A 90A A 2
+text39 CODE 0 A89 A89 29 2
+text40 CODE 0 942 942 10 2
+text41 CODE 0 962 962 11 2
+maintext CODE 0 CAA CAA 6E 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 30 30 35 1
+cstackBANK1 BANK1 1 A0 A0 23 1
+inittext CODE 0 7F4 7F4 C 2
+stringtext1 STRCODE 0 1000 1000 29 2
+stringtext2 STRCODE 0 1029 1029 1C 2
+stringtext3 STRCODE 0 1045 1045 12 2
+stringtext4 STRCODE 0 1057 1057 E 2
+stringtext5 STRCODE 0 1065 1065 A 2
+stringtext6 STRCODE 0 106F 106F 4 2
+intentry CODE 0 204 204 C 2
+bssBANK0 BANK0 1 65 65 A 1
+bssBANK1 BANK1 1 CA CA 4 1
+idataBANK1 CODE 0 8EB 8EB 7 2
+idataBANK3 CODE 0 934 934 E 2
+dataBANK1 BANK1 1 C3 C3 7 1
+dataBANK3 BANK3 1 1C0 1C0 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 6F-6F 1
+RAM CE-CF 1
+RAM 1CE-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 6F-6F 1
+BANK1 CE-CF 1
+BANK3 1CE-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 203-203 2
+CONST 800-8E0 2
+CONST 1073-1F7E 2
+CONST 1F80-1FFF 2
+ENTRY 203-203 2
+ENTRY 800-8E0 2
+ENTRY 1073-1F7E 2
+ENTRY 1F80-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 211E-23EF 1
+CODE 203-203 2
+CODE 800-8E0 2
+CODE 1073-1F7E 2
+CODE 1F80-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+CONFIG 8007-8008 2
+STRCODE 203-203 2
+STRCODE 800-8E0 2
+STRCODE 1073-1F7E 2
+STRCODE 1F80-1FFF 2
+STRING 203-203 2
+STRING 800-8E0 2
+STRING 1073-1F7E 2
+STRING 1F80-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\customHID.X.production.obj
+212 cinit CODE >862:C:\Users\dungl\AppData\Local\Temp\s117c.
+212 cinit CODE >865:C:\Users\dungl\AppData\Local\Temp\s117c.
+212 cinit CODE >948:C:\Users\dungl\AppData\Local\Temp\s117c.
+213 cinit CODE >949:C:\Users\dungl\AppData\Local\Temp\s117c.
+214 cinit CODE >950:C:\Users\dungl\AppData\Local\Temp\s117c.
+215 cinit CODE >951:C:\Users\dungl\AppData\Local\Temp\s117c.
+216 cinit CODE >952:C:\Users\dungl\AppData\Local\Temp\s117c.
+217 cinit CODE >953:C:\Users\dungl\AppData\Local\Temp\s117c.
+218 cinit CODE >954:C:\Users\dungl\AppData\Local\Temp\s117c.
+219 cinit CODE >955:C:\Users\dungl\AppData\Local\Temp\s117c.
+21A cinit CODE >956:C:\Users\dungl\AppData\Local\Temp\s117c.
+21B cinit CODE >957:C:\Users\dungl\AppData\Local\Temp\s117c.
+21C cinit CODE >958:C:\Users\dungl\AppData\Local\Temp\s117c.
+21D cinit CODE >959:C:\Users\dungl\AppData\Local\Temp\s117c.
+220 cinit CODE >963:C:\Users\dungl\AppData\Local\Temp\s117c.
+221 cinit CODE >964:C:\Users\dungl\AppData\Local\Temp\s117c.
+222 cinit CODE >965:C:\Users\dungl\AppData\Local\Temp\s117c.
+223 cinit CODE >966:C:\Users\dungl\AppData\Local\Temp\s117c.
+224 cinit CODE >967:C:\Users\dungl\AppData\Local\Temp\s117c.
+225 cinit CODE >968:C:\Users\dungl\AppData\Local\Temp\s117c.
+226 cinit CODE >969:C:\Users\dungl\AppData\Local\Temp\s117c.
+227 cinit CODE >970:C:\Users\dungl\AppData\Local\Temp\s117c.
+228 cinit CODE >971:C:\Users\dungl\AppData\Local\Temp\s117c.
+229 cinit CODE >972:C:\Users\dungl\AppData\Local\Temp\s117c.
+22A cinit CODE >973:C:\Users\dungl\AppData\Local\Temp\s117c.
+22B cinit CODE >974:C:\Users\dungl\AppData\Local\Temp\s117c.
+22D cinit CODE >979:C:\Users\dungl\AppData\Local\Temp\s117c.
+22E cinit CODE >980:C:\Users\dungl\AppData\Local\Temp\s117c.
+22F cinit CODE >981:C:\Users\dungl\AppData\Local\Temp\s117c.
+230 cinit CODE >982:C:\Users\dungl\AppData\Local\Temp\s117c.
+231 cinit CODE >983:C:\Users\dungl\AppData\Local\Temp\s117c.
+232 cinit CODE >984:C:\Users\dungl\AppData\Local\Temp\s117c.
+233 cinit CODE >985:C:\Users\dungl\AppData\Local\Temp\s117c.
+234 cinit CODE >986:C:\Users\dungl\AppData\Local\Temp\s117c.
+235 cinit CODE >987:C:\Users\dungl\AppData\Local\Temp\s117c.
+236 cinit CODE >988:C:\Users\dungl\AppData\Local\Temp\s117c.
+237 cinit CODE >992:C:\Users\dungl\AppData\Local\Temp\s117c.
+238 cinit CODE >993:C:\Users\dungl\AppData\Local\Temp\s117c.
+239 cinit CODE >994:C:\Users\dungl\AppData\Local\Temp\s117c.
+23A cinit CODE >995:C:\Users\dungl\AppData\Local\Temp\s117c.
+23B cinit CODE >996:C:\Users\dungl\AppData\Local\Temp\s117c.
+23C cinit CODE >1002:C:\Users\dungl\AppData\Local\Temp\s117c.
+23C cinit CODE >1004:C:\Users\dungl\AppData\Local\Temp\s117c.
+23D cinit CODE >1005:C:\Users\dungl\AppData\Local\Temp\s117c.
+23E cinit CODE >1006:C:\Users\dungl\AppData\Local\Temp\s117c.
+204 intentry CODE >132:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+204 intentry CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+209 intentry CODE >135:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+20B intentry CODE >137:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+962 text41 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+963 text41 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+964 text41 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+966 text41 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+96A text41 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+96C text41 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+96E text41 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+971 text41 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+942 text40 CODE >1496:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+943 text40 CODE >1498:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A89 text39 CODE >740:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A89 text39 CODE >742:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A90 text39 CODE >761:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A99 text39 CODE >762:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A9B text39 CODE >764:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A9E text39 CODE >765:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+AA4 text39 CODE >768:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+AAC text39 CODE >771:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+90A text38 CODE >467:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+90A text38 CODE >469:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+90D text38 CODE >470:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+90F text38 CODE >471:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+911 text38 CODE >472:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+913 text38 CODE >479:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D18 text37 CODE >1269:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D18 text37 CODE >1271:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D1C text37 CODE >1272:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D1F text37 CODE >1273:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D21 text37 CODE >1276:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D25 text37 CODE >1278:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D39 text37 CODE >1280:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D4D text37 CODE >1281:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D55 text37 CODE >1282:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D5D text37 CODE >1289:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D6A text37 CODE >1290:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D6D text37 CODE >1292:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D77 text37 CODE >1293:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D78 text37 CODE >1294:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D7C text37 CODE >1295:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D82 text37 CODE >1296:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D84 text37 CODE >1297:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D86 text37 CODE >1298:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D87 text37 CODE >1300:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D8B text37 CODE >1307:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D8D text37 CODE >1309:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8F2 text36 CODE >727:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8F2 text36 CODE >735:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8F4 text36 CODE >736:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+914 text35 CODE >678:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+914 text35 CODE >686:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BEC text34 CODE >1207:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BEC text34 CODE >1212:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BF1 text34 CODE >1214:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BF4 text34 CODE >1222:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BF6 text34 CODE >1223:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BF7 text34 CODE >1232:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BFB text34 CODE >1233:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C16 text34 CODE >1240:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C27 text34 CODE >1242:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C2C text34 CODE >1243:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C33 text34 CODE >1248:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C3B text34 CODE >1253:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C3F text34 CODE >1255:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C42 text34 CODE >1258:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C44 text34 CODE >1259:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C45 text34 CODE >1262:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C47 text34 CODE >1265:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+952 text33 CODE >207:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+952 text33 CODE >211:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+956 text33 CODE >212:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+95D text33 CODE >213:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+928 text32 CODE >217:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+928 text32 CODE >219:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+92F text32 CODE >220:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+E93 text31 CODE >811:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+E93 text31 CODE >813:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+EA8 text31 CODE >814:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+EC3 text31 CODE >815:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+ED2 text31 CODE >816:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+EE4 text31 CODE >817:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+EF1 text31 CODE >818:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F10 text31 CODE >821:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F12 text31 CODE >822:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F1C text31 CODE >823:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A00 text30 CODE >1579:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A00 text30 CODE >1584:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A05 text30 CODE >1585:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A0A text30 CODE >1586:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A19 text30 CODE >1587:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+E10 text29 CODE >50:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E10 text29 CODE >54:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E1A text29 CODE >73:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E2B text29 CODE >74:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E38 text29 CODE >77:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E3C text29 CODE >79:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E40 text29 CODE >80:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E4D text29 CODE >82:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E51 text29 CODE >83:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E5E text29 CODE >91:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E60 text29 CODE >92:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E62 text29 CODE >94:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E8F text29 CODE >95:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+E91 text29 CODE >175:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_hid.c
+8FA text28 CODE >119:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+8FA text28 CODE >129:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+8E4 text27 CODE >691:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8E4 text27 CODE >700:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+AB2 text26 CODE >705:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+AB3 text26 CODE >710:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A6B text25 CODE >716:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A6C text25 CODE >721:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+AE1 text24 CODE >180:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AE2 text24 CODE >182:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AE5 text24 CODE >183:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AEC text24 CODE >184:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AF1 text24 CODE >186:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AF4 text24 CODE >187:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+AFB text24 CODE >188:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+B00 text24 CODE >190:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+B04 text24 CODE >191:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+B0B text24 CODE >192:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+B10 text24 CODE >195:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb_descriptors.c
+240 text23 CODE >825:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+240 text23 CODE >828:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+242 text23 CODE >836:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+24A text23 CODE >840:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+25B text23 CODE >841:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+268 text23 CODE >842:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+271 text23 CODE >844:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+274 text23 CODE >848:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+28F text23 CODE >849:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+290 text23 CODE >850:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+295 text23 CODE >852:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+298 text23 CODE >853:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+29C text23 CODE >855:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2A5 text23 CODE >856:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2C4 text23 CODE >858:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2C5 text23 CODE >859:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2CA text23 CODE >886:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2D7 text23 CODE >887:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2D9 text23 CODE >888:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2DC text23 CODE >890:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2DD text23 CODE >892:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2F2 text23 CODE >899:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2F3 text23 CODE >913:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2F6 text23 CODE >918:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+2F7 text23 CODE >919:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+301 text23 CODE >922:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+303 text23 CODE >923:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+30C text23 CODE >925:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+30F text23 CODE >926:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+310 text23 CODE >927:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+31A text23 CODE >931:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+323 text23 CODE >935:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+326 text23 CODE >936:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+32B text23 CODE >940:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+32C text23 CODE >941:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+335 text23 CODE >946:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+349 text23 CODE >947:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+34A text23 CODE >948:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+353 text23 CODE >954:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+35C text23 CODE >961:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+35E text23 CODE >963:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+372 text23 CODE >964:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+373 text23 CODE >965:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+37D text23 CODE >967:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+387 text23 CODE >968:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+38B text23 CODE >969:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+39D text23 CODE >973:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3BD text23 CODE >974:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3BE text23 CODE >975:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3D2 text23 CODE >976:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3D3 text23 CODE >979:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3D6 text23 CODE >981:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3D7 text23 CODE >983:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3DA text23 CODE >988:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3DB text23 CODE >989:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3E5 text23 CODE >1005:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3E8 text23 CODE >1007:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3E9 text23 CODE >1008:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3F3 text23 CODE >1029:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+3F4 text23 CODE >1030:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+408 text23 CODE >1032:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+409 text23 CODE >1033:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+41B text23 CODE >1034:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+41D text23 CODE >1040:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+426 text23 CODE >1041:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+42F text23 CODE >1042:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+439 text23 CODE >1043:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+443 text23 CODE >1044:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+447 text23 CODE >1045:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+450 text23 CODE >1048:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+453 text23 CODE >1049:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+461 text23 CODE >1050:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+466 text23 CODE >1051:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+467 text23 CODE >1053:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+476 text23 CODE >1054:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+47B text23 CODE >1056:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+47C text23 CODE >1060:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+480 text23 CODE >1065:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+4AB text23 CODE >1068:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+4BD text23 CODE >1070:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+4BF text23 CODE >1082:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+4EC text23 CODE >1085:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+4FA text23 CODE >1087:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+50D text23 CODE >1093:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+50F text23 CODE >1098:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+512 text23 CODE >1099:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+515 text23 CODE >1100:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+516 text23 CODE >1102:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+519 text23 CODE >1103:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+51A text23 CODE >1104:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+51A text23 CODE >1105:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+51C text23 CODE >1114:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B15 text22 CODE >1117:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B15 text22 CODE >1126:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B1D text22 CODE >1129:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B25 text22 CODE >1136:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B28 text22 CODE >1138:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B2D text22 CODE >1146:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B30 text22 CODE >1149:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B3B text22 CODE >1150:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B42 text22 CODE >1151:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B44 text22 CODE >1186:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B4F text22 CODE >1187:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B51 text22 CODE >1188:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B53 text22 CODE >1199:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B53 text22 CODE >1204:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B55 text22 CODE >1205:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+902 text21 CODE >666:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+902 text21 CODE >674:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9CF text20 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9CF text20 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9D3 text20 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9DC text20 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9E6 text20 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+A34 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A34 text19 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A36 text19 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A38 text19 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A3C text19 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A41 text19 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A46 text19 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A4A text19 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+B56 text18 CODE >449:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B56 text18 CODE >452:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B5A text18 CODE >455:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B61 text18 CODE >456:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B66 text18 CODE >458:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B6B text18 CODE >459:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+B6F text18 CODE >463:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+690 text17 CODE >487:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+690 text17 CODE >493:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+693 text17 CODE >499:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+694 text17 CODE >500:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+695 text17 CODE >502:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+696 text17 CODE >510:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+697 text17 CODE >518:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+698 text17 CODE >521:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+699 text17 CODE >522:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69A text17 CODE >523:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69B text17 CODE >524:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69C text17 CODE >526:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69D text17 CODE >529:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69E text17 CODE >530:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+69F text17 CODE >531:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6A0 text17 CODE >576:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6AE text17 CODE >579:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6B0 text17 CODE >580:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6B1 text17 CODE >581:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6B2 text17 CODE >582:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6B3 text17 CODE >583:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6B4 text17 CODE >585:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6BB text17 CODE >586:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6C5 text17 CODE >587:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6CA text17 CODE >588:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6CF text17 CODE >589:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6D4 text17 CODE >590:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6D9 text17 CODE >591:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6DE text17 CODE >585:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6E6 text17 CODE >595:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6E8 text17 CODE >596:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6EA text17 CODE >597:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6EB text17 CODE >598:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6ED text17 CODE >599:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+6F3 text17 CODE >603:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+705 text17 CODE >599:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+70D text17 CODE >607:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+71B text17 CODE >611:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+728 text17 CODE >612:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+72E text17 CODE >621:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+73B text17 CODE >622:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+740 text17 CODE >628:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+746 text17 CODE >631:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+76A text17 CODE >632:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+797 text17 CODE >640:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+7BC text17 CODE >641:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+7E7 text17 CODE >628:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+7EF text17 CODE >657:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+7F1 text17 CODE >660:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+7F3 text17 CODE >664:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F1D text16 CODE >1314:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F1D text16 CODE >1316:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F20 text16 CODE >1321:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F23 text16 CODE >1322:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F25 text16 CODE >1326:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F27 text16 CODE >1333:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F37 text16 CODE >1334:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F46 text16 CODE >1335:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F4B text16 CODE >1333:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F5A text16 CODE >1338:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F5C text16 CODE >1339:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F5C text16 CODE >1342:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F5E text16 CODE >1346:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F6A text16 CODE >1353:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F71 text16 CODE >1355:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F75 text16 CODE >1356:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F78 text16 CODE >1357:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F79 text16 CODE >1358:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F7E text16 CODE >1362:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F81 text16 CODE >1363:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F84 text16 CODE >1364:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F85 text16 CODE >1368:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F88 text16 CODE >1369:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F88 text16 CODE >1371:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F8B text16 CODE >1372:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F8C text16 CODE >1373:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F99 text16 CODE >1378:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F9C text16 CODE >1379:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+F9D text16 CODE >1380:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FB3 text16 CODE >1381:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FB6 text16 CODE >1384:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FCC text16 CODE >1385:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FD6 text16 CODE >1391:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FD7 text16 CODE >1395:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FED text16 CODE >1396:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FF7 text16 CODE >1408:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FF7 text16 CODE >1410:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FF9 text16 CODE >1411:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FF9 text16 CODE >1414:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FFA text16 CODE >1418:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FFB text16 CODE >1422:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+FFE text16 CODE >1423:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+984 text14 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+986 text14 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+987 text14 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+989 text14 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+98D text14 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+98F text14 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+991 text14 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+994 text14 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul8.c
+D8E text13 CODE >1528:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+D90 text13 CODE >1548:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+DA6 text13 CODE >1549:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+DA9 text13 CODE >1550:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+DD1 text13 CODE >1554:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+DFE text13 CODE >1558:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+E0F text13 CODE >1561:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8E1 text12 CODE >1427:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+8E1 text12 CODE >1429:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9BB text11 CODE >1432:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9BD text11 CODE >1440:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A1A text10 CODE >1501:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A1C text10 CODE >1513:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+A2F text10 CODE >1514:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+996 text9 CODE >1486:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+998 text9 CODE >1492:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9E7 text8 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9E7 text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9EC text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9F5 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+9FF text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+A4F text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A4F text7 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A52 text7 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A54 text7 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A58 text7 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A5D text7 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A62 text7 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+A66 text7 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+BA1 text6 CODE >449:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BA1 text6 CODE >452:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BA6 text6 CODE >455:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BAD text6 CODE >456:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BB2 text6 CODE >458:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BB6 text6 CODE >459:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+BBA text6 CODE >463:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+91E text5 CODE >467:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+91E text5 CODE >469:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+921 text5 CODE >470:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+923 text5 CODE >471:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+925 text5 CODE >472:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+927 text5 CODE >479:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+51F text4 CODE >487:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+51F text4 CODE >493:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+522 text4 CODE >499:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+523 text4 CODE >500:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+524 text4 CODE >502:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+525 text4 CODE >510:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+526 text4 CODE >518:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+527 text4 CODE >521:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+528 text4 CODE >522:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+529 text4 CODE >523:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52A text4 CODE >524:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52B text4 CODE >526:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52C text4 CODE >529:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52D text4 CODE >530:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52E text4 CODE >531:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+52F text4 CODE >576:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+53E text4 CODE >579:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+540 text4 CODE >580:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+541 text4 CODE >581:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+542 text4 CODE >582:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+543 text4 CODE >583:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+544 text4 CODE >585:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+54B text4 CODE >586:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+555 text4 CODE >587:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+55A text4 CODE >588:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+55F text4 CODE >589:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+564 text4 CODE >590:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+569 text4 CODE >591:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+56E text4 CODE >585:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+576 text4 CODE >595:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+578 text4 CODE >596:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+57A text4 CODE >597:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+57B text4 CODE >598:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+57D text4 CODE >599:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+582 text4 CODE >603:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+594 text4 CODE >599:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+59C text4 CODE >607:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5AA text4 CODE >611:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5BA text4 CODE >612:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5C2 text4 CODE >621:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5D2 text4 CODE >622:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5D9 text4 CODE >628:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+5E0 text4 CODE >631:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+605 text4 CODE >632:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+632 text4 CODE >640:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+658 text4 CODE >641:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+683 text4 CODE >628:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+68B text4 CODE >657:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+68D text4 CODE >660:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+68F text4 CODE >664:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9A8 text3 CODE >1518:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+9AA text3 CODE >1524:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+973 text2 CODE >1496:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+975 text2 CODE >1498:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C48 text1 CODE >1444:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C4A text1 CODE >1450:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C56 text1 CODE >1470:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C64 text1 CODE >1471:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C7A text1 CODE >1472:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C7E text1 CODE >1474:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C81 text1 CODE >1475:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C8A text1 CODE >1478:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+C98 text1 CODE >1481:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/usb.c
+CAA maintext CODE >38:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CAA maintext CODE >42:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CAC maintext CODE >45:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CAD maintext CODE >46:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CAE maintext CODE >49:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CB1 maintext CODE >51:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CBA maintext CODE >60:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CC0 maintext CODE >67:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CCE maintext CODE >71:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CD5 maintext CODE >75:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CDE maintext CODE >78:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CEB maintext CODE >85:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CEC maintext CODE >94:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CF0 maintext CODE >96:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CF1 maintext CODE >104:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+CFD maintext CODE >107:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+D05 maintext CODE >111:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+D06 maintext CODE >85:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+D13 maintext CODE >114:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+D17 maintext CODE >115:E:\GitHub\PIC16F1-USB-DFU-Bootloader\example-apps\customHID/main.c
+7F4 inittext CODE >931:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F4 inittext CODE >932:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F5 inittext CODE >933:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F5 inittext CODE >934:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F6 inittext CODE >935:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F7 inittext CODE >936:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F8 inittext CODE >937:C:\Users\dungl\AppData\Local\Temp\s117c.
+7F9 inittext CODE >938:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FA inittext CODE >939:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FB inittext CODE >940:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FC inittext CODE >941:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FD inittext CODE >942:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FE inittext CODE >944:C:\Users\dungl\AppData\Local\Temp\s117c.
+7FF inittext CODE >943:C:\Users\dungl\AppData\Local\Temp\s117c.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__size_of_clear_ep0_stall 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+handle_standard_control_request@desc_626 51 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+___latbits 2 0 ABS 0 - dist/default/production\customHID.X.production.obj
+usb_arm_out_endpoint@endpoint A8 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__end_of_start_control_return 1E3A 0 CODE 0 text31 dist/default/production\customHID.X.production.obj
+_handle_ep0_in$672 30 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__LdataBANK3 0 0 ABS 0 dataBANK3 -
+_usb_application_config_descs C8 0 BANK1 1 dataBANK1 dist/default/production\customHID.X.production.obj
+__Hspace_0 1073 0 ABS 0 - -
+__Hspace_1 1CE 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__HidataBANK3 0 0 ABS 0 idataBANK3 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_reset_bd0_out 1204 0 CODE 0 text21 dist/default/production\customHID.X.production.obj
+__end_of_process_hid_setup_request 1D26 0 CODE 0 text29 dist/default/production\customHID.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+i1memset@p1 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_UEIE E97 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_UEP0 E98 0 ABS 0 - dist/default/production\customHID.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s117c.obj
+_addr 6C 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+_main 1954 0 CODE 0 maintext dist/default/production\customHID.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\customHID.X.production.obj
+start 420 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\s117c.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_handle_ep0_out$668 73 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_usb_service 1E3A 0 CODE 0 text16 dist/default/production\customHID.X.production.obj
+?___wmul A0 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+process_hid_setup_request@len 4D 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+usb_application_get_string@string_number 73 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1_usb_init D20 0 CODE 0 text17 dist/default/production\customHID.X.production.obj
+__size_of_stall_ep_in 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+__LidataBANK3 0 0 ABS 0 idataBANK3 -
+__end_of_usb_in_endpoint_halted 1308 0 CODE 0 text2 dist/default/production\customHID.X.production.obj
+__size_of_usb_send_data_stage 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+handle_standard_control_request@descriptor_index 54 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+i1___bmul@multiplier 72 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_ep0_data_stage_in_buffer CA 0 BANK1 1 bssBANK1 dist/default/production\customHID.X.production.obj
+pic16_linear_addr@addr B4 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+pic16_linear_addr@high B2 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+i1usb_init@i 3F 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__end_of_usb_out_endpoint_has_data 1376 0 CODE 0 text3 dist/default/production\customHID.X.production.obj
+?_usb_get_in_buffer A4 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\s117c.obj
+__end_of_usb_send_in_buffer 1954 0 CODE 0 text1 dist/default/production\customHID.X.production.obj
+?_pic16_linear_addr A6 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+___bmul@multiplicand A0 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_usb_send_in_buffer_0 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\customHID.X.production.obj
+main@RxDataBuffer C1 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+__end_of_usb_get_out_buffer 1468 0 CODE 0 text10 dist/default/production\customHID.X.production.obj
+i1memset@c 72 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1memset@n 74 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1memset@p 76 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+stall_ep_in@ep 77 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+usb_application_get_string@ptr 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__end_of_handle_standard_control_request A3E 0 CODE 0 text23 dist/default/production\customHID.X.production.obj
+_stall_ep_out 14D6 0 CODE 0 text25 dist/default/production\customHID.X.production.obj
+usb_service@i 61 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+usb_service@pid 63 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+handle_standard_control_request@desc 4A 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_ep0_in@bytes_to_send 32 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_vendor_string 20CA 0 STRCODE 0 stringtext5 dist/default/production\customHID.X.production.obj
+___wmul@multiplicand A2 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__end_of_usb_send_in_buffer_0 1564 0 CODE 0 text39 dist/default/production\customHID.X.production.obj
+_ep_buffers 2080 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_handle_ep0_out 17D8 0 CODE 0 text34 dist/default/production\customHID.X.production.obj
+__size_of_process_hid_setup_request 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_usb_send_data_stage 1400 0 CODE 0 text30 dist/default/production\customHID.X.production.obj
+stall_ep_out@ep 72 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+usb_in_endpoint_halted@endpoint A5 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__end_of_stall_ep0 123C 0 CODE 0 text35 dist/default/production\customHID.X.production.obj
+__end_of___bmul 132C 0 CODE 0 text14 dist/default/production\customHID.X.production.obj
+__end_of___wmul 14D6 0 CODE 0 text7 dist/default/production\customHID.X.production.obj
+_usb_send_in_buffer 1890 0 CODE 0 text1 dist/default/production\customHID.X.production.obj
+__size_of_stall_ep0 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_ofi1_usb_init FE8 0 CODE 0 text17 dist/default/production\customHID.X.production.obj
+usb_send_in_buffer@endpoint AB 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+app_unknown_setup_request_callback@setup 51 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_usb_get_out_buffer 1434 0 CODE 0 text10 dist/default/production\customHID.X.production.obj
+usb_arm_out_endpoint@pid A7 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_usb_application_get_string 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_app_unknown_setup_request_callback 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+handle_standard_control_request@ret_636 42 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@ret_638 47 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__size_of_reset_bd0_out 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+___bmul@multiplier A3 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_usb_application_get_hid_descriptor 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_usb_application_get_hid_report_descriptor 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_stall_ep_out 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_ofi1_reset_ep0_data_stage 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+handle_ep0_setup@setup 59 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_stall_ep0 1228 0 CODE 0 text35 dist/default/production\customHID.X.production.obj
+_addr_pending 6D 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__size_ofi1___bmul 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_ofi1___wmul 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_reset_ep0_data_stage 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_usb_out_endpoint_has_data 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_control_need_zlp 6B 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__size_of_usb_in_endpoint_busy 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+main@counter BE 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+start_initialization 424 0 CODE 0 cinit dist/default/production\customHID.X.production.obj
+?i1_pic16_linear_addr 76 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_usb_arm_out_endpoint 1B1C 0 CODE 0 text13 dist/default/production\customHID.X.production.obj
+__end_of_handle_ep0_out 1890 0 CODE 0 text34 dist/default/production\customHID.X.production.obj
+__end_of_stall_ep_out 1512 0 CODE 0 text25 dist/default/production\customHID.X.production.obj
+__end_of_reset_bd0_out 1214 0 CODE 0 text21 dist/default/production\customHID.X.production.obj
+usb_send_data_stage@context 43 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__end_of_reset_ep0_data_stage 1250 0 CODE 0 text5 dist/default/production\customHID.X.production.obj
+_usb_application_get_string 15C2 0 CODE 0 text24 dist/default/production\customHID.X.production.obj
+__end_of_usb_in_endpoint_busy 1350 0 CODE 0 text9 dist/default/production\customHID.X.production.obj
+__end_of_memset 1400 0 CODE 0 text8 dist/default/production\customHID.X.production.obj
+i1___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1pic16_linear_addr@addr 7A 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1pic16_linear_addr@high 78 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_ep0_data_stage_buf_remaining 65 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__pcstackBANK0 30 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_usb_get_in_buffer 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_pic16_linear_addr 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_product_string 20AE 0 STRCODE 0 stringtext4 dist/default/production\customHID.X.production.obj
+_ep0_data_stage_out_buffer 6A 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__end_of_usb_application_get_hid_report_descriptor 1268 0 CODE 0 text32 dist/default/production\customHID.X.production.obj
+usb_init@i BB 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+i1___bmul@product 73 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+usb_send_data_stage@buffer 3D 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\s117c.obj
+_UIEbits E92 0 ABS 0 - dist/default/production\customHID.X.production.obj
+i1___bmul 12C4 0 CODE 0 text41 dist/default/production\customHID.X.production.obj
+i1___wmul 1468 0 CODE 0 text19 dist/default/production\customHID.X.production.obj
+_UIRbits E90 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 480 0 CODE 0 cinit -
+i1___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__end_of_usb_get_configuration 11C8 0 CODE 0 text12 dist/default/production\customHID.X.production.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_ofi1_memset 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_of_usb_send_data_stage 1434 0 CODE 0 text30 dist/default/production\customHID.X.production.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+usb_get_out_buffer@endpoint A6 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+_custom_report_descriptor 2052 0 STRCODE 0 stringtext2 dist/default/production\customHID.X.production.obj
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__size_of_usb_in_endpoint_halted 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_UCFGbits E91 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_process_hid_setup_request 1C20 0 CODE 0 text29 dist/default/production\customHID.X.production.obj
+_ep0_data_stage_direc 69 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+_stall_ep_in 1564 0 CODE 0 text26 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@len 4C 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@req 46 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@res 48 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@ret 40 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_start_control_return 1D26 0 CODE 0 text31 dist/default/production\customHID.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 0 0 CONFIG 0 config -
+__end_ofi1___bmul 12E6 0 CODE 0 text41 dist/default/production\customHID.X.production.obj
+__end_ofi1___wmul 149E 0 CODE 0 text19 dist/default/production\customHID.X.production.obj
+_send_zero_length_packet_ep0 11E4 0 CODE 0 text36 dist/default/production\customHID.X.production.obj
+usb_send_in_buffer@len A6 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+usb_send_in_buffer@pid AA 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit 424 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+init_ram FE8 0 CODE 0 inittext dist/default/production\customHID.X.production.obj
+__end_of_vendor_string 20DE 0 STRCODE 0 stringtext5 dist/default/production\customHID.X.production.obj
+_app_unknown_setup_request_callback 11F4 0 CODE 0 text28 dist/default/production\customHID.X.production.obj
+_usb_get_configuration 11C2 0 CODE 0 text12 dist/default/production\customHID.X.production.obj
+__Linittext 0 0 ABS 0 inittext -
+usb_service@ep 5F 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_ep0_data_stage_callback 67 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 420 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 420 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 2000 0 STRCODE 0 stringtext1 dist/default/production\customHID.X.production.obj
+__pstringtext2 2052 0 STRCODE 0 stringtext2 dist/default/production\customHID.X.production.obj
+__pstringtext3 208A 0 STRCODE 0 stringtext3 dist/default/production\customHID.X.production.obj
+__pstringtext4 20AE 0 STRCODE 0 stringtext4 dist/default/production\customHID.X.production.obj
+__pstringtext5 20CA 0 STRCODE 0 stringtext5 dist/default/production\customHID.X.production.obj
+__pstringtext6 20DE 0 STRCODE 0 stringtext6 dist/default/production\customHID.X.production.obj
+_usb_application_get_hid_descriptor 12A4 0 CODE 0 text33 dist/default/production\customHID.X.production.obj
+memset@c A2 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+memset@n A4 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+memset@p A6 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+___bmul 1308 0 CODE 0 text14 dist/default/production\customHID.X.production.obj
+___wmul 149E 0 CODE 0 text7 dist/default/production\customHID.X.production.obj
+__end_of_usb_service 2000 0 CODE 0 text16 dist/default/production\customHID.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+int$flags 7E 0 ABS 0 - dist/default/production\customHID.X.production.obj
+usb_send_in_buffer_0@len 76 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+usb_send_in_buffer_0@pid 79 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_UIE E92 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_UIR E90 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__S0 1073 0 ABS 0 - -
+__S1 1CE 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+_bds 20 0 ABS 1 - dist/default/production\customHID.X.production.obj
+_isr 408 0 CODE 0 intentry dist/default/production\customHID.X.production.obj
+__end_of_product_string 20CA 0 STRCODE 0 stringtext4 dist/default/production\customHID.X.production.obj
+_handle_standard_control_request$637 44 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_usb_out_endpoint_has_data 1350 0 CODE 0 text3 dist/default/production\customHID.X.production.obj
+i1___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_UCONbits E8E 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_usb_init 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+main@TxDataBuffer BF 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+i1_memset 139E 0 CODE 0 text20 dist/default/production\customHID.X.production.obj
+_ep_buf 1C0 0 BANK3 1 dataBANK3 dist/default/production\customHID.X.production.obj
+_handle_standard_control_request 480 0 CODE 0 text23 dist/default/production\customHID.X.production.obj
+__size_ofi1_usb_init 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_ofi1_pic16_linear_addr 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_of_isr 420 0 CODE 0 intentry dist/default/production\customHID.X.production.obj
+handle_ep0_out@bytes_to_copy 76 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__Lintentry 408 0 CODE 0 intentry -
+usb_send_data_stage@callback 41 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+usb_init@ep B9 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__end_ofi1_memset 13CE 0 CODE 0 text20 dist/default/production\customHID.X.production.obj
+_ep0_buf C3 0 BANK1 1 dataBANK1 dist/default/production\customHID.X.production.obj
+reset_vec 400 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\s117c.obj
+usb_out_endpoint_has_data@endpoint A1 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+i1_usb_in_endpoint_halted 1284 0 CODE 0 text40 dist/default/production\customHID.X.production.obj
+_ep0_data_stage_context CC 0 BANK1 1 bssBANK1 dist/default/production\customHID.X.production.obj
+handle_ep0_setup@res 58 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__pdataBANK1 C3 0 BANK1 1 dataBANK1 dist/default/production\customHID.X.production.obj
+__pdataBANK3 1C0 0 BANK3 1 dataBANK3 dist/default/production\customHID.X.production.obj
+__size_of___bmul 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+_handle_ep0_in 1A30 0 CODE 0 text37 dist/default/production\customHID.X.production.obj
+__size_of_usb_send_in_buffer 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+__Lstringtext4 0 0 ABS 0 stringtext4 -
+__Lstringtext5 0 0 ABS 0 stringtext5 -
+__Lstringtext6 0 0 ABS 0 stringtext6 -
+process_hid_setup_request@interface 4B 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__end_of_usb_get_in_buffer 139E 0 CODE 0 text11 dist/default/production\customHID.X.production.obj
+_PIE2bits 92 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_usb_get_out_buffer 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_of_pic16_linear_addr 17D8 0 CODE 0 text6 dist/default/production\customHID.X.production.obj
+_memset 13CE 0 CODE 0 text8 dist/default/production\customHID.X.production.obj
+memset@p1 A0 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__ptext10 1434 0 CODE 0 text10 dist/default/production\customHID.X.production.obj
+__ptext11 1376 0 CODE 0 text11 dist/default/production\customHID.X.production.obj
+__ptext12 11C2 0 CODE 0 text12 dist/default/production\customHID.X.production.obj
+__ptext13 1B1C 0 CODE 0 text13 dist/default/production\customHID.X.production.obj
+__ptext14 1308 0 CODE 0 text14 dist/default/production\customHID.X.production.obj
+__ptext16 1E3A 0 CODE 0 text16 dist/default/production\customHID.X.production.obj
+__ptext17 D20 0 CODE 0 text17 dist/default/production\customHID.X.production.obj
+__ptext18 16AC 0 CODE 0 text18 dist/default/production\customHID.X.production.obj
+__ptext19 1468 0 CODE 0 text19 dist/default/production\customHID.X.production.obj
+__ptext20 139E 0 CODE 0 text20 dist/default/production\customHID.X.production.obj
+__ptext21 1204 0 CODE 0 text21 dist/default/production\customHID.X.production.obj
+__ptext22 162A 0 CODE 0 text22 dist/default/production\customHID.X.production.obj
+__ptext23 480 0 CODE 0 text23 dist/default/production\customHID.X.production.obj
+__ptext24 15C2 0 CODE 0 text24 dist/default/production\customHID.X.production.obj
+__ptext25 14D6 0 CODE 0 text25 dist/default/production\customHID.X.production.obj
+__ptext26 1564 0 CODE 0 text26 dist/default/production\customHID.X.production.obj
+__ptext27 11C8 0 CODE 0 text27 dist/default/production\customHID.X.production.obj
+__ptext28 11F4 0 CODE 0 text28 dist/default/production\customHID.X.production.obj
+__ptext29 1C20 0 CODE 0 text29 dist/default/production\customHID.X.production.obj
+__ptext30 1400 0 CODE 0 text30 dist/default/production\customHID.X.production.obj
+__ptext31 1D26 0 CODE 0 text31 dist/default/production\customHID.X.production.obj
+__ptext32 1250 0 CODE 0 text32 dist/default/production\customHID.X.production.obj
+__ptext33 12A4 0 CODE 0 text33 dist/default/production\customHID.X.production.obj
+__ptext34 17D8 0 CODE 0 text34 dist/default/production\customHID.X.production.obj
+__ptext35 1228 0 CODE 0 text35 dist/default/production\customHID.X.production.obj
+__ptext36 11E4 0 CODE 0 text36 dist/default/production\customHID.X.production.obj
+__ptext37 1A30 0 CODE 0 text37 dist/default/production\customHID.X.production.obj
+__ptext38 1214 0 CODE 0 text38 dist/default/production\customHID.X.production.obj
+__ptext39 1512 0 CODE 0 text39 dist/default/production\customHID.X.production.obj
+__ptext40 1284 0 CODE 0 text40 dist/default/production\customHID.X.production.obj
+__ptext41 12C4 0 CODE 0 text41 dist/default/production\customHID.X.production.obj
+?_usb_application_get_string 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_usb_send_in_buffer_0 1512 0 CODE 0 text39 dist/default/production\customHID.X.production.obj
+i1pic16_linear_addr@low 79 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+i1pic16_linear_addr@ptr 76 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 1954 0 CODE 0 maintext dist/default/production\customHID.X.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__end_of_configuration_1 2052 0 STRCODE 0 stringtext1 dist/default/production\customHID.X.production.obj
+process_hid_setup_request@descriptor 4C 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 0 config -
+__Hinittext 0 0 ABS 0 inittext -
+___wmul@multiplier A0 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+i1_reset_ep0_data_stage 1214 0 CODE 0 text38 dist/default/production\customHID.X.production.obj
+usb_in_endpoint_busy@endpoint A1 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@ep_num_640 55 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+i1_pic16_linear_addr 16AC 0 CODE 0 text18 dist/default/production\customHID.X.production.obj
+_usb_init A3E 0 CODE 0 text4 dist/default/production\customHID.X.production.obj
+_process_hid_setup_request$985 49 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_this_device_descriptor 208A 0 STRCODE 0 stringtext3 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@flags 4F 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+?i1___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+handle_standard_control_request@setup 56 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@stall 49 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_handle_ep0_setup 162A 0 CODE 0 text22 dist/default/production\customHID.X.production.obj
+__end_of_usb_init D20 0 CODE 0 text4 dist/default/production\customHID.X.production.obj
+stackhi 23EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s117c.obj
+stacklo 211E 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\s117c.obj
+usb_get_in_buffer@endpoint A7 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+start_control_return@len 32 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+start_control_return@ptr 30 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__end_of_app_unknown_setup_request_callback 1204 0 CODE 0 text28 dist/default/production\customHID.X.production.obj
+__end_of_clear_ep0_stall 11D6 0 CODE 0 text27 dist/default/production\customHID.X.production.obj
+__end_of_usb_application_get_hid_descriptor 12C4 0 CODE 0 text33 dist/default/production\customHID.X.production.obj
+process_hid_setup_request@setup 44 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_memset 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+start_control_return@bytes_to_send 3C 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_PIR2bits 12 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__Lend_init 420 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 478 0 CODE 0 cinit dist/default/production\customHID.X.production.obj
+pic16_linear_addr@low B3 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+pic16_linear_addr@ptr A6 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__Hintentry 420 0 CODE 0 intentry -
+_configuration_1 2000 0 STRCODE 0 stringtext1 dist/default/production\customHID.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+__size_of_usb_service 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+usb_application_get_hid_descriptor@ptr 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+handle_standard_control_request@descriptor 53 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__Hreset_vec 406 0 CODE 0 reset_vec -
+__size_of_handle_ep0_out 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_reset_ep0_data_stage 123C 0 CODE 0 text5 dist/default/production\customHID.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__size_of_handle_standard_control_request 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_usb_in_endpoint_busy 132C 0 CODE 0 text9 dist/default/production\customHID.X.production.obj
+__ptext1 1890 0 CODE 0 text1 dist/default/production\customHID.X.production.obj
+__ptext2 12E6 0 CODE 0 text2 dist/default/production\customHID.X.production.obj
+__ptext3 1350 0 CODE 0 text3 dist/default/production\customHID.X.production.obj
+__ptext4 A3E 0 CODE 0 text4 dist/default/production\customHID.X.production.obj
+__ptext5 123C 0 CODE 0 text5 dist/default/production\customHID.X.production.obj
+__ptext6 1742 0 CODE 0 text6 dist/default/production\customHID.X.production.obj
+__ptext7 149E 0 CODE 0 text7 dist/default/production\customHID.X.production.obj
+__ptext8 13CE 0 CODE 0 text8 dist/default/production\customHID.X.production.obj
+__ptext9 132C 0 CODE 0 text9 dist/default/production\customHID.X.production.obj
+_usb_get_in_buffer 1376 0 CODE 0 text11 dist/default/production\customHID.X.production.obj
+__size_of_handle_ep0_in 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+usb_send_data_stage@len 3F 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_pic16_linear_addr 1742 0 CODE 0 text6 dist/default/production\customHID.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+handle_standard_control_request@ep_dir 50 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+handle_standard_control_request@ep_num 4E 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_usb_in_endpoint_halted 12E6 0 CODE 0 text2 dist/default/production\customHID.X.production.obj
+usb_send_in_buffer@bd AC 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_ofi1_usb_in_endpoint_halted 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_clear_ep0_stall 11C8 0 CODE 0 text27 dist/default/production\customHID.X.production.obj
+__Lreset_vec 400 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+__Hstringtext4 0 0 ABS 0 stringtext4 -
+__Hstringtext5 0 0 ABS 0 stringtext5 -
+__Hstringtext6 0 0 ABS 0 stringtext6 -
+__end_of_stall_ep_in 15C2 0 CODE 0 text26 dist/default/production\customHID.X.production.obj
+__end_of_custom_report_descriptor 208A 0 STRCODE 0 stringtext2 dist/default/production\customHID.X.production.obj
+__end_of__initialization 478 0 CODE 0 cinit dist/default/production\customHID.X.production.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__end_of_handle_ep0_setup 16AC 0 CODE 0 text22 dist/default/production\customHID.X.production.obj
+__end_ofi1_pic16_linear_addr 1742 0 CODE 0 text18 dist/default/production\customHID.X.production.obj
+__size_of_usb_arm_out_endpoint 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__pidataBANK1 11D6 0 CODE 0 idataBANK1 dist/default/production\customHID.X.production.obj
+__pidataBANK3 1268 0 CODE 0 idataBANK3 dist/default/production\customHID.X.production.obj
+__end_of_handle_ep0_in 1B1C 0 CODE 0 text37 dist/default/production\customHID.X.production.obj
+_USTATbits E8F 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+?_usb_application_get_hid_descriptor 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_g_configuration 6E 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__size_of_handle_ep0_setup 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__size_of_usb_get_configuration 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+?_usb_application_get_hid_report_descriptor 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+start_control_return@bytes_asked_for 34 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+__end_of_usb_arm_out_endpoint 1C20 0 CODE 0 text13 dist/default/production\customHID.X.production.obj
+__Hend_init 424 0 CODE 0 end_init -
+__end_of_main 1A30 0 CODE 0 maintext dist/default/production\customHID.X.production.obj
+handle_ep0_out@pkt_len 75 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_UADDR E96 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_of_str00 20E6 0 STRCODE 0 stringtext6 dist/default/production\customHID.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__size_of_send_zero_length_packet_ep0 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+_usb_application_get_hid_report_descriptor 1250 0 CODE 0 text32 dist/default/production\customHID.X.production.obj
+usb_application_get_hid_descriptor@p 73 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_str00 20DE 0 STRCODE 0 stringtext6 dist/default/production\customHID.X.production.obj
+process_hid_setup_request@desc 4F 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__pintentry 408 0 CODE 0 intentry dist/default/production\customHID.X.production.obj
+usb_application_get_hid_report_descriptor@ptr 70 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+usb_get_out_buffer@buf A4 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_isr 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__HdataBANK3 0 0 ABS 0 dataBANK3 -
+__end_ofi1_reset_ep0_data_stage 1228 0 CODE 0 text38 dist/default/production\customHID.X.production.obj
+__initialization 424 0 CODE 0 cinit dist/default/production\customHID.X.production.obj
+___bmul@product A2 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__size_of_start_control_return 0 0 ABS 0 - dist/default/production\customHID.X.production.obj
+__end_of_this_device_descriptor 20AE 0 STRCODE 0 stringtext3 dist/default/production\customHID.X.production.obj
+_start_control_return$595 36 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_start_control_return$596 38 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+_start_control_return$597 3A 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+__pbssBANK0 65 0 BANK0 1 bssBANK0 dist/default/production\customHID.X.production.obj
+__pbssBANK1 CA 0 BANK1 1 bssBANK1 dist/default/production\customHID.X.production.obj
+__end_of_usb_application_get_string 162A 0 CODE 0 text24 dist/default/production\customHID.X.production.obj
+___wmul@product A4 0 BANK1 1 cstackBANK1 dist/default/production\customHID.X.production.obj
+__end_ofi1_usb_in_endpoint_halted 12A4 0 CODE 0 text40 dist/default/production\customHID.X.production.obj
+i1usb_in_endpoint_halted@endpoint 75 0 COMMON 1 cstackCOMMON dist/default/production\customHID.X.production.obj
+_returning_short CD 0 BANK1 1 bssBANK1 dist/default/production\customHID.X.production.obj
+__end_of_send_zero_length_packet_ep0 11F4 0 CODE 0 text36 dist/default/production\customHID.X.production.obj
+i1usb_init@ep 3D 0 BANK0 1 cstackBANK0 dist/default/production\customHID.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_bds 1 20 10
+- 1 1A0 20
+- 1 120 50
+- 1 D0 20
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text1 0 C48 1890 62 2
+text2 0 973 12E6 11 2
+text3 0 9A8 1350 13 2
+text5 0 91E 123C A 2
+text6 0 BA1 1742 4B 2
+text7 0 A4F 149E 1C 2
+text8 0 9E7 13CE 19 2
+text9 0 996 132C 12 2
+text10 0 A1A 1434 1A 2
+text11 0 9BB 1376 14 2
+text12 0 8E1 11C2 3 2
+text13 0 D8E 1B1C 82 2
+text14 0 984 1308 12 2
+text16 0 F1D 1E3A E3 2
+text18 0 B56 16AC 4B 2
+text19 0 A34 1468 1B 2
+text20 0 9CF 139E 18 2
+text21 0 902 1204 8 2
+text22 0 B15 162A 41 2
+text24 0 AE1 15C2 34 2
+text25 0 A6B 14D6 1E 2
+text26 0 AB2 1564 2F 2
+text27 0 8E4 11C8 7 2
+text28 0 8FA 11F4 8 2
+text29 0 E10 1C20 83 2
+text30 0 A00 1400 1A 2
+text31 0 E93 1D26 8A 2
+text32 0 928 1250 C 2
+text33 0 952 12A4 10 2
+text34 0 BEC 17D8 5C 2
+text35 0 914 1228 A 2
+text36 0 8F2 11E4 8 2
+text37 0 D18 1A30 76 2
+text38 0 90A 1214 A 2
+text39 0 A89 1512 29 2
+text40 0 942 1284 10 2
+text41 0 962 12C4 11 2
+maintext 0 CAA 1954 6E 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 30 30 3F 1
+cstackBANK1 1 A0 A0 2E 1
+stringtext1 0 1000 2000 73 2
+intentry 0 204 408 5FC 2
+reset_vec 0 200 400 3 2
+idataBANK1 0 8EB 11D6 7 2
+idataBANK3 0 934 1268 E 2
+dataBANK3 1 1C0 1C0 E 1

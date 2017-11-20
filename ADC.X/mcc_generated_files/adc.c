@@ -55,7 +55,7 @@
   Section: Macro Declarations
 */
 
-#define ACQ_US_DELAY 5
+#define ACQ_US_DELAY 20
 
 /**
   Section: ADC Module APIs
@@ -68,8 +68,8 @@ void ADC_Initialize(void)
     // GO_nDONE stop; ADON enabled; CHS AN0; 
     ADCON0 = 0x01;
     
-    // ADFM right; ADNREF VSS; ADPREF VDD; ADCS FOSC/32; 
-    ADCON1 = 0xA0;
+    // ADFM right; ADNREF VSS; ADPREF VDD; ADCS Frc; 
+    ADCON1 = 0xF0;
     
     // ADRESL 0; 
     ADRESL = 0x00;
