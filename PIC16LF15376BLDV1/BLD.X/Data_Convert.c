@@ -18,7 +18,7 @@ uint16_t Make168(uint8_t HByte, uint8_t LByte)
     return res;
 }
 
-uint16_t Make168a(uint8_t *data, uint8_t idx)
+uint16_t Make168a(uint8_t *data)
 {
-    return Make168(data[idx], data[idx+1]);
+    return Make168(&data[0], &data[1]);
 }

@@ -1,0 +1,448 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF15376 ]
+[d frameptr 6 ]
+"34 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\BLD.h
+[e E9428 HEX_RECORD_TYPES `uc
+DATA_RECORD 0
+END_OF_FILE_RECORD 1
+EXT_SEG_ADRS_RECORD 2
+START_SEG_ADRS 3
+EXT_LIN_ADRS_RECORD 4
+START_LIN_ADRS 5
+]
+"53
+[e E9448 . `uc
+INIT 0
+GET_DATA 1
+ENTER_BLD_MODE 2
+CONVERT 3
+CHECKSUM 4
+PROGRAM 5
+REP_SUCCESS 6
+REP_ERROR 7
+DEFAULT 8
+]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"13 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Data_Convert.c
+[v _Make168 Make168 `(ui  1 e 2 0 ]
+"21
+[v _Make168a Make168a `(ui  1 e 2 0 ]
+"12 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"55 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"108
+[v _UART_TX UART_TX `(v  1 e 1 0 ]
+"114
+[v _UART_Puts UART_Puts `(v  1 e 1 0 ]
+"137
+[v _UART_RX UART_RX `(uc  1 e 1 0 ]
+"86 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"95
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"57 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/memory.c
+[v _FLASH_ReadWord FLASH_ReadWord `(ui  1 e 2 0 ]
+"93
+[v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
+"148
+[v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
+"52 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"91
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+"103
+[v _TMR0_Read16bitTimer TMR0_Read16bitTimer `(ui  1 e 2 0 ]
+"4 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Tick_Timer.c
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+"23
+[v _Delay_ms Delay_ms `(v  1 e 1 0 ]
+"28
+[v _Delay_Init Delay_Init `(v  1 e 1 0 ]
+[s S342 . 4 `ui 1 Phy 2 0 `ui 1 ELin 2 2 ]
+"34 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\BLD.h
+[s S345 . 5 `uc 1 BCount 1 0 `ui 1 Write1 2 1 `ui 1 Write2 2 3 ]
+[s S356 . 10 `S342 1 Addr 4 0 `S345 1 Data 5 4 `E9428 1 RecType 1 9 ]
+[v _Hex Hex `S356  1 e 10 0 ]
+[s S370 . 2 `E9448 1 Prev 1 0 `E9448 1 Next 1 1 ]
+"53
+[v _Task Task `S370  1 e 2 0 ]
+[s S373 . 7 `uc 1 timeout 1 0 `um 1 start 3 1 `um 1 stop 3 4 ]
+"60
+[s S377 . 21 `S373 1 Led 7 0 `S373 1 RxTout 7 7 `S373 1 BldTout 7 14 ]
+[v _Tick Tick `S377  1 e 21 0 ]
+[s S381 . 49 `[48]uc 1 Dat 48 0 `uc 1 Len 1 48 ]
+"66
+[v _Buf Buf `S381  1 e 49 0 ]
+"69
+[v _i i `uc  1 e 1 0 ]
+[v _j j `uc  1 e 1 0 ]
+[s S253 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"424 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16lf15376.h
+[u S258 . 1 `S253 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES258  1 e 1 @11 ]
+"730
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+"792
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"854
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"916
+[v _TRISD TRISD `VEuc  1 e 1 @21 ]
+"978
+[v _TRISE TRISE `VEuc  1 e 1 @22 ]
+"1016
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"1078
+[v _LATB LATB `VEuc  1 e 1 @25 ]
+"1140
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"1202
+[v _LATD LATD `VEuc  1 e 1 @27 ]
+"1264
+[v _LATE LATE `VEuc  1 e 1 @28 ]
+[s S400 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"1276
+[u S404 . 1 `S400 1 . 1 0 ]
+[v _LATEbits LATEbits `VES404  1 e 1 @28 ]
+"1638
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"1692
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"1753
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"1823
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"1877
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S197 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1903
+[u S206 . 1 `S197 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES206  1 e 1 @285 ]
+"2057
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+"2237
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"7956
+[v _TMR0L TMR0L `VEuc  1 e 1 @1436 ]
+"8094
+[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
+"8348
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
+[s S40 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 T0OE 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"8368
+[s S46 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S51 . 1 `S40 1 . 1 0 `S46 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES51  1 e 1 @1438 ]
+"8418
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
+[s S23 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"9279
+[u S28 . 1 `S23 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES28  1 e 1 @1804 ]
+[s S176 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 TX2IF 1 0 :1:6 
+`uc 1 RC2IF 1 0 :1:7 
+]
+"9388
+[u S185 . 1 `S176 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES185  1 e 1 @1807 ]
+"10774
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
+"10836
+[v _NVMADRH NVMADRH `VEuc  1 e 1 @2075 ]
+"10899
+[v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
+"10961
+[v _NVMDATH NVMDATH `VEuc  1 e 1 @2077 ]
+[s S268 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 NVMREGS 1 0 :1:6 
+]
+"11027
+[u S276 . 1 `S268 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES276  1 e 1 @2078 ]
+"11067
+[v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
+"11144
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"11284
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"11324
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @2192 ]
+"11381
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"11432
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"11490
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"17305
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @7823 ]
+[s S136 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"17315
+[u S138 . 1 `S136 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES138  1 e 1 @7823 ]
+[s S143 . 1 `uc 1 RX1DTPPS 1 0 :6:0 
+]
+"18445
+[s S145 . 1 `uc 1 RX1DTPPS0 1 0 :1:0 
+`uc 1 RX1DTPPS1 1 0 :1:1 
+`uc 1 RX1DTPPS2 1 0 :1:2 
+`uc 1 RX1DTPPS3 1 0 :1:3 
+`uc 1 RX1DTPPS4 1 0 :1:4 
+`uc 1 RX1DTPPS5 1 0 :1:5 
+]
+[u S152 . 1 `S143 1 . 1 0 `S145 1 . 1 0 ]
+[v _RX1DTPPSbits RX1DTPPSbits `VES152  1 e 1 @7883 ]
+"19451
+[v _RC2PPS RC2PPS `VEuc  1 e 1 @7970 ]
+"20199
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"20261
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"20323
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"20695
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"20757
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"20819
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"21191
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"21253
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"21315
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"21687
+[v _ANSELD ANSELD `VEuc  1 e 1 @8025 ]
+"21749
+[v _WPUD WPUD `VEuc  1 e 1 @8026 ]
+"21811
+[v _ODCOND ODCOND `VEuc  1 e 1 @8027 ]
+"21997
+[v _ANSELE ANSELE `VEuc  1 e 1 @8036 ]
+"22029
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"22067
+[v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"23310
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\main.c
+[v _ACCESSKEY ACCESSKEY `DC[8]uc  1 e 8 0 ]
+"5
+[v _PVID PVID `DC[9]uc  1 e 9 0 ]
+"57 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal16bit timer0ReloadVal16bit `VEui  1 e 2 0 ]
+"21 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Tick_Timer.c
+[v _t t `S373  1 e 7 0 ]
+"12 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"119
+[v main@backup backup `ui  1 a 2 16 ]
+"153
+} 0
+"137 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/eusart1.c
+[v _UART_RX UART_RX `(uc  1 e 1 0 ]
+{
+[v UART_RX@byte byte `*.4uc  1 a 1 wreg ]
+[v UART_RX@byte byte `*.4uc  1 a 1 wreg ]
+"139
+[v UART_RX@byte byte `*.4uc  1 a 1 1 ]
+"150
+} 0
+"114
+[v _UART_Puts UART_Puts `(v  1 e 1 0 ]
+{
+[v UART_Puts@s s `*.25uc  1 p 2 1 ]
+"117
+} 0
+"108
+[v _UART_TX UART_TX `(v  1 e 1 0 ]
+{
+[v UART_TX@txChar txChar `uc  1 a 1 wreg ]
+[v UART_TX@txChar txChar `uc  1 a 1 wreg ]
+[v UART_TX@txChar txChar `uc  1 a 1 0 ]
+"112
+} 0
+"86 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"93
+} 0
+"64 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"91
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+{
+"95
+} 0
+"52 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"104
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"118
+} 0
+"95 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"109
+} 0
+"55 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"21 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Data_Convert.c
+[v _Make168a Make168a `(ui  1 e 2 0 ]
+{
+[v Make168a@data data `*.4uc  1 a 1 wreg ]
+[v Make168a@data data `*.4uc  1 a 1 wreg ]
+"23
+[v Make168a@data data `*.4uc  1 a 1 10 ]
+"24
+} 0
+"13
+[v _Make168 Make168 `(ui  1 e 2 0 ]
+{
+[v Make168@HByte HByte `uc  1 a 1 wreg ]
+"15
+[v Make168@res res `ui  1 a 2 5 ]
+"13
+[v Make168@HByte HByte `uc  1 a 1 wreg ]
+[v Make168@LByte LByte `uc  1 p 1 0 ]
+"15
+[v Make168@HByte HByte `uc  1 a 1 4 ]
+"19
+} 0
+"93 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/memory.c
+[v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
+{
+"95
+[v FLASH_WriteBlock@blockStartAddr blockStartAddr `ui  1 a 2 9 ]
+"97
+[v FLASH_WriteBlock@i i `uc  1 a 1 12 ]
+"96
+[v FLASH_WriteBlock@GIEBitValue GIEBitValue `uc  1 a 1 11 ]
+"93
+[v FLASH_WriteBlock@writeAddr writeAddr `ui  1 p 2 3 ]
+[v FLASH_WriteBlock@flashWordArray flashWordArray `*.4ui  1 p 1 5 ]
+"146
+} 0
+"148
+[v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
+{
+"150
+[v FLASH_EraseBlock@GIEBitValue GIEBitValue `uc  1 a 1 2 ]
+"148
+[v FLASH_EraseBlock@startAddr startAddr `ui  1 p 2 0 ]
+"173
+} 0
+"57
+[v _FLASH_ReadWord FLASH_ReadWord `(ui  1 e 2 0 ]
+{
+"59
+[v FLASH_ReadWord@GIEBitValue GIEBitValue `uc  1 a 1 2 ]
+"57
+[v FLASH_ReadWord@flashAddr flashAddr `ui  1 p 2 0 ]
+"72
+} 0
+"23 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Tick_Timer.c
+[v _Delay_ms Delay_ms `(v  1 e 1 0 ]
+{
+[v Delay_ms@ms ms `um  1 p 3 11 ]
+"26
+} 0
+"4
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+{
+[s S373 . 7 `uc 1 timeout 1 0 `um 1 start 3 1 `um 1 stop 3 4 ]
+[v Tick_Is_Over@tick tick `*.4S373  1 a 1 wreg ]
+"6
+[v Tick_Is_Over@pre pre `um  1 a 3 7 ]
+"4
+[v Tick_Is_Over@tick tick `*.4S373  1 a 1 wreg ]
+[v Tick_Is_Over@ms ms `um  1 p 3 11 ]
+"6
+"4
+[v Tick_Is_Over@tick tick `*.4S373  1 a 1 10 ]
+"19
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+{
+"17
+[v ___tmul@product product `um  1 a 3 6 ]
+"15
+[v ___tmul@multiplier multiplier `um  1 p 3 0 ]
+[v ___tmul@multiplicand multiplicand `um  1 p 3 3 ]
+"99
+} 0
+"103 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\mcc_generated_files/tmr0.c
+[v _TMR0_Read16bitTimer TMR0_Read16bitTimer `(ui  1 e 2 0 ]
+{
+"105
+[v TMR0_Read16bitTimer@readVal readVal `ui  1 a 2 7 ]
+"107
+[v TMR0_Read16bitTimer@readValHigh readValHigh `uc  1 a 1 10 ]
+"106
+[v TMR0_Read16bitTimer@readValLow readValLow `uc  1 a 1 9 ]
+"114
+} 0
+"28 F:\GitHub\XC8Training\PIC16LF15376BLDV1\BLD.X\Tick_Timer.c
+[v _Delay_Init Delay_Init `(v  1 e 1 0 ]
+{
+"31
+} 0
