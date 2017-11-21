@@ -63,19 +63,17 @@
 [v _RTC_Get_Time RTC_Get_Time `(v  1 e 1 0 ]
 "67
 [v _RTC_Init RTC_Init `(v  1 e 1 0 ]
-"67 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
-[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
-"74
-[v _I2C_NAck I2C_NAck `(v  1 e 1 0 ]
-"82
+"6 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
+[v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
+"11
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"97
+"26
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"104
+"33
 [v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
-"116
+"46
 [v _I2C_Write I2C_Write `(v  1 e 1 0 ]
-"122
+"52
 [v _I2C_Init I2C_Init `(v  1 e 1 0 ]
 "4 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\TextLCD.c
 [v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 e 1 0 ]
@@ -112,7 +110,7 @@
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1344
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S342 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S319 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -122,8 +120,8 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1361
-[u S351 . 1 `S342 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES351  1 e 1 @142 ]
+[u S328 . 1 `S319 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES328  1 e 1 @142 ]
 "1406
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
 [s S20 . 1 `uc 1 PS0 1 0 :1:0 
@@ -167,7 +165,7 @@
 [v _LATBbits LATBbits `VES61  1 e 1 @269 ]
 "2309
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S405 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S370 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -177,8 +175,8 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2326
-[u S414 . 1 `S405 1 . 1 0 ]
-[v _LATCbits LATCbits `VES414  1 e 1 @270 ]
+[u S379 . 1 `S370 1 . 1 0 ]
+[v _LATCbits LATCbits `VES379  1 e 1 @270 ]
 "2371
 [v _LATE LATE `VEuc  1 e 1 @272 ]
 "3013
@@ -197,23 +195,11 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
 "3845
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
-[s S320 . 1 `uc 1 BF 1 0 :1:0 
-`uc 1 UA 1 0 :1:1 
-`uc 1 R_nW 1 0 :1:2 
-`uc 1 S 1 0 :1:3 
-`uc 1 P 1 0 :1:4 
-`uc 1 D_nA 1 0 :1:5 
-`uc 1 CKE 1 0 :1:6 
-`uc 1 SMP 1 0 :1:7 
-]
-"3862
-[u S329 . 1 `S320 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES329  1 e 1 @532 ]
 "3907
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
 "4029
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
-[s S295 . 1 `uc 1 SEN 1 0 :1:0 
+[s S297 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -223,8 +209,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "4046
-[u S304 . 1 `S295 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES304  1 e 1 @534 ]
+[u S306 . 1 `S297 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES306  1 e 1 @534 ]
 "4091
 [v _SSPCON3 SSPCON3 `VEuc  1 e 1 @535 ]
 "7754
@@ -237,7 +223,7 @@
 [v _rtc_flag rtc_flag `VEuc  1 e 1 0 ]
 "28
 [v _date_time date_time `VE[8]uc  1 e 8 0 ]
-"65 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
+"4 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
 [v _restart restart `uc  1 e 1 0 ]
 "5 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -457,10 +443,10 @@
 [v RTC_Write@address address `uc  1 a 1 7 ]
 "11
 } 0
-"122 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
+"52 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
 [v _I2C_Init I2C_Init `(v  1 e 1 0 ]
 {
-"133
+"63
 } 0
 "60 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\mcp7941x.c
 [v _RTC_Get_Time RTC_Get_Time `(v  1 e 1 0 ]
@@ -502,53 +488,48 @@
 {
 [v RTC_Read@address address `uc  1 a 1 wreg ]
 "20
-[v RTC_Read@data data `uc  1 a 1 7 ]
+[v RTC_Read@data data `uc  1 a 1 9 ]
 "13
 [v RTC_Read@address address `uc  1 a 1 wreg ]
 "15
-[v RTC_Read@address address `uc  1 a 1 6 ]
+[v RTC_Read@address address `uc  1 a 1 8 ]
 "23
 } 0
-"116 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
+"46 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\MSSP_I2C_Master.c
 [v _I2C_Write I2C_Write `(v  1 e 1 0 ]
 {
 [v I2C_Write@data_out data_out `uc  1 a 1 wreg ]
 [v I2C_Write@data_out data_out `uc  1 a 1 wreg ]
-"118
+"48
 [v I2C_Write@data_out data_out `uc  1 a 1 2 ]
-"120
+"50
 } 0
-"97
+"26
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
 {
-"102
+"31
 } 0
-"82
+"11
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 {
-"95
+"24
 } 0
-"104
+"33
 [v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
 {
 [v I2C_Read@ack ack `uc  1 a 1 wreg ]
-"106
-[v I2C_Read@res res `uc  1 a 1 4 ]
-"104
+"35
+[v I2C_Read@temp temp `us  1 a 2 4 ]
+"33
 [v I2C_Read@ack ack `uc  1 a 1 wreg ]
-"107
-[v I2C_Read@ack ack `uc  1 a 1 3 ]
-"114
+"36
+[v I2C_Read@ack ack `uc  1 a 1 6 ]
+"44
 } 0
-"74
-[v _I2C_NAck I2C_NAck `(v  1 e 1 0 ]
+"6
+[v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
 {
-"80
-} 0
-"67
-[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
-{
-"72
+"9
 } 0
 "51 F:\GitHub\XC8Training\RTC_MCP7941x_1936.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

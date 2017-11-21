@@ -1,5 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"4035 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1936.h
+"3845 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1936.h
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@532 ]
+"4029
+[v _SSPCON2 `Vuc ~T0 @X0 0 e@534 ]
+"4035
 [s S205 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S205 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
 "4034
@@ -7,17 +11,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S204 . . ]
 "4046
 [v _SSPCON2bits `VS204 ~T0 @X0 0 e@534 ]
-"29 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-"3851 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1936.h
-[s S199 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S199 . BF UA R_nW S P D_nA CKE SMP ]
-"3850
-[u S198 `S199 1 ]
-[n S198 . . ]
-"3862
-[v _SSPSTATbits `VS198 ~T0 @X0 0 e@532 ]
 "3785
 [v _SSPBUF `Vuc ~T0 @X0 0 e@529 ]
 "1350
@@ -28,10 +21,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S71 . . ]
 "1361
 [v _TRISCbits `VS71 ~T0 @X0 0 e@142 ]
-"3845
-[v _SSPSTAT `Vuc ~T0 @X0 0 e@532 ]
-"4029
-[v _SSPCON2 `Vuc ~T0 @X0 0 e@534 ]
 "4091
 [v _SSPCON3 `Vuc ~T0 @X0 0 e@535 ]
 "3805
@@ -3086,256 +3075,201 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 69: void SYSTEM_Initialize(void);
 [; ;mcc.h: 82: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 95: void WDT_Initialize(void);
-"65 MSSP_I2C_Master.c
+"4 MSSP_I2C_Master.c
 [v _restart `uc ~T0 @X0 1 e ]
-[; ;MSSP_I2C_Master.c: 65: bool restart;
-"67
-[v _I2C_Ack `(v ~T0 @X0 1 ef ]
-"68
+[; ;MSSP_I2C_Master.c: 4: bool restart;
+"6
+[v _I2C_Wait `(v ~T0 @X0 1 ef ]
+"7
 {
-[; ;MSSP_I2C_Master.c: 67: void I2C_Ack()
-[; ;MSSP_I2C_Master.c: 68: {
-[e :U _I2C_Ack ]
+[; ;MSSP_I2C_Master.c: 6: void I2C_Wait()
+[; ;MSSP_I2C_Master.c: 7: {
+[e :U _I2C_Wait ]
 [f ]
-[; ;MSSP_I2C_Master.c: 69: SSPCON2bits.ACKDT=0;
-"69
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 70: SSPCON2bits.ACKEN=1;
-"70
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 71: while(SSPCON2bits.ACKEN);
-"71
+[; ;MSSP_I2C_Master.c: 8: while((SSPSTAT&0x04)||(SSPCON2&0x1F));
+"8
 [e $U 350  ]
 [e :U 351 ]
 [e :U 350 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> -> -> 0 `i `Vuc `i 351  ]
+[e $ || != & -> _SSPSTAT `i -> 4 `i -> 0 `i != & -> _SSPCON2 `i -> 31 `i -> 0 `i 351  ]
 [e :U 352 ]
-[; ;MSSP_I2C_Master.c: 72: }
-"72
+[; ;MSSP_I2C_Master.c: 9: }
+"9
 [e :UE 349 ]
 }
-"74
-[v _I2C_NAck `(v ~T0 @X0 1 ef ]
-"75
-{
-[; ;MSSP_I2C_Master.c: 74: void I2C_NAck()
-[; ;MSSP_I2C_Master.c: 75: {
-[e :U _I2C_NAck ]
-[f ]
-[; ;MSSP_I2C_Master.c: 76: SSPCON2bits.ACKDT=1;
-"76
-[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 77: SSPCON2bits.ACKEN=1;
-"77
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 78: while(SSPCON2bits.ACKEN);
-"78
-[e $U 354  ]
-[e :U 355 ]
-[e :U 354 ]
-[e $ != -> . . _SSPCON2bits 0 4 `i -> -> -> 0 `i `Vuc `i 355  ]
-[e :U 356 ]
-[; ;MSSP_I2C_Master.c: 79: SSPCON2bits.ACKDT=0;
-"79
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 80: }
-"80
-[e :UE 353 ]
-}
-"82
+"11
 [v _I2C_Start `(v ~T0 @X0 1 ef ]
-"83
+"12
 {
-[; ;MSSP_I2C_Master.c: 82: void I2C_Start()
-[; ;MSSP_I2C_Master.c: 83: {
+[; ;MSSP_I2C_Master.c: 11: void I2C_Start()
+[; ;MSSP_I2C_Master.c: 12: {
 [e :U _I2C_Start ]
 [f ]
-[; ;MSSP_I2C_Master.c: 84: if(restart)
-"84
-[e $ ! != -> _restart `i -> -> -> 0 `i `uc `i 358  ]
-[; ;MSSP_I2C_Master.c: 85: {
-"85
+[; ;MSSP_I2C_Master.c: 13: if(restart)
+"13
+[e $ ! != -> _restart `i -> -> -> 0 `i `uc `i 354  ]
+[; ;MSSP_I2C_Master.c: 14: {
+"14
 {
-[; ;MSSP_I2C_Master.c: 86: SSPCON2bits.RSEN=1;
-"86
+[; ;MSSP_I2C_Master.c: 15: SSPCON2bits.RSEN=1;
+"15
 [e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 87: while(SSPCON2bits.RSEN);
-"87
-[e $U 359  ]
-[e :U 360 ]
-[e :U 359 ]
-[e $ != -> . . _SSPCON2bits 0 1 `i -> -> -> 0 `i `Vuc `i 360  ]
-[e :U 361 ]
-"88
+[; ;MSSP_I2C_Master.c: 16: I2C_Wait();
+"16
+[e ( _I2C_Wait ..  ]
+"17
 }
-[; ;MSSP_I2C_Master.c: 88: }
-[e $U 362  ]
-"89
-[e :U 358 ]
-[; ;MSSP_I2C_Master.c: 89: else
-[; ;MSSP_I2C_Master.c: 90: {
-"90
+[; ;MSSP_I2C_Master.c: 17: }
+[e $U 355  ]
+"18
+[e :U 354 ]
+[; ;MSSP_I2C_Master.c: 18: else
+[; ;MSSP_I2C_Master.c: 19: {
+"19
 {
-[; ;MSSP_I2C_Master.c: 91: SSPCON2bits.SEN=1;
-"91
-[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 92: while(SSPCON2bits.SEN);
-"92
-[e $U 363  ]
-[e :U 364 ]
-[e :U 363 ]
-[e $ != -> . . _SSPCON2bits 0 0 `i -> -> -> 0 `i `Vuc `i 364  ]
-[e :U 365 ]
-[; ;MSSP_I2C_Master.c: 93: restart=1;
-"93
+[; ;MSSP_I2C_Master.c: 20: restart=1;
+"20
 [e = _restart -> -> 1 `i `uc ]
-"94
+[; ;MSSP_I2C_Master.c: 21: SSPCON2bits.SEN=1;
+"21
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+[; ;MSSP_I2C_Master.c: 22: I2C_Wait();
+"22
+[e ( _I2C_Wait ..  ]
+"23
 }
-[e :U 362 ]
-[; ;MSSP_I2C_Master.c: 94: }
-[; ;MSSP_I2C_Master.c: 95: }
-"95
-[e :UE 357 ]
+[e :U 355 ]
+[; ;MSSP_I2C_Master.c: 23: }
+[; ;MSSP_I2C_Master.c: 24: }
+"24
+[e :UE 353 ]
 }
-"97
+"26
 [v _I2C_Stop `(v ~T0 @X0 1 ef ]
-"98
+"27
 {
-[; ;MSSP_I2C_Master.c: 97: void I2C_Stop()
-[; ;MSSP_I2C_Master.c: 98: {
+[; ;MSSP_I2C_Master.c: 26: void I2C_Stop()
+[; ;MSSP_I2C_Master.c: 27: {
 [e :U _I2C_Stop ]
 [f ]
-[; ;MSSP_I2C_Master.c: 99: SSPCON2bits.PEN=1;
-"99
+[; ;MSSP_I2C_Master.c: 28: SSPCON2bits.PEN=1;
+"28
 [e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 100: while(SSPCON2bits.PEN);
-"100
-[e $U 367  ]
-[e :U 368 ]
-[e :U 367 ]
-[e $ != -> . . _SSPCON2bits 0 2 `i -> -> -> 0 `i `Vuc `i 368  ]
-[e :U 369 ]
-[; ;MSSP_I2C_Master.c: 101: restart=0;
-"101
+[; ;MSSP_I2C_Master.c: 29: restart=0;
+"29
 [e = _restart -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 102: }
-"102
-[e :UE 366 ]
+[; ;MSSP_I2C_Master.c: 30: I2C_Wait();
+"30
+[e ( _I2C_Wait ..  ]
+[; ;MSSP_I2C_Master.c: 31: }
+"31
+[e :UE 356 ]
 }
-"104
+"33
 [v _I2C_Read `(uc ~T0 @X0 1 ef1`uc ]
-"105
+"34
 {
-[; ;MSSP_I2C_Master.c: 104: uint8_t I2C_Read(bool ack)
-[; ;MSSP_I2C_Master.c: 105: {
+[; ;MSSP_I2C_Master.c: 33: uint8_t I2C_Read(bool ack)
+[; ;MSSP_I2C_Master.c: 34: {
 [e :U _I2C_Read ]
-"104
+"33
 [v _ack `uc ~T0 @X0 1 r1 ]
-"105
+"34
 [f ]
-"106
-[v _res `uc ~T0 @X0 1 a ]
-[; ;MSSP_I2C_Master.c: 106: uint8_t res;
-[; ;MSSP_I2C_Master.c: 107: SSPCON2bits.RCEN=1;
-"107
+"35
+[v _temp `us ~T0 @X0 1 a ]
+[; ;MSSP_I2C_Master.c: 35: unsigned short temp;
+[; ;MSSP_I2C_Master.c: 36: SSPCON2bits.RCEN=1;
+"36
 [e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;MSSP_I2C_Master.c: 108: __nop();
-"108
-[e ( ___nop ..  ]
-[; ;MSSP_I2C_Master.c: 109: while(!SSPSTATbits.BF);
-"109
-[e $U 371  ]
-[e :U 372 ]
-[e :U 371 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 372  ]
-[e :U 373 ]
-[; ;MSSP_I2C_Master.c: 110: res=SSPBUF;
-"110
-[e = _res _SSPBUF ]
-[; ;MSSP_I2C_Master.c: 111: if(ack) I2C_Ack();
-"111
-[e $ ! != -> _ack `i -> -> -> 0 `i `uc `i 374  ]
-[e ( _I2C_Ack ..  ]
-[e $U 375  ]
-"112
-[e :U 374 ]
-[; ;MSSP_I2C_Master.c: 112: else I2C_NAck();
-[e ( _I2C_NAck ..  ]
-[e :U 375 ]
-[; ;MSSP_I2C_Master.c: 113: return res;
-"113
-[e ) _res ]
-[e $UE 370  ]
-[; ;MSSP_I2C_Master.c: 114: }
-"114
-[e :UE 370 ]
+[; ;MSSP_I2C_Master.c: 37: I2C_Wait();
+"37
+[e ( _I2C_Wait ..  ]
+[; ;MSSP_I2C_Master.c: 38: temp=SSPBUF;
+"38
+[e = _temp -> _SSPBUF `us ]
+[; ;MSSP_I2C_Master.c: 39: I2C_Wait();
+"39
+[e ( _I2C_Wait ..  ]
+[; ;MSSP_I2C_Master.c: 40: SSPCON2bits.ACKDT=(ack)?0:1;
+"40
+[e = . . _SSPCON2bits 0 5 -> ? != -> _ack `i -> -> -> 0 `i `uc `i : -> 0 `i -> 1 `i `uc ]
+[; ;MSSP_I2C_Master.c: 41: SSPCON2bits.ACKEN=1;
+"41
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;MSSP_I2C_Master.c: 42: I2C_Wait();
+"42
+[e ( _I2C_Wait ..  ]
+[; ;MSSP_I2C_Master.c: 43: return temp;
+"43
+[e ) -> _temp `uc ]
+[e $UE 357  ]
+[; ;MSSP_I2C_Master.c: 44: }
+"44
+[e :UE 357 ]
 }
-"116
+"46
 [v _I2C_Write `(v ~T0 @X0 1 ef1`uc ]
-"117
+"47
 {
-[; ;MSSP_I2C_Master.c: 116: void I2C_Write(uint8_t data_out)
-[; ;MSSP_I2C_Master.c: 117: {
+[; ;MSSP_I2C_Master.c: 46: void I2C_Write(uint8_t data_out)
+[; ;MSSP_I2C_Master.c: 47: {
 [e :U _I2C_Write ]
-"116
+"46
 [v _data_out `uc ~T0 @X0 1 r1 ]
-"117
+"47
 [f ]
-[; ;MSSP_I2C_Master.c: 118: SSPBUF=data_out;
-"118
+[; ;MSSP_I2C_Master.c: 48: SSPBUF=data_out;
+"48
 [e = _SSPBUF _data_out ]
-[; ;MSSP_I2C_Master.c: 119: while(SSPSTATbits.BF);
-"119
-[e $U 377  ]
-[e :U 378 ]
-[e :U 377 ]
-[e $ != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 378  ]
-[e :U 379 ]
-[; ;MSSP_I2C_Master.c: 120: }
-"120
-[e :UE 376 ]
+[; ;MSSP_I2C_Master.c: 49: I2C_Wait();
+"49
+[e ( _I2C_Wait ..  ]
+[; ;MSSP_I2C_Master.c: 50: }
+"50
+[e :UE 358 ]
 }
-"122
+"52
 [v _I2C_Init `(v ~T0 @X0 1 ef ]
-"123
+"53
 {
-[; ;MSSP_I2C_Master.c: 122: void I2C_Init()
-[; ;MSSP_I2C_Master.c: 123: {
+[; ;MSSP_I2C_Master.c: 52: void I2C_Init()
+[; ;MSSP_I2C_Master.c: 53: {
 [e :U _I2C_Init ]
 [f ]
-[; ;MSSP_I2C_Master.c: 124: restart=0;
-"124
+[; ;MSSP_I2C_Master.c: 54: restart=0;
+"54
 [e = _restart -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 125: do { TRISCbits.TRISC3 = 1; } while(0);
-"125
-[e :U 383 ]
+[; ;MSSP_I2C_Master.c: 55: do { TRISCbits.TRISC3 = 1; } while(0);
+"55
+[e :U 362 ]
 {
 [e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 382 ]
-[; ;MSSP_I2C_Master.c: 126: do { TRISCbits.TRISC4 = 1; } while(0);
-"126
-[e :U 386 ]
+[e :U 361 ]
+[; ;MSSP_I2C_Master.c: 56: do { TRISCbits.TRISC4 = 1; } while(0);
+"56
+[e :U 365 ]
 {
 [e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 385 ]
-[; ;MSSP_I2C_Master.c: 127: SSPSTAT=0;
-"127
+[e :U 364 ]
+[; ;MSSP_I2C_Master.c: 57: SSPSTAT=0;
+"57
 [e = _SSPSTAT -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 128: SSPCON2=0x00;
-"128
+[; ;MSSP_I2C_Master.c: 58: SSPCON2=0x00;
+"58
 [e = _SSPCON2 -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 129: SSPCON3=0x00;
-"129
+[; ;MSSP_I2C_Master.c: 59: SSPCON3=0x00;
+"59
 [e = _SSPCON3 -> -> 0 `i `uc ]
-[; ;MSSP_I2C_Master.c: 131: SSPADD=19;
-"131
+[; ;MSSP_I2C_Master.c: 61: SSPADD=19;
+"61
 [e = _SSPADD -> -> 19 `i `uc ]
-[; ;MSSP_I2C_Master.c: 132: SSPCON1=0b00101000;
-"132
+[; ;MSSP_I2C_Master.c: 62: SSPCON1=0b00101000;
+"62
 [e = _SSPCON1 -> -> 40 `i `uc ]
-[; ;MSSP_I2C_Master.c: 133: }
-"133
-[e :UE 380 ]
+[; ;MSSP_I2C_Master.c: 63: }
+"63
+[e :UE 359 ]
 }
