@@ -38,7 +38,7 @@ uint8_t RTC_Read(uint8_t address)
     {
         CLRWDT();
         I2C_MasterWrite(dat, 1, 0xDE, &WStt);
-        __delay_ms(1);
+        while(WStt == I2C_MESSAGE_PENDING);
     }
     while(WStt!=I2C_MESSAGE_COMPLETE);
 
@@ -46,7 +46,7 @@ uint8_t RTC_Read(uint8_t address)
     {
         CLRWDT();
         I2C_MasterRead(data, 1, 0xDF, &RStt);
-        __delay_ms(1);
+        while(RStt == I2C_MESSAGE_PENDING);
     }
     while(RStt!=I2C_MESSAGE_COMPLETE);
 

@@ -4412,7 +4412,7 @@ i2c_object.trStatus.s.full = 0;
 i2c_object.i2cErrors = 0;
 
 
-SSPSTAT = 0x00;
+SSPSTAT = 0x40;
 
 SSPCON1 = 0x28;
 

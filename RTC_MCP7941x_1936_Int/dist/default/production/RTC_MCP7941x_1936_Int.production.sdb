@@ -29,7 +29,7 @@ S_MASTER_SEND_ADDR_10BIT_LSB 10
 S_MASTER_10BIT_RESTART 11
 ]
 "5 F:\GitHub\XC8Training\RTC_MCP7941x_1936_Int\mcp7941x.c
-[e E3244 . `uc
+[e E3229 . `uc
 I2C_MESSAGE_COMPLETE 0
 I2C_MESSAGE_FAIL 1
 I2C_MESSAGE_PENDING 2
@@ -331,8 +331,8 @@ I2C_LOST_STATE 6
 "4 F:\GitHub\XC8Training\RTC_MCP7941x_1936_Int\mcp7941x.c
 [v _dat dat `[2]uc  1 e 2 0 ]
 "5
-[v _WStt WStt `E3244  1 e 1 0 ]
-[v _RStt RStt `E3244  1 e 1 0 ]
+[v _WStt WStt `E3229  1 e 1 0 ]
+[v _RStt RStt `E3229  1 e 1 0 ]
 "27 F:\GitHub\XC8Training\RTC_MCP7941x_1936_Int\mcp7941x.h
 [v _rtc_flag rtc_flag `VEuc  1 e 1 0 ]
 "28

@@ -3244,9 +3244,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c.c: 205: i2c_object.i2cErrors = 0;
 "205
 [e = . _i2c_object 4 -> -> 0 `i `uc ]
-[; ;i2c.c: 208: SSPSTAT = 0x00;
+[; ;i2c.c: 208: SSPSTAT = 0x40;
 "208
-[e = _SSPSTAT -> -> 0 `i `uc ]
+[e = _SSPSTAT -> -> 64 `i `uc ]
 [; ;i2c.c: 210: SSPCON1 = 0x28;
 "210
 [e = _SSPCON1 -> -> 40 `i `uc ]
