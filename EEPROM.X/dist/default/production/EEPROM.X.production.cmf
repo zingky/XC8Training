@@ -1,0 +1,991 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 18 18 2 2
+config CONFIG 0 8007 8007 2 2
+$dist/default/production\EEPROM.X.production.obj
+cinit CODE 0 1A 1A C 2
+text1 CODE 0 26 26 185 2
+text2 CODE 0 5C6 5C6 E 2
+text3 CODE 0 552 552 1B 2
+text4 CODE 0 47D 47D 2D 2
+text5 CODE 0 417 417 34 2
+text6 CODE 0 34F 34F 48 2
+text7 CODE 0 629 629 9 2
+text8 CODE 0 397 397 48 2
+text9 CODE 0 56D 56D 15 2
+text10 CODE 0 5EF 5EF C 2
+text11 CODE 0 518 518 1D 2
+text12 CODE 0 5FB 5FB C 2
+text13 CODE 0 64D 64D 4 2
+text14 CODE 0 607 607 C 2
+text15 CODE 0 535 535 1D 2
+text16 CODE 0 63A 63A 7 2
+text17 CODE 0 5E2 5E2 D 2
+text18 CODE 0 4D3 4D3 27 2
+text19 CODE 0 3DF 3DF 38 2
+text20 CODE 0 4FA 4FA 1E 2
+text21 CODE 0 582 582 14 2
+text22 CODE 0 5D4 5D4 E 2
+text23 CODE 0 647 647 6 2
+text24 CODE 0 5B7 5B7 F 2
+text25 CODE 0 632 632 8 2
+text26 CODE 0 613 613 C 2
+text27 CODE 0 28F 28F 67 2
+text28 CODE 0 1AB 1AB E4 2
+text29 CODE 0 44B 44B 32 2
+text30 CODE 0 4AA 4AA 29 2
+text32 CODE 0 596 596 12 2
+maintext CODE 0 2F6 2F6 59 2
+cstackCOMMON COMMON 1 70 70 C 1
+cstackBANK0 BANK0 1 3E 3E 1E 1
+stringtext1 STRCODE 0 61F 61F A 2
+stringtext2 STRCODE 0 5A8 5A8 F 2
+intentry CODE 0 4 4 14 2
+bssBANK0 BANK0 1 20 20 1E 1
+clrtext CODE 0 641 641 6 2
+bssCOMMON COMMON 1 7C 7C 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 5C-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-32F 1
+BANK0 5C-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-32F 1
+CONST 2-3 2
+CONST 651-1FFF 2
+ENTRY 2-3 2
+ENTRY 651-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-56F 1
+SFR11 580-5EF 1
+SFR12 600-66F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 203C-21EF 1
+CODE 2-3 2
+CODE 651-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-3EF 1
+SFR8 400-46F 1
+SFR9 480-4EF 1
+BIGRAM 2000-21EF 1
+COMMON 7D-7D 1
+EEDATA F000-F0FF 2
+STRCODE 2-3 2
+STRCODE 651-1FFF 2
+STRING 2-3 2
+STRING 651-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\EEPROM.X.production.obj
+1A cinit CODE >3220:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1A cinit CODE >3223:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1A cinit CODE >3259:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1B cinit CODE >3263:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1C cinit CODE >3264:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1D cinit CODE >3265:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1E cinit CODE >3266:C:\Users\dungl\AppData\Local\Temp\sdsg.
+1F cinit CODE >3267:C:\Users\dungl\AppData\Local\Temp\sdsg.
+20 cinit CODE >3268:C:\Users\dungl\AppData\Local\Temp\sdsg.
+22 cinit CODE >3274:C:\Users\dungl\AppData\Local\Temp\sdsg.
+22 cinit CODE >3276:C:\Users\dungl\AppData\Local\Temp\sdsg.
+23 cinit CODE >3277:C:\Users\dungl\AppData\Local\Temp\sdsg.
+24 cinit CODE >3278:C:\Users\dungl\AppData\Local\Temp\sdsg.
+4 intentry CODE >51:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/interrupt_manager.c
+4 intentry CODE >32:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+9 intentry CODE >54:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/interrupt_manager.c
+11 intentry CODE >56:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/interrupt_manager.c
+13 intentry CODE >62:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/interrupt_manager.c
+596 text32 CODE >34:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+596 text32 CODE >37:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+598 text32 CODE >38:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+599 text32 CODE >39:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+59A text32 CODE >42:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4AA text30 CODE >23:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4AA text30 CODE >25:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4B1 text30 CODE >26:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4B8 text30 CODE >27:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4BA text30 CODE >28:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4C1 text30 CODE >29:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4C3 text30 CODE >30:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+4CA text30 CODE >31:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+44B text29 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+44B text29 CODE >119:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+454 text29 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+456 text29 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+45F text29 CODE >123:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+466 text29 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+46D text29 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+473 text29 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
+1AB text28 CODE >4:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+1AD text28 CODE >6:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+1B9 text28 CODE >7:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+1BF text28 CODE >9:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+1CA text28 CODE >10:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+1FD text28 CODE >12:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+249 text28 CODE >13:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+28A text28 CODE >15:F:\GitHub\XC8Training\EEPROM.X\Tick_timer.c
+28F text27 CODE >3:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+290 text27 CODE >5:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+291 text27 CODE >8:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2A1 text27 CODE >10:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2A9 text27 CODE >11:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2AF text27 CODE >13:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2B5 text27 CODE >14:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2B6 text27 CODE >17:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2BA text27 CODE >20:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2BF text27 CODE >21:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2C4 text27 CODE >23:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2C5 text27 CODE >26:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2C9 text27 CODE >28:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2CE text27 CODE >29:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2D3 text27 CODE >34:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2D7 text27 CODE >36:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2DC text27 CODE >37:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2E4 text27 CODE >40:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2E5 text27 CODE >5:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+2F4 text27 CODE >41:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+613 text26 CODE >44:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+614 text26 CODE >46:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+619 text26 CODE >47:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+61E text26 CODE >48:F:\GitHub\XC8Training\EEPROM.X\Buttons.c
+632 text25 CODE >6:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+632 text25 CODE >8:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5B7 text24 CODE >11:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5B7 text24 CODE >13:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5BA text24 CODE >15:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5BC text24 CODE >16:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5BE text24 CODE >17:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5BF text24 CODE >18:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5BF text24 CODE >20:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5C1 text24 CODE >21:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5C3 text24 CODE >22:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+647 text23 CODE >26:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+647 text23 CODE >28:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+649 text23 CODE >29:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+64A text23 CODE >30:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+64C text23 CODE >31:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5D4 text22 CODE >46:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5D5 text22 CODE >49:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5D8 text22 CODE >50:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5DB text22 CODE >51:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5DD text22 CODE >52:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5DE text22 CODE >53:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E0 text22 CODE >54:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+582 text21 CODE >5:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+582 text21 CODE >8:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+585 text21 CODE >9:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+58C text21 CODE >10:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+58F text21 CODE >11:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4FA text20 CODE >33:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+4FB text20 CODE >36:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+4FD text20 CODE >37:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+500 text20 CODE >38:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+508 text20 CODE >39:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+50B text20 CODE >40:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+513 text20 CODE >41:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+514 text20 CODE >42:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+516 text20 CODE >43:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+3DF text19 CODE >26:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3DF text19 CODE >30:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3E5 text19 CODE >31:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3E8 text19 CODE >32:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3F7 text19 CODE >33:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3FB text19 CODE >34:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+3FE text19 CODE >35:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+40C text19 CODE >36:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+413 text19 CODE >37:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+415 text19 CODE >38:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4D3 text18 CODE >14:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4D3 text18 CODE >16:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4D5 text18 CODE >17:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4DB text18 CODE >18:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4DE text18 CODE >19:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4ED text18 CODE >20:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4F1 text18 CODE >21:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4F5 text18 CODE >22:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+4F7 text18 CODE >23:F:\GitHub\XC8Training\EEPROM.X\EE24AA.c
+5E2 text17 CODE >57:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E2 text17 CODE >59:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E3 text17 CODE >60:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E5 text17 CODE >61:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E6 text17 CODE >62:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E8 text17 CODE >63:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5E9 text17 CODE >64:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5EA text17 CODE >66:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5EC text17 CODE >67:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+5EE text17 CODE >68:F:\GitHub\XC8Training\EEPROM.X\MSSP_I2C_Master.c
+63A text16 CODE >79:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+63A text16 CODE >82:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+63D text16 CODE >84:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+63E text16 CODE >86:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+63E text16 CODE >88:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+535 text15 CODE >52:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+535 text15 CODE >57:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+537 text15 CODE >58:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+538 text15 CODE >59:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+539 text15 CODE >60:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+53B text15 CODE >65:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+53E text15 CODE >66:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+540 text15 CODE >67:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+542 text15 CODE >68:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+544 text15 CODE >73:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+547 text15 CODE >74:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+548 text15 CODE >79:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+54B text15 CODE >80:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+54D text15 CODE >81:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+54F text15 CODE >87:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+551 text15 CODE >92:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/pin_manager.c
+607 text14 CODE >6:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+607 text14 CODE >9:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+60A text14 CODE >11:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+60B text14 CODE >13:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+60C text14 CODE >15:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+60D text14 CODE >17:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+60E text14 CODE >19:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+610 text14 CODE >20:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+612 text14 CODE >21:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/tmr1.c
+64D text13 CODE >91:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+64D text13 CODE >94:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+650 text13 CODE >95:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+5FB text12 CODE >70:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+5FB text12 CODE >73:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+5FE text12 CODE >74:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+601 text12 CODE >75:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+604 text12 CODE >76:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+606 text12 CODE >77:F:\GitHub\XC8Training\EEPROM.X\mcc_generated_files/mcc.c
+518 text11 CODE >4:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+519 text11 CODE >6:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+51F text11 CODE >7:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+521 text11 CODE >8:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+526 text11 CODE >9:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+528 text11 CODE >10:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+52D text11 CODE >11:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+52F text11 CODE >12:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+534 text11 CODE >13:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5EF text10 CODE >15:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5EF text10 CODE >17:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5F1 text10 CODE >18:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5F4 text10 CODE >19:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5F6 text10 CODE >20:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+5FA text10 CODE >21:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+56D text9 CODE >23:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+56E text9 CODE >25:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+578 text9 CODE >26:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+57B text9 CODE >27:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+57F text9 CODE >28:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+581 text9 CODE >29:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+397 text8 CODE >56:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+397 text8 CODE >58:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3A3 text8 CODE >59:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3A7 text8 CODE >60:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3AA text8 CODE >61:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3B1 text8 CODE >62:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3B4 text8 CODE >63:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3B8 text8 CODE >64:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3BB text8 CODE >65:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3BF text8 CODE >66:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3C2 text8 CODE >67:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3C6 text8 CODE >68:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3CA text8 CODE >69:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3CE text8 CODE >70:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3D2 text8 CODE >71:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+3DE text8 CODE >72:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+629 text7 CODE >31:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+62A text7 CODE >33:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+62C text7 CODE >34:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+62F text7 CODE >35:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+631 text7 CODE >36:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+34F text6 CODE >38:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+350 text6 CODE >41:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+354 text6 CODE >42:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+358 text6 CODE >43:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+364 text6 CODE >44:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+368 text6 CODE >45:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+36C text6 CODE >47:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+382 text6 CODE >48:F:\GitHub\XC8Training\EEPROM.X\TextLCD.c
+417 text5 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+417 text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+419 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+41D text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+41F text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+421 text5 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+426 text5 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+42A text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+42B text5 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+430 text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+438 text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+43C text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+43D text5 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+442 text5 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+446 text5 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
+47D text4 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+47D text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+482 text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+484 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+486 text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+48B text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+48F text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+490 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+498 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+49C text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+4A1 text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+4A5 text4 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
+552 text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+552 text3 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+554 text3 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+556 text3 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+55A text3 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+55F text3 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+564 text3 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+568 text3 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul16.c
+5C6 text2 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\isdigit.c
+5C7 text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\isdigit.c
+26 text1 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+28 text1 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+2C text1 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+3F text1 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+43 text1 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+4E text1 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+4F text1 CODE >546:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+51 text1 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+52 text1 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+53 text1 CODE >579:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+53 text1 CODE >580:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+54 text1 CODE >581:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+58 text1 CODE >551:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+61 text1 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+6B text1 CODE >598:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+6E text1 CODE >600:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+7F text1 CODE >601:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+92 text1 CODE >602:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+9C text1 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+B4 text1 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+C0 text1 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+C2 text1 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+C6 text1 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+CB text1 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+D1 text1 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+E8 text1 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+F0 text1 CODE >1345:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+F8 text1 CODE >1346:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+FC text1 CODE >1381:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+10D text1 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+118 text1 CODE >1384:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+11B text1 CODE >1387:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+11D text1 CODE >1392:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+121 text1 CODE >1393:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+12C text1 CODE >1415:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+130 text1 CODE >1417:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+13B text1 CODE >1418:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+140 text1 CODE >1428:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+144 text1 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+14F text1 CODE >1431:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+157 text1 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+15B text1 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+166 text1 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+16A text1 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+171 text1 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+199 text1 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+1A4 text1 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+1A5 text1 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
+2F6 maintext CODE >10:F:\GitHub\XC8Training\EEPROM.X\main.c
+2F6 maintext CODE >13:F:\GitHub\XC8Training\EEPROM.X\main.c
+2F9 maintext CODE >14:F:\GitHub\XC8Training\EEPROM.X\main.c
+2FC maintext CODE >15:F:\GitHub\XC8Training\EEPROM.X\main.c
+300 maintext CODE >16:F:\GitHub\XC8Training\EEPROM.X\main.c
+303 maintext CODE >17:F:\GitHub\XC8Training\EEPROM.X\main.c
+30D maintext CODE >18:F:\GitHub\XC8Training\EEPROM.X\main.c
+30E maintext CODE >19:F:\GitHub\XC8Training\EEPROM.X\main.c
+30F maintext CODE >22:F:\GitHub\XC8Training\EEPROM.X\main.c
+324 maintext CODE >24:F:\GitHub\XC8Training\EEPROM.X\main.c
+329 maintext CODE >25:F:\GitHub\XC8Training\EEPROM.X\main.c
+333 maintext CODE >26:F:\GitHub\XC8Training\EEPROM.X\main.c
+343 maintext CODE >27:F:\GitHub\XC8Training\EEPROM.X\main.c
+34E maintext CODE >20:F:\GitHub\XC8Training\EEPROM.X\main.c
+641 clrtext CODE >3248:C:\Users\dungl\AppData\Local\Temp\sdsg.
+641 clrtext CODE >3249:C:\Users\dungl\AppData\Local\Temp\sdsg.
+642 clrtext CODE >3250:C:\Users\dungl\AppData\Local\Temp\sdsg.
+642 clrtext CODE >3251:C:\Users\dungl\AppData\Local\Temp\sdsg.
+643 clrtext CODE >3252:C:\Users\dungl\AppData\Local\Temp\sdsg.
+644 clrtext CODE >3253:C:\Users\dungl\AppData\Local\Temp\sdsg.
+645 clrtext CODE >3254:C:\Users\dungl\AppData\Local\Temp\sdsg.
+646 clrtext CODE >3255:C:\Users\dungl\AppData\Local\Temp\sdsg.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TextLCD_CMD ADA 0 CODE 0 text9 dist/default/production\EEPROM.X.production.obj
+___lwmod@counter 7A 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Hspace_0 8009 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+EXT_EEPROM_ReadByte@data 7A 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+TextLCD_4Bits_Write@nib 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_TextLCD_PutChar C52 0 CODE 0 text7 dist/default/production\EEPROM.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_T1CONbits 18 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Start B8C 0 CODE 0 text24 dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Write BC4 0 CODE 0 text22 dist/default/production\EEPROM.X.production.obj
+__end_of_WDT_Initialize CA2 0 CODE 0 text13 dist/default/production\EEPROM.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_LATA 10C 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_LATB 10D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_LATC 10E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_LATE 110 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_PLLR 4D6 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_WPUB 20D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_WPUE 210 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+_main 5EC 0 CODE 0 maintext dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Start 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Write 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+start 30 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+__end_ofTextLCD_Puts@DDRAM_Start_Address B58 0 STRCODE 0 stringtext2 dist/default/production\EEPROM.X.production.obj
+TextLCD_CMD@cmd 73 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+BT_Is_Pressed@signal 54 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+?___lmul 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+?___wmul 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_OPTION_REGbits 95 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Init 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Read 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Stop 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_I2C_Wait 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_I2C_Start B6E 0 CODE 0 text24 dist/default/production\EEPROM.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of_TextLCD_Enable BF6 0 CODE 0 text10 dist/default/production\EEPROM.X.production.obj
+_I2C_Write BA8 0 CODE 0 text22 dist/default/production\EEPROM.X.production.obj
+__size_of_TMR1_Initialize 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_EXT_EEPROM_Ready B2C 0 CODE 0 text21 dist/default/production\EEPROM.X.production.obj
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+Tick_Is_Over@ms 42 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+BT_Is_Pressed@edge 55 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__size_of_EXT_EEPROM_Ready 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+_TextLCD_Init 72E 0 CODE 0 text8 dist/default/production\EEPROM.X.production.obj
+_TextLCD_Puts 69E 0 CODE 0 text6 dist/default/production\EEPROM.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___wmul@multiplicand 73 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_ANSELA 18C 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_ANSELB 18D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_APFCON 11D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_INTERRUPT_InterruptManager 30 0 CODE 0 intentry dist/default/production\EEPROM.X.production.obj
+_I2C_Init BC4 0 CODE 0 text17 dist/default/production\EEPROM.X.production.obj
+_I2C_Read 9F4 0 CODE 0 text20 dist/default/production\EEPROM.X.production.obj
+_I2C_Stop C8E 0 CODE 0 text23 dist/default/production\EEPROM.X.production.obj
+_I2C_Wait C64 0 CODE 0 text25 dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_PutChar 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of___lmul 8FA 0 CODE 0 text29 dist/default/production\EEPROM.X.production.obj
+__end_of___wmul ADA 0 CODE 0 text3 dist/default/production\EEPROM.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Init BDE 0 CODE 0 text17 dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Read A30 0 CODE 0 text20 dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Stop C9A 0 CODE 0 text23 dist/default/production\EEPROM.X.production.obj
+__end_of_I2C_Wait C74 0 CODE 0 text25 dist/default/production\EEPROM.X.production.obj
+___lwmod@divisor 3E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__end_of___lwdiv 896 0 CODE 0 text5 dist/default/production\EEPROM.X.production.obj
+__end_of___lwmod 954 0 CODE 0 text4 dist/default/production\EEPROM.X.production.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_Init 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_Puts 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_dpowers C3E 0 STRCODE 0 stringtext1 dist/default/production\EEPROM.X.production.obj
+___lwdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_4Bits_Write 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_EXT_EEPROM_WriteByte 9A6 0 CODE 0 text18 dist/default/production\EEPROM.X.production.obj
+___lwmod@dividend 40 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_PIN_MANAGER_Initialize A6A 0 CODE 0 text15 dist/default/production\EEPROM.X.production.obj
+start_initialization 34 0 CODE 0 cinit dist/default/production\EEPROM.X.production.obj
+_OSCCON 99 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_TextLCD_Init 7BE 0 CODE 0 text8 dist/default/production\EEPROM.X.production.obj
+__end_of_TextLCD_Puts 72E 0 CODE 0 text6 dist/default/production\EEPROM.X.production.obj
+_BT_Is_Pressed 51E 0 CODE 0 text27 dist/default/production\EEPROM.X.production.obj
+_TRISCbits 8E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_SYSTEM_Initialize C0E 0 CODE 0 text12 dist/default/production\EEPROM.X.production.obj
+clear_ram0 C82 0 CODE 0 clrtext dist/default/production\EEPROM.X.production.obj
+__pcstackBANK0 3E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_T1GCON 19 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_SSPADD 212 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_SSPBUF 211 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_Button_Init C3E 0 CODE 0 text26 dist/default/production\EEPROM.X.production.obj
+Tick_Is_Over@pre 4F 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__size_of_TMR1_ReadTimer 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_restart 7C 0 COMMON 1 bssCOMMON dist/default/production\EEPROM.X.production.obj
+_isdigit$862 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_WDTCON 97 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TextLCD_4Bits_Write A30 0 CODE 0 text11 dist/default/production\EEPROM.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+__end_of_TextLCD_CMD B04 0 CODE 0 text9 dist/default/production\EEPROM.X.production.obj
+BT_Is_Pressed@detect_time 56 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 BANK7 1 bank7 -
+__Hbank8 0 0 BANK8 1 bank8 -
+__Hbank9 0 0 BANK9 1 bank9 -
+__Hcinit 4C 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Hbank10 0 0 BANK10 1 bank10 -
+__Hbank11 0 0 BANK11 1 bank11 -
+__Hbank12 0 0 BANK12 1 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_sprintf 356 0 CODE 0 text1 dist/default/production\EEPROM.X.production.obj
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 0 config -
+TMR1_ReadTimer@readVal 75 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 BANK7 1 bank7 -
+__Lbank8 0 0 BANK8 1 bank8 -
+__Lbank9 0 0 BANK9 1 bank9 -
+__end_of_isdigit BA8 0 CODE 0 text2 dist/default/production\EEPROM.X.production.obj
+__Lcinit 34 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+TextLCD_Puts@DDRAM_Start_Address B50 0 STRCODE 0 stringtext2 dist/default/production\EEPROM.X.production.obj
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+_PORTBbits D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 30 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 30 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 C3E 0 STRCODE 0 stringtext1 dist/default/production\EEPROM.X.production.obj
+__pstringtext2 B50 0 STRCODE 0 stringtext2 dist/default/production\EEPROM.X.production.obj
+__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/production\EEPROM.X.production.obj
+___lmul 896 0 CODE 0 text29 dist/default/production\EEPROM.X.production.obj
+___wmul AA4 0 CODE 0 text3 dist/default/production\EEPROM.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+TextLCD_Puts@data 76 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+TextLCD_Puts@line 79 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+int$flags 7E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__S0 8009 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_str 22 0 BANK0 1 bssBANK0 dist/default/production\EEPROM.X.production.obj
+__size_of_TMR1_ISR 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__CFG_PLLEN$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_BT_Is_Pressed 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+sprintf@val 4C 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_SYSTEM_Initialize BF6 0 CODE 0 text12 dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_Enable 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_EXT_EEPROM_ReadByte 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+BT_Is_Pressed@BT 7A 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__size_of___lmul 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\EEPROM.X.production.obj
+_Tick_Is_Over 356 0 CODE 0 text28 dist/default/production\EEPROM.X.production.obj
+I2C_Read@ack 73 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_PIE1bits 91 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_TextLCD_4Bits_Write A6A 0 CODE 0 text11 dist/default/production\EEPROM.X.production.obj
+_Tick_Is_Over$568 4E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__end_of_BT_Is_Pressed 5EC 0 CODE 0 text27 dist/default/production\EEPROM.X.production.obj
+sprintf@flag 4E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+sprintf@prec 4B 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+EXT_EEPROM_WriteByte@data 78 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_TMR1_ISR B2C 0 CODE 0 text32 dist/default/production\EEPROM.X.production.obj
+__ptext10 BDE 0 CODE 0 text10 dist/default/production\EEPROM.X.production.obj
+__ptext11 A30 0 CODE 0 text11 dist/default/production\EEPROM.X.production.obj
+__ptext12 BF6 0 CODE 0 text12 dist/default/production\EEPROM.X.production.obj
+__ptext13 C9A 0 CODE 0 text13 dist/default/production\EEPROM.X.production.obj
+__ptext14 C0E 0 CODE 0 text14 dist/default/production\EEPROM.X.production.obj
+__ptext15 A6A 0 CODE 0 text15 dist/default/production\EEPROM.X.production.obj
+__ptext16 C74 0 CODE 0 text16 dist/default/production\EEPROM.X.production.obj
+__ptext17 BC4 0 CODE 0 text17 dist/default/production\EEPROM.X.production.obj
+__ptext18 9A6 0 CODE 0 text18 dist/default/production\EEPROM.X.production.obj
+__ptext19 7BE 0 CODE 0 text19 dist/default/production\EEPROM.X.production.obj
+__ptext20 9F4 0 CODE 0 text20 dist/default/production\EEPROM.X.production.obj
+__ptext21 B04 0 CODE 0 text21 dist/default/production\EEPROM.X.production.obj
+__ptext22 BA8 0 CODE 0 text22 dist/default/production\EEPROM.X.production.obj
+__ptext23 C8E 0 CODE 0 text23 dist/default/production\EEPROM.X.production.obj
+__ptext24 B6E 0 CODE 0 text24 dist/default/production\EEPROM.X.production.obj
+__ptext25 C64 0 CODE 0 text25 dist/default/production\EEPROM.X.production.obj
+__ptext26 C26 0 CODE 0 text26 dist/default/production\EEPROM.X.production.obj
+__ptext27 51E 0 CODE 0 text27 dist/default/production\EEPROM.X.production.obj
+__ptext28 356 0 CODE 0 text28 dist/default/production\EEPROM.X.production.obj
+__ptext29 896 0 CODE 0 text29 dist/default/production\EEPROM.X.production.obj
+__ptext30 954 0 CODE 0 text30 dist/default/production\EEPROM.X.production.obj
+__ptext32 B2C 0 CODE 0 text32 dist/default/production\EEPROM.X.production.obj
+__end_of_PIN_MANAGER_Initialize AA4 0 CODE 0 text15 dist/default/production\EEPROM.X.production.obj
+___lwdiv 82E 0 CODE 0 text5 dist/default/production\EEPROM.X.production.obj
+___lwmod 8FA 0 CODE 0 text4 dist/default/production\EEPROM.X.production.obj
+__Lbank10 0 0 BANK10 1 bank10 -
+__Lbank11 0 0 BANK11 1 bank11 -
+__Lbank12 0 0 BANK12 1 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 5EC 0 CODE 0 maintext dist/default/production\EEPROM.X.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+___lmul@multiplier 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__end_of_TMR1_ISR B50 0 CODE 0 text32 dist/default/production\EEPROM.X.production.obj
+___wmul@multiplier 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_LATAbits 10C 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_LATCbits 10E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+I2C_Read@temp 74 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_EXT_EEPROM_ReadByte 7BE 0 CODE 0 text19 dist/default/production\EEPROM.X.production.obj
+__size_of_Button_Init 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+main@count 7B 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+___lwdiv@divisor 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+Tick_Is_Over@tick 53 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+Button_Init@BT 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__size_of_TextLCD_CMD 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+EXT_EEPROM_Ready@ack 75 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+stacklo 203C 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\sdsg.obj
+TextLCD_Puts@address 7A 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_OSCTUNE 98 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_Tick_Is_Over 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+TextLCD_Puts@length_or_type 77 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 7C 0 COMMON 1 bssCOMMON dist/default/production\EEPROM.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+I2C_Write@temp 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_PIR1bits 11 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Lend_init 30 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+EXT_EEPROM_ReadByte@address 76 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+end_of_initialization 44 0 CODE 0 cinit dist/default/production\EEPROM.X.production.obj
+__Hintentry 30 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+TextLCD_Puts@idx 75 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 73 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+?___lwdiv 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+?___lwmod 3E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__end_of_Tick_Is_Over 51E 0 CODE 0 text28 dist/default/production\EEPROM.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+_SSPCON2bits 216 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__ptext1 4C 0 CODE 0 text1 dist/default/production\EEPROM.X.production.obj
+__ptext2 B8C 0 CODE 0 text2 dist/default/production\EEPROM.X.production.obj
+__ptext3 AA4 0 CODE 0 text3 dist/default/production\EEPROM.X.production.obj
+__ptext4 8FA 0 CODE 0 text4 dist/default/production\EEPROM.X.production.obj
+__ptext5 82E 0 CODE 0 text5 dist/default/production\EEPROM.X.production.obj
+__ptext6 69E 0 CODE 0 text6 dist/default/production\EEPROM.X.production.obj
+__ptext7 C52 0 CODE 0 text7 dist/default/production\EEPROM.X.production.obj
+__ptext8 72E 0 CODE 0 text8 dist/default/production\EEPROM.X.production.obj
+__ptext9 ADA 0 CODE 0 text9 dist/default/production\EEPROM.X.production.obj
+_sprintf 4C 0 CODE 0 text1 dist/default/production\EEPROM.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 4A 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+sprintf@sp 51 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_isdigit B8C 0 CODE 0 text2 dist/default/production\EEPROM.X.production.obj
+__end_of_TMR1_Initialize C26 0 CODE 0 text14 dist/default/production\EEPROM.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+__size_of_EXT_EEPROM_WriteByte 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TMR1_ReadTimer 954 0 CODE 0 text30 dist/default/production\EEPROM.X.production.obj
+__end_of__initialization 44 0 CODE 0 cinit dist/default/production\EEPROM.X.production.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__end_of_EXT_EEPROM_ReadByte 82E 0 CODE 0 text19 dist/default/production\EEPROM.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+EXT_EEPROM_WriteByte@address 76 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+___lmul@product 3E 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__end_of_EXT_EEPROM_WriteByte 9F4 0 CODE 0 text18 dist/default/production\EEPROM.X.production.obj
+TextLCD_PutChar@data 74 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+___lmul@multiplicand 75 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_SSPCON1 215 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_SSPCON2 216 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_SSPCON3 217 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_SSPSTAT 214 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Hend_init 34 0 CODE 0 end_init -
+sprintf@c 52 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+sprintf@f 42 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+__end_of_main 69E 0 CODE 0 maintext dist/default/production\EEPROM.X.production.obj
+isdigit@c 72 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+__end_of_TextLCD_PutChar C64 0 CODE 0 text7 dist/default/production\EEPROM.X.production.obj
+__end_of_dpowers C52 0 STRCODE 0 stringtext1 dist/default/production\EEPROM.X.production.obj
+_COUNT 33 0 BANK0 1 bssBANK0 dist/default/production\EEPROM.X.production.obj
+?_sprintf 42 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_T1CON 18 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TMR1H 17 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TMR1L 16 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TRISA 8C 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TRISB 8D 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TRISC 8E 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_TRISE 90 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_TMR1_Initialize C0E 0 CODE 0 text14 dist/default/production\EEPROM.X.production.obj
+_count 20 0 BANK0 1 bssBANK0 dist/default/production\EEPROM.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+_WDT_Initialize C9A 0 CODE 0 text13 dist/default/production\EEPROM.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\EEPROM.X.production.obj
+sprintf@width 4F 0 BANK0 1 cstackBANK0 dist/default/production\EEPROM.X.production.obj
+_EXT_EEPROM_Ready B04 0 CODE 0 text21 dist/default/production\EEPROM.X.production.obj
+__end_of_OSCILLATOR_Initialize C82 0 CODE 0 text16 dist/default/production\EEPROM.X.production.obj
+__end_of_TMR1_ReadTimer 9A6 0 CODE 0 text30 dist/default/production\EEPROM.X.production.obj
+__initialization 34 0 CODE 0 cinit dist/default/production\EEPROM.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\EEPROM.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\EEPROM.X.production.obj
+___wmul@product 75 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+I2C_Write@data_out 73 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+?_TMR1_ReadTimer 71 0 COMMON 1 cstackCOMMON dist/default/production\EEPROM.X.production.obj
+_Button_Init C26 0 CODE 0 text26 dist/default/production\EEPROM.X.production.obj
+_TextLCD_Enable BDE 0 CODE 0 text10 dist/default/production\EEPROM.X.production.obj
+_OSCILLATOR_Initialize C74 0 CODE 0 text16 dist/default/production\EEPROM.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text7 0 629 C52 28 2
+text24 0 5B7 B6E 68 2
+cstackCOMMON 1 70 70 D 1
+stringtext1 0 61F C3E A 2
+stringtext2 0 5A8 B50 F 2
+intentry 0 4 8 5A4 2
+reset_vec 0 0 0 2 2
+bssBANK0 1 20 20 3C 1
+config 0 8007 1000E 2 2

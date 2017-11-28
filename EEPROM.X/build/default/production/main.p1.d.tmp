@@ -1,0 +1,12 @@
+ build/default/production/main.d  \
+ build/default/production/main.p1:  \
+ main.c  \
+EE24AA.h  \
+mcc_generated_files/mcc.h  \
+Tick_timer.h  \
+TextLCD.h  \
+MSSP_I2C_Master.h  \
+Buttons.h  \
+mcc_generated_files/interrupt_manager.h  \
+mcc_generated_files/tmr1.h  \
+mcc_generated_files/pin_manager.h 
