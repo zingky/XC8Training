@@ -1,4 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"26 mcc_generated_files/../mcp7941x.h
+[c E2686 0 1 2 3 4 5 6 7 8 10 11 12 13 14 15 17 18 19 20 21 22 .. ]
+[n E2686 . MCP7941x_SEC MCP7941x_MIN MCP7941x_HOUR MCP7941x_WKDAY MCP7941x_DATE MCP7941x_MTH MCP7941x_YEAR MCP7941x_CONTROL MCP7941x_OSC MCP7941x_ALM0SEC MCP7941x_ALM0MIN MCP7941x_ALM0HOUR MCP7941x_ALM0WKDAY MCP7941x_ALM0DATE MCP7941x_ALM0MTH MCP7941x_ALM1SEC MCP7941x_ALM1MIN MCP7941x_ALM1HOUR MCP7941x_ALM1WKDAY MCP7941x_ALM1DATE MCP7941x_ALM1MTH  ]
 [v F2649 `(v ~T0 @X0 0 tf ]
 "1227 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1507.h
 [s S72 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -11,15 +14,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S71 . . . ]
 "1244
 [v _OPTION_REGbits `VS71 ~T0 @X0 0 e@149 ]
-"1779
-[s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S99 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"1778
-[u S98 `S99 1 ]
-[n S98 . . ]
-"1788
-[v _LATAbits `VS98 ~T0 @X0 0 e@268 ]
-"355
+"66 mcc_generated_files/../mcp7941x.h
+[v _MCP7941x_MFP `(*Vuc ~T0 @X0 0 ef1`uc ]
+"355 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1507.h
 [s S26 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S26 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
 "365
@@ -2603,21 +2600,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"27 mcc_generated_files/../mcp7941x.h
-[v _rtc_flag `Vuc ~T0 @X0 1 e ]
-[; ;mcp7941x.h: 27: volatile bool rtc_flag;
-"28
-[v _date_time `Vuc ~T0 @X0 -> 8 `i e ]
-[; ;mcp7941x.h: 28: volatile uint8_t date_time[8];
-[; ;mcp7941x.h: 30: uint8_t bcd2int(uint8_t bcd);
-[; ;mcp7941x.h: 31: uint8_t int2bcd(uint8_t i);
-[; ;mcp7941x.h: 32: void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-[; ;mcp7941x.h: 33: uint8_t RTC_Read(uint8_t rtcc_reg) ;
-[; ;mcp7941x.h: 34: void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-[; ;mcp7941x.h: 35: uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-[; ;mcp7941x.h: 36: void RTC_Get_Date();
-[; ;mcp7941x.h: 37: void RTC_Get_Time();
-[; ;mcp7941x.h: 38: void RTC_Init(int8_t trim);
+"26 mcc_generated_files/../mcp7941x.h
+[v _MCP7941x_REG `E2686 ~T0 @X0 1 e ]
+[; ;mcp7941x.h: 4: enum {
+[; ;mcp7941x.h: 5: MCP7941x_SEC = 0,
+[; ;mcp7941x.h: 6: MCP7941x_MIN = 1,
+[; ;mcp7941x.h: 7: MCP7941x_HOUR = 2,
+[; ;mcp7941x.h: 8: MCP7941x_WKDAY = 3,
+[; ;mcp7941x.h: 9: MCP7941x_DATE = 4,
+[; ;mcp7941x.h: 10: MCP7941x_MTH = 5,
+[; ;mcp7941x.h: 11: MCP7941x_YEAR = 6,
+[; ;mcp7941x.h: 12: MCP7941x_CONTROL = 7,
+[; ;mcp7941x.h: 13: MCP7941x_OSC = 8,
+[; ;mcp7941x.h: 14: MCP7941x_ALM0SEC = 10,
+[; ;mcp7941x.h: 15: MCP7941x_ALM0MIN = 11,
+[; ;mcp7941x.h: 16: MCP7941x_ALM0HOUR = 12,
+[; ;mcp7941x.h: 17: MCP7941x_ALM0WKDAY = 13,
+[; ;mcp7941x.h: 18: MCP7941x_ALM0DATE = 14,
+[; ;mcp7941x.h: 19: MCP7941x_ALM0MTH = 15,
+[; ;mcp7941x.h: 20: MCP7941x_ALM1SEC = 17,
+[; ;mcp7941x.h: 21: MCP7941x_ALM1MIN = 18,
+[; ;mcp7941x.h: 22: MCP7941x_ALM1HOUR = 19,
+[; ;mcp7941x.h: 23: MCP7941x_ALM1WKDAY = 20,
+[; ;mcp7941x.h: 24: MCP7941x_ALM1DATE = 21,
+[; ;mcp7941x.h: 25: MCP7941x_ALM1MTH = 22
+[; ;mcp7941x.h: 26: } MCP7941x_REG;
+[; ;mcp7941x.h: 28: typedef enum {
+[; ;mcp7941x.h: 30: _1Hz = 0x40,
+[; ;mcp7941x.h: 31: _4096Hz = 0x41,
+[; ;mcp7941x.h: 32: _8192Hz = 0x42,
+[; ;mcp7941x.h: 33: _32768Hz = 0x43,
+[; ;mcp7941x.h: 34: _0Hz = 0x00,
+[; ;mcp7941x.h: 36: L2H = 0x80,
+[; ;mcp7941x.h: 37: H2L = 0x00
+[; ;mcp7941x.h: 38: } mcp7941x_sqwfs_t;
+[; ;mcp7941x.h: 40: typedef struct {
+[; ;mcp7941x.h: 41: uint8_t DoWeek;
+[; ;mcp7941x.h: 42: uint8_t Date;
+[; ;mcp7941x.h: 43: uint8_t Month;
+[; ;mcp7941x.h: 44: uint16_t Year;
+[; ;mcp7941x.h: 45: } mcp7941x_date_t;
+[; ;mcp7941x.h: 47: typedef struct {
+[; ;mcp7941x.h: 48: uint8_t Hour;
+[; ;mcp7941x.h: 49: uint8_t Minute;
+[; ;mcp7941x.h: 50: uint8_t Second;
+[; ;mcp7941x.h: 51: } mcp7941x_time_t;
+[; ;mcp7941x.h: 53: typedef struct {
+[; ;mcp7941x.h: 54: mcp7941x_date_t Date;
+[; ;mcp7941x.h: 55: mcp7941x_time_t Time;
+[; ;mcp7941x.h: 56: } mcp7941x_rtcc_t;
+[; ;mcp7941x.h: 58: void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 59: void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 60: void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 62: void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 63: void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 64: void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 66: volatile bool *MCP7941x_MFP(bool RW);
+[; ;mcp7941x.h: 68: void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);
 "40 mcc_generated_files/ext_int.c
 [v _INT_InterruptHandler `*F2649 ~T0 @X0 1 e ]
 [; ;ext_int.c: 40: void (*INT_InterruptHandler)(void);
@@ -2632,97 +2671,90 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.c: 48: OPTION_REGbits.INTEDG = ~OPTION_REGbits.INTEDG;
 "48
 [e = . . _OPTION_REGbits 0 4 -> ~ -> . . _OPTION_REGbits 0 4 `i `uc ]
-[; ;ext_int.c: 49: do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
+[; ;ext_int.c: 49: MCP7941x_MFP(0);
 "49
-[e :U 311 ]
-{
-[e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
-}
-[e :U 310 ]
-[; ;ext_int.c: 50: rtc_flag=1;
-"50
-[e = _rtc_flag -> -> 1 `i `uc ]
-[; ;ext_int.c: 53: (INTCONbits.INTF = 0);
-"53
+[e ( _MCP7941x_MFP (1 -> -> 0 `i `uc ]
+[; ;ext_int.c: 52: (INTCONbits.INTF = 0);
+"52
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;ext_int.c: 56: INT_CallBack();
-"56
+[; ;ext_int.c: 55: INT_CallBack();
+"55
 [e ( _INT_CallBack ..  ]
-[; ;ext_int.c: 57: }
-"57
-[e :UE 308 ]
+[; ;ext_int.c: 56: }
+"56
+[e :UE 311 ]
 }
-"62
+"61
 [v _INT_CallBack `(v ~T0 @X0 1 ef ]
-"63
+"62
 {
-[; ;ext_int.c: 62: void INT_CallBack(void)
-[; ;ext_int.c: 63: {
+[; ;ext_int.c: 61: void INT_CallBack(void)
+[; ;ext_int.c: 62: {
 [e :U _INT_CallBack ]
 [f ]
-[; ;ext_int.c: 65: if(INT_InterruptHandler)
-"65
+[; ;ext_int.c: 64: if(INT_InterruptHandler)
+"64
 [e $ ! != _INT_InterruptHandler -> -> 0 `i `*F2649 313  ]
-[; ;ext_int.c: 66: {
-"66
+[; ;ext_int.c: 65: {
+"65
 {
-[; ;ext_int.c: 67: INT_InterruptHandler();
-"67
+[; ;ext_int.c: 66: INT_InterruptHandler();
+"66
 [e ( *U _INT_InterruptHandler ..  ]
-"68
+"67
 }
 [e :U 313 ]
+[; ;ext_int.c: 67: }
 [; ;ext_int.c: 68: }
-[; ;ext_int.c: 69: }
-"69
+"68
 [e :UE 312 ]
 }
-"74
+"73
 [v _INT_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2646 ]
 {
-[; ;ext_int.c: 74: void INT_SetInterruptHandler(void (* InterruptHandler)(void)){
+[; ;ext_int.c: 73: void INT_SetInterruptHandler(void (* InterruptHandler)(void)){
 [e :U _INT_SetInterruptHandler ]
-[v F2715 `(v ~T0 @X0 0 tf ]
-[v _InterruptHandler `*F2715 ~T0 @X0 1 r1 ]
+[v F2755 `(v ~T0 @X0 0 tf ]
+[v _InterruptHandler `*F2755 ~T0 @X0 1 r1 ]
 [f ]
-[; ;ext_int.c: 75: INT_InterruptHandler = InterruptHandler;
-"75
+[; ;ext_int.c: 74: INT_InterruptHandler = InterruptHandler;
+"74
 [e = _INT_InterruptHandler _InterruptHandler ]
-[; ;ext_int.c: 76: }
-"76
+[; ;ext_int.c: 75: }
+"75
 [e :UE 314 ]
 }
-"81
+"80
 [v _INT_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;ext_int.c: 81: void INT_DefaultInterruptHandler(void){
+[; ;ext_int.c: 80: void INT_DefaultInterruptHandler(void){
 [e :U _INT_DefaultInterruptHandler ]
 [f ]
-[; ;ext_int.c: 84: }
-"84
+[; ;ext_int.c: 83: }
+"83
 [e :UE 315 ]
 }
-"94
+"93
 [v _EXT_INT_Initialize `(v ~T0 @X0 1 ef ]
-"95
+"94
 {
-[; ;ext_int.c: 94: void EXT_INT_Initialize(void)
-[; ;ext_int.c: 95: {
+[; ;ext_int.c: 93: void EXT_INT_Initialize(void)
+[; ;ext_int.c: 94: {
 [e :U _EXT_INT_Initialize ]
 [f ]
-[; ;ext_int.c: 103: (INTCONbits.INTF = 0);
-"103
+[; ;ext_int.c: 102: (INTCONbits.INTF = 0);
+"102
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;ext_int.c: 104: (OPTION_REGbits.INTEDG = 1);
-"104
+[; ;ext_int.c: 103: (OPTION_REGbits.INTEDG = 1);
+"103
 [e = . . _OPTION_REGbits 0 4 -> -> 1 `i `uc ]
-[; ;ext_int.c: 106: INT_SetInterruptHandler(INT_DefaultInterruptHandler);
-"106
+[; ;ext_int.c: 105: INT_SetInterruptHandler(INT_DefaultInterruptHandler);
+"105
 [e ( _INT_SetInterruptHandler (1 &U _INT_DefaultInterruptHandler ]
-[; ;ext_int.c: 107: (INTCONbits.INTE = 1);
-"107
+[; ;ext_int.c: 106: (INTCONbits.INTE = 1);
+"106
 [e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;ext_int.c: 109: }
-"109
+[; ;ext_int.c: 108: }
+"108
 [e :UE 316 ]
 }

@@ -1651,7 +1651,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA0"/>
-         <value>LED</value>
+         <value>MFP_STT</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRB4"/>
@@ -2176,10 +2176,6 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>14610106a790ac4c0f70e72a54bf58ffb477ce4c6ef1801af80fef2ff2bb43bd</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>e9caaad8e40bb7b0a2c90a2aace3a05f45ccd3cebeca36bf0d3d201ba37614d5</hash>
       </entry>
@@ -2188,12 +2184,12 @@
          <hash>e52e4ffd142a124028122a6144e254d07b9967ba3b5e645bf63b79b9b545446d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>f2233627eaa06bc6bef9dd254df3433153423c68692f06d6cae2d376a232d31f</hash>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>14610106a790ac4c0f70e72a54bf58ffb477ce4c6ef1801af80fef2ff2bb43bd</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>d5c2fb6a594e4faca86f80cebb1b9a05ba5e5b88e31b51070ece30bed8b76904</hash>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>892ff296c6102355f8f3d3ea2b279c8c36a95c2d7468d312afe965ee4123d134</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
@@ -2202,6 +2198,10 @@
       <entry>
          <file>mcc_generated_files\ext_int.h</file>
          <hash>e2c46fbda004a3c7ed73aa8cb46fd1dd8ddb7086dca6c088df733724f05d87e5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>d5c2fb6a594e4faca86f80cebb1b9a05ba5e5b88e31b51070ece30bed8b76904</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>

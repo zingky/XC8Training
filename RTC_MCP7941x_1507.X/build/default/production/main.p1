@@ -1,11 +1,33 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"26 mcp7941x.h
+[c E2695 0 1 2 3 4 5 6 7 8 10 11 12 13 14 15 17 18 19 20 21 22 .. ]
+[n E2695 . MCP7941x_SEC MCP7941x_MIN MCP7941x_HOUR MCP7941x_WKDAY MCP7941x_DATE MCP7941x_MTH MCP7941x_YEAR MCP7941x_CONTROL MCP7941x_OSC MCP7941x_ALM0SEC MCP7941x_ALM0MIN MCP7941x_ALM0HOUR MCP7941x_ALM0WKDAY MCP7941x_ALM0DATE MCP7941x_ALM0MTH MCP7941x_ALM1SEC MCP7941x_ALM1MIN MCP7941x_ALM1HOUR MCP7941x_ALM1WKDAY MCP7941x_ALM1DATE MCP7941x_ALM1MTH  ]
+"14 main.c
+[c E2828 0 1 2 3 4 .. ]
+[n E2828 . DEFAULT APP_INIT RTC_READ PROCESS LCD_WRITE  ]
+"40 mcp7941x.h
+[s S308 `uc 1 `uc 1 `uc 1 `ui 1 ]
+[n S308 . DoWeek Date Month Year ]
+"47
+[s S309 `uc 1 `uc 1 `uc 1 ]
+[n S309 . Hour Minute Second ]
+"53
+[s S310 `S308 1 `S309 1 ]
+[n S310 . Date Time ]
+"19 main.c
+[s S312 `S310 1 `S310 1 ]
+[n S312 . Pres Prev ]
 [p mainexit ]
 "69 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"38 mcp7941x.h
-[v _RTC_Init `(v ~T0 @X0 0 ef1`c ]
 "6 TextLCD.h
 [v _TextLCD_Init `(v ~T0 @X0 0 ef ]
+"8
+[v _TextLCD_Puts `(v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
+[v F2628 `(v ~T0 @X0 1 tf1`ul ]
+"153 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic.h
+[v __delay `JF2628 ~T0 @X0 0 e ]
+[p i __delay ]
 "355 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1507.h
 [s S26 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S26 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
@@ -17,14 +39,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S25 . . . ]
 "372
 [v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
-"36 mcp7941x.h
-[v _RTC_Get_Date `(v ~T0 @X0 0 ef ]
-"37
-[v _RTC_Get_Time `(v ~T0 @X0 0 ef ]
+"40 main.c
+[c E2718 64 65 66 67 0 128 0 .. ]
+[n E2718 . _1Hz _4096Hz _8192Hz _32768Hz _0Hz L2H H2L  ]
+"68 mcp7941x.h
+[v _MCP7941x_Init `(v ~T0 @X0 0 ef2`uc`E2718 ]
+"64
+[v _MCP7941x_Get_DateTime `(v ~T0 @X0 0 ef1`*S310 ]
 "194 C:\Program Files (x86)\Microchip\xc8\v1.44\include\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"8 TextLCD.h
-[v _TextLCD_Puts `(v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
+"66 mcp7941x.h
+[v _MCP7941x_MFP `(*Vuc ~T0 @X0 0 ef1`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2599,21 +2624,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 69: void SYSTEM_Initialize(void);
 [; ;mcc.h: 82: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 95: void WDT_Initialize(void);
-"27 mcp7941x.h
-[v _rtc_flag `Vuc ~T0 @X0 1 e ]
-[; ;mcp7941x.h: 27: volatile bool rtc_flag;
-"28
-[v _date_time `Vuc ~T0 @X0 -> 8 `i e ]
-[; ;mcp7941x.h: 28: volatile uint8_t date_time[8];
-[; ;mcp7941x.h: 30: uint8_t bcd2int(uint8_t bcd);
-[; ;mcp7941x.h: 31: uint8_t int2bcd(uint8_t i);
-[; ;mcp7941x.h: 32: void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-[; ;mcp7941x.h: 33: uint8_t RTC_Read(uint8_t rtcc_reg) ;
-[; ;mcp7941x.h: 34: void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-[; ;mcp7941x.h: 35: uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-[; ;mcp7941x.h: 36: void RTC_Get_Date();
-[; ;mcp7941x.h: 37: void RTC_Get_Time();
-[; ;mcp7941x.h: 38: void RTC_Init(int8_t trim);
+"26 mcp7941x.h
+[v _MCP7941x_REG `E2695 ~T0 @X0 1 e ]
+[; ;mcp7941x.h: 4: enum {
+[; ;mcp7941x.h: 5: MCP7941x_SEC = 0,
+[; ;mcp7941x.h: 6: MCP7941x_MIN = 1,
+[; ;mcp7941x.h: 7: MCP7941x_HOUR = 2,
+[; ;mcp7941x.h: 8: MCP7941x_WKDAY = 3,
+[; ;mcp7941x.h: 9: MCP7941x_DATE = 4,
+[; ;mcp7941x.h: 10: MCP7941x_MTH = 5,
+[; ;mcp7941x.h: 11: MCP7941x_YEAR = 6,
+[; ;mcp7941x.h: 12: MCP7941x_CONTROL = 7,
+[; ;mcp7941x.h: 13: MCP7941x_OSC = 8,
+[; ;mcp7941x.h: 14: MCP7941x_ALM0SEC = 10,
+[; ;mcp7941x.h: 15: MCP7941x_ALM0MIN = 11,
+[; ;mcp7941x.h: 16: MCP7941x_ALM0HOUR = 12,
+[; ;mcp7941x.h: 17: MCP7941x_ALM0WKDAY = 13,
+[; ;mcp7941x.h: 18: MCP7941x_ALM0DATE = 14,
+[; ;mcp7941x.h: 19: MCP7941x_ALM0MTH = 15,
+[; ;mcp7941x.h: 20: MCP7941x_ALM1SEC = 17,
+[; ;mcp7941x.h: 21: MCP7941x_ALM1MIN = 18,
+[; ;mcp7941x.h: 22: MCP7941x_ALM1HOUR = 19,
+[; ;mcp7941x.h: 23: MCP7941x_ALM1WKDAY = 20,
+[; ;mcp7941x.h: 24: MCP7941x_ALM1DATE = 21,
+[; ;mcp7941x.h: 25: MCP7941x_ALM1MTH = 22
+[; ;mcp7941x.h: 26: } MCP7941x_REG;
+[; ;mcp7941x.h: 28: typedef enum {
+[; ;mcp7941x.h: 30: _1Hz = 0x40,
+[; ;mcp7941x.h: 31: _4096Hz = 0x41,
+[; ;mcp7941x.h: 32: _8192Hz = 0x42,
+[; ;mcp7941x.h: 33: _32768Hz = 0x43,
+[; ;mcp7941x.h: 34: _0Hz = 0x00,
+[; ;mcp7941x.h: 36: L2H = 0x80,
+[; ;mcp7941x.h: 37: H2L = 0x00
+[; ;mcp7941x.h: 38: } mcp7941x_sqwfs_t;
+[; ;mcp7941x.h: 40: typedef struct {
+[; ;mcp7941x.h: 41: uint8_t DoWeek;
+[; ;mcp7941x.h: 42: uint8_t Date;
+[; ;mcp7941x.h: 43: uint8_t Month;
+[; ;mcp7941x.h: 44: uint16_t Year;
+[; ;mcp7941x.h: 45: } mcp7941x_date_t;
+[; ;mcp7941x.h: 47: typedef struct {
+[; ;mcp7941x.h: 48: uint8_t Hour;
+[; ;mcp7941x.h: 49: uint8_t Minute;
+[; ;mcp7941x.h: 50: uint8_t Second;
+[; ;mcp7941x.h: 51: } mcp7941x_time_t;
+[; ;mcp7941x.h: 53: typedef struct {
+[; ;mcp7941x.h: 54: mcp7941x_date_t Date;
+[; ;mcp7941x.h: 55: mcp7941x_time_t Time;
+[; ;mcp7941x.h: 56: } mcp7941x_rtcc_t;
+[; ;mcp7941x.h: 58: void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 59: void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 60: void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 62: void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 63: void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 64: void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 66: volatile bool *MCP7941x_MFP(bool RW);
+[; ;mcp7941x.h: 68: void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -2647,85 +2714,330 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;TextLCD.h: 6: void TextLCD_Init();
 [; ;TextLCD.h: 7: void TextLCD_Clear();
 [; ;TextLCD.h: 8: void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
-[v $root$_main `(v ~T0 @X0 0 e ]
-"5 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"6
-{
-[; ;main.c: 5: void main(void)
+[; ;main.c: 5: typedef enum
 [; ;main.c: 6: {
+[; ;main.c: 7: DEFAULT,
+[; ;main.c: 8: APP_INIT,
+[; ;main.c: 9: RTC_READ,
+[; ;main.c: 10: PROCESS,
+[; ;main.c: 11: LCD_WRITE
+[; ;main.c: 12: } task_t;
+"14 main.c
+[v _Task `E2828 ~T0 @X0 1 e ]
+[; ;main.c: 14: task_t Task;
+"16
+[v _Str `uc ~T0 @X0 -> 17 `i e ]
+[; ;main.c: 16: uint8_t Str[17];
+"22
+[v _RTC `S312 ~T0 @X0 1 e ]
+[; ;main.c: 18: struct
+[; ;main.c: 19: {
+[; ;main.c: 20: mcp7941x_rtcc_t Pres;
+[; ;main.c: 21: mcp7941x_rtcc_t Prev;
+[; ;main.c: 22: } RTC;
+[v $root$_main `(v ~T0 @X0 0 e ]
+"24
+[v _main `(v ~T0 @X0 1 ef ]
+"25
+{
+[; ;main.c: 24: void main(void)
+[; ;main.c: 25: {
 [e :U _main ]
 [f ]
-[; ;main.c: 7: SYSTEM_Initialize();
-"7
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 8: RTC_Init(0);
-"8
-[e ( _RTC_Init (1 -> -> 0 `i `c ]
-[; ;main.c: 9: TextLCD_Init();
-"9
-[e ( _TextLCD_Init ..  ]
-[; ;main.c: 10: (INTCONbits.GIE = 1);
-"10
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 11: (INTCONbits.PEIE = 1);
-"11
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 12: rtc_flag=1;
-"12
-[e = _rtc_flag -> -> 1 `i `uc ]
-[; ;main.c: 13: while(1)
-"13
-[e :U 311 ]
-[; ;main.c: 14: {
-"14
-{
-[; ;main.c: 15: asm("clrwdt");
-"15
-[; <" clrwdt ;# ">
-[; ;main.c: 16: if(rtc_flag)
-"16
-[e $ ! != -> _rtc_flag `i -> -> -> 0 `i `Vuc `i 313  ]
-[; ;main.c: 17: {
-"17
-{
-"18
-[v _string `uc ~T0 @X0 -> 32 `i a ]
-[; ;main.c: 18: uint8_t string[32];
-[; ;main.c: 19: RTC_Get_Date(); RTC_Get_Time();
-"19
-[e ( _RTC_Get_Date ..  ]
-[e ( _RTC_Get_Time ..  ]
-[; ;main.c: 20: sprintf(string, "%02d.%02d.20%02d", date_time[4], date_time[5], date_time[6]);
-"20
-[e ( _sprintf (1 , , , (. , &U _string :s 1C -> *U + &U _date_time * -> -> -> 4 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i -> *U + &U _date_time * -> -> -> 5 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i -> *U + &U _date_time * -> -> -> 6 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i ]
-[; ;main.c: 21: TextLCD_Puts(0, 3, string, 0);
-"21
-[e ( _TextLCD_Puts (4 , , , -> -> 0 `i `uc -> -> 3 `i `uc &U _string -> -> 0 `i `uc ]
-[; ;main.c: 22: sprintf(string, "%02d:%02d:%02d", date_time[2], date_time[1], date_time[0]);
-"22
-[e ( _sprintf (1 , , , (. , &U _string :s 2C -> *U + &U _date_time * -> -> -> 2 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i -> *U + &U _date_time * -> -> -> 1 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i -> *U + &U _date_time * -> -> -> 0 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i ]
-[; ;main.c: 23: TextLCD_Puts(1, 4, string, 0);
-"23
-[e ( _TextLCD_Puts (4 , , , -> -> 1 `i `uc -> -> 4 `i `uc &U _string -> -> 0 `i `uc ]
-[; ;main.c: 24: rtc_flag=0;
-"24
-[e = _rtc_flag -> -> 0 `i `uc ]
-"25
-}
-[e :U 313 ]
+[; ;main.c: 26: Task=APP_INIT;
 "26
-}
-[e :U 310 ]
-"13
-[e $U 311  ]
-[e :U 312 ]
-[; ;main.c: 25: }
-[; ;main.c: 26: }
-[; ;main.c: 27: }
+[e = _Task . `E2828 1 ]
+[; ;main.c: 27: SYSTEM_Initialize();
 "27
-[e :UE 309 ]
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 28: TextLCD_Init();
+"28
+[e ( _TextLCD_Init ..  ]
+[; ;main.c: 29: TextLCD_Puts(0, 0, (uint8_t *) "MCP7941x TEST", 0);
+"29
+[e ( _TextLCD_Puts (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> :s 1C `*uc -> -> 0 `i `uc ]
+[; ;main.c: 30: _delay((unsigned long)((500)*(16000000/4000.0)));
+"30
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 31: (INTCONbits.GIE = 1);
+"31
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 32: (INTCONbits.PEIE = 1);
+"32
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 34: while(1)
+"34
+[e :U 315 ]
+[; ;main.c: 35: {
+"35
+{
+[; ;main.c: 36: asm("clrwdt");
+"36
+[; <" clrwdt ;# ">
+[; ;main.c: 37: switch(Task)
+"37
+[e $U 318  ]
+[; ;main.c: 38: {
+"38
+{
+[; ;main.c: 39: case APP_INIT:
+"39
+[e :U 319 ]
+[; ;main.c: 40: MCP7941x_Init(0, _1Hz|H2L);
+"40
+[e ( _MCP7941x_Init (2 , -> -> 0 `i `uc -> | -> . `E2718 0 `i -> . `E2718 6 `i `E2718 ]
+[; ;main.c: 41: RTC.Prev.Date.DoWeek=0;
+"41
+[e = . . . _RTC 1 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 42: RTC.Prev.Date.Date=0;
+"42
+[e = . . . _RTC 1 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 43: RTC.Prev.Date.Month=0;
+"43
+[e = . . . _RTC 1 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 44: RTC.Prev.Date.Year=0;
+"44
+[e = . . . _RTC 1 0 3 -> -> 0 `i `ui ]
+[; ;main.c: 46: RTC.Prev.Time.Hour=0;
+"46
+[e = . . . _RTC 1 1 0 -> -> 0 `i `uc ]
+[; ;main.c: 47: RTC.Prev.Time.Minute=0;
+"47
+[e = . . . _RTC 1 1 1 -> -> 0 `i `uc ]
+[; ;main.c: 48: RTC.Prev.Time.Second=0;
+"48
+[e = . . . _RTC 1 1 2 -> -> 0 `i `uc ]
+[; ;main.c: 50: Task=RTC_READ;
+"50
+[e = _Task . `E2828 2 ]
+[; ;main.c: 51: break;
+"51
+[e $U 317  ]
+[; ;main.c: 53: case RTC_READ:
+"53
+[e :U 320 ]
+[; ;main.c: 54: MCP7941x_Get_DateTime(&RTC.Pres);
+"54
+[e ( _MCP7941x_Get_DateTime (1 &U . _RTC 0 ]
+[; ;main.c: 55: Task=PROCESS;
+"55
+[e = _Task . `E2828 3 ]
+[; ;main.c: 56: break;
+"56
+[e $U 317  ]
+[; ;main.c: 58: case PROCESS:
+"58
+[e :U 321 ]
+[; ;main.c: 59: if(
+[; ;main.c: 60: (RTC.Prev.Time.Second!=RTC.Pres.Time.Second)||
+[; ;main.c: 61: (RTC.Prev.Time.Minute!=RTC.Pres.Time.Minute)||
+[; ;main.c: 62: (RTC.Prev.Time.Hour!=RTC.Pres.Time.Hour)||
+[; ;main.c: 63: (RTC.Prev.Date.DoWeek!=RTC.Pres.Date.DoWeek)||
+[; ;main.c: 64: (RTC.Prev.Date.Date!=RTC.Pres.Date.Date)||
+[; ;main.c: 65: (RTC.Prev.Date.Month!=RTC.Pres.Date.Month)||
+[; ;main.c: 66: (RTC.Prev.Date.Year!=RTC.Pres.Date.Year))
+"66
+[e $ ! || || || || || || != -> . . . _RTC 1 1 2 `i -> . . . _RTC 0 1 2 `i != -> . . . _RTC 1 1 1 `i -> . . . _RTC 0 1 1 `i != -> . . . _RTC 1 1 0 `i -> . . . _RTC 0 1 0 `i != -> . . . _RTC 1 0 0 `i -> . . . _RTC 0 0 0 `i != -> . . . _RTC 1 0 1 `i -> . . . _RTC 0 0 1 `i != -> . . . _RTC 1 0 2 `i -> . . . _RTC 0 0 2 `i != . . . _RTC 1 0 3 . . . _RTC 0 0 3 322  ]
+[; ;main.c: 67: {
+"67
+{
+[; ;main.c: 68: (RTC.Prev.Time.Second=RTC.Pres.Time.Second);
+"68
+[e = . . . _RTC 1 1 2 . . . _RTC 0 1 2 ]
+[; ;main.c: 69: (RTC.Prev.Time.Minute=RTC.Pres.Time.Minute);
+"69
+[e = . . . _RTC 1 1 1 . . . _RTC 0 1 1 ]
+[; ;main.c: 70: (RTC.Prev.Time.Hour=RTC.Pres.Time.Hour);
+"70
+[e = . . . _RTC 1 1 0 . . . _RTC 0 1 0 ]
+[; ;main.c: 71: (RTC.Prev.Date.DoWeek=RTC.Pres.Date.DoWeek);
+"71
+[e = . . . _RTC 1 0 0 . . . _RTC 0 0 0 ]
+[; ;main.c: 72: (RTC.Prev.Date.Date=RTC.Pres.Date.Date);
+"72
+[e = . . . _RTC 1 0 1 . . . _RTC 0 0 1 ]
+[; ;main.c: 73: (RTC.Prev.Date.Month=RTC.Pres.Date.Month);
+"73
+[e = . . . _RTC 1 0 2 . . . _RTC 0 0 2 ]
+[; ;main.c: 74: (RTC.Prev.Date.Year=RTC.Pres.Date.Year);
+"74
+[e = . . . _RTC 1 0 3 . . . _RTC 0 0 3 ]
+[; ;main.c: 75: Task=LCD_WRITE;
+"75
+[e = _Task . `E2828 4 ]
+"76
+}
+[; ;main.c: 76: }
+[e $U 323  ]
+"77
+[e :U 322 ]
+[; ;main.c: 77: else Task=DEFAULT;
+[e = _Task . `E2828 0 ]
+[e :U 323 ]
+[; ;main.c: 78: break;
+"78
+[e $U 317  ]
+[; ;main.c: 80: case LCD_WRITE:
+"80
+[e :U 324 ]
+[; ;main.c: 81: switch(RTC.Prev.Date.DoWeek)
+"81
+[e $U 326  ]
+[; ;main.c: 82: {
+"82
+{
+[; ;main.c: 83: case 1:
+"83
+[e :U 327 ]
+[; ;main.c: 84: sprintf(&Str[0], "Sun");
+"84
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 2C ]
+[; ;main.c: 85: break;
+"85
+[e $U 325  ]
+[; ;main.c: 87: case 2:
+"87
+[e :U 328 ]
+[; ;main.c: 88: sprintf(&Str[0], "Mon");
+"88
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 3C ]
+[; ;main.c: 89: break;
+"89
+[e $U 325  ]
+[; ;main.c: 91: case 3:
+"91
+[e :U 329 ]
+[; ;main.c: 92: sprintf(&Str[0], "Tue");
+"92
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 4C ]
+[; ;main.c: 93: break;
+"93
+[e $U 325  ]
+[; ;main.c: 95: case 4:
+"95
+[e :U 330 ]
+[; ;main.c: 96: sprintf(&Str[0], "Wed");
+"96
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 5C ]
+[; ;main.c: 97: break;
+"97
+[e $U 325  ]
+[; ;main.c: 99: case 5:
+"99
+[e :U 331 ]
+[; ;main.c: 100: sprintf(&Str[0], "Thu");
+"100
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 6C ]
+[; ;main.c: 101: break;
+"101
+[e $U 325  ]
+[; ;main.c: 103: case 6:
+"103
+[e :U 332 ]
+[; ;main.c: 104: sprintf(&Str[0], "Fri");
+"104
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 7C ]
+[; ;main.c: 105: break;
+"105
+[e $U 325  ]
+[; ;main.c: 107: case 7:
+"107
+[e :U 333 ]
+[; ;main.c: 108: sprintf(&Str[0], "Sat");
+"108
+[e ( _sprintf (1 , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 8C ]
+[; ;main.c: 109: break;
+"109
+[e $U 325  ]
+[; ;main.c: 111: default:
+"111
+[e :U 334 ]
+[; ;main.c: 112: break;
+"112
+[e $U 325  ]
+"113
+}
+[; ;main.c: 113: }
+[e $U 325  ]
+"81
+[e :U 326 ]
+[e [\ . . . _RTC 1 0 0 , $ -> -> 1 `i `uc 327
+ , $ -> -> 2 `i `uc 328
+ , $ -> -> 3 `i `uc 329
+ , $ -> -> 4 `i `uc 330
+ , $ -> -> 5 `i `uc 331
+ , $ -> -> 6 `i `uc 332
+ , $ -> -> 7 `i `uc 333
+ 334 ]
+"113
+[e :U 325 ]
+[; ;main.c: 115: sprintf(&Str[3], ", %02d.%02d.%04d",
+[; ;main.c: 116: RTC.Pres.Date.Date,
+[; ;main.c: 117: RTC.Pres.Date.Month,
+[; ;main.c: 118: RTC.Pres.Date.Year);
+"118
+[e ( _sprintf (1 , , , (. , &U *U + &U _Str * -> -> -> 3 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 9C -> . . . _RTC 0 0 1 `i -> . . . _RTC 0 0 2 `i . . . _RTC 0 0 3 ]
+[; ;main.c: 119: TextLCD_Puts(0, 0, Str, 16);
+"119
+[e ( _TextLCD_Puts (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc &U _Str -> -> 16 `i `uc ]
+[; ;main.c: 121: sprintf(&Str[0], "%02d:%02d:%02d",
+[; ;main.c: 122: RTC.Pres.Time.Hour,
+[; ;main.c: 123: RTC.Pres.Time.Minute,
+[; ;main.c: 124: RTC.Pres.Time.Second);
+"124
+[e ( _sprintf (1 , , , (. , &U *U + &U _Str * -> -> -> 0 `i `ui `ux -> -> # *U &U _Str `ui `ux :s 10C -> . . . _RTC 0 1 0 `i -> . . . _RTC 0 1 1 `i -> . . . _RTC 0 1 2 `i ]
+[; ;main.c: 125: TextLCD_Puts(1, 0, Str, 8);
+"125
+[e ( _TextLCD_Puts (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc &U _Str -> -> 8 `i `uc ]
+[; ;main.c: 126: Task=DEFAULT;
+"126
+[e = _Task . `E2828 0 ]
+[; ;main.c: 127: break;
+"127
+[e $U 317  ]
+[; ;main.c: 129: default:
+"129
+[e :U 335 ]
+[; ;main.c: 130: if(MCP7941x_MFP(1)) Task=RTC_READ;
+"130
+[e $ ! != ( _MCP7941x_MFP (1 -> -> 1 `i `uc -> -> 0 `i `*Vuc 336  ]
+[e = _Task . `E2828 2 ]
+[e :U 336 ]
+[; ;main.c: 131: break;
+"131
+[e $U 317  ]
+"132
+}
+[; ;main.c: 132: }
+[e $U 317  ]
+"37
+[e :U 318 ]
+[e [\ _Task , $ . `E2828 1 319
+ , $ . `E2828 2 320
+ , $ . `E2828 3 321
+ , $ . `E2828 4 324
+ 335 ]
+"132
+[e :U 317 ]
+"133
+}
+[e :U 314 ]
+"34
+[e $U 315  ]
+[e :U 316 ]
+[; ;main.c: 133: }
+[; ;main.c: 134: }
+"134
+[e :UE 313 ]
 }
 [p f _sprintf 8421508 ]
-[a 2C 37 48 50 100 58 37 48 50 100 58 37 48 50 100 0 ]
-[a 1C 37 48 50 100 46 37 48 50 100 46 50 48 37 48 50 100 0 ]
+[a 6C 84 104 117 0 ]
+[a 8C 83 97 116 0 ]
+[a 2C 83 117 110 0 ]
+[a 3C 77 111 110 0 ]
+[a 7C 70 114 105 0 ]
+[a 4C 84 117 101 0 ]
+[a 5C 87 101 100 0 ]
+[a 9C 44 32 37 48 50 100 46 37 48 50 100 46 37 48 52 100 0 ]
+[a 10C 37 48 50 100 58 37 48 50 100 58 37 48 50 100 0 ]
+[a 1C 77 67 80 55 57 52 49 120 32 84 69 83 84 0 ]

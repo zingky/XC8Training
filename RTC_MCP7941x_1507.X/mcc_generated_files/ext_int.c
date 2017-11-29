@@ -46,8 +46,7 @@ void INT_ISR(void)
 {
     //***User Area Begin->code***
     OPTION_REGbits.INTEDG = ~OPTION_REGbits.INTEDG;
-    LED_Toggle();
-    rtc_flag=1;
+    MCP7941x_MFP(0);
     //***User Area End->code***
     
     EXT_INT_InterruptFlagClear();

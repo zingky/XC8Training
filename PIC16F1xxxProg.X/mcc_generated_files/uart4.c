@@ -6,8 +6,8 @@ void UART4_Initialize(void)
     U4MODE=0x8008;
     // UTXISEL TX_ONE_CHAR; UTXINV disabled; ADDR 0; URXEN disabled; OERR disabled; ADM_EN disabled; URXISEL RX_ONE_CHAR; UTXBRK disabled; UTXEN disabled; ADDEN disabled; 
     U4STA=0x0;
-    // BaudRate = 10000; Frequency = 48000000 Hz; BRG 1199; 
-    U4BRG=0x4AF;
+    // BaudRate = 300000; Frequency = 48000000 Hz; BRG 39;
+    U4BRG=0x027;
     U4STAbits.UTXEN=1;
     U4STAbits.URXEN=1;
 }

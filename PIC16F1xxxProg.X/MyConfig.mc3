@@ -751,7 +751,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART4" registerAlias="UBRG" settingAlias="BRG"/>
-         <value>1199</value>
+         <value>39</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATD" settingAlias="LATD10" alias="clear"/>
@@ -5323,7 +5323,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART4" registerAlias="UBRG"/>
-         <value>1199</value>
+         <value>39</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELB" settingAlias="ANSB8" alias="digital"/>
@@ -10519,7 +10519,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART4" name="Baudrate"/>
-         <value>10000</value>
+         <value>300000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART4" registerAlias="USTA" settingAlias="ADDEN" alias="enabled"/>
@@ -10796,28 +10796,28 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>edb6797d795f2562fda5fdd8e1181097d7d7c71e8baa8534dbc00c5d7d2dd20d</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>21db37c893f6475f8a3615f6a7fff35125a39058cf8929de3327086075ed5778</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>1e2bcc5d3b185b1c60a12d0446a9e25a52903cdff1cf9015b7ba02f1cfe19216</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\uart4.c</file>
-         <hash>edf46c790d62e0b6d0720879ab575a8c743a6d63bbac0df623bac07ff47edbe4</hash>
+         <hash>f71e23b7275d2084a9b9d008e0e5a55f7adae32391f64182021fc8b5173768a0</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
          <hash>2862bfdee0d3a9be3bb943917d784831d1ef04ea5806295acd41f2bef2c84408</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>3c83977779a52545dfdd0fadbd002eb8cb7e2757b676778e700d176b6d92a415</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>ec3d0dd9a738f95a3ccef9162f44168b43f2756d2e8553134b94bcc4107dfb4b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>3c83977779a52545dfdd0fadbd002eb8cb7e2757b676778e700d176b6d92a415</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\uart4.h</file>

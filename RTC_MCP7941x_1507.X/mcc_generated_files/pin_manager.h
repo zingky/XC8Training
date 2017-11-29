@@ -59,22 +59,22 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set LED aliases
-#define LED_TRIS               TRISAbits.TRISA0
-#define LED_LAT                LATAbits.LATA0
-#define LED_PORT               PORTAbits.RA0
-#define LED_WPU                WPUAbits.WPUA0
-#define LED_ANS                ANSELAbits.ANSA0
-#define LED_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
-#define LED_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
-#define LED_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
-#define LED_GetValue()           PORTAbits.RA0
-#define LED_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
-#define LED_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
-#define LED_SetPullup()      do { WPUAbits.WPUA0 = 1; } while(0)
-#define LED_ResetPullup()    do { WPUAbits.WPUA0 = 0; } while(0)
-#define LED_SetAnalogMode()  do { ANSELAbits.ANSA0 = 1; } while(0)
-#define LED_SetDigitalMode() do { ANSELAbits.ANSA0 = 0; } while(0)
+// get/set MFP_STT aliases
+#define MFP_STT_TRIS               TRISAbits.TRISA0
+#define MFP_STT_LAT                LATAbits.LATA0
+#define MFP_STT_PORT               PORTAbits.RA0
+#define MFP_STT_WPU                WPUAbits.WPUA0
+#define MFP_STT_ANS                ANSELAbits.ANSA0
+#define MFP_STT_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define MFP_STT_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define MFP_STT_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define MFP_STT_GetValue()           PORTAbits.RA0
+#define MFP_STT_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define MFP_STT_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define MFP_STT_SetPullup()      do { WPUAbits.WPUA0 = 1; } while(0)
+#define MFP_STT_ResetPullup()    do { WPUAbits.WPUA0 = 0; } while(0)
+#define MFP_STT_SetAnalogMode()  do { ANSELAbits.ANSA0 = 1; } while(0)
+#define MFP_STT_SetDigitalMode() do { ANSELAbits.ANSA0 = 0; } while(0)
 
 // get/set RA2 procedures
 #define RA2_SetHigh()    do { LATAbits.LATA2 = 1; } while(0)

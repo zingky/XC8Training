@@ -1,38 +1,68 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define RTC_SEC     0
-#define RTC_MIN     1
-#define RTC_HOUR    2
-#define RTC_WKDAY   3
-#define RTC_DATE    4
-#define RTC_MTH     5
-#define RTC_YEAR    6
-#define RTC_CONTROL 7
-#define RTC_OSC     8
-#define RTC_ALM0SEC   10
-#define RTC_ALM0MIN   11
-#define RTC_ALM0HOUR  12
-#define RTC_ALM0WKDAY 13
-#define RTC_ALM0DATE  14
-#define RTC_ALM0MTH   15
-#define RTC_ALM1SEC   17
-#define RTC_ALM1MIN   18
-#define RTC_ALM1HOUR  19
-#define RTC_ALM1WKDAY 20
-#define RTC_ALM1DATE  21
-#define RTC_ALM1MTH   22
-#define RTC_Get_DateTime() RTC_Get_Date(); RTC_Get_Time()
+enum {
+    MCP7941x_SEC = 0,
+    MCP7941x_MIN = 1,
+    MCP7941x_HOUR = 2,
+    MCP7941x_WKDAY = 3,
+    MCP7941x_DATE = 4,
+    MCP7941x_MTH = 5,
+    MCP7941x_YEAR = 6,
+    MCP7941x_CONTROL = 7,
+    MCP7941x_OSC = 8,
+    MCP7941x_ALM0SEC = 10,
+    MCP7941x_ALM0MIN = 11,
+    MCP7941x_ALM0HOUR = 12,
+    MCP7941x_ALM0WKDAY = 13,
+    MCP7941x_ALM0DATE = 14,
+    MCP7941x_ALM0MTH = 15,
+    MCP7941x_ALM1SEC = 17,
+    MCP7941x_ALM1MIN = 18,
+    MCP7941x_ALM1HOUR = 19,
+    MCP7941x_ALM1WKDAY = 20,
+    MCP7941x_ALM1DATE = 21,
+    MCP7941x_ALM1MTH = 22
+} MCP7941x_REG;
 
-volatile bool rtc_flag;
-volatile uint8_t date_time[8];
+typedef enum {
+    // Square Wave Clock Output Frequency Select bits
+    _1Hz = 0x40,
+    _4096Hz = 0x41,
+    _8192Hz = 0x42,
+    _32768Hz = 0x43,
+    _0Hz = 0x00,// Off MFP
+    //  Logic Level for General Purpose Output bit (Or with above)
+    L2H = 0x80,
+    H2L = 0x00
+} mcp7941x_sqwfs_t;
 
-uint8_t bcd2int(uint8_t bcd);
-uint8_t int2bcd(uint8_t i);
-void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-uint8_t RTC_Read(uint8_t rtcc_reg) ;
-void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-                      uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-void RTC_Get_Date();
-void RTC_Get_Time();
-void RTC_Init(int8_t trim);
+typedef struct {
+    uint8_t DoWeek;
+    uint8_t Date;
+    uint8_t Month;
+    uint16_t Year;
+} mcp7941x_date_t;
+
+typedef struct {
+    uint8_t Hour;
+    uint8_t Minute;
+    uint8_t Second;
+} mcp7941x_time_t;
+
+typedef struct {
+    mcp7941x_date_t Date;
+    mcp7941x_time_t Time;
+} mcp7941x_rtcc_t;
+
+void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+
+void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+
+volatile bool *MCP7941x_MFP(bool RW);
+
+void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);

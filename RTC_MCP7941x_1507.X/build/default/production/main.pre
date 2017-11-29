@@ -3568,19 +3568,72 @@ void OSCILLATOR_Initialize(void);
 # 95
 void WDT_Initialize(void);
 
-# 27 "mcp7941x.h"
-volatile bool rtc_flag;
-volatile uint8_t date_time[8];
+# 4 "mcp7941x.h"
+enum {
+MCP7941x_SEC = 0,
+MCP7941x_MIN = 1,
+MCP7941x_HOUR = 2,
+MCP7941x_WKDAY = 3,
+MCP7941x_DATE = 4,
+MCP7941x_MTH = 5,
+MCP7941x_YEAR = 6,
+MCP7941x_CONTROL = 7,
+MCP7941x_OSC = 8,
+MCP7941x_ALM0SEC = 10,
+MCP7941x_ALM0MIN = 11,
+MCP7941x_ALM0HOUR = 12,
+MCP7941x_ALM0WKDAY = 13,
+MCP7941x_ALM0DATE = 14,
+MCP7941x_ALM0MTH = 15,
+MCP7941x_ALM1SEC = 17,
+MCP7941x_ALM1MIN = 18,
+MCP7941x_ALM1HOUR = 19,
+MCP7941x_ALM1WKDAY = 20,
+MCP7941x_ALM1DATE = 21,
+MCP7941x_ALM1MTH = 22
+} MCP7941x_REG;
 
-uint8_t bcd2int(uint8_t bcd);
-uint8_t int2bcd(uint8_t i);
-void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-uint8_t RTC_Read(uint8_t rtcc_reg) ;
-void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-void RTC_Get_Date();
-void RTC_Get_Time();
-void RTC_Init(int8_t trim);
+typedef enum {
+
+_1Hz = 0x40,
+_4096Hz = 0x41,
+_8192Hz = 0x42,
+_32768Hz = 0x43,
+_0Hz = 0x00,
+
+L2H = 0x80,
+H2L = 0x00
+} mcp7941x_sqwfs_t;
+
+typedef struct {
+uint8_t DoWeek;
+uint8_t Date;
+uint8_t Month;
+uint16_t Year;
+} mcp7941x_date_t;
+
+typedef struct {
+uint8_t Hour;
+uint8_t Minute;
+uint8_t Second;
+} mcp7941x_time_t;
+
+typedef struct {
+mcp7941x_date_t Date;
+mcp7941x_time_t Time;
+} mcp7941x_rtcc_t;
+
+void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+
+void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+
+volatile bool *MCP7941x_MFP(bool RW);
+
+void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);
 
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\__size_t.h"
 typedef unsigned size_t;
@@ -3651,26 +3704,133 @@ void TextLCD_Clear();
 void TextLCD_Puts(uint8_t line, uint8_t idx, uint8_t *data, uint8_t length_or_type);
 
 # 5 "main.c"
+typedef enum
+{
+DEFAULT,
+APP_INIT,
+RTC_READ,
+PROCESS,
+LCD_WRITE
+} task_t;
+
+task_t Task;
+
+uint8_t Str[17];
+
+struct
+{
+mcp7941x_rtcc_t Pres;
+mcp7941x_rtcc_t Prev;
+} RTC;
+
 void main(void)
 {
+Task=APP_INIT;
 SYSTEM_Initialize();
-RTC_Init(0);
 TextLCD_Init();
+TextLCD_Puts(0, 0, (uint8_t *) "MCP7941x TEST", 0);
+_delay((unsigned long)((500)*(16000000/4000.0)));
 (INTCONbits.GIE = 1);
 (INTCONbits.PEIE = 1);
-rtc_flag=1;
+
 while(1)
 {
 asm("clrwdt");
-if(rtc_flag)
+switch(Task)
 {
-uint8_t string[32];
-RTC_Get_Date(); RTC_Get_Time();
-sprintf(string, "%02d.%02d.20%02d", date_time[4], date_time[5], date_time[6]);
-TextLCD_Puts(0, 3, string, 0);
-sprintf(string, "%02d:%02d:%02d", date_time[2], date_time[1], date_time[0]);
-TextLCD_Puts(1, 4, string, 0);
-rtc_flag=0;
+case APP_INIT:
+MCP7941x_Init(0, _1Hz|H2L);
+RTC.Prev.Date.DoWeek=0;
+RTC.Prev.Date.Date=0;
+RTC.Prev.Date.Month=0;
+RTC.Prev.Date.Year=0;
+
+RTC.Prev.Time.Hour=0;
+RTC.Prev.Time.Minute=0;
+RTC.Prev.Time.Second=0;
+
+Task=RTC_READ;
+break;
+
+case RTC_READ:
+MCP7941x_Get_DateTime(&RTC.Pres);
+Task=PROCESS;
+break;
+
+case PROCESS:
+if(
+(RTC.Prev.Time.Second!=RTC.Pres.Time.Second)||
+(RTC.Prev.Time.Minute!=RTC.Pres.Time.Minute)||
+(RTC.Prev.Time.Hour!=RTC.Pres.Time.Hour)||
+(RTC.Prev.Date.DoWeek!=RTC.Pres.Date.DoWeek)||
+(RTC.Prev.Date.Date!=RTC.Pres.Date.Date)||
+(RTC.Prev.Date.Month!=RTC.Pres.Date.Month)||
+(RTC.Prev.Date.Year!=RTC.Pres.Date.Year))
+{
+(RTC.Prev.Time.Second=RTC.Pres.Time.Second);
+(RTC.Prev.Time.Minute=RTC.Pres.Time.Minute);
+(RTC.Prev.Time.Hour=RTC.Pres.Time.Hour);
+(RTC.Prev.Date.DoWeek=RTC.Pres.Date.DoWeek);
+(RTC.Prev.Date.Date=RTC.Pres.Date.Date);
+(RTC.Prev.Date.Month=RTC.Pres.Date.Month);
+(RTC.Prev.Date.Year=RTC.Pres.Date.Year);
+Task=LCD_WRITE;
+}
+else Task=DEFAULT;
+break;
+
+case LCD_WRITE:
+switch(RTC.Prev.Date.DoWeek)
+{
+case 1:
+sprintf(&Str[0], "Sun");
+break;
+
+case 2:
+sprintf(&Str[0], "Mon");
+break;
+
+case 3:
+sprintf(&Str[0], "Tue");
+break;
+
+case 4:
+sprintf(&Str[0], "Wed");
+break;
+
+case 5:
+sprintf(&Str[0], "Thu");
+break;
+
+case 6:
+sprintf(&Str[0], "Fri");
+break;
+
+case 7:
+sprintf(&Str[0], "Sat");
+break;
+
+default:
+break;
+}
+
+sprintf(&Str[3], ", %02d.%02d.%04d",
+RTC.Pres.Date.Date,
+RTC.Pres.Date.Month,
+RTC.Pres.Date.Year);
+TextLCD_Puts(0, 0, Str, 16);
+
+sprintf(&Str[0], "%02d:%02d:%02d",
+RTC.Pres.Time.Hour,
+RTC.Pres.Time.Minute,
+RTC.Pres.Time.Second);
+TextLCD_Puts(1, 0, Str, 8);
+Task=DEFAULT;
+break;
+
+default:
+if(MCP7941x_MFP(1)) Task=RTC_READ;
+break;
 }
 }
 }

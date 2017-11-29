@@ -151,6 +151,7 @@ void main()
                 UART_Puts((uint8_t *) "\r\nErased\r\n");
                 Task.Prev=CONVERT;
                 Task.Next=REP_SUCCESS;
+                Delay_ms(100);
                 break;
 
             case CONVERT: // Convert UART data to Hex data format

@@ -1,4 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"26 mcp7941x.h
+[c E30 0 1 2 3 4 5 6 7 8 10 11 12 13 14 15 17 18 19 20 21 22 .. ]
+[n E30 . MCP7941x_SEC MCP7941x_MIN MCP7941x_HOUR MCP7941x_WKDAY MCP7941x_DATE MCP7941x_MTH MCP7941x_YEAR MCP7941x_CONTROL MCP7941x_OSC MCP7941x_ALM0SEC MCP7941x_ALM0MIN MCP7941x_ALM0HOUR MCP7941x_ALM0WKDAY MCP7941x_ALM0DATE MCP7941x_ALM0MTH MCP7941x_ALM1SEC MCP7941x_ALM1MIN MCP7941x_ALM1HOUR MCP7941x_ALM1WKDAY MCP7941x_ALM1DATE MCP7941x_ALM1MTH  ]
 "6 SW_I2C_Master.h
 [v _I2C_Start `(v ~T0 @X0 0 ef ]
 "9
@@ -7,7 +10,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _I2C_Stop `(v ~T0 @X0 0 ef ]
 "8
 [v _I2C_Read `(uc ~T0 @X0 0 ef1`uc ]
-"5
+"40 mcp7941x.h
+[s S1 `uc 1 `uc 1 `uc 1 `ui 1 ]
+[n S1 . DoWeek Date Month Year ]
+"47
+[s S2 `uc 1 `uc 1 `uc 1 ]
+[n S2 . Hour Minute Second ]
+"53
+[s S3 `S1 1 `S2 1 ]
+[n S3 . Date Time ]
+"1779 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1507.h
+[s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S102 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
+"1778
+[u S101 `S102 1 ]
+[n S101 . . ]
+"1788
+[v _LATAbits `VS101 ~T0 @X0 0 e@268 ]
+"122 mcp7941x.c
+[c E53 64 65 66 67 0 128 0 .. ]
+[n E53 . _1Hz _4096Hz _8192Hz _32768Hz _0Hz L2H H2L  ]
+"5 SW_I2C_Master.h
 [v _I2C_Init `(v ~T0 @X0 0 ef ]
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;stdint.h: 13: typedef signed char int8_t;
@@ -38,21 +61,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"27 mcp7941x.h
-[v _rtc_flag `Vuc ~T0 @X0 1 e ]
-[; ;mcp7941x.h: 27: volatile bool rtc_flag;
-"28
-[v _date_time `Vuc ~T0 @X0 -> 8 `i e ]
-[; ;mcp7941x.h: 28: volatile uint8_t date_time[8];
-[; ;mcp7941x.h: 30: uint8_t bcd2int(uint8_t bcd);
-[; ;mcp7941x.h: 31: uint8_t int2bcd(uint8_t i);
-[; ;mcp7941x.h: 32: void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-[; ;mcp7941x.h: 33: uint8_t RTC_Read(uint8_t rtcc_reg) ;
-[; ;mcp7941x.h: 34: void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-[; ;mcp7941x.h: 35: uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-[; ;mcp7941x.h: 36: void RTC_Get_Date();
-[; ;mcp7941x.h: 37: void RTC_Get_Time();
-[; ;mcp7941x.h: 38: void RTC_Init(int8_t trim);
+"26 mcp7941x.h
+[v _MCP7941x_REG `E30 ~T0 @X0 1 e ]
+[; ;mcp7941x.h: 4: enum {
+[; ;mcp7941x.h: 5: MCP7941x_SEC = 0,
+[; ;mcp7941x.h: 6: MCP7941x_MIN = 1,
+[; ;mcp7941x.h: 7: MCP7941x_HOUR = 2,
+[; ;mcp7941x.h: 8: MCP7941x_WKDAY = 3,
+[; ;mcp7941x.h: 9: MCP7941x_DATE = 4,
+[; ;mcp7941x.h: 10: MCP7941x_MTH = 5,
+[; ;mcp7941x.h: 11: MCP7941x_YEAR = 6,
+[; ;mcp7941x.h: 12: MCP7941x_CONTROL = 7,
+[; ;mcp7941x.h: 13: MCP7941x_OSC = 8,
+[; ;mcp7941x.h: 14: MCP7941x_ALM0SEC = 10,
+[; ;mcp7941x.h: 15: MCP7941x_ALM0MIN = 11,
+[; ;mcp7941x.h: 16: MCP7941x_ALM0HOUR = 12,
+[; ;mcp7941x.h: 17: MCP7941x_ALM0WKDAY = 13,
+[; ;mcp7941x.h: 18: MCP7941x_ALM0DATE = 14,
+[; ;mcp7941x.h: 19: MCP7941x_ALM0MTH = 15,
+[; ;mcp7941x.h: 20: MCP7941x_ALM1SEC = 17,
+[; ;mcp7941x.h: 21: MCP7941x_ALM1MIN = 18,
+[; ;mcp7941x.h: 22: MCP7941x_ALM1HOUR = 19,
+[; ;mcp7941x.h: 23: MCP7941x_ALM1WKDAY = 20,
+[; ;mcp7941x.h: 24: MCP7941x_ALM1DATE = 21,
+[; ;mcp7941x.h: 25: MCP7941x_ALM1MTH = 22
+[; ;mcp7941x.h: 26: } MCP7941x_REG;
+[; ;mcp7941x.h: 28: typedef enum {
+[; ;mcp7941x.h: 30: _1Hz = 0x40,
+[; ;mcp7941x.h: 31: _4096Hz = 0x41,
+[; ;mcp7941x.h: 32: _8192Hz = 0x42,
+[; ;mcp7941x.h: 33: _32768Hz = 0x43,
+[; ;mcp7941x.h: 34: _0Hz = 0x00,
+[; ;mcp7941x.h: 36: L2H = 0x80,
+[; ;mcp7941x.h: 37: H2L = 0x00
+[; ;mcp7941x.h: 38: } mcp7941x_sqwfs_t;
+[; ;mcp7941x.h: 40: typedef struct {
+[; ;mcp7941x.h: 41: uint8_t DoWeek;
+[; ;mcp7941x.h: 42: uint8_t Date;
+[; ;mcp7941x.h: 43: uint8_t Month;
+[; ;mcp7941x.h: 44: uint16_t Year;
+[; ;mcp7941x.h: 45: } mcp7941x_date_t;
+[; ;mcp7941x.h: 47: typedef struct {
+[; ;mcp7941x.h: 48: uint8_t Hour;
+[; ;mcp7941x.h: 49: uint8_t Minute;
+[; ;mcp7941x.h: 50: uint8_t Second;
+[; ;mcp7941x.h: 51: } mcp7941x_time_t;
+[; ;mcp7941x.h: 53: typedef struct {
+[; ;mcp7941x.h: 54: mcp7941x_date_t Date;
+[; ;mcp7941x.h: 55: mcp7941x_time_t Time;
+[; ;mcp7941x.h: 56: } mcp7941x_rtcc_t;
+[; ;mcp7941x.h: 58: void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 59: void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 60: void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 62: void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+[; ;mcp7941x.h: 63: void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+[; ;mcp7941x.h: 64: void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+[; ;mcp7941x.h: 66: volatile bool *MCP7941x_MFP(bool RW);
+[; ;mcp7941x.h: 68: void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2591,253 +2656,471 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;SW_I2C_Master.h: 7: void I2C_Stop();
 [; ;SW_I2C_Master.h: 8: uint8_t I2C_Read(bool ack);
 [; ;SW_I2C_Master.h: 9: void I2C_Write(uint8_t data_out);
-"4 mcp7941x.c
-[v _RTC_Write `(v ~T0 @X0 1 ef2`uc`uc ]
-"5
-{
-[; ;mcp7941x.c: 4: void RTC_Write(uint8_t address, uint8_t data)
-[; ;mcp7941x.c: 5: {
-[e :U _RTC_Write ]
-"4
-[v _address `uc ~T0 @X0 1 r1 ]
-[v _data `uc ~T0 @X0 1 r2 ]
-"5
-[f ]
-[; ;mcp7941x.c: 6: I2C_Start();
+[; ;pin_manager.h: 207: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 219: void PIN_MANAGER_IOC(void);
+"5 mcp7941x.c
+[v _Byte2BCD `(uc ~T0 @X0 1 ef1`uc ]
 "6
-[e ( _I2C_Start ..  ]
-[; ;mcp7941x.c: 7: I2C_Write(0xDE);
+{
+[; ;mcp7941x.c: 5: uint8_t Byte2BCD(uint8_t data)
+[; ;mcp7941x.c: 6: {
+[e :U _Byte2BCD ]
+"5
+[v _data `uc ~T0 @X0 1 r1 ]
+"6
+[f ]
 "7
-[e ( _I2C_Write (1 -> -> 222 `i `uc ]
-[; ;mcp7941x.c: 8: I2C_Write(address);
-"8
-[e ( _I2C_Write (1 _address ]
-[; ;mcp7941x.c: 9: I2C_Write(data);
-"9
-[e ( _I2C_Write (1 _data ]
-[; ;mcp7941x.c: 10: I2C_Stop();
-"10
-[e ( _I2C_Stop ..  ]
-[; ;mcp7941x.c: 11: }
-"11
-[e :UE 308 ]
-}
-"13
-[v _RTC_Read `(uc ~T0 @X0 1 ef1`uc ]
-"14
-{
-[; ;mcp7941x.c: 13: uint8_t RTC_Read(uint8_t address)
-[; ;mcp7941x.c: 14: {
-[e :U _RTC_Read ]
-"13
-[v _address `uc ~T0 @X0 1 r1 ]
-"14
-[f ]
-[; ;mcp7941x.c: 15: I2C_Start();
-"15
-[e ( _I2C_Start ..  ]
-[; ;mcp7941x.c: 16: I2C_Write(0xDE);
-"16
-[e ( _I2C_Write (1 -> -> 222 `i `uc ]
-[; ;mcp7941x.c: 17: I2C_Write(address);
-"17
-[e ( _I2C_Write (1 _address ]
-[; ;mcp7941x.c: 18: I2C_Start();
-"18
-[e ( _I2C_Start ..  ]
-[; ;mcp7941x.c: 19: I2C_Write(0xDF);
-"19
-[e ( _I2C_Write (1 -> -> 223 `i `uc ]
-"20
-[v _data `uc ~T0 @X0 1 a ]
-[; ;mcp7941x.c: 20: uint8_t data=I2C_Read(0);
-[e = _data ( _I2C_Read (1 -> -> 0 `i `uc ]
-[; ;mcp7941x.c: 21: I2C_Stop();
-"21
-[e ( _I2C_Stop ..  ]
-[; ;mcp7941x.c: 22: return (data);
-"22
-[e ) _data ]
-[e $UE 309  ]
-[; ;mcp7941x.c: 23: }
-"23
-[e :UE 309 ]
-}
-"25
-[v _int2bcd `(uc ~T0 @X0 1 ef1`uc ]
-"26
-{
-[; ;mcp7941x.c: 25: uint8_t int2bcd(uint8_t data)
-[; ;mcp7941x.c: 26: {
-[e :U _int2bcd ]
-"25
-[v _data `uc ~T0 @X0 1 r1 ]
-"26
-[f ]
-"27
 [v _nibh `uc ~T0 @X0 1 a ]
-[; ;mcp7941x.c: 27: uint8_t nibh=data/10;
+[; ;mcp7941x.c: 7: uint8_t nibh=data/10;
 [e = _nibh -> / -> _data `i -> 10 `i `uc ]
-"28
+"8
 [v _nibl `uc ~T0 @X0 1 a ]
-[; ;mcp7941x.c: 28: uint8_t nibl=data-(nibh*10);
+[; ;mcp7941x.c: 8: uint8_t nibl=data-(nibh*10);
 [e = _nibl -> - -> _data `i * -> _nibh `i -> 10 `i `uc ]
-[; ;mcp7941x.c: 29: return ((nibh<<4)|nibl);
-"29
+[; ;mcp7941x.c: 9: return ((nibh<<4)|nibl);
+"9
 [e ) -> | << -> _nibh `i -> 4 `i -> _nibl `i `uc ]
-[e $UE 310  ]
-[; ;mcp7941x.c: 30: }
-"30
-[e :UE 310 ]
-}
-"32
-[v _bcd2int `(uc ~T0 @X0 1 ef1`uc ]
-"33
-{
-[; ;mcp7941x.c: 32: uint8_t bcd2int(uint8_t data)
-[; ;mcp7941x.c: 33: {
-[e :U _bcd2int ]
-"32
-[v _data `uc ~T0 @X0 1 r1 ]
-"33
-[f ]
-"34
-[v _i `uc ~T0 @X0 1 a ]
-[; ;mcp7941x.c: 34: uint8_t i=data;
-[e = _i _data ]
-[; ;mcp7941x.c: 35: data=(i>>4)*10;
-"35
-[e = _data -> * >> -> _i `i -> 4 `i -> 10 `i `uc ]
-[; ;mcp7941x.c: 36: data=data+(i&0x0F);
-"36
-[e = _data -> + -> _data `i & -> _i `i -> 15 `i `uc ]
-[; ;mcp7941x.c: 37: return data;
-"37
-[e ) _data ]
 [e $UE 311  ]
-[; ;mcp7941x.c: 38: }
-"38
+[; ;mcp7941x.c: 10: }
+"10
 [e :UE 311 ]
 }
-"40
-[v _RTC_Set_DateTime `(v ~T0 @X0 1 ef8`uc`uc`uc`uc`uc`uc`uc`uc ]
-"42
+"12
+[v _BCD2Byte `(uc ~T0 @X0 1 ef1`uc ]
+"13
 {
-[; ;mcp7941x.c: 40: void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-[; ;mcp7941x.c: 41: uint8_t hour, uint8_t min, uint8_t sec, bool leap)
-[; ;mcp7941x.c: 42: {
-[e :U _RTC_Set_DateTime ]
-"40
-[v _day `uc ~T0 @X0 1 r1 ]
-[v _mth `uc ~T0 @X0 1 r2 ]
-[v _year `uc ~T0 @X0 1 r3 ]
-[v _dow `uc ~T0 @X0 1 r4 ]
-"41
-[v _hour `uc ~T0 @X0 1 r5 ]
-[v _min `uc ~T0 @X0 1 r6 ]
-[v _sec `uc ~T0 @X0 1 r7 ]
-[v _leap `uc ~T0 @X0 1 r8 ]
-"42
+[; ;mcp7941x.c: 12: uint8_t BCD2Byte(uint8_t data)
+[; ;mcp7941x.c: 13: {
+[e :U _BCD2Byte ]
+"12
+[v _data `uc ~T0 @X0 1 r1 ]
+"13
 [f ]
-[; ;mcp7941x.c: 43: RTC_Write(6, int2bcd(year));
-"43
-[e ( _RTC_Write (2 , -> -> 6 `i `uc ( _int2bcd (1 _year ]
-[; ;mcp7941x.c: 44: RTC_Write(5, int2bcd(mth)|(leap<<5));
-"44
-[e ( _RTC_Write (2 , -> -> 5 `i `uc -> | -> ( _int2bcd (1 _mth `i << -> _leap `i -> 5 `i `uc ]
-[; ;mcp7941x.c: 45: RTC_Write(4, int2bcd(day));
-"45
-[e ( _RTC_Write (2 , -> -> 4 `i `uc ( _int2bcd (1 _day ]
-[; ;mcp7941x.c: 46: RTC_Write(3, int2bcd(dow)|8);
-"46
-[e ( _RTC_Write (2 , -> -> 3 `i `uc -> | -> ( _int2bcd (1 _dow `i -> 8 `i `uc ]
-[; ;mcp7941x.c: 47: RTC_Write(2, int2bcd(hour));
-"47
-[e ( _RTC_Write (2 , -> -> 2 `i `uc ( _int2bcd (1 _hour ]
-[; ;mcp7941x.c: 48: RTC_Write(1, int2bcd(min));
-"48
-[e ( _RTC_Write (2 , -> -> 1 `i `uc ( _int2bcd (1 _min ]
-[; ;mcp7941x.c: 49: RTC_Write(0, int2bcd(sec)|0x80);
-"49
-[e ( _RTC_Write (2 , -> -> 0 `i `uc -> | -> ( _int2bcd (1 _sec `i -> 128 `i `uc ]
-[; ;mcp7941x.c: 50: }
-"50
+"14
+[v _i `uc ~T0 @X0 1 a ]
+[; ;mcp7941x.c: 14: uint8_t i=data;
+[e = _i _data ]
+[; ;mcp7941x.c: 15: data=(i>>4)*10;
+"15
+[e = _data -> * >> -> _i `i -> 4 `i -> 10 `i `uc ]
+[; ;mcp7941x.c: 16: data=data+(i&0x0F);
+"16
+[e = _data -> + -> _data `i & -> _i `i -> 15 `i `uc ]
+[; ;mcp7941x.c: 17: return data;
+"17
+[e ) _data ]
+[e $UE 312  ]
+[; ;mcp7941x.c: 18: }
+"18
 [e :UE 312 ]
 }
-"52
-[v _RTC_Get_Date `(v ~T0 @X0 1 ef ]
-"53
+"20
+[v _Leap_Year_Calc `(uc ~T0 @X0 1 ef1`ui ]
+"21
 {
-[; ;mcp7941x.c: 52: void RTC_Get_Date()
-[; ;mcp7941x.c: 53: {
-[e :U _RTC_Get_Date ]
+[; ;mcp7941x.c: 20: bool Leap_Year_Calc(uint16_t Year)
+[; ;mcp7941x.c: 21: {
+[e :U _Leap_Year_Calc ]
+"20
+[v _Year `ui ~T0 @X0 1 r1 ]
+"21
 [f ]
-[; ;mcp7941x.c: 54: date_time[6]=bcd2int(RTC_Read(6));
-"54
-[e = *U + &U _date_time * -> -> -> 6 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 ( _RTC_Read (1 -> -> 6 `i `uc ]
-[; ;mcp7941x.c: 55: date_time[5]=bcd2int(RTC_Read(5)&0x1f);
-"55
-[e = *U + &U _date_time * -> -> -> 5 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 -> & -> ( _RTC_Read (1 -> -> 5 `i `uc `i -> 31 `i `uc ]
-[; ;mcp7941x.c: 56: date_time[4]=bcd2int(RTC_Read(4));
-"56
-[e = *U + &U _date_time * -> -> -> 4 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 ( _RTC_Read (1 -> -> 4 `i `uc ]
-[; ;mcp7941x.c: 57: date_time[3]=bcd2int(RTC_Read(3)&7);
-"57
-[e = *U + &U _date_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 -> & -> ( _RTC_Read (1 -> -> 3 `i `uc `i -> 7 `i `uc ]
-[; ;mcp7941x.c: 58: }
-"58
+"22
+[v _leap `uc ~T0 @X0 1 a ]
+[; ;mcp7941x.c: 22: bool leap=0;
+[e = _leap -> -> 0 `i `uc ]
+[; ;mcp7941x.c: 24: if((Year%4)==0)
+"24
+[e $ ! == % _Year -> -> 4 `i `ui -> -> 0 `i `ui 314  ]
+[; ;mcp7941x.c: 25: {
+"25
+{
+[; ;mcp7941x.c: 26: if((Year%100)==0)
+"26
+[e $ ! == % _Year -> -> 100 `i `ui -> -> 0 `i `ui 315  ]
+[; ;mcp7941x.c: 27: {
+"27
+{
+[; ;mcp7941x.c: 28: if((Year%400)==0) leap=1;
+"28
+[e $ ! == % _Year -> -> 400 `i `ui -> -> 0 `i `ui 316  ]
+[e = _leap -> -> 1 `i `uc ]
+[e :U 316 ]
+"29
+}
+[; ;mcp7941x.c: 29: }
+[e $U 317  ]
+"30
+[e :U 315 ]
+[; ;mcp7941x.c: 30: else leap=1;
+[e = _leap -> -> 1 `i `uc ]
+[e :U 317 ]
+"31
+}
+[e :U 314 ]
+[; ;mcp7941x.c: 31: }
+[; ;mcp7941x.c: 32: return leap;
+"32
+[e ) _leap ]
+[e $UE 313  ]
+[; ;mcp7941x.c: 33: }
+"33
 [e :UE 313 ]
 }
-"60
-[v _RTC_Get_Time `(v ~T0 @X0 1 ef ]
-"61
+"35
+[v _MCP7941x_Write `(v ~T0 @X0 1 ef2`uc`uc ]
+"36
 {
-[; ;mcp7941x.c: 60: void RTC_Get_Time()
-[; ;mcp7941x.c: 61: {
-[e :U _RTC_Get_Time ]
+[; ;mcp7941x.c: 35: void MCP7941x_Write(uint8_t address, uint8_t data)
+[; ;mcp7941x.c: 36: {
+[e :U _MCP7941x_Write ]
+"35
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"36
 [f ]
-[; ;mcp7941x.c: 62: date_time[2]=bcd2int(RTC_Read(2));
-"62
-[e = *U + &U _date_time * -> -> -> 2 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 ( _RTC_Read (1 -> -> 2 `i `uc ]
-[; ;mcp7941x.c: 63: date_time[1]=bcd2int(RTC_Read(1));
-"63
-[e = *U + &U _date_time * -> -> -> 1 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 ( _RTC_Read (1 -> -> 1 `i `uc ]
-[; ;mcp7941x.c: 64: date_time[0]=bcd2int(RTC_Read(0)&0x7F);
-"64
-[e = *U + &U _date_time * -> -> -> 0 `i `ui `ux -> -> # *U &U _date_time `ui `ux ( _bcd2int (1 -> & -> ( _RTC_Read (1 -> -> 0 `i `uc `i -> 127 `i `uc ]
-[; ;mcp7941x.c: 65: }
-"65
-[e :UE 314 ]
+[; ;mcp7941x.c: 37: I2C_Start();
+"37
+[e ( _I2C_Start ..  ]
+[; ;mcp7941x.c: 38: I2C_Write(0xDE);
+"38
+[e ( _I2C_Write (1 -> -> 222 `i `uc ]
+[; ;mcp7941x.c: 39: I2C_Write(address);
+"39
+[e ( _I2C_Write (1 _address ]
+[; ;mcp7941x.c: 40: I2C_Write(data);
+"40
+[e ( _I2C_Write (1 _data ]
+[; ;mcp7941x.c: 41: I2C_Stop();
+"41
+[e ( _I2C_Stop ..  ]
+[; ;mcp7941x.c: 42: }
+"42
+[e :UE 318 ]
 }
-"67
-[v _RTC_Init `(v ~T0 @X0 1 ef1`c ]
-"68
+"44
+[v _MCP7941x_Read `(uc ~T0 @X0 1 ef1`uc ]
+"45
 {
-[; ;mcp7941x.c: 67: void RTC_Init(int8_t trim)
-[; ;mcp7941x.c: 68: {
-[e :U _RTC_Init ]
-"67
-[v _trim `c ~T0 @X0 1 r1 ]
-"68
+[; ;mcp7941x.c: 44: uint8_t MCP7941x_Read(uint8_t address)
+[; ;mcp7941x.c: 45: {
+[e :U _MCP7941x_Read ]
+"44
+[v _address `uc ~T0 @X0 1 r1 ]
+"45
 [f ]
-[; ;mcp7941x.c: 69: I2C_Init();
+[; ;mcp7941x.c: 46: I2C_Start();
+"46
+[e ( _I2C_Start ..  ]
+[; ;mcp7941x.c: 47: I2C_Write(0xDE);
+"47
+[e ( _I2C_Write (1 -> -> 222 `i `uc ]
+[; ;mcp7941x.c: 48: I2C_Write(address);
+"48
+[e ( _I2C_Write (1 _address ]
+[; ;mcp7941x.c: 49: I2C_Start();
+"49
+[e ( _I2C_Start ..  ]
+[; ;mcp7941x.c: 50: I2C_Write(0xDF);
+"50
+[e ( _I2C_Write (1 -> -> 223 `i `uc ]
+"51
+[v _data `uc ~T0 @X0 1 a ]
+[; ;mcp7941x.c: 51: uint8_t data=I2C_Read(0);
+[e = _data ( _I2C_Read (1 -> -> 0 `i `uc ]
+[; ;mcp7941x.c: 52: I2C_Stop();
+"52
+[e ( _I2C_Stop ..  ]
+[; ;mcp7941x.c: 53: return (data);
+"53
+[e ) _data ]
+[e $UE 319  ]
+[; ;mcp7941x.c: 54: }
+"54
+[e :UE 319 ]
+}
+"56
+[v _MCP7941x_Set_Date `(v ~T0 @X0 1 ef1`*S1 ]
+"57
+{
+[; ;mcp7941x.c: 56: void MCP7941x_Set_Date(mcp7941x_date_t *pData)
+[; ;mcp7941x.c: 57: {
+[e :U _MCP7941x_Set_Date ]
+"56
+[v _pData `*S1 ~T0 @X0 1 r1 ]
+"57
+[f ]
+[; ;mcp7941x.c: 58: MCP7941x_Write(MCP7941x_YEAR, Byte2BCD((uint8_t) (pData->Year%100)));
+"58
+[e ( _MCP7941x_Write (2 , -> . `E30 6 `uc ( _Byte2BCD (1 -> % . *U _pData 3 -> -> 100 `i `ui `uc ]
+[; ;mcp7941x.c: 59: MCP7941x_Write(MCP7941x_MTH, Byte2BCD(pData->Month)
+[; ;mcp7941x.c: 60: |((uint8_t) Leap_Year_Calc(pData->Year)<<5));
+"60
+[e ( _MCP7941x_Write (2 , -> . `E30 5 `uc -> | -> ( _Byte2BCD (1 . *U _pData 2 `i << -> ( _Leap_Year_Calc (1 . *U _pData 3 `i -> 5 `i `uc ]
+[; ;mcp7941x.c: 61: MCP7941x_Write(MCP7941x_DATE, Byte2BCD(pData->Date));
+"61
+[e ( _MCP7941x_Write (2 , -> . `E30 4 `uc ( _Byte2BCD (1 . *U _pData 1 ]
+[; ;mcp7941x.c: 62: MCP7941x_Write(MCP7941x_WKDAY, Byte2BCD(pData->DoWeek)|8);
+"62
+[e ( _MCP7941x_Write (2 , -> . `E30 3 `uc -> | -> ( _Byte2BCD (1 . *U _pData 0 `i -> 8 `i `uc ]
+[; ;mcp7941x.c: 63: }
+"63
+[e :UE 320 ]
+}
+"65
+[v _MCP7941x_Set_Time `(v ~T0 @X0 1 ef1`*S2 ]
+"66
+{
+[; ;mcp7941x.c: 65: void MCP7941x_Set_Time(mcp7941x_time_t *pData)
+[; ;mcp7941x.c: 66: {
+[e :U _MCP7941x_Set_Time ]
+"65
+[v _pData `*S2 ~T0 @X0 1 r1 ]
+"66
+[f ]
+[; ;mcp7941x.c: 67: MCP7941x_Write(MCP7941x_HOUR, Byte2BCD(pData->Hour));
+"67
+[e ( _MCP7941x_Write (2 , -> . `E30 2 `uc ( _Byte2BCD (1 . *U _pData 0 ]
+[; ;mcp7941x.c: 68: MCP7941x_Write(MCP7941x_MIN, Byte2BCD(pData->Minute));
+"68
+[e ( _MCP7941x_Write (2 , -> . `E30 1 `uc ( _Byte2BCD (1 . *U _pData 1 ]
+[; ;mcp7941x.c: 69: MCP7941x_Write(MCP7941x_SEC, Byte2BCD(pData->Second)|0x80);
 "69
-[e ( _I2C_Init ..  ]
-[; ;mcp7941x.c: 71: RTC_Write(7, 0x40);
-"71
-[e ( _RTC_Write (2 , -> -> 7 `i `uc -> -> 64 `i `uc ]
-[; ;mcp7941x.c: 72: RTC_Write(8, trim);
+[e ( _MCP7941x_Write (2 , -> . `E30 0 `uc -> | -> ( _Byte2BCD (1 . *U _pData 2 `i -> 128 `i `uc ]
+[; ;mcp7941x.c: 70: }
+"70
+[e :UE 321 ]
+}
 "72
-[e ( _RTC_Write (2 , -> -> 8 `i `uc -> _trim `uc ]
-[; ;mcp7941x.c: 73: date_time[3]=0x20&RTC_Read(3);
+[v _MCP7941x_Set_DateTime `(v ~T0 @X0 1 ef1`*S3 ]
 "73
-[e = *U + &U _date_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _date_time `ui `ux -> & -> 32 `i -> ( _RTC_Read (1 -> -> 3 `i `uc `i `uc ]
-[; ;mcp7941x.c: 74: if(date_time[3]!=0x20) RTC_Set_DateTime(1, 1, 16, 6, 0, 0, 0, 1);
+{
+[; ;mcp7941x.c: 72: void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData)
+[; ;mcp7941x.c: 73: {
+[e :U _MCP7941x_Set_DateTime ]
+"72
+[v _pData `*S3 ~T0 @X0 1 r1 ]
+"73
+[f ]
+[; ;mcp7941x.c: 74: MCP7941x_Set_Date(&pData->Date);
 "74
-[e $ ! != -> *U + &U _date_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _date_time `ui `ux `i -> 32 `i 316  ]
-[e ( _RTC_Set_DateTime (4 , , , , , , , -> -> 1 `i `uc -> -> 1 `i `uc -> -> 16 `i `uc -> -> 6 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc ]
-[e :U 316 ]
-[; ;mcp7941x.c: 75: }
+[e ( _MCP7941x_Set_Date (1 &U . *U _pData 0 ]
+[; ;mcp7941x.c: 75: MCP7941x_Set_Time(&pData->Time);
 "75
-[e :UE 315 ]
+[e ( _MCP7941x_Set_Time (1 &U . *U _pData 1 ]
+[; ;mcp7941x.c: 76: }
+"76
+[e :UE 322 ]
+}
+"78
+[v _MCP7941x_Get_Date `(v ~T0 @X0 1 ef1`*S1 ]
+"79
+{
+[; ;mcp7941x.c: 78: void MCP7941x_Get_Date(mcp7941x_date_t *pData)
+[; ;mcp7941x.c: 79: {
+[e :U _MCP7941x_Get_Date ]
+"78
+[v _pData `*S1 ~T0 @X0 1 r1 ]
+"79
+[f ]
+[; ;mcp7941x.c: 80: pData->Year=2000+BCD2Byte(MCP7941x_Read(MCP7941x_YEAR));
+"80
+[e = . *U _pData 3 -> + -> 2000 `i -> ( _BCD2Byte (1 ( _MCP7941x_Read (1 -> . `E30 6 `uc `i `ui ]
+[; ;mcp7941x.c: 81: pData->Month=BCD2Byte(MCP7941x_Read(MCP7941x_MTH)&0x1F);
+"81
+[e = . *U _pData 2 ( _BCD2Byte (1 -> & -> ( _MCP7941x_Read (1 -> . `E30 5 `uc `i -> 31 `i `uc ]
+[; ;mcp7941x.c: 82: pData->Date=BCD2Byte(MCP7941x_Read(MCP7941x_DATE));
+"82
+[e = . *U _pData 1 ( _BCD2Byte (1 ( _MCP7941x_Read (1 -> . `E30 4 `uc ]
+[; ;mcp7941x.c: 83: pData->DoWeek=BCD2Byte(MCP7941x_Read(MCP7941x_WKDAY)&7);
+"83
+[e = . *U _pData 0 ( _BCD2Byte (1 -> & -> ( _MCP7941x_Read (1 -> . `E30 3 `uc `i -> 7 `i `uc ]
+[; ;mcp7941x.c: 84: }
+"84
+[e :UE 323 ]
+}
+"86
+[v _MCP7941x_Get_Time `(v ~T0 @X0 1 ef1`*S2 ]
+"87
+{
+[; ;mcp7941x.c: 86: void MCP7941x_Get_Time(mcp7941x_time_t *pData)
+[; ;mcp7941x.c: 87: {
+[e :U _MCP7941x_Get_Time ]
+"86
+[v _pData `*S2 ~T0 @X0 1 r1 ]
+"87
+[f ]
+[; ;mcp7941x.c: 88: pData->Hour=BCD2Byte(MCP7941x_Read(MCP7941x_HOUR));
+"88
+[e = . *U _pData 0 ( _BCD2Byte (1 ( _MCP7941x_Read (1 -> . `E30 2 `uc ]
+[; ;mcp7941x.c: 89: pData->Minute=BCD2Byte(MCP7941x_Read(MCP7941x_MIN));
+"89
+[e = . *U _pData 1 ( _BCD2Byte (1 ( _MCP7941x_Read (1 -> . `E30 1 `uc ]
+[; ;mcp7941x.c: 90: pData->Second=BCD2Byte(MCP7941x_Read(MCP7941x_SEC)&0x7F);
+"90
+[e = . *U _pData 2 ( _BCD2Byte (1 -> & -> ( _MCP7941x_Read (1 -> . `E30 0 `uc `i -> 127 `i `uc ]
+[; ;mcp7941x.c: 91: }
+"91
+[e :UE 324 ]
+}
+"93
+[v _MCP7941x_Get_DateTime `(v ~T0 @X0 1 ef1`*S3 ]
+"94
+{
+[; ;mcp7941x.c: 93: void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData)
+[; ;mcp7941x.c: 94: {
+[e :U _MCP7941x_Get_DateTime ]
+"93
+[v _pData `*S3 ~T0 @X0 1 r1 ]
+"94
+[f ]
+[; ;mcp7941x.c: 95: MCP7941x_Get_Date(&pData->Date);
+"95
+[e ( _MCP7941x_Get_Date (1 &U . *U _pData 0 ]
+[; ;mcp7941x.c: 96: MCP7941x_Get_Time(&pData->Time);
+"96
+[e ( _MCP7941x_Get_Time (1 &U . *U _pData 1 ]
+[; ;mcp7941x.c: 97: }
+"97
+[e :UE 325 ]
+}
+"99
+[v _MFP `Vuc ~T0 @X0 1 e ]
+[; ;mcp7941x.c: 99: volatile bool MFP;
+"101
+[v _MCP7941x_MFP `(*Vuc ~T0 @X0 1 ef1`uc ]
+"102
+{
+[; ;mcp7941x.c: 101: volatile bool *MCP7941x_MFP(bool RW)
+[; ;mcp7941x.c: 102: {
+[e :U _MCP7941x_MFP ]
+"101
+[v _RW `uc ~T0 @X0 1 r1 ]
+"102
+[f ]
+[; ;mcp7941x.c: 103: if(RW)
+"103
+[e $ ! != -> _RW `i -> -> -> 0 `i `uc `i 327  ]
+[; ;mcp7941x.c: 104: {
+"104
+{
+[; ;mcp7941x.c: 105: if(MFP)
+"105
+[e $ ! != -> _MFP `i -> -> -> 0 `i `Vuc `i 328  ]
+[; ;mcp7941x.c: 106: {
+"106
+{
+[; ;mcp7941x.c: 107: MFP=0;
+"107
+[e = _MFP -> -> 0 `i `uc ]
+[; ;mcp7941x.c: 108: return 1;
+"108
+[e ) -> -> 1 `i `*Vuc ]
+[e $UE 326  ]
+"109
+}
+[e :U 328 ]
+"110
+}
+[; ;mcp7941x.c: 109: }
+[; ;mcp7941x.c: 110: }
+[e $U 329  ]
+"111
+[e :U 327 ]
+[; ;mcp7941x.c: 111: else
+[; ;mcp7941x.c: 112: {
+"112
+{
+[; ;mcp7941x.c: 113: MFP=1;
+"113
+[e = _MFP -> -> 1 `i `uc ]
+[; ;mcp7941x.c: 115: do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
+"115
+[e :U 332 ]
+{
+[e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
+}
+[e :U 331 ]
+"117
+}
+[e :U 329 ]
+[; ;mcp7941x.c: 117: }
+[; ;mcp7941x.c: 118: return 0;
+"118
+[e ) -> -> 0 `i `*Vuc ]
+[e $UE 326  ]
+[; ;mcp7941x.c: 119: }
+"119
+[e :UE 326 ]
+}
+"121
+[v _MCP7941x_Init `(v ~T0 @X0 1 ef2`uc`E53 ]
+"122
+{
+[; ;mcp7941x.c: 121: void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk)
+[; ;mcp7941x.c: 122: {
+[e :U _MCP7941x_Init ]
+"121
+[v _trim `uc ~T0 @X0 1 r1 ]
+[v _mfp_clk `E53 ~T0 @X0 1 r2 ]
+"122
+[f ]
+"123
+[v _temp `uc ~T0 @X0 1 a ]
+[; ;mcp7941x.c: 123: uint8_t temp;
+[; ;mcp7941x.c: 124: MFP=0;
+"124
+[e = _MFP -> -> 0 `i `uc ]
+[; ;mcp7941x.c: 125: I2C_Init();
+"125
+[e ( _I2C_Init ..  ]
+[; ;mcp7941x.c: 126: MCP7941x_Write(MCP7941x_CONTROL, mfp_clk);
+"126
+[e ( _MCP7941x_Write (2 , -> . `E30 7 `uc -> _mfp_clk `uc ]
+[; ;mcp7941x.c: 127: MCP7941x_Write(MCP7941x_OSC, trim);
+"127
+[e ( _MCP7941x_Write (2 , -> . `E30 8 `uc _trim ]
+[; ;mcp7941x.c: 128: temp=MCP7941x_Read(MCP7941x_WKDAY);
+"128
+[e = _temp ( _MCP7941x_Read (1 -> . `E30 3 `uc ]
+[; ;mcp7941x.c: 129: if((temp&0x20)!=0x20)
+"129
+[e $ ! != & -> _temp `i -> 32 `i -> 32 `i 334  ]
+[; ;mcp7941x.c: 130: {
+"130
+{
+"131
+[v _Preset `S3 ~T0 @X0 1 a ]
+[; ;mcp7941x.c: 131: mcp7941x_rtcc_t Preset;
+[; ;mcp7941x.c: 132: Preset.Date.DoWeek=2;
+"132
+[e = . . _Preset 0 0 -> -> 2 `i `uc ]
+[; ;mcp7941x.c: 133: Preset.Date.Date=27;
+"133
+[e = . . _Preset 0 1 -> -> 27 `i `uc ]
+[; ;mcp7941x.c: 134: Preset.Date.Month=11;
+"134
+[e = . . _Preset 0 2 -> -> 11 `i `uc ]
+[; ;mcp7941x.c: 135: Preset.Date.Year=2017;
+"135
+[e = . . _Preset 0 3 -> -> 2017 `i `ui ]
+[; ;mcp7941x.c: 137: Preset.Time.Hour=23;
+"137
+[e = . . _Preset 1 0 -> -> 23 `i `uc ]
+[; ;mcp7941x.c: 138: Preset.Time.Minute=59;
+"138
+[e = . . _Preset 1 1 -> -> 59 `i `uc ]
+[; ;mcp7941x.c: 139: Preset.Time.Second=50;
+"139
+[e = . . _Preset 1 2 -> -> 50 `i `uc ]
+[; ;mcp7941x.c: 141: MCP7941x_Set_DateTime(&Preset);
+"141
+[e ( _MCP7941x_Set_DateTime (1 &U _Preset ]
+"142
+}
+[e :U 334 ]
+[; ;mcp7941x.c: 142: }
+[; ;mcp7941x.c: 143: }
+"143
+[e :UE 333 ]
 }

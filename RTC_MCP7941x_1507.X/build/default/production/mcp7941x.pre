@@ -94,19 +94,72 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 27 "mcp7941x.h"
-volatile bool rtc_flag;
-volatile uint8_t date_time[8];
+# 4 "mcp7941x.h"
+enum {
+MCP7941x_SEC = 0,
+MCP7941x_MIN = 1,
+MCP7941x_HOUR = 2,
+MCP7941x_WKDAY = 3,
+MCP7941x_DATE = 4,
+MCP7941x_MTH = 5,
+MCP7941x_YEAR = 6,
+MCP7941x_CONTROL = 7,
+MCP7941x_OSC = 8,
+MCP7941x_ALM0SEC = 10,
+MCP7941x_ALM0MIN = 11,
+MCP7941x_ALM0HOUR = 12,
+MCP7941x_ALM0WKDAY = 13,
+MCP7941x_ALM0DATE = 14,
+MCP7941x_ALM0MTH = 15,
+MCP7941x_ALM1SEC = 17,
+MCP7941x_ALM1MIN = 18,
+MCP7941x_ALM1HOUR = 19,
+MCP7941x_ALM1WKDAY = 20,
+MCP7941x_ALM1DATE = 21,
+MCP7941x_ALM1MTH = 22
+} MCP7941x_REG;
 
-uint8_t bcd2int(uint8_t bcd);
-uint8_t int2bcd(uint8_t i);
-void RTC_Write(uint8_t time_var, uint8_t rtcc_reg);
-uint8_t RTC_Read(uint8_t rtcc_reg) ;
-void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-uint8_t hour, uint8_t min, uint8_t sec, bool leap);
-void RTC_Get_Date();
-void RTC_Get_Time();
-void RTC_Init(int8_t trim);
+typedef enum {
+
+_1Hz = 0x40,
+_4096Hz = 0x41,
+_8192Hz = 0x42,
+_32768Hz = 0x43,
+_0Hz = 0x00,
+
+L2H = 0x80,
+H2L = 0x00
+} mcp7941x_sqwfs_t;
+
+typedef struct {
+uint8_t DoWeek;
+uint8_t Date;
+uint8_t Month;
+uint16_t Year;
+} mcp7941x_date_t;
+
+typedef struct {
+uint8_t Hour;
+uint8_t Minute;
+uint8_t Second;
+} mcp7941x_time_t;
+
+typedef struct {
+mcp7941x_date_t Date;
+mcp7941x_time_t Time;
+} mcp7941x_rtcc_t;
+
+void MCP7941x_Set_Date(mcp7941x_date_t *pData);
+void MCP7941x_Set_Time(mcp7941x_time_t *pData);
+void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData);
+
+void MCP7941x_Get_Date(mcp7941x_date_t *pData);
+void MCP7941x_Get_Time(mcp7941x_time_t *pData);
+void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData);
+
+volatile bool *MCP7941x_MFP(bool RW);
+
+void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk);
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -3553,8 +3606,44 @@ void I2C_Stop();
 uint8_t I2C_Read(bool ack);
 void I2C_Write(uint8_t data_out);
 
-# 4 "mcp7941x.c"
-void RTC_Write(uint8_t address, uint8_t data)
+# 207 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+
+# 219
+void PIN_MANAGER_IOC(void);
+
+# 5 "mcp7941x.c"
+uint8_t Byte2BCD(uint8_t data)
+{
+uint8_t nibh=data/10;
+uint8_t nibl=data-(nibh*10);
+return ((nibh<<4)|nibl);
+}
+
+uint8_t BCD2Byte(uint8_t data)
+{
+uint8_t i=data;
+data=(i>>4)*10;
+data=data+(i&0x0F);
+return data;
+}
+
+bool Leap_Year_Calc(uint16_t Year)
+{
+bool leap=0;
+
+if((Year%4)==0)
+{
+if((Year%100)==0)
+{
+if((Year%400)==0) leap=1;
+}
+else leap=1;
+}
+return leap;
+}
+
+void MCP7941x_Write(uint8_t address, uint8_t data)
 {
 I2C_Start();
 I2C_Write(0xDE);
@@ -3563,7 +3652,7 @@ I2C_Write(data);
 I2C_Stop();
 }
 
-uint8_t RTC_Read(uint8_t address)
+uint8_t MCP7941x_Read(uint8_t address)
 {
 I2C_Start();
 I2C_Write(0xDE);
@@ -3575,54 +3664,91 @@ I2C_Stop();
 return (data);
 }
 
-uint8_t int2bcd(uint8_t data)
+void MCP7941x_Set_Date(mcp7941x_date_t *pData)
 {
-uint8_t nibh=data/10;
-uint8_t nibl=data-(nibh*10);
-return ((nibh<<4)|nibl);
+MCP7941x_Write(MCP7941x_YEAR, Byte2BCD((uint8_t) (pData->Year%100)));
+MCP7941x_Write(MCP7941x_MTH, Byte2BCD(pData->Month)
+|((uint8_t) Leap_Year_Calc(pData->Year)<<5));
+MCP7941x_Write(MCP7941x_DATE, Byte2BCD(pData->Date));
+MCP7941x_Write(MCP7941x_WKDAY, Byte2BCD(pData->DoWeek)|8);
 }
 
-uint8_t bcd2int(uint8_t data)
+void MCP7941x_Set_Time(mcp7941x_time_t *pData)
 {
-uint8_t i=data;
-data=(i>>4)*10;
-data=data+(i&0x0F);
-return data;
+MCP7941x_Write(MCP7941x_HOUR, Byte2BCD(pData->Hour));
+MCP7941x_Write(MCP7941x_MIN, Byte2BCD(pData->Minute));
+MCP7941x_Write(MCP7941x_SEC, Byte2BCD(pData->Second)|0x80);
 }
 
-void RTC_Set_DateTime(uint8_t day, uint8_t mth, uint8_t year, uint8_t dow,
-uint8_t hour, uint8_t min, uint8_t sec, bool leap)
+void MCP7941x_Set_DateTime(mcp7941x_rtcc_t *pData)
 {
-RTC_Write(6, int2bcd(year));
-RTC_Write(5, int2bcd(mth)|(leap<<5));
-RTC_Write(4, int2bcd(day));
-RTC_Write(3, int2bcd(dow)|8);
-RTC_Write(2, int2bcd(hour));
-RTC_Write(1, int2bcd(min));
-RTC_Write(0, int2bcd(sec)|0x80);
+MCP7941x_Set_Date(&pData->Date);
+MCP7941x_Set_Time(&pData->Time);
 }
 
-void RTC_Get_Date()
+void MCP7941x_Get_Date(mcp7941x_date_t *pData)
 {
-date_time[6]=bcd2int(RTC_Read(6));
-date_time[5]=bcd2int(RTC_Read(5)&0x1f);
-date_time[4]=bcd2int(RTC_Read(4));
-date_time[3]=bcd2int(RTC_Read(3)&7);
+pData->Year=2000+BCD2Byte(MCP7941x_Read(MCP7941x_YEAR));
+pData->Month=BCD2Byte(MCP7941x_Read(MCP7941x_MTH)&0x1F);
+pData->Date=BCD2Byte(MCP7941x_Read(MCP7941x_DATE));
+pData->DoWeek=BCD2Byte(MCP7941x_Read(MCP7941x_WKDAY)&7);
 }
 
-void RTC_Get_Time()
+void MCP7941x_Get_Time(mcp7941x_time_t *pData)
 {
-date_time[2]=bcd2int(RTC_Read(2));
-date_time[1]=bcd2int(RTC_Read(1));
-date_time[0]=bcd2int(RTC_Read(0)&0x7F);
+pData->Hour=BCD2Byte(MCP7941x_Read(MCP7941x_HOUR));
+pData->Minute=BCD2Byte(MCP7941x_Read(MCP7941x_MIN));
+pData->Second=BCD2Byte(MCP7941x_Read(MCP7941x_SEC)&0x7F);
 }
 
-void RTC_Init(int8_t trim)
+void MCP7941x_Get_DateTime(mcp7941x_rtcc_t *pData)
 {
+MCP7941x_Get_Date(&pData->Date);
+MCP7941x_Get_Time(&pData->Time);
+}
+
+volatile bool MFP;
+
+volatile bool *MCP7941x_MFP(bool RW)
+{
+if(RW)
+{
+if(MFP)
+{
+MFP=0;
+return 1;
+}
+}
+else
+{
+MFP=1;
+
+do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
+
+}
+return 0;
+}
+
+void MCP7941x_Init(uint8_t trim, mcp7941x_sqwfs_t mfp_clk)
+{
+uint8_t temp;
+MFP=0;
 I2C_Init();
+MCP7941x_Write(MCP7941x_CONTROL, mfp_clk);
+MCP7941x_Write(MCP7941x_OSC, trim);
+temp=MCP7941x_Read(MCP7941x_WKDAY);
+if((temp&0x20)!=0x20)
+{
+mcp7941x_rtcc_t Preset;
+Preset.Date.DoWeek=2;
+Preset.Date.Date=27;
+Preset.Date.Month=11;
+Preset.Date.Year=2017;
 
-RTC_Write(7, 0x40);
-RTC_Write(8, trim);
-date_time[3]=0x20&RTC_Read(3);
-if(date_time[3]!=0x20) RTC_Set_DateTime(1, 1, 16, 6, 0, 0, 0, 1);
+Preset.Time.Hour=23;
+Preset.Time.Minute=59;
+Preset.Time.Second=50;
+
+MCP7941x_Set_DateTime(&Preset);
+}
 }
