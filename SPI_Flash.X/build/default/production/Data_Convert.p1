@@ -1,0 +1,527 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;Data_Convert.h: 11: uint32_t Make328A(uint8_t *val);
+[; ;Data_Convert.h: 12: uint32_t Make328B(uint8_t B3, uint8_t B2, uint8_t B1, uint8_t B0);
+[; ;Data_Convert.h: 13: uint32_t Make328IA(uint8_t *val);
+[; ;Data_Convert.h: 14: uint32_t Make328IB(uint8_t B3, uint8_t B2, uint8_t B1, uint8_t B0);
+[; ;Data_Convert.h: 15: uint16_t Make1632DW(uint32_t val, bool idx);
+[; ;Data_Convert.h: 16: uint16_t Make168A(uint8_t *val);
+[; ;Data_Convert.h: 17: uint16_t Make168B(uint8_t B1, uint8_t B0);
+[; ;Data_Convert.h: 18: uint16_t Make168IA(uint8_t *val);
+[; ;Data_Convert.h: 19: uint16_t Make168IB(uint8_t B1, uint8_t B0);
+[; ;Data_Convert.h: 20: uint16_t Byte2Hex_Convert(uint8_t *pDatain, uint16_t len, uint8_t *pDataout);
+[; ;Data_Convert.h: 21: uint16_t Hex2Byte_Convert(uint8_t *pDatain, uint16_t len, uint8_t *pDataout);
+"5 Data_Convert.c
+[v _Make328A `(ul ~T0 @X0 1 ef1`*uc ]
+"6
+{
+[; ;Data_Convert.c: 5: uint32_t Make328A(uint8_t *val)
+[; ;Data_Convert.c: 6: {
+[e :U _Make328A ]
+"5
+[v _val `*uc ~T0 @X0 1 r1 ]
+"6
+[f ]
+"7
+[v _res `ul ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 7: uint32_t res=val[0];
+[e = _res -> *U + _val * -> -> 0 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 8: res<<=8;
+"8
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 9: res|=val[1];
+"9
+[e =| _res -> *U + _val * -> -> 1 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 10: res<<=8;
+"10
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 11: res|=val[2];
+"11
+[e =| _res -> *U + _val * -> -> 2 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 12: res<<=8;
+"12
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 13: res|=val[3];
+"13
+[e =| _res -> *U + _val * -> -> 3 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 14: return res;
+"14
+[e ) _res ]
+[e $UE 1  ]
+[; ;Data_Convert.c: 15: }
+"15
+[e :UE 1 ]
+}
+"17
+[v _Make328B `(ul ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+"18
+{
+[; ;Data_Convert.c: 17: uint32_t Make328B(uint8_t B3, uint8_t B2, uint8_t B1, uint8_t B0)
+[; ;Data_Convert.c: 18: {
+[e :U _Make328B ]
+"17
+[v _B3 `uc ~T0 @X0 1 r1 ]
+[v _B2 `uc ~T0 @X0 1 r2 ]
+[v _B1 `uc ~T0 @X0 1 r3 ]
+[v _B0 `uc ~T0 @X0 1 r4 ]
+"18
+[f ]
+"19
+[v _res `ul ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 19: uint32_t res=B3;
+[e = _res -> _B3 `ul ]
+[; ;Data_Convert.c: 20: res<<=8;
+"20
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 21: res|=B2;
+"21
+[e =| _res -> _B2 `ul ]
+[; ;Data_Convert.c: 22: res<<=8;
+"22
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 23: res|=B1;
+"23
+[e =| _res -> _B1 `ul ]
+[; ;Data_Convert.c: 24: res<<=8;
+"24
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 25: res|=B0;
+"25
+[e =| _res -> _B0 `ul ]
+[; ;Data_Convert.c: 26: return res;
+"26
+[e ) _res ]
+[e $UE 2  ]
+[; ;Data_Convert.c: 27: }
+"27
+[e :UE 2 ]
+}
+"29
+[v _Make328IA `(ul ~T0 @X0 1 ef1`*uc ]
+"30
+{
+[; ;Data_Convert.c: 29: uint32_t Make328IA(uint8_t *val)
+[; ;Data_Convert.c: 30: {
+[e :U _Make328IA ]
+"29
+[v _val `*uc ~T0 @X0 1 r1 ]
+"30
+[f ]
+"31
+[v _res `ul ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 31: uint32_t res=val[3];
+[e = _res -> *U + _val * -> -> 3 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 32: res<<=8;
+"32
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 33: res|=val[2];
+"33
+[e =| _res -> *U + _val * -> -> 2 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 34: res<<=8;
+"34
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 35: res|=val[1];
+"35
+[e =| _res -> *U + _val * -> -> 1 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 36: res<<=8;
+"36
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 37: res|=val[0];
+"37
+[e =| _res -> *U + _val * -> -> 0 `i `x -> -> # *U _val `i `x `ul ]
+[; ;Data_Convert.c: 38: return res;
+"38
+[e ) _res ]
+[e $UE 3  ]
+[; ;Data_Convert.c: 39: }
+"39
+[e :UE 3 ]
+}
+"41
+[v _Make328IB `(ul ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+"42
+{
+[; ;Data_Convert.c: 41: uint32_t Make328IB(uint8_t B3, uint8_t B2, uint8_t B1, uint8_t B0)
+[; ;Data_Convert.c: 42: {
+[e :U _Make328IB ]
+"41
+[v _B3 `uc ~T0 @X0 1 r1 ]
+[v _B2 `uc ~T0 @X0 1 r2 ]
+[v _B1 `uc ~T0 @X0 1 r3 ]
+[v _B0 `uc ~T0 @X0 1 r4 ]
+"42
+[f ]
+"43
+[v _res `ul ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 43: uint32_t res=B0;
+[e = _res -> _B0 `ul ]
+[; ;Data_Convert.c: 44: res<<=8;
+"44
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 45: res|=B1;
+"45
+[e =| _res -> _B1 `ul ]
+[; ;Data_Convert.c: 46: res<<=8;
+"46
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 47: res|=B2;
+"47
+[e =| _res -> _B2 `ul ]
+[; ;Data_Convert.c: 48: res<<=8;
+"48
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 49: res|=B3;
+"49
+[e =| _res -> _B3 `ul ]
+[; ;Data_Convert.c: 50: return res;
+"50
+[e ) _res ]
+[e $UE 4  ]
+[; ;Data_Convert.c: 51: }
+"51
+[e :UE 4 ]
+}
+"53
+[v _Make1632DW `(ui ~T0 @X0 1 ef2`ul`uc ]
+"54
+{
+[; ;Data_Convert.c: 53: uint16_t Make1632DW(uint32_t val, bool idx)
+[; ;Data_Convert.c: 54: {
+[e :U _Make1632DW ]
+"53
+[v _val `ul ~T0 @X0 1 r1 ]
+[v _idx `uc ~T0 @X0 1 r2 ]
+"54
+[f ]
+[; ;Data_Convert.c: 55: if(idx) val>>=16;
+"55
+[e $ ! != -> _idx `i -> -> -> 0 `i `uc `i 6  ]
+[e =>> _val -> 16 `i ]
+[e :U 6 ]
+[; ;Data_Convert.c: 56: return (uint16_t) val;
+"56
+[e ) -> _val `ui ]
+[e $UE 5  ]
+[; ;Data_Convert.c: 57: }
+"57
+[e :UE 5 ]
+}
+"59
+[v _Make168A `(ui ~T0 @X0 1 ef1`*uc ]
+"60
+{
+[; ;Data_Convert.c: 59: uint16_t Make168A(uint8_t *val)
+[; ;Data_Convert.c: 60: {
+[e :U _Make168A ]
+"59
+[v _val `*uc ~T0 @X0 1 r1 ]
+"60
+[f ]
+"61
+[v _res `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 61: uint16_t res=val[0];
+[e = _res -> *U + _val * -> -> 0 `i `x -> -> # *U _val `i `x `ui ]
+[; ;Data_Convert.c: 62: res<<=8;
+"62
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 63: res|=val[1];
+"63
+[e =| _res -> *U + _val * -> -> 1 `i `x -> -> # *U _val `i `x `ui ]
+[; ;Data_Convert.c: 64: return res;
+"64
+[e ) _res ]
+[e $UE 7  ]
+[; ;Data_Convert.c: 65: }
+"65
+[e :UE 7 ]
+}
+"67
+[v _Make168B `(ui ~T0 @X0 1 ef2`uc`uc ]
+"68
+{
+[; ;Data_Convert.c: 67: uint16_t Make168B(uint8_t B1, uint8_t B0)
+[; ;Data_Convert.c: 68: {
+[e :U _Make168B ]
+"67
+[v _B1 `uc ~T0 @X0 1 r1 ]
+[v _B0 `uc ~T0 @X0 1 r2 ]
+"68
+[f ]
+"69
+[v _res `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 69: uint16_t res=B1;
+[e = _res -> _B1 `ui ]
+[; ;Data_Convert.c: 70: res<<=8;
+"70
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 71: res|=B0;
+"71
+[e =| _res -> _B0 `ui ]
+[; ;Data_Convert.c: 72: return res;
+"72
+[e ) _res ]
+[e $UE 8  ]
+[; ;Data_Convert.c: 73: }
+"73
+[e :UE 8 ]
+}
+"75
+[v _Make168IA `(ui ~T0 @X0 1 ef1`*uc ]
+"76
+{
+[; ;Data_Convert.c: 75: uint16_t Make168IA(uint8_t *val)
+[; ;Data_Convert.c: 76: {
+[e :U _Make168IA ]
+"75
+[v _val `*uc ~T0 @X0 1 r1 ]
+"76
+[f ]
+"77
+[v _res `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 77: uint16_t res=val[1];
+[e = _res -> *U + _val * -> -> 1 `i `x -> -> # *U _val `i `x `ui ]
+[; ;Data_Convert.c: 78: res<<=8;
+"78
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 79: res|=val[0];
+"79
+[e =| _res -> *U + _val * -> -> 0 `i `x -> -> # *U _val `i `x `ui ]
+[; ;Data_Convert.c: 80: return res;
+"80
+[e ) _res ]
+[e $UE 9  ]
+[; ;Data_Convert.c: 81: }
+"81
+[e :UE 9 ]
+}
+"83
+[v _Make168IB `(ui ~T0 @X0 1 ef2`uc`uc ]
+"84
+{
+[; ;Data_Convert.c: 83: uint16_t Make168IB(uint8_t B1, uint8_t B0)
+[; ;Data_Convert.c: 84: {
+[e :U _Make168IB ]
+"83
+[v _B1 `uc ~T0 @X0 1 r1 ]
+[v _B0 `uc ~T0 @X0 1 r2 ]
+"84
+[f ]
+"85
+[v _res `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 85: uint16_t res=B0;
+[e = _res -> _B0 `ui ]
+[; ;Data_Convert.c: 86: res<<=8;
+"86
+[e =<< _res -> 8 `i ]
+[; ;Data_Convert.c: 87: res|=B1;
+"87
+[e =| _res -> _B1 `ui ]
+[; ;Data_Convert.c: 88: return res;
+"88
+[e ) _res ]
+[e $UE 10  ]
+[; ;Data_Convert.c: 89: }
+"89
+[e :UE 10 ]
+}
+"91
+[v _Byte2Hex_Convert `(ui ~T0 @X0 1 ef3`*uc`ui`*uc ]
+"92
+{
+[; ;Data_Convert.c: 91: uint16_t Byte2Hex_Convert(uint8_t *pDatain, uint16_t len, uint8_t *pDataout)
+[; ;Data_Convert.c: 92: {
+[e :U _Byte2Hex_Convert ]
+"91
+[v _pDatain `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _pDataout `*uc ~T0 @X0 1 r3 ]
+"92
+[f ]
+"93
+[v _newlen `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 93: uint16_t newlen=len<<1;
+[e = _newlen << _len -> 1 `i ]
+[; ;Data_Convert.c: 94: while(len--)
+"94
+[e $U 12  ]
+[e :U 13 ]
+[; ;Data_Convert.c: 95: {
+"95
+{
+"96
+[v _H `uc ~T0 @X0 1 a ]
+[v _h `uc ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 96: uint8_t H, h;
+[; ;Data_Convert.c: 97: H=*pDatain>>4;
+"97
+[e = _H -> >> -> *U _pDatain `i -> 4 `i `uc ]
+[; ;Data_Convert.c: 98: if(H>9) H+='7';
+"98
+[e $ ! > -> _H `i -> 9 `i 15  ]
+[e =+ _H -> -> 55 `ui `uc ]
+[e $U 16  ]
+"99
+[e :U 15 ]
+[; ;Data_Convert.c: 99: else H+='0';
+[e =+ _H -> -> 48 `ui `uc ]
+[e :U 16 ]
+[; ;Data_Convert.c: 101: h=*pDatain&0x0F;
+"101
+[e = _h -> & -> *U _pDatain `i -> 15 `i `uc ]
+[; ;Data_Convert.c: 102: if(h>9) h+='7';
+"102
+[e $ ! > -> _h `i -> 9 `i 17  ]
+[e =+ _h -> -> 55 `ui `uc ]
+[e $U 18  ]
+"103
+[e :U 17 ]
+[; ;Data_Convert.c: 103: else h+='0';
+[e =+ _h -> -> 48 `ui `uc ]
+[e :U 18 ]
+[; ;Data_Convert.c: 105: *pDataout=H;
+"105
+[e = *U _pDataout _H ]
+[; ;Data_Convert.c: 106: pDataout++;
+"106
+[e ++ _pDataout * -> -> 1 `i `x -> -> # *U _pDataout `i `x ]
+[; ;Data_Convert.c: 107: *pDataout=h;
+"107
+[e = *U _pDataout _h ]
+[; ;Data_Convert.c: 108: pDataout++;
+"108
+[e ++ _pDataout * -> -> 1 `i `x -> -> # *U _pDataout `i `x ]
+[; ;Data_Convert.c: 109: pDatain++;
+"109
+[e ++ _pDatain * -> -> 1 `i `x -> -> # *U _pDatain `i `x ]
+"110
+}
+[e :U 12 ]
+"94
+[e $ != -- _len -> -> 1 `i `ui -> -> 0 `i `ui 13  ]
+[e :U 14 ]
+[; ;Data_Convert.c: 110: }
+[; ;Data_Convert.c: 111: return newlen;
+"111
+[e ) _newlen ]
+[e $UE 11  ]
+[; ;Data_Convert.c: 112: }
+"112
+[e :UE 11 ]
+}
+"114
+[v _Hex2Byte_Convert `(ui ~T0 @X0 1 ef3`*uc`ui`*uc ]
+"115
+{
+[; ;Data_Convert.c: 114: uint16_t Hex2Byte_Convert(uint8_t *pDatain, uint16_t len, uint8_t *pDataout)
+[; ;Data_Convert.c: 115: {
+[e :U _Hex2Byte_Convert ]
+"114
+[v _pDatain `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _pDataout `*uc ~T0 @X0 1 r3 ]
+"115
+[f ]
+"116
+[v _newlen `ui ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 116: uint16_t newlen=len>>1;
+[e = _newlen >> _len -> 1 `i ]
+[; ;Data_Convert.c: 117: while(len--)
+"117
+[e $U 20  ]
+[e :U 21 ]
+[; ;Data_Convert.c: 118: {
+"118
+{
+"119
+[v _B `uc ~T0 @X0 1 a ]
+[v _b `uc ~T0 @X0 1 a ]
+[; ;Data_Convert.c: 119: uint8_t B, b;
+[; ;Data_Convert.c: 120: B=*pDatain++;
+"120
+[e = _B *U ++ _pDatain * -> -> 1 `i `x -> -> # *U _pDatain `i `x ]
+[; ;Data_Convert.c: 121: if(B>='a') B-='Y';
+"121
+[e $ ! >= -> _B `ui -> 97 `ui 23  ]
+[e =- _B -> -> 89 `ui `uc ]
+[e $U 24  ]
+"122
+[e :U 23 ]
+[; ;Data_Convert.c: 122: else if(B>='A') B-='7';
+[e $ ! >= -> _B `ui -> 65 `ui 25  ]
+[e =- _B -> -> 55 `ui `uc ]
+[e $U 26  ]
+"123
+[e :U 25 ]
+[; ;Data_Convert.c: 123: else B-='0';
+[e =- _B -> -> 48 `ui `uc ]
+[e :U 26 ]
+[e :U 24 ]
+[; ;Data_Convert.c: 125: b=*pDatain++;
+"125
+[e = _b *U ++ _pDatain * -> -> 1 `i `x -> -> # *U _pDatain `i `x ]
+[; ;Data_Convert.c: 126: if(b>='a') b-='Y';
+"126
+[e $ ! >= -> _b `ui -> 97 `ui 27  ]
+[e =- _b -> -> 89 `ui `uc ]
+[e $U 28  ]
+"127
+[e :U 27 ]
+[; ;Data_Convert.c: 127: else if(b>='A') b-='7';
+[e $ ! >= -> _b `ui -> 65 `ui 29  ]
+[e =- _b -> -> 55 `ui `uc ]
+[e $U 30  ]
+"128
+[e :U 29 ]
+[; ;Data_Convert.c: 128: else b-='0';
+[e =- _b -> -> 48 `ui `uc ]
+[e :U 30 ]
+[e :U 28 ]
+[; ;Data_Convert.c: 130: *pDataout=(B<<4)|b;
+"130
+[e = *U _pDataout -> | << -> _B `i -> 4 `i -> _b `i `uc ]
+[; ;Data_Convert.c: 131: *pDataout++;
+"131
+[e *U ++ _pDataout * -> -> 1 `i `x -> -> # *U _pDataout `i `x ]
+"132
+}
+[e :U 20 ]
+"117
+[e $ != -- _len -> -> 1 `i `ui -> -> 0 `i `ui 21  ]
+[e :U 22 ]
+[; ;Data_Convert.c: 132: }
+[; ;Data_Convert.c: 133: return newlen;
+"133
+[e ) _newlen ]
+[e $UE 19  ]
+[; ;Data_Convert.c: 134: }
+"134
+[e :UE 19 ]
+}
