@@ -1,0 +1,9 @@
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\bin\Debug\UART_Terminal.exe.config
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\bin\Debug\UART_Terminal.exe
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\bin\Debug\UART_Terminal.pdb
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.csprojResolveAssemblyReference.cache
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.Form1.resources
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.Properties.Resources.resources
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.csproj.GenerateResource.Cache
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.exe
+C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.pdb
