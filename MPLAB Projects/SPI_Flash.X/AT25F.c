@@ -117,8 +117,8 @@ void AT_Write_nByte(uint32_t BAddr, uint16_t len, uint8_t *data)
                 ESec=SECTOR_LENGTH*((BWAddr/SECTOR_LENGTH)+1); // Calculate start address of the next sector
                 for(i=BWAddr; (i<ESec)&&(i<EAddr); i++)
                 {
-                    AT_Read_nByte(i, 1, &temp[0]);
-                    if(temp[0]==0xFF)
+                    AT_Read_nByte(i, 1, &temp);
+                    if(temp==0xFF)
                     {
                         AT_Write_Byte(i, *data++);
                         BAddr++;
@@ -137,8 +137,8 @@ void AT_Write_nByte(uint32_t BAddr, uint16_t len, uint8_t *data)
                 i=BWAddr&0xFFFF000;
                 for(j=TEMP_BGN_ADDR; j<SECTOR_LENGTH; j+=BUF_LEN)// Copy all data in present sector to backup sector
                 {
-                    AT_Read_nByte(i, BUF_LEN, &temp[0]);
-                    AT_Write_AAI(j, BUF_LEN, &temp[0]);
+                    AT_Read_nByte(i, BUF_LEN, &temp);
+                    AT_Write_AAI(j, BUF_LEN, &temp);
                     i+=BUF_LEN;
                 }
                 AT_Sector_Erase(BWAddr); // Erase current sector
@@ -155,7 +155,7 @@ void AT_Write_nByte(uint32_t BAddr, uint16_t len, uint8_t *data)
                         else AT_Read_nByte(j, 1, &temp[idx]);
                         j++;
                     }
-                    AT_Write_AAI(i, BUF_LEN, &temp[0]);
+                    AT_Write_AAI(i, BUF_LEN, &temp);
                     i+=BUF_LEN;
                 }
                 state=4;
