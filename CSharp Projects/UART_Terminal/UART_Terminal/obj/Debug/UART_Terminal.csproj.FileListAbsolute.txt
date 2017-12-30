@@ -7,3 +7,6 @@ C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal
 C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.csproj.GenerateResource.Cache
 C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.exe
 C:\Users\dungl\Documents\Visual Studio 2015\Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.pdb
+E:\GitHub\XC8Training\CSharp Projects\UART_Terminal\UART_Terminal\bin\Debug\UART_Terminal.exe.config
+E:\GitHub\XC8Training\CSharp Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.exe
+E:\GitHub\XC8Training\CSharp Projects\UART_Terminal\UART_Terminal\obj\Debug\UART_Terminal.pdb

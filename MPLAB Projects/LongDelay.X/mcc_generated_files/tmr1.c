@@ -55,7 +55,7 @@
 */
 volatile uint16_t timer1ReloadVal;
 void (*TMR1_InterruptHandler)(void);
-volatile uint16_t count;
+
 /**
   Section: TMR1 APIs
 */
@@ -63,7 +63,7 @@ volatile uint16_t count;
 void TMR1_Initialize(void)
 {
     //Set the Timer to the options selected in the GUI
-    count=0;
+
     //T1GSS T1G_pin; TMR1GE disabled; T1GTM disabled; T1GPOL low; T1GGO_nDONE done; T1GSPM disabled; 
     T1GCON = 0x00;
 
@@ -103,7 +103,17 @@ void TMR1_StopTimer(void)
 
 uint16_t TMR1_ReadTimer(void)
 {
+    uint16_t readVal;
+    uint8_t readValHigh;
+    uint8_t readValLow;
+    
+	
+    readValLow = TMR1L;
+    readValHigh = TMR1H;
+    
+    readVal = ((uint16_t)readValHigh << 8) | readValLow;
 
+    return readVal;
 }
 
 void TMR1_WriteTimer(uint16_t timerVal)
@@ -145,9 +155,14 @@ uint8_t TMR1_CheckGateValueStatus(void)
 
 void TMR1_ISR(void)
 {
+
+    // Clear the TMR1 interrupt flag
     PIR1bits.TMR1IF = 0;
-    // callback function - called every 8192th pass
-    if (++count >= TMR1_INTERRUPT_TICKER_FACTOR) count=0;
+    TMR1_WriteTimer(timer1ReloadVal);
+
+    // ticker function call;
+    // ticker is 1 -> Callback function gets called everytime this ISR executes
+    TMR1_CallBack();
 }
 
 void TMR1_CallBack(void)

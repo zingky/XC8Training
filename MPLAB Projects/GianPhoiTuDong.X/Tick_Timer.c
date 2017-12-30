@@ -1,16 +1,14 @@
 #include "Tick_Timer.h"
-#include "mcc_generated_files/tmr1.h"
+#include "Timer1.h"
 
-
-
-bool Tick_Is_Over(tick_timer_t *tick, uint32_t ms)
+bool Tick_Is_Over(tick_timer_t *tick, uint24_t ms)
 {
-    uint24_t pre=TMR1_ReadTimer();
-    pre<<=3;
+    uint24_t pre=Timer1_Read24bit();
     if(tick->timeout)
     {
         tick->start=pre;
         tick->stop=tick->start+ms*TICK_PER_MS;
+        if(tick->stop>0x07FFFF) tick->stop-=0x080000;
     }
     if(tick->stop>tick->start) tick->timeout=(bool)(tick->stop<pre);
     else tick->timeout=(bool)((tick->stop<pre)&&(pre<tick->start));
@@ -18,9 +16,14 @@ bool Tick_Is_Over(tick_timer_t *tick, uint32_t ms)
     return tick->timeout;
 }
 
-void Delay_ms(uint32_t ms)
+tick_timer_t t;
+
+void Delay_ms(uint24_t ms)
 {
-    tick_timer_t t;
+    while(!Tick_Is_Over(&t, ms));
+}
+
+void Delay_Init()
+{
     t.timeout=1;
-    while(!Tick_Is_Over(&t, ms)) CLRWDT();
 }
