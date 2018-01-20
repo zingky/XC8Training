@@ -1,0 +1,305 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1619 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"21 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"72 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"108
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"129
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"154
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+"173
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+"51 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"77 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"85
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"52 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"6 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"22
+[v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
+"33
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"4 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\Tick_Timer.c
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+"18
+[v _Delay_Ms Delay_Ms `(v  1 e 1 0 ]
+[s S76 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"372 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1619.h
+[s S85 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S90 . 1 `S76 1 . 1 0 `S85 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES90  1 e 1 @11 ]
+[s S129 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"595
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES138  1 e 1 @16 ]
+"893
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"913
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"933
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+"1000
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+"1612
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1662
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1701
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S108 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1780
+[u S117 . 1 `S108 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES117  1 e 1 @144 ]
+[s S31 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"2074
+[s S38 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S45 . 1 `S31 1 . 1 0 `S38 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES45  1 e 1 @149 ]
+"2196
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2254
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2623
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2673
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2712
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"3048
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3323
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3370
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3409
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3672
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3726
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"3800
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3862
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3911
+[v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
+[s S210 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3937
+[u S219 . 1 `S210 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES219  1 e 1 @413 ]
+"4091
+[v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
+"4271
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
+"4517
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"4575
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4614
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"6082
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"6127
+[v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
+"6166
+[v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
+"22137
+[v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
+"22973
+[v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
+"30878
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"8 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\main.c
+[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 e 1 0 ]
+"9
+[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
+[s S306 . 9 `ul 1 start 4 0 `ul 1 stop 4 4 `uc 1 timeout 1 8 ]
+"17
+[s S310 . 75 `uc 1 Len 1 0 `uc 1 Idx 1 1 `[64]uc 1 Dat 64 2 `S306 1 Timeout 9 66 ]
+[v _UART UART `S310  1 e 75 0 ]
+"19
+[v _Task Task `uc  1 e 1 0 ]
+"59 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/eusart.c
+[v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
+"60
+[v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
+"61
+[v _eusartTxBuffer eusartTxBuffer `VE[64]uc  1 e 64 0 ]
+"64
+[v _eusartRxHead eusartRxHead `VEuc  1 e 1 0 ]
+"65
+[v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
+"66
+[v _eusartRxBuffer eusartRxBuffer `VE[64]uc  1 e 64 0 ]
+"4 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/tmr1.c
+[v _count count `VEui  1 s 2 count ]
+"21 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"75
+} 0
+"77 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"6 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"20
+} 0
+"52 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"98
+} 0
+"85 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"72 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"106
+} 0
+"129
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 3 ]
+"151
+} 0
+"108
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"110
+[v EUSART_Read@readValue readValue `uc  1 a 1 3 ]
+"127
+} 0
+"18 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\Tick_Timer.c
+[v _Delay_Ms Delay_Ms `(v  1 e 1 0 ]
+{
+"20
+[v Delay_Ms@tdl tdl `S306  1 a 9 30 ]
+"18
+[v Delay_Ms@t t `ul  1 p 4 26 ]
+"23
+} 0
+"4
+[v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
+{
+[s S306 . 9 `ul 1 start 4 0 `ul 1 stop 4 4 `uc 1 timeout 1 8 ]
+[v Tick_Is_Over@tick tick `*.4S306  1 a 1 wreg ]
+"6
+[v Tick_Is_Over@pre pre `ul  1 a 4 21 ]
+"4
+[v Tick_Is_Over@tick tick `*.4S306  1 a 1 wreg ]
+[v Tick_Is_Over@t t `ul  1 p 4 8 ]
+"6
+"4
+[v Tick_Is_Over@tick tick `*.4S306  1 a 1 25 ]
+"16
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 2 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"22 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/tmr1.c
+[v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
+{
+"24
+[v TMR1_ReadTimer@res res `ul  1 a 4 0 ]
+"31
+} 0
+"51 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"77
+} 0
+"33 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"39
+} 0
+"154 E:\GitHub\XC8Training\MPLAB Projects\UART_16F1619.X\mcc_generated_files/eusart.c
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+{
+"171
+} 0
+"173
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+{
+"191
+} 0
