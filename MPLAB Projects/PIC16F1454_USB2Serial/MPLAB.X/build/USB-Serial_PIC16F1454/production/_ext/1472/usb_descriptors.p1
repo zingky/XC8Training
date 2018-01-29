@@ -428,7 +428,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1454.h: 50: extern volatile unsigned char INDF0 @ 0x000;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [; ;pic16f1454.h: 52: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1454.h: 55: typedef union {
@@ -2855,7 +2855,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1944: }info;
 [; ;usb_device.h: 1945: WORD_VAL  wCount;
 [; ;usb_device.h: 1946: }IN_PIPE;
-[; ;usb_device.h: 1948: extern  IN_PIPE inPipes[];
+[; ;usb_device.h: 1948: extern volatile IN_PIPE inPipes[];
 [; ;usb_device.h: 1950: typedef struct 
 [; ;usb_device.h: 1951: {
 [; ;usb_device.h: 1952: union 
@@ -2875,10 +2875,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1969: WORD_VAL wCount;
 [; ;usb_device.h: 1970: void (*pFunc)(void);
 [; ;usb_device.h: 1971: }OUT_PIPE;
-[; ;usb_device.h: 1981: extern  BOOL RemoteWakeup;
-[; ;usb_device.h: 1982: extern  BOOL USBBusIsSuspended;
-[; ;usb_device.h: 1983: extern  USB_DEVICE_STATE USBDeviceState;
-[; ;usb_device.h: 1984: extern  BYTE USBActiveConfiguration;
+[; ;usb_device.h: 1981: extern volatile BOOL RemoteWakeup;
+[; ;usb_device.h: 1982: extern volatile BOOL USBBusIsSuspended;
+[; ;usb_device.h: 1983: extern volatile USB_DEVICE_STATE USBDeviceState;
+[; ;usb_device.h: 1984: extern volatile BYTE USBActiveConfiguration;
 [; ;usb_hal_pic16f1.h: 260: typedef union _BD_STAT
 [; ;usb_hal_pic16f1.h: 261: {
 [; ;usb_hal_pic16f1.h: 262: BYTE Val;
@@ -2948,9 +2948,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_hal_pic16f1.h: 347: const BYTE* bRom;
 [; ;usb_hal_pic16f1.h: 348: const WORD* wRom;
 [; ;usb_hal_pic16f1.h: 353: } POINTER;
-[; ;usb_hal_pic16f1.h: 549: extern  BYTE USBActiveConfiguration;
-[; ;usb_hal_pic16f1.h: 550: extern  IN_PIPE inPipes[1];
-[; ;usb_hal_pic16f1.h: 551: extern  OUT_PIPE outPipes[1];
+[; ;usb_hal_pic16f1.h: 549: extern volatile BYTE USBActiveConfiguration;
+[; ;usb_hal_pic16f1.h: 550: extern volatile IN_PIPE inPipes[1];
+[; ;usb_hal_pic16f1.h: 551: extern volatile OUT_PIPE outPipes[1];
 [; ;usb_hal_pic16f1.h: 554: extern volatile BDT_ENTRY* pBDTEntryOut[2+1];
 [; ;usb_hal_pic16f1.h: 555: extern volatile BDT_ENTRY* pBDTEntryIn[2+1];
 [; ;usb_hal.h: 152: void OTGCORE_SetDeviceAddr( BYTE addr );

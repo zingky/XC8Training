@@ -107,7 +107,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S312 `S313 1 `S314 1 `S17 1 ]
 [n S312 . pSrc info wCount ]
 "1948
-[v _inPipes `S312 ~T0 @X0 -> 0 `x e ]
+[v _inPipes `VS312 ~T0 @X0 -> 0 `x e ]
 "1953
 [u S317 `*uc 1 `*us 1 ]
 [n S317 . bRam wRam ]
@@ -122,10 +122,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S316 `S317 1 `S318 1 `S17 1 `*F2994 1 ]
 [n S316 . pDst info wCount pFunc ]
 "551 ../Microchip/Include\USB/usb_hal_pic16f1.h
-[v _outPipes `S316 ~T0 @X0 -> 0 `x e ]
+[v _outPipes `VS316 ~T0 @X0 -> 0 `x e ]
 "233 ../Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [v _mySetLineCodingHandler `(v ~T0 @X0 0 ef ]
-"1526 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"1526 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S110 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 ]
 "1525
@@ -137,7 +137,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _USBEnableEndpoint `(v ~T0 @X0 0 ef2`uc`uc ]
 "502
 [v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
-"967 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"967 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S86 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S86 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 ]
 "966
@@ -174,6 +174,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "292
 [u S324 `S325 1 `S326 1 `ul 1 `uc -> 4 `i ]
 [n S324 __BDT . . Val v ]
+"1069 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
+[s S90 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S90 . . ACTIE USBIE BCL1IE . OSFIE ]
+"1068
+[u S89 `S90 1 ]
+[n S89 . . ]
+"1078
+[v _PIE2bits `VS89 ~T0 @X0 0 e@146 ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;Include\GenericTypeDefs.h: 65: typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
@@ -579,7 +587,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1454.h: 50: extern volatile unsigned char INDF0 @ 0x000;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [; ;pic16f1454.h: 52: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1454.h: 55: typedef union {
@@ -3006,7 +3014,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1944: }info;
 [; ;usb_device.h: 1945: WORD_VAL  wCount;
 [; ;usb_device.h: 1946: }IN_PIPE;
-[; ;usb_device.h: 1948: extern  IN_PIPE inPipes[];
+[; ;usb_device.h: 1948: extern volatile IN_PIPE inPipes[];
 [; ;usb_device.h: 1950: typedef struct 
 [; ;usb_device.h: 1951: {
 [; ;usb_device.h: 1952: union 
@@ -3026,10 +3034,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1969: WORD_VAL wCount;
 [; ;usb_device.h: 1970: void (*pFunc)(void);
 [; ;usb_device.h: 1971: }OUT_PIPE;
-[; ;usb_device.h: 1981: extern  BOOL RemoteWakeup;
-[; ;usb_device.h: 1982: extern  BOOL USBBusIsSuspended;
-[; ;usb_device.h: 1983: extern  USB_DEVICE_STATE USBDeviceState;
-[; ;usb_device.h: 1984: extern  BYTE USBActiveConfiguration;
+[; ;usb_device.h: 1981: extern volatile BOOL RemoteWakeup;
+[; ;usb_device.h: 1982: extern volatile BOOL USBBusIsSuspended;
+[; ;usb_device.h: 1983: extern volatile USB_DEVICE_STATE USBDeviceState;
+[; ;usb_device.h: 1984: extern volatile BYTE USBActiveConfiguration;
 [; ;usb_hal_pic16f1.h: 260: typedef union _BD_STAT
 [; ;usb_hal_pic16f1.h: 261: {
 [; ;usb_hal_pic16f1.h: 262: BYTE Val;
@@ -3099,9 +3107,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_hal_pic16f1.h: 347: const BYTE* bRom;
 [; ;usb_hal_pic16f1.h: 348: const WORD* wRom;
 [; ;usb_hal_pic16f1.h: 353: } POINTER;
-[; ;usb_hal_pic16f1.h: 549: extern  BYTE USBActiveConfiguration;
-[; ;usb_hal_pic16f1.h: 550: extern  IN_PIPE inPipes[1];
-[; ;usb_hal_pic16f1.h: 551: extern  OUT_PIPE outPipes[1];
+[; ;usb_hal_pic16f1.h: 549: extern volatile BYTE USBActiveConfiguration;
+[; ;usb_hal_pic16f1.h: 550: extern volatile IN_PIPE inPipes[1];
+[; ;usb_hal_pic16f1.h: 551: extern volatile OUT_PIPE outPipes[1];
 [; ;usb_hal_pic16f1.h: 554: extern volatile BDT_ENTRY* pBDTEntryOut[2+1];
 [; ;usb_hal_pic16f1.h: 555: extern volatile BDT_ENTRY* pBDTEntryIn[2+1];
 [; ;usb_hal.h: 152: void OTGCORE_SetDeviceAddr( BYTE addr );
@@ -3303,8 +3311,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "289
 [e :U 350 ]
 [; ;usb_function_cdc.c: 291: inPipes[0].pSrc.bRam = (BYTE*)&dummy_encapsulated_cmd_response;
+[v F3212 `*uc ~T0 @X0 1 t ]
 "291
-[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _dummy_encapsulated_cmd_response `*uc ]
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> -> &U _dummy_encapsulated_cmd_response `*uc `V*uc ]
 [; ;usb_function_cdc.c: 292: inPipes[0].wCount.Val = 0x08;
 "292
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 8 `i `us ]
@@ -3321,8 +3330,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "296
 [e :U 351 ]
 [; ;usb_function_cdc.c: 298: inPipes[0].pSrc.bRam = (BYTE*)&dummy_encapsulated_cmd_response;
+[v F3214 `*uc ~T0 @X0 1 t ]
 "298
-[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _dummy_encapsulated_cmd_response `*uc ]
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> -> &U _dummy_encapsulated_cmd_response `*uc `V*uc ]
 [; ;usb_function_cdc.c: 299: inPipes[0].info.bits.busy = 1;
 "299
 [e = . . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 0 3 -> -> 1 `i `uc ]
@@ -3336,11 +3346,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "305
 [e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 . . _SetupPkt 0 4 ]
 [; ;usb_function_cdc.c: 306: outPipes[0].pDst.bRam = (BYTE*)&cdc_notice.SetLineCoding._byte[0];
+[v F3216 `*uc ~T0 @X0 1 t ]
 "306
-[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 0 0 -> &U *U + &U . . . _cdc_notice 1 0 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . . _cdc_notice 1 0 0 `ui `ux `*uc ]
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 0 0 -> -> &U *U + &U . . . _cdc_notice 1 0 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . . _cdc_notice 1 0 0 `ui `ux `*uc `V*uc ]
 [; ;usb_function_cdc.c: 307: outPipes[0].pFunc = &mySetLineCodingHandler;
+[v F3219 `*F2994 ~T0 @X0 1 t ]
 "307
-[e = . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 &U _mySetLineCodingHandler ]
+[e = . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 -> &U _mySetLineCodingHandler `V*F2994 ]
 [; ;usb_function_cdc.c: 308: outPipes[0].info.bits.busy = 1;
 "308
 [e = . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 -> -> 1 `i `uc ]
@@ -3353,7 +3365,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_function_cdc.c: 312: { inPipes[0].pSrc.bRam = (BYTE*)&line_coding; inPipes[0].wCount.Val = 0x07; inPipes[0].info.Val = 0x40 | 0x80 | 0x01; };
 "312
 {
-[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> &U _line_coding `*uc ]
+[v F3221 `*uc ~T0 @X0 1 t ]
+[e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 0 0 -> -> &U _line_coding `*uc `V*uc ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 2 0 -> -> 7 `i `us ]
 [e = . . *U + &U _inPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _inPipes `ui `ux 1 1 -> | | -> 64 `i -> 128 `i -> 1 `i `uc ]
 }
@@ -3619,7 +3632,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _length `uc ~T0 @X0 1 r2 ]
 "677
 [f ]
-[; ;usb_function_cdc.c: 701: ;
+[; ;usb_function_cdc.c: 701: {PIE2bits.USBIE = 0;};
+"701
+{
+[e = . . _PIE2bits 0 2 -> -> 0 `i `uc ]
+}
 [; ;usb_function_cdc.c: 702: if(cdc_trf_state == 0)
 "702
 [e $ ! == -> _cdc_trf_state `i -> 0 `i 374  ]
@@ -3638,7 +3655,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 374 ]
 [; ;usb_function_cdc.c: 705: }
-[; ;usb_function_cdc.c: 706: ;
+[; ;usb_function_cdc.c: 706: {PIE2bits.USBIE = 1;};
+"706
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 707: }
 "707
 [e :UE 373 ]
@@ -3660,14 +3681,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _pData `*uc ~T0 @X0 1 a ]
 [; ;usb_function_cdc.c: 751: BYTE len;
 [; ;usb_function_cdc.c: 752: char *pData;
-[; ;usb_function_cdc.c: 777: ;
+[; ;usb_function_cdc.c: 777: {PIE2bits.USBIE = 0;};
+"777
+{
+[e = . . _PIE2bits 0 2 -> -> 0 `i `uc ]
+}
 [; ;usb_function_cdc.c: 778: if(cdc_trf_state != 0)
 "778
 [e $ ! != -> _cdc_trf_state `i -> 0 `i 376  ]
 [; ;usb_function_cdc.c: 779: {
 "779
 {
-[; ;usb_function_cdc.c: 780: ;
+[; ;usb_function_cdc.c: 780: {PIE2bits.USBIE = 1;};
+"780
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 781: return;
 "781
 [e $UE 375  ]
@@ -3708,7 +3737,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _cdc_mem_type -> -> 1 `i `uc ]
 [e = _cdc_trf_state -> -> 1 `i `uc ]
 }
-[; ;usb_function_cdc.c: 803: ;
+[; ;usb_function_cdc.c: 803: {PIE2bits.USBIE = 1;};
+"803
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 804: }
 "804
 [e :UE 375 ]
@@ -3730,14 +3763,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _pData `*Cuc ~T0 @X0 1 a ]
 [; ;usb_function_cdc.c: 848: BYTE len;
 [; ;usb_function_cdc.c: 849: const const char *pData;
-[; ;usb_function_cdc.c: 874: ;
+[; ;usb_function_cdc.c: 874: {PIE2bits.USBIE = 0;};
+"874
+{
+[e = . . _PIE2bits 0 2 -> -> 0 `i `uc ]
+}
 [; ;usb_function_cdc.c: 875: if(cdc_trf_state != 0)
 "875
 [e $ ! != -> _cdc_trf_state `i -> 0 `i 382  ]
 [; ;usb_function_cdc.c: 876: {
 "876
 {
-[; ;usb_function_cdc.c: 877: ;
+[; ;usb_function_cdc.c: 877: {PIE2bits.USBIE = 1;};
+"877
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 878: return;
 "878
 [e $UE 381  ]
@@ -3778,7 +3819,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _cdc_mem_type -> -> 0 `i `uc ]
 [e = _cdc_trf_state -> -> 1 `i `uc ]
 }
-[; ;usb_function_cdc.c: 901: ;
+[; ;usb_function_cdc.c: 901: {PIE2bits.USBIE = 1;};
+"901
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 903: }
 "903
 [e :UE 381 ]
@@ -3797,7 +3842,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _i `uc ~T0 @X0 1 a ]
 [; ;usb_function_cdc.c: 958: BYTE byte_to_send;
 [; ;usb_function_cdc.c: 959: BYTE i;
-[; ;usb_function_cdc.c: 961: ;
+[; ;usb_function_cdc.c: 961: {PIE2bits.USBIE = 0;};
+"961
+{
+[e = . . _PIE2bits 0 2 -> -> 0 `i `uc ]
+}
 [; ;usb_function_cdc.c: 963: {};
 "963
 {
@@ -3808,7 +3857,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_function_cdc.c: 966: {
 "966
 {
-[; ;usb_function_cdc.c: 967: ;
+[; ;usb_function_cdc.c: 967: {PIE2bits.USBIE = 1;};
+"967
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 968: return;
 "968
 [e $UE 387  ]
@@ -3829,7 +3882,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_function_cdc.c: 983: {
 "983
 {
-[; ;usb_function_cdc.c: 984: ;
+[; ;usb_function_cdc.c: 984: {PIE2bits.USBIE = 1;};
+"984
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 985: return;
 "985
 [e $UE 387  ]
@@ -3988,7 +4045,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "1051
 [e :U 392 ]
 [; ;usb_function_cdc.c: 1049: }
-[; ;usb_function_cdc.c: 1051: ;
+[; ;usb_function_cdc.c: 1051: {PIE2bits.USBIE = 1;};
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
 [; ;usb_function_cdc.c: 1052: }
 "1052
 [e :UE 387 ]

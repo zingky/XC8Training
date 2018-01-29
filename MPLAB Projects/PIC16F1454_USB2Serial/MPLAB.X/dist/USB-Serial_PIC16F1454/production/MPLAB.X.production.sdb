@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F1454 ]
 [d frameptr 6 ]
-"282 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"282 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [e E2855 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
@@ -63,7 +63,7 @@ EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"545 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+"545 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [e E2627 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
@@ -112,7 +112,7 @@ EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"458 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"137 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [e E2855 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
@@ -122,12 +122,12 @@ ADR_PENDING_STATE 8
 ADDRESS_STATE 16
 CONFIGURED_STATE 32
 ]
-"974
+"294
 [e E3 _BOOL `uc
 FALSE 0
 TRUE 1
 ]
-"1068
+"317
 [e E2627 . `ui
 EVENT_NONE 0
 EVENT_DEVICE_STACK_BASE 1
@@ -171,43 +171,43 @@ EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"79
+"41
 [v _ISRCode ISRCode `II(v  1 e 1 0 ]
-"111
+"46
 [v _main main `(i  1 e 2 0 ]
-"166
+"53
 [v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
-"245
+"64
 [v _UserInit UserInit `(v  1 e 1 0 ]
-"279
+"75
 [v _InitializeUSART InitializeUSART `(v  1 e 1 0 ]
-"317
+"93
 [v _putcUSART putcUSART `(v  1 e 1 0 ]
-"344
+"101
 [v _mySetLineCodingHandler mySetLineCodingHandler `(v  1 e 1 0 ]
-"416
+"117
 [v _getcUSART getcUSART `(uc  1 e 1 0 ]
-"453
+"132
 [v _ProcessIO ProcessIO `(v  1 e 1 0 ]
-"547
+"172
 [v _BlinkUSBStatus BlinkUSBStatus `(v  1 e 1 0 ]
-"666
+"255
 [v _USBCBSuspend USBCBSuspend `(v  1 e 1 0 ]
-"711
+"260
 [v _USBCBWakeFromSuspend USBCBWakeFromSuspend `(v  1 e 1 0 ]
-"743
+"265
 [v _USBCB_SOF_Handler USBCB_SOF_Handler `(v  1 e 1 0 ]
-"766
+"270
 [v _USBCBErrorHandler USBCBErrorHandler `(v  1 e 1 0 ]
-"817
+"275
 [v _USBCBCheckOtherReq USBCBCheckOtherReq `(v  1 e 1 0 ]
-"842
+"280
 [v _USBCBStdSetDscHandler USBCBStdSetDscHandler `(v  1 e 1 0 ]
-"868
+"285
 [v _USBCBInitEP USBCBInitEP `(v  1 e 1 0 ]
-"1066
+"315
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(E3  1 e 1 0 ]
-"267 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+"267 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [v _USBCheckCDCRequest USBCheckCDCRequest `(v  1 e 1 0 ]
 "414
 [v _CDCInitEP CDCInitEP `(v  1 e 1 0 ]
@@ -217,14 +217,18 @@ EVENT_TRANSFER_TERMINATED 5
 [v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
 "956
 [v _CDCTxService CDCTxService `(v  1 e 1 0 ]
-"466 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"466 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
-"667
+[v i1_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+"660
 [v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
 "1055
 [v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
 "1172
 [v _USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
+[v i1_USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
+"1525
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
 "1589
 [v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
 "1659
@@ -261,40 +265,40 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
 "2906
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lldiv.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
-"50 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"17 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [v _USB_Out_Buffer USB_Out_Buffer `[64]uc  1 e 64 0 ]
-"51
+"18
 [v _RS232_Out_Data RS232_Out_Data `[64]uc  1 e 64 0 ]
-"53
+"20
 [v _NextUSBOut NextUSBOut `uc  1 e 1 0 ]
-"56
+"22
 [v _LastRS232Out LastRS232Out `uc  1 e 1 0 ]
-"57
+"23
 [v _RS232cp RS232cp `uc  1 e 1 0 ]
-"58
+"24
 [v _RS232_Out_Data_Rdy RS232_Out_Data_Rdy `uc  1 e 1 0 ]
-"59
+"25
 [v _lastTransmission lastTransmission `*.1v  1 e 1 0 ]
-"61
+"26
 [v _sending sending `uc  1 e 1 0 ]
-"62
+"27
 [v _receiving receiving `uc  1 e 1 0 ]
-"188 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+"188 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [v _cdc_data_tx cdc_data_tx `VFE[64]uc  1 e 64 @544 ]
 "189
 [v _cdc_data_rx cdc_data_rx `VFE[64]uc  1 e 64 @672 ]
-[s S2004 . 7 `[7]uc 1 _byte 7 0 ]
+[s S2052 . 7 `[7]uc 1 _byte 7 0 ]
 "191
-[s S2006 . 4 `us 1 LW 2 0 `us 1 HW 2 2 ]
-[s S2009 . 4 `uc 1 LB 1 0 `uc 1 HB 1 1 `uc 1 UB 1 2 `uc 1 MB 1 3 ]
+[s S2054 . 4 `us 1 LW 2 0 `us 1 HW 2 2 ]
+[s S2057 . 4 `uc 1 LB 1 0 `uc 1 HB 1 1 `uc 1 UB 1 2 `uc 1 MB 1 3 ]
 [s S79 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 [s S82 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
@@ -314,8 +318,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 b15 1 1 :1:7 
 ]
 [u S99 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S79 1 byte 2 0 `S82 1 bits 2 0 ]
-[s S2039 . 4 `S99 1 low 2 0 `S99 1 high 2 2 ]
-[s S2042 . 4 `uc 1 b0 1 0 :1:0 
+[s S2087 . 4 `S99 1 low 2 0 `S99 1 high 2 2 ]
+[s S2090 . 4 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -348,23 +352,23 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 b30 1 3 :1:6 
 `uc 1 b31 1 3 :1:7 
 ]
-[u S2075 . 4 `ul 1 Val 4 0 `[2]us 1 w 4 0 `[4]uc 1 v 4 0 `S2006 1 word 4 0 `S2009 1 byte 4 0 `S2039 1 wordUnion 4 0 `S2042 1 bits 4 0 ]
-[s S2083 . 7 `S2075 1 dwDTERate 4 0 `uc 1 bCharFormat 1 4 `uc 1 bParityType 1 5 `uc 1 bDataBits 1 6 ]
-[u S2088 _LINE_CODING 7 `S2004 1 . 7 0 `S2083 1 . 7 0 ]
-[v _line_coding line_coding `S2088  1 e 7 @288 ]
+[u S2123 . 4 `ul 1 Val 4 0 `[2]us 1 w 4 0 `[4]uc 1 v 4 0 `S2054 1 word 4 0 `S2057 1 byte 4 0 `S2087 1 wordUnion 4 0 `S2090 1 bits 4 0 ]
+[s S2131 . 7 `S2123 1 dwDTERate 4 0 `uc 1 bCharFormat 1 4 `uc 1 bParityType 1 5 `uc 1 bDataBits 1 6 ]
+[u S2136 _LINE_CODING 7 `S2052 1 . 7 0 `S2131 1 . 7 0 ]
+[v _line_coding line_coding `S2136  1 e 7 @288 ]
 "192
-[u S2091 _CDC_NOTICE 10 `S2088 1 GetLineCoding 7 0 `S2088 1 SetLineCoding 7 0 `[10]uc 1 packet 10 0 ]
-[v _cdc_notice cdc_notice `VFES2091  1 e 10 @295 ]
+[u S2139 _CDC_NOTICE 10 `S2136 1 GetLineCoding 7 0 `S2136 1 SetLineCoding 7 0 `[10]uc 1 packet 10 0 ]
+[v _cdc_notice cdc_notice `VFES2139  1 e 10 @295 ]
 "202
 [v _cdc_rx_len cdc_rx_len `uc  1 e 1 0 ]
 "204
 [v _cdc_trf_state cdc_trf_state `uc  1 e 1 0 ]
-[s S2095 . 2 `uc 1 bLow 1 0 `uc 1 bHigh 1 1 ]
+[s S2143 . 2 `uc 1 bLow 1 0 `uc 1 bHigh 1 1 ]
 "205
-[u S2098 _POINTER 2 `S2095 1 . 2 0 `us 1 _word 2 0 `*.1uc 1 bRam 2 0 `*.1us 1 wRam 2 0 `*.1DCuc 1 bRom 2 0 `*.1DCus 1 wRom 2 0 ]
-[v _pCDCSrc pCDCSrc `S2098  1 e 2 0 ]
+[u S2146 _POINTER 2 `S2143 1 . 2 0 `us 1 _word 2 0 `*.1uc 1 bRam 2 0 `*.1us 1 wRam 2 0 `*.1DCuc 1 bRom 2 0 `*.1DCus 1 wRom 2 0 ]
+[v _pCDCSrc pCDCSrc `S2146  1 e 2 0 ]
 "206
-[v _pCDCDst pCDCDst `S2098  1 e 2 0 ]
+[v _pCDCDst pCDCDst `S2146  1 e 2 0 ]
 "207
 [v _cdc_tx_len cdc_tx_len `uc  1 e 1 0 ]
 "208
@@ -373,12 +377,12 @@ EVENT_TRANSFER_TERMINATED 5
 [v _CDCDataOutHandle CDCDataOutHandle `*.4v  1 e 1 0 ]
 "211
 [v _CDCDataInHandle CDCDataInHandle `*.4v  1 e 1 0 ]
-[s S2105 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
+[s S2153 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
 `uc 1 CARRIER_CONTROL 1 0 :1:1 
 ]
 "214
-[u S2108 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S2105 1 . 1 0 ]
-[v _control_signal_bitmap control_signal_bitmap `S2108  1 e 1 0 ]
+[u S2156 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S2153 1 . 1 0 ]
+[v _control_signal_bitmap control_signal_bitmap `S2156  1 e 1 0 ]
 [s S180 . 1 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
@@ -391,12 +395,12 @@ EVENT_TRANSFER_TERMINATED 5
 "230
 [u S189 . 1 `uc 1 Val 1 0 `S180 1 bits 1 0 ]
 [v _dummy_encapsulated_cmd_response dummy_encapsulated_cmd_response `[8]S189  1 e 8 0 ]
-"282 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
-[v _USBDeviceState USBDeviceState `E2855  1 e 1 0 ]
+"282 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+[v _USBDeviceState USBDeviceState `VEE2855  1 e 1 0 ]
 "283
-[v _USBActiveConfiguration USBActiveConfiguration `uc  1 e 1 0 ]
+[v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
 "284
-[v _USBAlternateInterface USBAlternateInterface `[2]uc  1 e 2 0 ]
+[v _USBAlternateInterface USBAlternateInterface `VE[2]uc  1 e 2 0 ]
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
@@ -432,9 +436,9 @@ EVENT_TRANSFER_TERMINATED 5
 "288
 [v _pBDTEntryIn pBDTEntryIn `[3]*.4VES61  1 e 3 0 ]
 "289
-[v _shortPacketStatus shortPacketStatus `uc  1 e 1 0 ]
+[v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
 "290
-[v _controlTransferState controlTransferState `uc  1 e 1 0 ]
+[v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
 [u S66 . 2 `*.1uc 1 bRam 2 0 `*.1DCuc 1 bRom 2 0 `*.1us 1 wRam 2 0 `*.1DCus 1 wRom 2 0 ]
 "291
 [s S71 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
@@ -444,7 +448,7 @@ EVENT_TRANSFER_TERMINATED 5
 ]
 [u S76 . 1 `S71 1 bits 1 0 `uc 1 Val 1 0 ]
 [s S104 . 5 `S66 1 pSrc 2 0 `S76 1 info 1 2 `S99 1 wCount 2 3 ]
-[v _inPipes inPipes `[1]S104  1 e 5 0 ]
+[v _inPipes inPipes `VE[1]S104  1 e 5 0 ]
 [u S108 . 2 `*.1uc 1 bRam 2 0 `*.1us 1 wRam 2 0 ]
 "292
 [s S111 . 1 `uc 1 reserved 1 0 :7:0 
@@ -452,13 +456,13 @@ EVENT_TRANSFER_TERMINATED 5
 ]
 [u S114 . 1 `S111 1 bits 1 0 `uc 1 Val 1 0 ]
 [s S118 . 7 `S108 1 pDst 2 0 `S114 1 info 1 2 `S99 1 wCount 2 3 `*.37(v 1 pFunc 2 5 ]
-[v _outPipes outPipes `[1]S118  1 e 7 0 ]
+[v _outPipes outPipes `VE[1]S118  1 e 7 0 ]
 "293
-[v _pDst pDst `*.4uc  1 e 1 0 ]
+[v _pDst pDst `*.4VEuc  1 e 1 0 ]
 "294
-[v _RemoteWakeup RemoteWakeup `E3  1 e 1 0 ]
+[v _RemoteWakeup RemoteWakeup `VEE3  1 e 1 0 ]
 "295
-[v _USBBusIsSuspended USBBusIsSuspended `E3  1 e 1 0 ]
+[v _USBBusIsSuspended USBBusIsSuspended `VEE3  1 e 1 0 ]
 [s S126 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
@@ -466,21 +470,21 @@ EVENT_TRANSFER_TERMINATED 5
 ]
 "296
 [u S131 __USTAT 1 `S126 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `S131  1 e 1 0 ]
+[v _USTATcopy USTATcopy `VES131  1 e 1 0 ]
 "297
-[v _endpoint_number endpoint_number `uc  1 e 1 0 ]
+[v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "298
-[v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `E3  1 e 1 0 ]
+[v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEE3  1 e 1 0 ]
 [s S134 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "299
 [u S137 . 1 `S134 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `[3]S137  1 e 3 0 ]
+[v _ep_data_in ep_data_in `VE[3]S137  1 e 3 0 ]
 "300
-[v _ep_data_out ep_data_out `[3]S137  1 e 3 0 ]
+[v _ep_data_out ep_data_out `VE[3]S137  1 e 3 0 ]
 "301
-[v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `uc  1 e 1 0 ]
+[v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "302
 [v _USBDeferStatusStagePacket USBDeferStatusStagePacket `VEE3  1 e 1 0 ]
 "303
@@ -560,24 +564,41 @@ EVENT_TRANSFER_TERMINATED 5
 [v _SetupPkt SetupPkt `VES239  1 e 8 @80 ]
 "332
 [v _CtrlTrfData CtrlTrfData `VE[8]uc  1 e 8 @88 ]
-[s S436 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `us 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `us 1 idVendor 2 8 `us 1 idProduct 2 10 `us 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
-"166 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/usb_descriptors.c
-[v _device_dsc device_dsc `DCS436  1 e 18 0 ]
+[s S468 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `us 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `us 1 idVendor 2 8 `us 1 idProduct 2 10 `us 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"166 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/usb_descriptors.c
+[v _device_dsc device_dsc `DCS468  1 e 18 0 ]
 "185
 [v _configDescriptor1 configDescriptor1 `DC[67]uc  1 e 67 0 ]
-[s S4203 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
+[s S4278 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
 "271
-[v _sd000 sd000 `DCS4203  1 e 4 0 ]
-[s S4207 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]us 1 string 50 2 ]
+[v _sd000 sd000 `DCS4278  1 e 4 0 ]
+[s S4282 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]us 1 string 50 2 ]
 "275
-[v _sd001 sd001 `DCS4207  1 e 52 0 ]
+[v _sd001 sd001 `DCS4282  1 e 52 0 ]
 "282
-[v _sd002 sd002 `DCS4207  1 e 52 0 ]
+[v _sd002 sd002 `DCS4282  1 e 52 0 ]
 "289
 [v _USB_CD_Ptr USB_CD_Ptr `DC[1]*.25DCuc  1 e 2 0 ]
 "294
 [v _USB_SD_Ptr USB_SD_Ptr `DC[3]*.25DCuc  1 e 6 0 ]
-[s S3404 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S419 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"372 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
+[s S428 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S433 . 1 `S419 1 . 1 0 `S428 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES433  1 e 1 @11 ]
+[s S3468 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -586,10 +607,10 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"539 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
-[u S3413 . 1 `S3404 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES3413  1 e 1 @17 ]
-[s S314 . 1 `uc 1 . 1 0 :1:0 
+"539
+[u S3477 . 1 `S3468 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES3477  1 e 1 @17 ]
+[s S336 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ACTIF 1 0 :1:1 
 `uc 1 USBIF 1 0 :1:2 
 `uc 1 BCL1IF 1 0 :1:3 
@@ -597,11 +618,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 OSFIF 1 0 :1:7 
 ]
 "589
-[u S321 . 1 `S314 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES321  1 e 1 @18 ]
+[u S343 . 1 `S336 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES343  1 e 1 @18 ]
 "961
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S2279 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S2327 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -609,8 +630,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "976
-[u S2286 . 1 `S2279 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES2286  1 e 1 @142 ]
+[u S2334 . 1 `S2327 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2334  1 e 1 @142 ]
 [s S250 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ACTIE 1 0 :1:1 
 `uc 1 USBIE 1 0 :1:2 
@@ -627,7 +648,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1520
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S2260 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2308 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -635,8 +656,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 LATC5 1 0 :1:5 
 ]
 "1535
-[u S2267 . 1 `S2260 1 . 1 0 ]
-[v _LATCbits LATCbits `VES2267  1 e 1 @270 ]
+[u S2315 . 1 `S2308 1 . 1 0 ]
+[v _LATCbits LATCbits `VES2315  1 e 1 @270 ]
 "1676
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "1696
@@ -651,7 +672,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
 "2033
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S3337 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S3401 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -661,11 +682,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SPEN 1 0 :1:7 
 ]
 "2050
-[u S3346 . 1 `S3337 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES3346  1 e 1 @413 ]
+[u S3410 . 1 `S3401 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES3410  1 e 1 @413 ]
 "2095
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S3383 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S3447 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -675,8 +696,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2112
-[u S3392 . 1 `S3383 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES3392  1 e 1 @414 ]
+[u S3456 . 1 `S3447 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES3456  1 e 1 @414 ]
 "2157
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "3208
@@ -713,7 +734,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UCFG UCFG `VEuc  1 e 1 @3729 ]
 "3840
 [v _UIE UIE `VEuc  1 e 1 @3730 ]
-[s S331 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S313 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -722,8 +743,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "3856
-[u S339 . 1 `S331 1 . 1 0 ]
-[v _UIEbits UIEbits `VES339  1 e 1 @3730 ]
+[u S321 . 1 `S313 1 . 1 0 ]
+[v _UIEbits UIEbits `VES321  1 e 1 @3730 ]
 "3896
 [v _UEIR UEIR `VEuc  1 e 1 @3731 ]
 "4048
@@ -732,28 +753,173 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UEIE UEIE `VEuc  1 e 1 @3735 ]
 "4155
 [v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
-[s S470 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S502 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "4169
-[u S476 . 1 `S470 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES476  1 e 1 @3736 ]
+[u S508 . 1 `S502 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES508  1 e 1 @3736 ]
 "4199
 [v _UEP1 UEP1 `VEuc  1 e 1 @3737 ]
-"111 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"46 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"143
+"51
 } 0
-"667 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"1525 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+{
+"1555
+} 0
+"132 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
+[v _ProcessIO ProcessIO `(v  1 e 1 0 ]
+{
+"170
+} 0
+"93
+[v _putcUSART putcUSART `(v  1 e 1 0 ]
+{
+[v putcUSART@c c `uc  1 a 1 wreg ]
+[v putcUSART@c c `uc  1 a 1 wreg ]
+"95
+[v putcUSART@c c `uc  1 a 1 8 ]
+"97
+} 0
+"676 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+[v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
+{
+[v putUSBUSART@data data `*.5uc  1 a 1 wreg ]
+[v putUSBUSART@data data `*.5uc  1 a 1 wreg ]
+[v putUSBUSART@length length `uc  1 p 1 8 ]
+"701
+[v putUSBUSART@data data `*.5uc  1 a 1 10 ]
+"707
+} 0
+"605
+[v _getsUSBUSART getsUSBUSART `(uc  1 e 1 0 ]
+{
+[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 wreg ]
+[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 wreg ]
+[v getsUSBUSART@len len `uc  1 p 1 15 ]
+"607
+[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 3 ]
+"634
+} 0
+"117 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
+[v _getcUSART getcUSART `(uc  1 e 1 0 ]
+{
+"119
+[v getcUSART@c c `uc  1 a 1 9 ]
+"130
+} 0
+"956 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+[v _CDCTxService CDCTxService `(v  1 e 1 0 ]
+{
+"958
+[v CDCTxService@byte_to_send byte_to_send `uc  1 a 1 6 ]
+"959
+[v CDCTxService@i i `uc  1 a 1 5 ]
+"1052
+} 0
+"1172 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+[v _USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
+{
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S27 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"1174
+[s S36 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S43 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S47 _BD_STAT 1 `uc 1 Val 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S43 1 . 1 0 ]
+[s S52 . 4 `S47 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S57 . 4 `uc 1 filler1 1 0 :8:0 
+`uc 1 filler2 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.4VES61  1 a 1 14 ]
+"1172
+[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v USBTransferOnePacket@dir dir `uc  1 p 1 8 ]
+[v USBTransferOnePacket@data data `*.6uc  1 p 1 9 ]
+[v USBTransferOnePacket@len len `uc  1 p 1 10 ]
+"1177
+[v USBTransferOnePacket@ep ep `uc  1 a 1 13 ]
+"1223
+} 0
+"172 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
+[v _BlinkUSBStatus BlinkUSBStatus `(v  1 e 1 0 ]
+{
+"174
+[v BlinkUSBStatus@led_count led_count `us  1 s 2 led_count ]
+"253
+} 0
+"53
+[v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
+{
+"62
+} 0
+"64
+[v _UserInit UserInit `(v  1 e 1 0 ]
+{
+"66
+[v UserInit@i i `uc  1 a 1 11 ]
+"73
+} 0
+"75
+[v _InitializeUSART InitializeUSART `(v  1 e 1 0 ]
+{
+"77
+[v InitializeUSART@c c `uc  1 a 1 9 ]
+"87
+} 0
+"466 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+"481
+[v USBDeviceInit@p p `*.39uc  1 a 2 9 ]
+[v USBDeviceInit@i_740 i `uc  1 a 1 11 ]
+"468
+[v USBDeviceInit@i i `uc  1 a 1 12 ]
+"552
+} 0
+"41 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
+[v _ISRCode ISRCode `II(v  1 e 1 0 ]
+{
+"44
+} 0
+"660 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
 {
 "670
-[v USBDeviceTasks@i i `uc  1 a 1 0 ]
+[v USBDeviceTasks@i i `uc  1 a 1 6 ]
 "1004
+} 0
+"466
+[v i1_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+[v i1USBDeviceInit@p USBDeviceInit `*.39uc  1 a 2 1 ]
+[v i1USBDeviceInit@i USBDeviceInit `uc  1 a 1 4 ]
+[v i1USBDeviceInit@i_740 USBDeviceInit `uc  1 a 1 3 ]
+"552
 } 0
 "2455
 [v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
@@ -774,7 +940,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
 {
 "2551
-[v USBCtrlEPService@setup_cnt setup_cnt `uc  1 a 1 8 ]
+[v USBCtrlEPService@setup_cnt setup_cnt `uc  1 a 1 3 ]
 "2580
 } 0
 "2622
@@ -801,27 +967,27 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
 {
 "2139
-[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 11 ]
-[v USBStdSetCfgHandler@i_1801 i `uc  1 a 1 13 ]
+[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 8 ]
+[v USBStdSetCfgHandler@i_1844 i `uc  1 a 1 10 ]
 "2133
-[v USBStdSetCfgHandler@i i `uc  1 a 1 14 ]
+[v USBStdSetCfgHandler@i i `uc  1 a 1 11 ]
 "2187
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
 {
 [v memset@p1 p1 `*.4v  1 a 1 wreg ]
 "15
-[v memset@p p `*.4uc  1 a 1 6 ]
+[v memset@p p `*.4uc  1 a 1 5 ]
 "8
 [v memset@p1 p1 `*.4v  1 a 1 wreg ]
-[v memset@c c `i  1 p 2 1 ]
-[v memset@n n `ui  1 p 2 3 ]
+[v memset@c c `i  1 p 2 0 ]
+[v memset@n n `ui  1 p 2 2 ]
 "18
-[v memset@p1 p1 `*.4v  1 a 1 7 ]
+[v memset@p1 p1 `*.4v  1 a 1 6 ]
 "22
 } 0
-"2282 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"2282 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
 {
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
@@ -851,7 +1017,7 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.4S61  1 a 1 2 ]
+[v USBStdGetStatusHandler@p p `*.4S61  1 a 1 1 ]
 "2337
 } 0
 "2206
@@ -863,7 +1029,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
 {
 "2913
-[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 0 ]
+[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 10 ]
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
@@ -891,64 +1057,103 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdFeatureReqHandler@p p `*.4S61  1 a 1 3 ]
+[v USBStdFeatureReqHandler@p p `*.4S61  1 a 1 13 ]
 [s S134 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2909
 [u S137 . 1 `S134 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S137  1 a 1 2 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S137  1 a 1 12 ]
 "3131
 } 0
-"1066 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"315 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(E3  1 e 1 0 ]
 {
-[v USER_USB_CALLBACK_EVENT_HANDLER@event event `i  1 p 2 6 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.4v  1 p 1 8 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 9 ]
-"1108
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `i  1 p 2 3 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.4v  1 p 1 5 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 6 ]
+"349
 } 0
-"743
+"265
 [v _USBCB_SOF_Handler USBCB_SOF_Handler `(v  1 e 1 0 ]
 {
-"747
+"268
 } 0
-"711
+"260
 [v _USBCBWakeFromSuspend USBCBWakeFromSuspend `(v  1 e 1 0 ]
 {
-"723
+"263
 } 0
-"666
+"255
 [v _USBCBSuspend USBCBSuspend `(v  1 e 1 0 ]
 {
-"686
+"258
 } 0
-"842
+"280
 [v _USBCBStdSetDscHandler USBCBStdSetDscHandler `(v  1 e 1 0 ]
 {
-"845
+"283
 } 0
-"868
+"285
 [v _USBCBInitEP USBCBInitEP `(v  1 e 1 0 ]
 {
-"872
+"288
 } 0
-"414 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+"414 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [v _CDCInitEP CDCInitEP `(v  1 e 1 0 ]
 {
 "467
 } 0
-"1055 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"1172 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+[v i1_USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
+{
+[v i1USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[s S27 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+[s S36 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S43 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S47 _BD_STAT 1 `uc 1 Val 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S43 1 . 1 0 ]
+[s S52 . 4 `S47 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S57 . 4 `uc 1 filler1 1 0 :8:0 
+`uc 1 filler2 1 1 :8:0 
+`us 1 ADR 2 2 ]
+[u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i1USBTransferOnePacket@handle USBTransferOnePacket `*.4VES61  1 a 1 6 ]
+[v i1USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
+[v i1USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
+[v i1USBTransferOnePacket@data data `*.6uc  1 p 1 1 ]
+[v i1USBTransferOnePacket@len len `uc  1 p 1 2 ]
+"1177
+[v i1USBTransferOnePacket@ep ep `uc  1 a 1 5 ]
+"1223
+} 0
+"1055
 [v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
 {
 [v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
 "1057
-[v USBEnableEndpoint@p p `*.39uc  1 a 2 0 ]
+[v USBEnableEndpoint@p p `*.39uc  1 a 2 10 ]
 "1055
 [v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
-[v USBEnableEndpoint@options options `uc  1 p 1 8 ]
+[v USBEnableEndpoint@options options `uc  1 p 1 7 ]
 "1061
-[v USBEnableEndpoint@ep ep `uc  1 a 1 2 ]
+[v USBEnableEndpoint@ep ep `uc  1 a 1 12 ]
 "1079
 } 0
 "1712
@@ -982,30 +1187,30 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.4VES61  1 a 1 7 ]
+[v USBConfigureEndpoint@handle handle `*.4VES61  1 a 1 6 ]
 "1712
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[v USBConfigureEndpoint@direction direction `uc  1 p 1 1 ]
+[v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
 "1718
-[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 6 ]
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 5 ]
 "1754
 } 0
-"766 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"270 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [v _USBCBErrorHandler USBCBErrorHandler `(v  1 e 1 0 ]
 {
-"786
+"273
 } 0
-"817
+"275
 [v _USBCBCheckOtherReq USBCBCheckOtherReq `(v  1 e 1 0 ]
 {
-"820
+"278
 } 0
-"267 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
+"267 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
 [v _USBCheckCDCRequest USBCheckCDCRequest `(v  1 e 1 0 ]
 {
 "380
 } 0
-"2694 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"2694 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
 {
 "2722
@@ -1014,9 +1219,9 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
 {
 "2020
-[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 10 ]
+[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 9 ]
 "2021
-[v USBCtrlTrfRxService@i i `uc  1 a 1 9 ]
+[v USBCtrlTrfRxService@i i `uc  1 a 1 8 ]
 "2110
 } 0
 "1589
@@ -1028,15 +1233,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
 {
 "2749
-[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 9 ]
+[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 6 ]
 "2819
 } 0
-"344 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
+"101 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/main.c
 [v _mySetLineCodingHandler mySetLineCodingHandler `(v  1 e 1 0 ]
 {
-[s S2006 . 4 `us 1 LW 2 0 `us 1 HW 2 2 ]
-"373
-[s S2009 . 4 `uc 1 LB 1 0 `uc 1 HB 1 1 `uc 1 UB 1 2 `uc 1 MB 1 3 ]
+[s S2054 . 4 `us 1 LW 2 0 `us 1 HW 2 2 ]
+"109
+[s S2057 . 4 `uc 1 LB 1 0 `uc 1 HB 1 1 `uc 1 UB 1 2 `uc 1 MB 1 3 ]
 [s S79 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
 [s S82 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
@@ -1056,8 +1261,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 b15 1 1 :1:7 
 ]
 [u S99 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S79 1 byte 2 0 `S82 1 bits 2 0 ]
-[s S2039 . 4 `S99 1 low 2 0 `S99 1 high 2 2 ]
-[s S2042 . 4 `uc 1 b0 1 0 :1:0 
+[s S2087 . 4 `S99 1 low 2 0 `S99 1 high 2 2 ]
+[s S2090 . 4 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
 `uc 1 b3 1 0 :1:3 
@@ -1090,158 +1295,26 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 b30 1 3 :1:6 
 `uc 1 b31 1 3 :1:7 
 ]
-[u S2075 . 4 `ul 1 Val 4 0 `[2]us 1 w 4 0 `[4]uc 1 v 4 0 `S2006 1 word 4 0 `S2009 1 byte 4 0 `S2039 1 wordUnion 4 0 `S2042 1 bits 4 0 ]
-[v mySetLineCodingHandler@dwBaud dwBaud `S2075  1 a 4 5 ]
-"397
+[u S2123 . 4 `ul 1 Val 4 0 `[2]us 1 w 4 0 `[4]uc 1 v 4 0 `S2054 1 word 4 0 `S2057 1 byte 4 0 `S2087 1 wordUnion 4 0 `S2090 1 bits 4 0 ]
+[v mySetLineCodingHandler@dwBaud dwBaud `S2123  1 a 4 0 ]
+"114
 } 0
-"6 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lldiv.c
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "11
-[v ___lldiv@quotient quotient `ul  1 a 4 0 ]
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
 "12
-[v ___lldiv@counter counter `uc  1 a 1 4 ]
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
 "6
-[v ___lldiv@divisor divisor `ul  1 p 4 1 ]
-[v ___lldiv@dividend dividend `ul  1 p 4 5 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "31
 } 0
-"1937 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
+"1937 E:\GitHub\XC8Training\MPLAB Projects\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
 [v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
 {
 "1939
-[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 3 ]
+[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 4 ]
 "1991
-} 0
-"453 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
-[v _ProcessIO ProcessIO `(v  1 e 1 0 ]
-{
-"527
-} 0
-"317
-[v _putcUSART putcUSART `(v  1 e 1 0 ]
-{
-[v putcUSART@c c `uc  1 a 1 wreg ]
-[v putcUSART@c c `uc  1 a 1 wreg ]
-"319
-[v putcUSART@c c `uc  1 a 1 1 ]
-"321
-} 0
-"676 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
-[v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
-{
-[v putUSBUSART@data data `*.5uc  1 a 1 wreg ]
-[v putUSBUSART@data data `*.5uc  1 a 1 wreg ]
-[v putUSBUSART@length length `uc  1 p 1 1 ]
-"702
-[v putUSBUSART@data data `*.5uc  1 a 1 3 ]
-"707
-} 0
-"605
-[v _getsUSBUSART getsUSBUSART `(uc  1 e 1 0 ]
-{
-[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 wreg ]
-[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 wreg ]
-[v getsUSBUSART@len len `uc  1 p 1 8 ]
-"607
-[v getsUSBUSART@buffer buffer `*.7uc  1 a 1 0 ]
-"634
-} 0
-"416 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
-[v _getcUSART getcUSART `(uc  1 e 1 0 ]
-{
-"418
-[v getcUSART@c c `uc  1 a 1 2 ]
-"434
-} 0
-"956 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/CDC_Device_Driver/usb_function_cdc.c
-[v _CDCTxService CDCTxService `(v  1 e 1 0 ]
-{
-"958
-[v CDCTxService@byte_to_send byte_to_send `uc  1 a 1 3 ]
-"959
-[v CDCTxService@i i `uc  1 a 1 2 ]
-"1052
-} 0
-"1172 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
-[v _USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
-{
-[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S27 . 1 `uc 1 BC8 1 0 :1:0 
-`uc 1 BC9 1 0 :1:1 
-`uc 1 BSTALL 1 0 :1:2 
-`uc 1 DTSEN 1 0 :1:3 
-`uc 1 INCDIS 1 0 :1:4 
-`uc 1 KEN 1 0 :1:5 
-`uc 1 DTS 1 0 :1:6 
-`uc 1 UOWN 1 0 :1:7 
-]
-"1174
-[s S36 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 PID0 1 0 :1:2 
-`uc 1 PID1 1 0 :1:3 
-`uc 1 PID2 1 0 :1:4 
-`uc 1 PID3 1 0 :1:5 
-`uc 1 . 1 0 :1:6 
-]
-[s S43 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 PID 1 0 :4:2 
-`uc 1 . 1 0 :2:6 
-]
-[u S47 _BD_STAT 1 `uc 1 Val 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S43 1 . 1 0 ]
-[s S52 . 4 `S47 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S57 . 4 `uc 1 filler1 1 0 :8:0 
-`uc 1 filler2 1 1 :8:0 
-`us 1 ADR 2 2 ]
-[u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.4VES61  1 a 1 7 ]
-"1172
-[v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[v USBTransferOnePacket@dir dir `uc  1 p 1 1 ]
-[v USBTransferOnePacket@data data `*.6uc  1 p 1 2 ]
-[v USBTransferOnePacket@len len `uc  1 p 1 3 ]
-"1177
-[v USBTransferOnePacket@ep ep `uc  1 a 1 6 ]
-"1223
-} 0
-"547 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
-[v _BlinkUSBStatus BlinkUSBStatus `(v  1 e 1 0 ]
-{
-"549
-[v BlinkUSBStatus@led_count led_count `us  1 s 2 led_count ]
-"626
-} 0
-"166
-[v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
-{
-"224
-} 0
-"245
-[v _UserInit UserInit `(v  1 e 1 0 ]
-{
-"247
-[v UserInit@i i `uc  1 a 1 4 ]
-"261
-} 0
-"279
-[v _InitializeUSART InitializeUSART `(v  1 e 1 0 ]
-{
-"281
-[v InitializeUSART@c c `uc  1 a 1 2 ]
-"295
-} 0
-"466 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/Microchip/USB/usb_device.c
-[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
-{
-"481
-[v USBDeviceInit@p p `*.39uc  1 a 2 2 ]
-[v USBDeviceInit@i_708 i `uc  1 a 1 4 ]
-"468
-[v USBDeviceInit@i i `uc  1 a 1 5 ]
-"552
-} 0
-"79 F:\GitHub\XC8Training\PIC16F1454_USB2Serial/main.c
-[v _ISRCode ISRCode `II(v  1 e 1 0 ]
-{
-"89
 } 0

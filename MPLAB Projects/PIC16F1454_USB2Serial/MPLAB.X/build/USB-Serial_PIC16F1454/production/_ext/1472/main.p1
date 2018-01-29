@@ -1,12 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"66 ../main.c
-[v _InitializeSystem `(v ~T0 @X0 0 sf ]
 "357 ../Microchip/Include\USB/usb_device.h
 [v _USBDeviceTasks `(v ~T0 @X0 0 ef ]
-"67 ../main.c
+[p mainexit ]
+"29 ../main.c
+[v _InitializeSystem `(v ~T0 @X0 0 sf ]
+"693 ../Microchip/Include\USB/usb_device.h
+[v _USBDeviceAttach `(v ~T0 @X0 0 ef ]
+"30 ../main.c
 [v _ProcessIO `(v ~T0 @X0 0 ef ]
-"1676 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"1676 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
 "1696
 [v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
@@ -16,13 +18,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
 "3208
 [v _ACTCON `Vuc ~T0 @X0 0 e@923 ]
-"73 ../main.c
+"36 ../main.c
 [v _UserInit `(v ~T0 @X0 0 ef ]
 "252 ../Microchip/Include\USB/usb_device.h
 [v _USBDeviceInit `(v ~T0 @X0 0 ef ]
-"74 ../main.c
+"37 ../main.c
 [v _InitializeUSART `(v ~T0 @X0 0 ef ]
-"1520 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"1520 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [v _LATC `Vuc ~T0 @X0 0 e@270 ]
 "961
 [v _TRISC `Vuc ~T0 @X0 0 e@142 ]
@@ -88,7 +90,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _cdc_notice `VFS340 ~T0 @X0 0 e ]
 "1033
 [v _line_coding `S331 ~T0 @X0 0 e ]
-"2039 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"2039 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S146 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S146 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
 "2038
@@ -96,14 +98,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S145 . . ]
 "2050
 [v _RCSTAbits `VS145 ~T0 @X0 0 e@413 ]
-"72 ../main.c
+"35 ../main.c
 [v _BlinkUSBStatus `(v ~T0 @X0 0 ef ]
-"458
+"137
 [c E2855 0 1 2 4 8 16 32 .. ]
 [n E2855 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
 "1983 ../Microchip/Include\USB/usb_device.h
-[v _USBDeviceState `E2855 ~T0 @X0 0 e ]
-"3625 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+[v _USBDeviceState `VE2855 ~T0 @X0 0 e ]
+"3625 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S222 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
 "3624
@@ -113,7 +115,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _UCONbits `VS221 ~T0 @X0 0 e@3726 ]
 "734 ../Microchip/Include\./USB/usb_function_cdc.h
 [v _getsUSBUSART `(uc ~T0 @X0 0 ef2`*uc`uc ]
-"2101 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"2101 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S148 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S148 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
 "2100
@@ -135,7 +137,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _putUSBUSART `(v ~T0 @X0 0 ef2`*uc`uc ]
 "912
 [v _CDCTxService `(v ~T0 @X0 0 ef ]
-"1526 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"1526 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S110 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 ]
 "1525
@@ -147,14 +149,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _USBCheckCDCRequest `(v ~T0 @X0 0 ef ]
 "617
 [v _CDCInitEP `(v ~T0 @X0 0 ef ]
-"974 ../main.c
+"294 ../main.c
 [c E3 0 1 .. ]
 [n E3 _BOOL FALSE TRUE  ]
 "1981 ../Microchip/Include\USB/usb_device.h
-[v _RemoteWakeup `E3 ~T0 @X0 0 e ]
+[v _RemoteWakeup `VE3 ~T0 @X0 0 e ]
 "1982
-[v _USBBusIsSuspended `E3 ~T0 @X0 0 e ]
-"1068 ../main.c
+[v _USBBusIsSuspended `VE3 ~T0 @X0 0 e ]
+"1069 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
+[s S90 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S90 . . ACTIE USBIE BCL1IE . OSFIE ]
+"1068
+[u S89 `S90 1 ]
+[n S89 . . ]
+"1078
+[v _PIE2bits `VS89 ~T0 @X0 0 e@146 ]
+"317 ../main.c
 [c E2627 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 400 500 600 700 800 900 1000 10000 32767 .. ]
 [n E2627 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
 [c E2864 1 2 3 4 5 .. ]
@@ -564,7 +574,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1454.h: 50: extern volatile unsigned char INDF0 @ 0x000;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f1454.h
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1454.h
 [; ;pic16f1454.h: 52: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1454.h: 55: typedef union {
@@ -2991,7 +3001,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1944: }info;
 [; ;usb_device.h: 1945: WORD_VAL  wCount;
 [; ;usb_device.h: 1946: }IN_PIPE;
-[; ;usb_device.h: 1948: extern  IN_PIPE inPipes[];
+[; ;usb_device.h: 1948: extern volatile IN_PIPE inPipes[];
 [; ;usb_device.h: 1950: typedef struct 
 [; ;usb_device.h: 1951: {
 [; ;usb_device.h: 1952: union 
@@ -3011,10 +3021,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device.h: 1969: WORD_VAL wCount;
 [; ;usb_device.h: 1970: void (*pFunc)(void);
 [; ;usb_device.h: 1971: }OUT_PIPE;
-[; ;usb_device.h: 1981: extern  BOOL RemoteWakeup;
-[; ;usb_device.h: 1982: extern  BOOL USBBusIsSuspended;
-[; ;usb_device.h: 1983: extern  USB_DEVICE_STATE USBDeviceState;
-[; ;usb_device.h: 1984: extern  BYTE USBActiveConfiguration;
+[; ;usb_device.h: 1981: extern volatile BOOL RemoteWakeup;
+[; ;usb_device.h: 1982: extern volatile BOOL USBBusIsSuspended;
+[; ;usb_device.h: 1983: extern volatile USB_DEVICE_STATE USBDeviceState;
+[; ;usb_device.h: 1984: extern volatile BYTE USBActiveConfiguration;
 [; ;usb_hal_pic16f1.h: 260: typedef union _BD_STAT
 [; ;usb_hal_pic16f1.h: 261: {
 [; ;usb_hal_pic16f1.h: 262: BYTE Val;
@@ -3084,9 +3094,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_hal_pic16f1.h: 347: const BYTE* bRom;
 [; ;usb_hal_pic16f1.h: 348: const WORD* wRom;
 [; ;usb_hal_pic16f1.h: 353: } POINTER;
-[; ;usb_hal_pic16f1.h: 549: extern  BYTE USBActiveConfiguration;
-[; ;usb_hal_pic16f1.h: 550: extern  IN_PIPE inPipes[1];
-[; ;usb_hal_pic16f1.h: 551: extern  OUT_PIPE outPipes[1];
+[; ;usb_hal_pic16f1.h: 549: extern volatile BYTE USBActiveConfiguration;
+[; ;usb_hal_pic16f1.h: 550: extern volatile IN_PIPE inPipes[1];
+[; ;usb_hal_pic16f1.h: 551: extern volatile OUT_PIPE outPipes[1];
 [; ;usb_hal_pic16f1.h: 554: extern volatile BDT_ENTRY* pBDTEntryOut[2+1];
 [; ;usb_hal_pic16f1.h: 555: extern volatile BDT_ENTRY* pBDTEntryIn[2+1];
 [; ;usb_hal.h: 152: void OTGCORE_SetDeviceAddr( BYTE addr );
@@ -3207,7 +3217,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_function_cdc.h: 1033: extern LINE_CODING line_coding;
 [; ;usb_function_cdc.h: 1035: extern volatile CTRL_TRF_SETUP SetupPkt;
 [; ;usb_function_cdc.h: 1036: extern const BYTE configDescriptor1[];
-"30 ../main.c
+"5 ../main.c
 [p x FOSC=INTOSC ]
 [p x WDTE=OFF ]
 [p x PWRTE=ON ]
@@ -3217,7 +3227,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x CLKOUTEN=OFF ]
 [p x IESO=OFF ]
 [p x FCMEN=OFF ]
-"31
+"6
 [p x WRT=OFF ]
 [p x CPUDIV=NOCLKDIV ]
 [p x USBLSCLK=48MHz ]
@@ -3227,738 +3237,731 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x BORV=LO ]
 [p x LPBOR=OFF ]
 [p x LVP=ON ]
-"50
+[; ;main.c: 5: __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & CP_OFF & BOREN_ON & CLKOUTEN_OFF & IESO_OFF & FCMEN_OFF");
+[; ;main.c: 6: __config("__CONFIG", "pic", "WRT_OFF & CPUDIV_NOCLKDIV & USBLSCLK_48MHz & PLLMULT_3x & PLLEN_ENABLED & STVREN_ON & BORV_LO & LPBOR_OFF & LVP_ON");
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+"17
 [v _USB_Out_Buffer `uc ~T0 @X0 -> 64 `i e ]
-[; ;main.c: 30: __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & CP_OFF & BOREN_ON & CLKOUTEN_OFF & IESO_OFF & FCMEN_OFF");
-[; ;main.c: 31: __config("__CONFIG", "pic", "WRT_OFF & CPUDIV_NOCLKDIV & USBLSCLK_48MHz & PLLMULT_3x & PLLEN_ENABLED & STVREN_ON & BORV_LO & LPBOR_OFF & LVP_ON");
-[; ;main.c: 50: char USB_Out_Buffer[64];
-"51
+[; ;main.c: 17: char USB_Out_Buffer[64];
+"18
 [v _RS232_Out_Data `uc ~T0 @X0 -> 64 `i e ]
-[; ;main.c: 51: char RS232_Out_Data[64];
-"53
+[; ;main.c: 18: char RS232_Out_Data[64];
+"20
 [v _NextUSBOut `uc ~T0 @X0 1 e ]
-[; ;main.c: 53: unsigned char NextUSBOut;
-[; ;main.c: 54: unsigned char NextUSBOut;
-"56
+[; ;main.c: 20: uint8_t NextUSBOut;
+[; ;main.c: 21: uint8_t NextUSBOut;
+"22
 [v _LastRS232Out `uc ~T0 @X0 1 e ]
-[; ;main.c: 56: unsigned char LastRS232Out;
-"57
+[; ;main.c: 22: uint8_t LastRS232Out;
+"23
 [v _RS232cp `uc ~T0 @X0 1 e ]
-[; ;main.c: 57: unsigned char RS232cp;
-"58
+[; ;main.c: 23: uint8_t RS232cp;
+"24
 [v _RS232_Out_Data_Rdy `uc ~T0 @X0 1 e ]
 [i _RS232_Out_Data_Rdy
 -> -> 0 `i `uc
 ]
-[; ;main.c: 58: unsigned char RS232_Out_Data_Rdy = 0;
-"59
+[; ;main.c: 24: uint8_t RS232_Out_Data_Rdy=0;
+"25
 [v _lastTransmission `*v ~T0 @X0 1 e ]
-[; ;main.c: 59: void* lastTransmission;
-"61
+[; ;main.c: 25: void* lastTransmission;
+"26
 [v _sending `uc ~T0 @X0 1 e ]
 [i _sending
 -> -> 0 `i `uc
 ]
-[; ;main.c: 61: unsigned char sending= 0;
-"62
+[; ;main.c: 26: uint8_t sending=0;
+"27
 [v _receiving `uc ~T0 @X0 1 e ]
 [i _receiving
 -> -> 0 `i `uc
 ]
-[; ;main.c: 62: unsigned char receiving= 0;
-[; ;main.c: 66: static void InitializeSystem(void);
-[; ;main.c: 67: void ProcessIO(void);
-[; ;main.c: 68: void USBDeviceTasks(void);
-[; ;main.c: 69: void YourHighPriorityISRCode();
-[; ;main.c: 70: void YourLowPriorityISRCode();
-[; ;main.c: 71: void USBCBSendResume(void);
-[; ;main.c: 72: void BlinkUSBStatus(void);
-[; ;main.c: 73: void UserInit(void);
-[; ;main.c: 74: void InitializeUSART(void);
-[; ;main.c: 75: void putcUSART(char c);
-[; ;main.c: 76: unsigned char getcUSART ();
+[; ;main.c: 27: uint8_t receiving=0;
+[; ;main.c: 29: static void InitializeSystem(void);
+[; ;main.c: 30: void ProcessIO(void);
+[; ;main.c: 31: void USBDeviceTasks(void);
+[; ;main.c: 32: void YourHighPriorityISRCode();
+[; ;main.c: 33: void YourLowPriorityISRCode();
+[; ;main.c: 34: void USBCBSendResume(void);
+[; ;main.c: 35: void BlinkUSBStatus(void);
+[; ;main.c: 36: void UserInit(void);
+[; ;main.c: 37: void InitializeUSART(void);
+[; ;main.c: 38: void putcUSART(char c);
+[; ;main.c: 39: uint8_t getcUSART();
 [v $root$_ISRCode `(v ~T0 @X0 0 e ]
-[v F3226 `(v ~T0 @X0 1 tf ]
-"79
-[v _ISRCode `IF3226 ~T0 @X0 1 e ]
-"80
+[v F3255 `(v ~T0 @X0 1 tf ]
+"41
+[v _ISRCode `IF3255 ~T0 @X0 1 e ]
+"42
 {
-[; ;main.c: 79: void interrupt ISRCode()
-[; ;main.c: 80: {
+[; ;main.c: 41: void interrupt ISRCode()
+[; ;main.c: 42: {
 [e :U _ISRCode ]
 [f ]
-[; ;main.c: 89: }
-"89
+[; ;main.c: 43: USBDeviceTasks();
+"43
+[e ( _USBDeviceTasks ..  ]
+[; ;main.c: 44: }
+"44
 [e :UE 344 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"111
+"46
 [v _main `(i ~T0 @X0 1 ef ]
-"113
+"47
 {
-[; ;main.c: 111: int main(void)
-[; ;main.c: 113: {
+[; ;main.c: 46: int main(void)
+[; ;main.c: 47: {
 [e :U _main ]
 [f ]
-[; ;main.c: 114: InitializeSystem();
-"114
+[; ;main.c: 48: InitializeSystem();
+"48
 [e ( _InitializeSystem ..  ]
-[; ;main.c: 120: while(1)
-"120
+[; ;main.c: 49: USBDeviceAttach();
+"49
+[e ( _USBDeviceAttach ..  ]
+[; ;main.c: 50: while(1) ProcessIO();
+"50
 [e :U 347 ]
-[; ;main.c: 121: {
-"121
-{
-[; ;main.c: 124: USBDeviceTasks();
-"124
-[e ( _USBDeviceTasks ..  ]
-[; ;main.c: 141: ProcessIO();
-"141
 [e ( _ProcessIO ..  ]
-"142
-}
 [e :U 346 ]
-"120
 [e $U 347  ]
 [e :U 348 ]
-[; ;main.c: 142: }
-[; ;main.c: 143: }
-"143
+[; ;main.c: 51: }
+"51
 [e :UE 345 ]
 }
-"166
+"53
 [v _InitializeSystem `(v ~T0 @X0 1 sf ]
-"167
+"54
 {
-[; ;main.c: 166: static void InitializeSystem(void)
-[; ;main.c: 167: {
+[; ;main.c: 53: static void InitializeSystem(void)
+[; ;main.c: 54: {
 [e :U _InitializeSystem ]
 [f ]
-[; ;main.c: 170: ANSELA = 0x00;
-"170
+[; ;main.c: 55: ANSELA=0x00;
+"55
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 174: ANSELC = 0x00;
-"174
+[; ;main.c: 56: ANSELC=0x00;
+"56
 [e = _ANSELC -> -> 0 `i `uc ]
-[; ;main.c: 176: OSCTUNE = 0;
-"176
+[; ;main.c: 57: OSCTUNE=0;
+"57
 [e = _OSCTUNE -> -> 0 `i `uc ]
-[; ;main.c: 177: OSCCON = 0xFC;
-"177
+[; ;main.c: 58: OSCCON=0xFC;
+"58
 [e = _OSCCON -> -> 252 `i `uc ]
-[; ;main.c: 178: ACTCON = 0x90;
-"178
+[; ;main.c: 59: ACTCON=0x90;
+"59
 [e = _ACTCON -> -> 144 `i `uc ]
-[; ;main.c: 220: UserInit();
-"220
+[; ;main.c: 60: UserInit();
+"60
 [e ( _UserInit ..  ]
-[; ;main.c: 222: USBDeviceInit();
-"222
+[; ;main.c: 61: USBDeviceInit();
+"61
 [e ( _USBDeviceInit ..  ]
-[; ;main.c: 224: }
-"224
+[; ;main.c: 62: }
+"62
 [e :UE 349 ]
 }
-"245
+"64
 [v _UserInit `(v ~T0 @X0 1 ef ]
-"246
+"65
 {
-[; ;main.c: 245: void UserInit(void)
-[; ;main.c: 246: {
+[; ;main.c: 64: void UserInit(void)
+[; ;main.c: 65: {
 [e :U _UserInit ]
 [f ]
-"247
+"66
 [v _i `uc ~T0 @X0 1 a ]
-[; ;main.c: 247: unsigned char i;
-[; ;main.c: 248: InitializeUSART();
-"248
+[; ;main.c: 66: uint8_t i;
+[; ;main.c: 67: InitializeUSART();
+"67
 [e ( _InitializeUSART ..  ]
-[; ;main.c: 251: for (i=0; i<sizeof(USB_Out_Buffer); i++)
-"251
+[; ;main.c: 68: for(i=0; i<sizeof (USB_Out_Buffer); i++) USB_Out_Buffer[i]=0;
+"68
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `ui -> # _USB_Out_Buffer `ui 351  ]
 [e $U 352  ]
-"252
 [e :U 351 ]
-[; ;main.c: 252: {
-{
-[; ;main.c: 253: USB_Out_Buffer[i] = 0;
-"253
 [e = *U + &U _USB_Out_Buffer * -> _i `ux -> -> # *U &U _USB_Out_Buffer `ui `ux -> -> 0 `i `uc ]
-"254
-}
-"251
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `ui -> # _USB_Out_Buffer `ui 351  ]
 [e :U 352 ]
-"254
 }
-[; ;main.c: 254: }
-[; ;main.c: 256: NextUSBOut = 0;
-"256
+[; ;main.c: 69: NextUSBOut=0;
+"69
 [e = _NextUSBOut -> -> 0 `i `uc ]
-[; ;main.c: 257: LastRS232Out = 0;
-"257
+[; ;main.c: 70: LastRS232Out=0;
+"70
 [e = _LastRS232Out -> -> 0 `i `uc ]
-[; ;main.c: 258: lastTransmission = 0;
-"258
+[; ;main.c: 71: lastTransmission=0;
+"71
 [e = _lastTransmission -> -> 0 `i `*v ]
-[; ;main.c: 260: LATC &= 0xFC; TRISC &= 0xFC;;
-"260
+[; ;main.c: 72: LATC &= 0xFC; TRISC &= 0xFC;
+"72
 [e =& _LATC -> -> 252 `i `uc ]
 [e =& _TRISC -> -> 252 `i `uc ]
-[; ;main.c: 261: }
-"261
+[; ;main.c: 73: }
+"73
 [e :UE 350 ]
 }
-"279
+"75
 [v _InitializeUSART `(v ~T0 @X0 1 ef ]
-"280
+"76
 {
-[; ;main.c: 279: void InitializeUSART(void)
-[; ;main.c: 280: {
+[; ;main.c: 75: void InitializeUSART(void)
+[; ;main.c: 76: {
 [e :U _InitializeUSART ]
 [f ]
-"281
+"77
 [v _c `uc ~T0 @X0 1 a ]
-[; ;main.c: 281: unsigned char c;
-[; ;main.c: 287: TRISCbits.TRISC5=1;
-"287
+[; ;main.c: 77: uint8_t c;
+[; ;main.c: 79: TRISCbits.TRISC5=1;
+"79
 [e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 288: TRISCbits.TRISC4=0;
-"288
+[; ;main.c: 80: TRISCbits.TRISC4=0;
+"80
 [e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 289: TXSTA = 0x24;
-"289
+[; ;main.c: 81: TXSTA=0x24;
+"81
 [e = _TXSTA -> -> 36 `i `uc ]
-[; ;main.c: 290: RCSTA = 0x90;
-"290
+[; ;main.c: 82: RCSTA=0x90;
+"82
 [e = _RCSTA -> -> 144 `i `uc ]
-[; ;main.c: 291: SPBRGL = 0x71;
-"291
+[; ;main.c: 83: SPBRGL=0x71;
+"83
 [e = _SPBRGL -> -> 113 `i `uc ]
-[; ;main.c: 292: SPBRGH = 0x02;
-"292
+[; ;main.c: 84: SPBRGH=0x02;
+"84
 [e = _SPBRGH -> -> 2 `i `uc ]
-[; ;main.c: 293: BAUDCON = 0x08;
-"293
+[; ;main.c: 85: BAUDCON=0x08;
+"85
 [e = _BAUDCON -> -> 8 `i `uc ]
-[; ;main.c: 294: c = RCREG;
-"294
+[; ;main.c: 86: c=RCREG;
+"86
 [e = _c _RCREG ]
-[; ;main.c: 295: }
-"295
+[; ;main.c: 87: }
+"87
 [e :UE 354 ]
 }
-"317
+"93
 [v _putcUSART `(v ~T0 @X0 1 ef1`uc ]
-"318
+"94
 {
-[; ;main.c: 317: void putcUSART(char c)
-[; ;main.c: 318: {
+[; ;main.c: 93: void putcUSART(char c)
+[; ;main.c: 94: {
 [e :U _putcUSART ]
-"317
+"93
 [v _c `uc ~T0 @X0 1 r1 ]
-"318
+"94
 [f ]
-[; ;main.c: 319: TXREG = c;
-"319
+[; ;main.c: 95: TXREG=c;
+"95
 [e = _TXREG _c ]
-[; ;main.c: 320: sending= 1;
-"320
+[; ;main.c: 96: sending=1;
+"96
 [e = _sending -> -> 1 `i `uc ]
-[; ;main.c: 321: }
-"321
+[; ;main.c: 97: }
+"97
 [e :UE 355 ]
 }
-"344
+"101
 [v _mySetLineCodingHandler `(v ~T0 @X0 1 ef ]
-"345
+"102
 {
-[; ;main.c: 344: void mySetLineCodingHandler(void)
-[; ;main.c: 345: {
+[; ;main.c: 101: void mySetLineCodingHandler(void)
+[; ;main.c: 102: {
 [e :U _mySetLineCodingHandler ]
 [f ]
-[; ;main.c: 347: if(cdc_notice.GetLineCoding.dwDTERate.Val > 115200)
-"347
+[; ;main.c: 103: if(cdc_notice.GetLineCoding.dwDTERate.Val>115200);
+"103
 [e $ ! > . . . . _cdc_notice 0 1 0 0 -> -> 115200 `l `ul 357  ]
-[; ;main.c: 348: {
-"348
-{
-"364
-}
-[; ;main.c: 364: }
 [e $U 358  ]
-"365
+"104
 [e :U 357 ]
-[; ;main.c: 365: else
-[; ;main.c: 366: {
-"366
+[; ;main.c: 104: else
+[; ;main.c: 105: {
+"105
 {
-[; ;main.c: 368: {line_coding.dwDTERate.Val=cdc_notice.GetLineCoding.dwDTERate.Val;};
-"368
+[; ;main.c: 107: {line_coding.dwDTERate.Val=cdc_notice.GetLineCoding.dwDTERate.Val;};
+"107
 {
 [e = . . . _line_coding 1 0 0 . . . . _cdc_notice 0 1 0 0 ]
 }
-[; ;main.c: 372: {
-"372
-{
-"373
+"109
 [v _dwBaud `S20 ~T0 @X0 1 a ]
-[; ;main.c: 373: DWORD_VAL dwBaud;
-[; ;main.c: 374: dwBaud.Val = (DWORD)(48000000/4)/line_coding.dwDTERate.Val-1;
-"374
+[; ;main.c: 109: DWORD_VAL dwBaud;
+[; ;main.c: 110: dwBaud.Val=(DWORD) (48000000/4)/line_coding.dwDTERate.Val-1;
+"110
 [e = . _dwBaud 0 - / -> / -> 48000000 `l -> -> 4 `i `l `ul . . . _line_coding 1 0 0 -> -> -> 1 `i `l `ul ]
-[; ;main.c: 375: SPBRGL = dwBaud.v[0];
-"375
+[; ;main.c: 111: SPBRGL=dwBaud.v[0];
+"111
 [e = _SPBRGL *U + &U . _dwBaud 2 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _dwBaud 2 `ui `ux ]
-[; ;main.c: 376: SPBRGH = dwBaud.v[1];
-"376
+[; ;main.c: 112: SPBRGH=dwBaud.v[1];
+"112
 [e = _SPBRGH *U + &U . _dwBaud 2 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _dwBaud 2 `ui `ux ]
-"377
-}
-"396
+"113
 }
 [e :U 358 ]
-[; ;main.c: 377: }
-[; ;main.c: 396: }
-[; ;main.c: 397: }
-"397
+[; ;main.c: 113: }
+[; ;main.c: 114: }
+"114
 [e :UE 356 ]
 }
-"416
+"117
 [v _getcUSART `(uc ~T0 @X0 1 ef ]
-"417
+"118
 {
-[; ;main.c: 416: unsigned char getcUSART ()
-[; ;main.c: 417: {
+[; ;main.c: 117: uint8_t getcUSART()
+[; ;main.c: 118: {
 [e :U _getcUSART ]
 [f ]
-"418
+"119
 [v _c `uc ~T0 @X0 1 a ]
-[; ;main.c: 418: char c;
-[; ;main.c: 420: if (RCSTAbits.OERR)
-"420
+[; ;main.c: 119: char c;
+[; ;main.c: 121: if(RCSTAbits.OERR)
+"121
 [e $ ! != -> . . _RCSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 360  ]
-[; ;main.c: 421: {
-"421
+[; ;main.c: 122: {
+"122
 {
-[; ;main.c: 422: RCSTAbits.CREN = 0;
-"422
+[; ;main.c: 123: RCSTAbits.CREN=0;
+"123
 [e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 423: c = RCREG;
-"423
+[; ;main.c: 124: c=RCREG;
+"124
 [e = _c _RCREG ]
-[; ;main.c: 424: RCSTAbits.CREN = 1;
-"424
+[; ;main.c: 125: RCSTAbits.CREN=1;
+"125
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"425
+"126
 }
-[; ;main.c: 425: }
+[; ;main.c: 126: }
 [e $U 361  ]
-"426
+"127
 [e :U 360 ]
-[; ;main.c: 426: else
-[; ;main.c: 427: {
-"427
-{
-[; ;main.c: 428: c = RCREG;
-"428
+[; ;main.c: 127: else c=RCREG;
 [e = _c _RCREG ]
-"429
-}
 [e :U 361 ]
-[; ;main.c: 429: }
-[; ;main.c: 432: receiving= 1;
-"432
+[; ;main.c: 128: receiving=1;
+"128
 [e = _receiving -> -> 1 `i `uc ]
-[; ;main.c: 433: return c;
-"433
+[; ;main.c: 129: return c;
+"129
 [e ) _c ]
 [e $UE 359  ]
-[; ;main.c: 434: }
-"434
+[; ;main.c: 130: }
+"130
 [e :UE 359 ]
 }
-"453
+"132
 [v _ProcessIO `(v ~T0 @X0 1 ef ]
-"454
+"133
 {
-[; ;main.c: 453: void ProcessIO(void)
-[; ;main.c: 454: {
+[; ;main.c: 132: void ProcessIO(void)
+[; ;main.c: 133: {
 [e :U _ProcessIO ]
 [f ]
-[; ;main.c: 456: BlinkUSBStatus();
-"456
+[; ;main.c: 135: BlinkUSBStatus();
+"135
 [e ( _BlinkUSBStatus ..  ]
-[; ;main.c: 458: if((USBDeviceState < CONFIGURED_STATE)||(UCONbits.SUSPND==1)) return;
-"458
+[; ;main.c: 137: if((USBDeviceState<CONFIGURED_STATE)||(UCONbits.SUSPND==1)) return;
+"137
 [e $ ! || < -> _USBDeviceState `i -> . `E2855 6 `i == -> . . _UCONbits 0 1 `i -> 1 `i 363  ]
 [e $UE 362  ]
 [e :U 363 ]
-[; ;main.c: 460: if (RS232_Out_Data_Rdy == 0)
-"460
+[; ;main.c: 138: if(RS232_Out_Data_Rdy==0)
+"138
 [e $ ! == -> _RS232_Out_Data_Rdy `i -> 0 `i 364  ]
-[; ;main.c: 461: {
-"461
+[; ;main.c: 139: {
+"139
 {
-[; ;main.c: 462: LastRS232Out = getsUSBUSART(RS232_Out_Data,64);
-"462
+[; ;main.c: 140: LastRS232Out=getsUSBUSART(RS232_Out_Data, 64);
+"140
 [e = _LastRS232Out ( _getsUSBUSART (2 , &U _RS232_Out_Data -> -> 64 `i `uc ]
-[; ;main.c: 463: if(LastRS232Out > 0)
-"463
+[; ;main.c: 141: if(LastRS232Out>0)
+"141
 [e $ ! > -> _LastRS232Out `i -> 0 `i 365  ]
-[; ;main.c: 464: {
-"464
+[; ;main.c: 142: {
+"142
 {
-[; ;main.c: 465: RS232_Out_Data_Rdy = 1;
-"465
+[; ;main.c: 143: RS232_Out_Data_Rdy=1;
+"143
 [e = _RS232_Out_Data_Rdy -> -> 1 `i `uc ]
-[; ;main.c: 466: RS232cp = 0;
-"466
+[; ;main.c: 144: RS232cp=0;
+"144
 [e = _RS232cp -> -> 0 `i `uc ]
-"467
+"145
 }
 [e :U 365 ]
-"468
+"146
 }
 [e :U 364 ]
-[; ;main.c: 467: }
-[; ;main.c: 468: }
-[; ;main.c: 472: if(RS232_Out_Data_Rdy && TXSTAbits.TRMT)
-"472
+[; ;main.c: 145: }
+[; ;main.c: 146: }
+[; ;main.c: 149: if(RS232_Out_Data_Rdy&&TXSTAbits.TRMT)
+"149
 [e $ ! && != -> _RS232_Out_Data_Rdy `i -> -> -> 0 `i `uc `i != -> . . _TXSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 366  ]
-[; ;main.c: 473: {
-"473
+[; ;main.c: 150: {
+"150
 {
-[; ;main.c: 486: putcUSART(RS232_Out_Data[RS232cp]);
-"486
+[; ;main.c: 152: putcUSART(RS232_Out_Data[RS232cp]);
+"152
 [e ( _putcUSART (1 *U + &U _RS232_Out_Data * -> _RS232cp `ux -> -> # *U &U _RS232_Out_Data `ui `ux ]
-[; ;main.c: 487: ++RS232cp;
-"487
+[; ;main.c: 153: ++RS232cp;
+"153
 [e =+ _RS232cp -> -> 1 `i `uc ]
-[; ;main.c: 488: if (RS232cp == LastRS232Out)
-"488
+[; ;main.c: 154: if(RS232cp==LastRS232Out) RS232_Out_Data_Rdy=0;
+"154
 [e $ ! == -> _RS232cp `i -> _LastRS232Out `i 367  ]
-[; ;main.c: 489: RS232_Out_Data_Rdy = 0;
-"489
 [e = _RS232_Out_Data_Rdy -> -> 0 `i `uc ]
 [e :U 367 ]
-"491
+"155
 }
 [e :U 366 ]
-[; ;main.c: 491: }
-[; ;main.c: 495: if(PIR1bits.RCIF && (NextUSBOut < (64 - 1)))
-"495
+[; ;main.c: 155: }
+[; ;main.c: 158: if(PIR1bits.RCIF && (NextUSBOut<(64-1)))
+"158
 [e $ ! && != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i < -> _NextUSBOut `i - -> 64 `i -> 1 `i 368  ]
-[; ;main.c: 496: {
-"496
+[; ;main.c: 159: {
+"159
 {
-[; ;main.c: 497: USB_Out_Buffer[NextUSBOut] = getcUSART();
-"497
+[; ;main.c: 160: USB_Out_Buffer[NextUSBOut]=getcUSART();
+"160
 [e = *U + &U _USB_Out_Buffer * -> _NextUSBOut `ux -> -> # *U &U _USB_Out_Buffer `ui `ux ( _getcUSART ..  ]
-[; ;main.c: 498: ++NextUSBOut;
-"498
+[; ;main.c: 161: ++NextUSBOut;
+"161
 [e =+ _NextUSBOut -> -> 1 `i `uc ]
-[; ;main.c: 499: USB_Out_Buffer[NextUSBOut] = 0;
-"499
+[; ;main.c: 162: USB_Out_Buffer[NextUSBOut]=0;
+"162
 [e = *U + &U _USB_Out_Buffer * -> _NextUSBOut `ux -> -> # *U &U _USB_Out_Buffer `ui `ux -> -> 0 `i `uc ]
-"500
+"163
 }
 [e :U 368 ]
-[; ;main.c: 500: }
-[; ;main.c: 519: if(((cdc_trf_state == 0)) && (NextUSBOut > 0))
-"519
+[; ;main.c: 163: }
+[; ;main.c: 164: if(((cdc_trf_state == 0)) && (NextUSBOut>0))
+"164
 [e $ ! && == -> _cdc_trf_state `i -> 0 `i > -> _NextUSBOut `i -> 0 `i 369  ]
-[; ;main.c: 520: {
-"520
+[; ;main.c: 165: {
+"165
 {
-[; ;main.c: 521: putUSBUSART(&USB_Out_Buffer[0], NextUSBOut);
-"521
+[; ;main.c: 166: putUSBUSART(&USB_Out_Buffer[0], NextUSBOut);
+"166
 [e ( _putUSBUSART (2 , &U *U + &U _USB_Out_Buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _USB_Out_Buffer `ui `ux _NextUSBOut ]
-[; ;main.c: 522: NextUSBOut = 0;
-"522
+[; ;main.c: 167: NextUSBOut=0;
+"167
 [e = _NextUSBOut -> -> 0 `i `uc ]
-"523
+"168
 }
 [e :U 369 ]
-[; ;main.c: 523: }
-[; ;main.c: 525: CDCTxService();
-"525
+[; ;main.c: 168: }
+[; ;main.c: 169: CDCTxService();
+"169
 [e ( _CDCTxService ..  ]
-[; ;main.c: 527: }
-"527
+[; ;main.c: 170: }
+"170
 [e :UE 362 ]
 }
-"547
+"172
 [v _BlinkUSBStatus `(v ~T0 @X0 1 ef ]
-"548
+"173
 {
-[; ;main.c: 547: void BlinkUSBStatus(void)
-[; ;main.c: 548: {
+[; ;main.c: 172: void BlinkUSBStatus(void)
+[; ;main.c: 173: {
 [e :U _BlinkUSBStatus ]
 [f ]
-"549
-[v F3242 `us ~T0 @X0 1 s led_count ]
-[i F3242
+"174
+[v F3271 `us ~T0 @X0 1 s led_count ]
+[i F3271
 -> -> 0 `i `us
 ]
-[; ;main.c: 549: static WORD led_count=0;
-[; ;main.c: 551: if(led_count == 0)led_count = 10000U;
-"551
-[e $ ! == -> F3242 `ui -> -> 0 `i `ui 371  ]
-[e = F3242 -> -> 10000 `ui `us ]
+[; ;main.c: 174: static WORD led_count=0;
+[; ;main.c: 176: if(led_count==0)led_count=10000U;
+"176
+[e $ ! == -> F3271 `ui -> -> 0 `i `ui 371  ]
+[e = F3271 -> -> 10000 `ui `us ]
 [e :U 371 ]
-[; ;main.c: 552: led_count--;
-"552
-[e -- F3242 -> -> 1 `i `us ]
-[; ;main.c: 559: if(UCONbits.SUSPND == 1)
-"559
+[; ;main.c: 177: led_count--;
+"177
+[e -- F3271 -> -> 1 `i `us ]
+[; ;main.c: 184: if(UCONbits.SUSPND==1)
+"184
 [e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 372  ]
-[; ;main.c: 560: {
-"560
+[; ;main.c: 185: {
+"185
 {
-[; ;main.c: 561: if(led_count==0)
-"561
-[e $ ! == -> F3242 `ui -> -> 0 `i `ui 373  ]
-[; ;main.c: 562: {
-"562
+[; ;main.c: 186: if(led_count==0)
+"186
+[e $ ! == -> F3271 `ui -> -> 0 `i `ui 373  ]
+[; ;main.c: 187: {
+"187
 {
-[; ;main.c: 563: LATCbits.LATC0 = !LATCbits.LATC0;;
-"563
+[; ;main.c: 188: LATCbits.LATC0 = !LATCbits.LATC0;
+"188
 [e = . . _LATCbits 0 0 -> -> ! != -> . . _LATCbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;main.c: 564: if(LATCbits.LATC0)
-"564
+[; ;main.c: 189: if(LATCbits.LATC0) LATCbits.LATC1 = 0;
+"189
 [e $ ! != -> . . _LATCbits 0 0 `i -> -> -> 0 `i `Vuc `i 374  ]
-[; ;main.c: 565: {
-"565
-{
-[; ;main.c: 566: LATCbits.LATC1 = 0;;
-"566
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"567
-}
-[; ;main.c: 567: }
 [e $U 375  ]
-"568
+"190
 [e :U 374 ]
-[; ;main.c: 568: else
-[; ;main.c: 569: {
-"569
-{
-[; ;main.c: 570: LATCbits.LATC1 = 1;;
-"570
+[; ;main.c: 190: else LATCbits.LATC1 = 1;
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"571
-}
 [e :U 375 ]
-"572
+"191
 }
 [e :U 373 ]
-"573
+"192
 }
-[; ;main.c: 571: }
-[; ;main.c: 572: }
-[; ;main.c: 573: }
+[; ;main.c: 191: }
+[; ;main.c: 192: }
 [e $U 376  ]
-"574
+"193
 [e :U 372 ]
-[; ;main.c: 574: else
-[; ;main.c: 575: {
-"575
+[; ;main.c: 193: else
+[; ;main.c: 194: {
+"194
 {
-[; ;main.c: 576: if(USBDeviceState == DETACHED_STATE)
-"576
+[; ;main.c: 195: if(USBDeviceState==DETACHED_STATE)
+"195
 [e $ ! == -> _USBDeviceState `i -> . `E2855 0 `i 377  ]
-[; ;main.c: 577: {
-"577
+[; ;main.c: 196: {
+"196
 {
-[; ;main.c: 578: {LATCbits.LATC0 = 1;;LATCbits.LATC1 = 1;;};
-"578
+[; ;main.c: 197: {LATCbits.LATC0 = 1;LATCbits.LATC1 = 1;};
+"197
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
-"579
+"198
 }
-[; ;main.c: 579: }
+[; ;main.c: 198: }
 [e $U 378  ]
-"580
+"199
 [e :U 377 ]
-[; ;main.c: 580: else if(USBDeviceState == ATTACHED_STATE)
+[; ;main.c: 199: else if(USBDeviceState==ATTACHED_STATE)
 [e $ ! == -> _USBDeviceState `i -> . `E2855 1 `i 379  ]
-[; ;main.c: 581: {
-"581
+[; ;main.c: 200: {
+"200
 {
-[; ;main.c: 582: {LATCbits.LATC0 = 0;;LATCbits.LATC1 = 0;;};
-"582
+[; ;main.c: 201: {LATCbits.LATC0 = 0;LATCbits.LATC1 = 0;};
+"201
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 }
-"583
+"202
 }
-[; ;main.c: 583: }
+[; ;main.c: 202: }
 [e $U 380  ]
-"584
+"203
 [e :U 379 ]
-[; ;main.c: 584: else if(USBDeviceState == POWERED_STATE)
+[; ;main.c: 203: else if(USBDeviceState==POWERED_STATE)
 [e $ ! == -> _USBDeviceState `i -> . `E2855 2 `i 381  ]
-[; ;main.c: 585: {
-"585
+[; ;main.c: 204: {
+"204
 {
-[; ;main.c: 586: {LATCbits.LATC0 = 0;;LATCbits.LATC1 = 1;;};
-"586
+[; ;main.c: 205: {LATCbits.LATC0 = 0;LATCbits.LATC1 = 1;};
+"205
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
-"587
+"206
 }
-[; ;main.c: 587: }
+[; ;main.c: 206: }
 [e $U 382  ]
-"588
+"207
 [e :U 381 ]
-[; ;main.c: 588: else if(USBDeviceState == DEFAULT_STATE)
+[; ;main.c: 207: else if(USBDeviceState==DEFAULT_STATE)
 [e $ ! == -> _USBDeviceState `i -> . `E2855 3 `i 383  ]
-[; ;main.c: 589: {
-"589
+[; ;main.c: 208: {
+"208
 {
-[; ;main.c: 590: {LATCbits.LATC0 = 1;;LATCbits.LATC1 = 0;;};
-"590
+[; ;main.c: 209: {LATCbits.LATC0 = 1;LATCbits.LATC1 = 0;};
+"209
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 }
-"591
+"210
 }
-[; ;main.c: 591: }
+[; ;main.c: 210: }
 [e $U 384  ]
-"592
+"211
 [e :U 383 ]
-[; ;main.c: 592: else if(USBDeviceState == ADDRESS_STATE)
+[; ;main.c: 211: else if(USBDeviceState==ADDRESS_STATE)
 [e $ ! == -> _USBDeviceState `i -> . `E2855 5 `i 385  ]
-[; ;main.c: 593: {
-"593
+[; ;main.c: 212: {
+"212
 {
-[; ;main.c: 594: if(led_count == 0)
-"594
-[e $ ! == -> F3242 `ui -> -> 0 `i `ui 386  ]
-[; ;main.c: 595: {
-"595
+[; ;main.c: 213: if(led_count==0)
+"213
+[e $ ! == -> F3271 `ui -> -> 0 `i `ui 386  ]
+[; ;main.c: 214: {
+"214
 {
-[; ;main.c: 596: LATCbits.LATC0 = !LATCbits.LATC0;;
-"596
+[; ;main.c: 215: LATCbits.LATC0 = !LATCbits.LATC0;
+"215
 [e = . . _LATCbits 0 0 -> -> ! != -> . . _LATCbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;main.c: 597: LATCbits.LATC1 = 1;;
-"597
+[; ;main.c: 216: LATCbits.LATC1 = 1;
+"216
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"598
+"217
 }
 [e :U 386 ]
-"599
+"218
 }
-[; ;main.c: 598: }
-[; ;main.c: 599: }
+[; ;main.c: 217: }
+[; ;main.c: 218: }
 [e $U 387  ]
-"600
+"219
 [e :U 385 ]
-[; ;main.c: 600: else if(USBDeviceState == CONFIGURED_STATE)
+[; ;main.c: 219: else if(USBDeviceState==CONFIGURED_STATE)
 [e $ ! == -> _USBDeviceState `i -> . `E2855 6 `i 388  ]
-[; ;main.c: 601: {
-"601
+[; ;main.c: 220: {
+"220
 {
-[; ;main.c: 602: if(led_count==0)
-"602
-[e $ ! == -> F3242 `ui -> -> 0 `i `ui 389  ]
-[; ;main.c: 603: {
-"603
+[; ;main.c: 221: if(led_count==0)
+"221
+[e $ ! == -> F3271 `ui -> -> 0 `i `ui 389  ]
+[; ;main.c: 222: {
+"222
 {
-[; ;main.c: 604: if(LATCbits.LATC3) {
-"604
+[; ;main.c: 223: if(LATCbits.LATC3)
+"223
 [e $ ! != -> . . _LATCbits 0 3 `i -> -> -> 0 `i `Vuc `i 390  ]
+[; ;main.c: 224: {
+"224
 {
-[; ;main.c: 605: if(LATCbits.LATC0) {
-"605
+[; ;main.c: 225: if(LATCbits.LATC0)
+"225
 [e $ ! != -> . . _LATCbits 0 0 `i -> -> -> 0 `i `Vuc `i 391  ]
+[; ;main.c: 226: {
+"226
 {
-[; ;main.c: 606: LATCbits.LATC0 = 1;;
-"606
+[; ;main.c: 227: LATCbits.LATC0 = 1;
+"227
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 607: receiving= 0;
-"607
+[; ;main.c: 228: receiving=0;
+"228
 [e = _receiving -> -> 0 `i `uc ]
-"608
+"229
 }
-[; ;main.c: 608: } else if(receiving)
+[; ;main.c: 229: }
 [e $U 392  ]
+"230
 [e :U 391 ]
+[; ;main.c: 230: else if(receiving)
 [e $ ! != -> _receiving `i -> -> -> 0 `i `uc `i 393  ]
-[; ;main.c: 609: LATCbits.LATC0 = 0;;
-"609
+[; ;main.c: 231: LATCbits.LATC0 = 0;
+"231
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 [e :U 393 ]
+"232
 [e :U 392 ]
-"610
 }
-[; ;main.c: 610: } else {
+[; ;main.c: 232: }
 [e $U 394  ]
+"233
 [e :U 390 ]
+[; ;main.c: 233: else
+[; ;main.c: 234: {
+"234
 {
-[; ;main.c: 611: if(!LATCbits.LATC0) {
-"611
+[; ;main.c: 235: if(!LATCbits.LATC0)
+"235
 [e $ ! ! != -> . . _LATCbits 0 0 `i -> -> -> 0 `i `Vuc `i 395  ]
+[; ;main.c: 236: {
+"236
 {
-[; ;main.c: 612: LATCbits.LATC0 = 0;;
-"612
+[; ;main.c: 237: LATCbits.LATC0 = 0;
+"237
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 613: receiving= 0;
-"613
+[; ;main.c: 238: receiving=0;
+"238
 [e = _receiving -> -> 0 `i `uc ]
-"614
+"239
 }
-[; ;main.c: 614: } else if(receiving)
+[; ;main.c: 239: }
 [e $U 396  ]
+"240
 [e :U 395 ]
+[; ;main.c: 240: else if(receiving)
 [e $ ! != -> _receiving `i -> -> -> 0 `i `uc `i 397  ]
-[; ;main.c: 615: LATCbits.LATC0 = 1;;
-"615
+[; ;main.c: 241: LATCbits.LATC0 = 1;
+"241
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 [e :U 397 ]
+"242
 [e :U 396 ]
-"616
 }
 [e :U 394 ]
-[; ;main.c: 616: }
-[; ;main.c: 617: if(LATCbits.LATC1) {
-"617
+[; ;main.c: 242: }
+[; ;main.c: 243: if(LATCbits.LATC1)
+"243
 [e $ ! != -> . . _LATCbits 0 1 `i -> -> -> 0 `i `Vuc `i 398  ]
+[; ;main.c: 244: {
+"244
 {
-[; ;main.c: 618: LATCbits.LATC1 = 1;;
-"618
+[; ;main.c: 245: LATCbits.LATC1 = 1;
+"245
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 619: sending= 0;
-"619
+[; ;main.c: 246: sending=0;
+"246
 [e = _sending -> -> 0 `i `uc ]
-"620
+"247
 }
-[; ;main.c: 620: } else if(sending)
+[; ;main.c: 247: }
 [e $U 399  ]
+"248
 [e :U 398 ]
+[; ;main.c: 248: else if(sending)
 [e $ ! != -> _sending `i -> -> -> 0 `i `uc `i 400  ]
-[; ;main.c: 621: LATCbits.LATC1 = 0;;
-"621
+[; ;main.c: 249: LATCbits.LATC1 = 0;
+"249
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 [e :U 400 ]
+"250
 [e :U 399 ]
-"622
 }
 [e :U 389 ]
-"623
+"251
 }
 [e :U 388 ]
-"624
+"252
 [e :U 387 ]
 [e :U 384 ]
 [e :U 382 ]
@@ -3966,294 +3969,290 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 378 ]
 }
 [e :U 376 ]
-[; ;main.c: 622: }
-[; ;main.c: 623: }
-[; ;main.c: 624: }
-[; ;main.c: 626: }
-"626
+[; ;main.c: 250: }
+[; ;main.c: 251: }
+[; ;main.c: 252: }
+[; ;main.c: 253: }
+"253
 [e :UE 370 ]
 }
-"666
+"255
 [v _USBCBSuspend `(v ~T0 @X0 1 ef ]
-"667
+"256
 {
-[; ;main.c: 666: void USBCBSuspend(void)
-[; ;main.c: 667: {
+[; ;main.c: 255: void USBCBSuspend(void)
+[; ;main.c: 256: {
 [e :U _USBCBSuspend ]
 [f ]
-[; ;main.c: 686: }
-"686
+[; ;main.c: 258: }
+"258
 [e :UE 401 ]
 }
-"711
+"260
 [v _USBCBWakeFromSuspend `(v ~T0 @X0 1 ef ]
-"712
+"261
 {
-[; ;main.c: 711: void USBCBWakeFromSuspend(void)
-[; ;main.c: 712: {
+[; ;main.c: 260: void USBCBWakeFromSuspend(void)
+[; ;main.c: 261: {
 [e :U _USBCBWakeFromSuspend ]
 [f ]
-[; ;main.c: 723: }
-"723
+[; ;main.c: 263: }
+"263
 [e :UE 402 ]
 }
-"743
+"265
 [v _USBCB_SOF_Handler `(v ~T0 @X0 1 ef ]
-"744
+"266
 {
-[; ;main.c: 743: void USBCB_SOF_Handler(void)
-[; ;main.c: 744: {
+[; ;main.c: 265: void USBCB_SOF_Handler(void)
+[; ;main.c: 266: {
 [e :U _USBCB_SOF_Handler ]
 [f ]
-[; ;main.c: 747: }
-"747
+[; ;main.c: 268: }
+"268
 [e :UE 403 ]
 }
-"766
+"270
 [v _USBCBErrorHandler `(v ~T0 @X0 1 ef ]
-"767
+"271
 {
-[; ;main.c: 766: void USBCBErrorHandler(void)
-[; ;main.c: 767: {
+[; ;main.c: 270: void USBCBErrorHandler(void)
+[; ;main.c: 271: {
 [e :U _USBCBErrorHandler ]
 [f ]
-[; ;main.c: 786: }
-"786
+[; ;main.c: 273: }
+"273
 [e :UE 404 ]
 }
-"817
+"275
 [v _USBCBCheckOtherReq `(v ~T0 @X0 1 ef ]
-"818
+"276
 {
-[; ;main.c: 817: void USBCBCheckOtherReq(void)
-[; ;main.c: 818: {
+[; ;main.c: 275: void USBCBCheckOtherReq(void)
+[; ;main.c: 276: {
 [e :U _USBCBCheckOtherReq ]
 [f ]
-[; ;main.c: 819: USBCheckCDCRequest();
-"819
+[; ;main.c: 277: USBCheckCDCRequest();
+"277
 [e ( _USBCheckCDCRequest ..  ]
-[; ;main.c: 820: }
-"820
+[; ;main.c: 278: }
+"278
 [e :UE 405 ]
 }
-"842
+"280
 [v _USBCBStdSetDscHandler `(v ~T0 @X0 1 ef ]
-"843
+"281
 {
-[; ;main.c: 842: void USBCBStdSetDscHandler(void)
-[; ;main.c: 843: {
+[; ;main.c: 280: void USBCBStdSetDscHandler(void)
+[; ;main.c: 281: {
 [e :U _USBCBStdSetDscHandler ]
 [f ]
-[; ;main.c: 845: }
-"845
+[; ;main.c: 283: }
+"283
 [e :UE 406 ]
 }
-"868
+"285
 [v _USBCBInitEP `(v ~T0 @X0 1 ef ]
-"869
+"286
 {
-[; ;main.c: 868: void USBCBInitEP(void)
-[; ;main.c: 869: {
+[; ;main.c: 285: void USBCBInitEP(void)
+[; ;main.c: 286: {
 [e :U _USBCBInitEP ]
 [f ]
-[; ;main.c: 871: CDCInitEP();
-"871
+[; ;main.c: 287: CDCInitEP();
+"287
 [e ( _CDCInitEP ..  ]
-[; ;main.c: 872: }
-"872
+[; ;main.c: 288: }
+"288
 [e :UE 407 ]
 }
-"961
+"290
 [v _USBCBSendResume `(v ~T0 @X0 1 ef ]
-"962
+"291
 {
-[; ;main.c: 961: void USBCBSendResume(void)
-[; ;main.c: 962: {
+[; ;main.c: 290: void USBCBSendResume(void)
+[; ;main.c: 291: {
 [e :U _USBCBSendResume ]
 [f ]
-"963
-[v F3258 `us ~T0 @X0 1 s delay_count ]
-[; ;main.c: 963: static WORD delay_count;
-[; ;main.c: 974: if(RemoteWakeup == TRUE)
-"974
-[e $ ! == -> _RemoteWakeup `i -> . `E3 1 `i 409  ]
-[; ;main.c: 975: {
-"975
+"292
+[v F3287 `us ~T0 @X0 1 s delay_count ]
+[; ;main.c: 292: static WORD delay_count;
+[; ;main.c: 294: if(RemoteWakeup==1)
+"294
+[e $ ! == -> _RemoteWakeup `i -> 1 `i 409  ]
+[; ;main.c: 295: {
+"295
 {
-[; ;main.c: 978: if(USBBusIsSuspended == TRUE)
-"978
-[e $ ! == -> _USBBusIsSuspended `i -> . `E3 1 `i 410  ]
-[; ;main.c: 979: {
-"979
+[; ;main.c: 296: if(USBBusIsSuspended==1)
+"296
+[e $ ! == -> _USBBusIsSuspended `i -> 1 `i 410  ]
+[; ;main.c: 297: {
+"297
 {
-[; ;main.c: 980: ;
-[; ;main.c: 983: USBCBWakeFromSuspend();
-"983
+[; ;main.c: 298: {PIE2bits.USBIE = 0;};
+"298
+{
+[e = . . _PIE2bits 0 2 -> -> 0 `i `uc ]
+}
+[; ;main.c: 299: USBCBWakeFromSuspend();
+"299
 [e ( _USBCBWakeFromSuspend ..  ]
-[; ;main.c: 984: UCONbits.SUSPND = 0;
-"984
+[; ;main.c: 300: UCONbits.SUSPND=0;
+"300
 [e = . . _UCONbits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 985: USBBusIsSuspended = FALSE;
-"985
-[e = _USBBusIsSuspended . `E3 0 ]
-[; ;main.c: 994: delay_count = 3600U;
-"994
-[e = F3258 -> -> 3600 `ui `us ]
-[; ;main.c: 995: do
-"995
+[; ;main.c: 301: USBBusIsSuspended=0;
+"301
+[e = _USBBusIsSuspended -> -> 0 `i `VE3 ]
+[; ;main.c: 302: delay_count=3600U;
+"302
+[e = F3287 -> -> 3600 `ui `us ]
+[; ;main.c: 303: do delay_count--;
+"303
 [e :U 413 ]
-[; ;main.c: 996: {
-"996
-{
-[; ;main.c: 997: delay_count--;
-"997
-[e -- F3258 -> -> 1 `i `us ]
-"998
-}
-[; ;main.c: 998: }while(delay_count);
-[e $ != -> F3258 `ui -> -> -> 0 `i `us `ui 413  ]
+[e -- F3287 -> -> 1 `i `us ]
+[; ;main.c: 304: while(delay_count);
+"304
+[e $ != -> F3287 `ui -> -> -> 0 `i `us `ui 413  ]
 [e :U 412 ]
-[; ;main.c: 1001: UCONbits.RESUME = 1;
-"1001
+[; ;main.c: 305: UCONbits.RESUME=1;
+"305
 [e = . . _UCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 1002: delay_count = 1800U;
-"1002
-[e = F3258 -> -> 1800 `ui `us ]
-[; ;main.c: 1003: do
-"1003
+[; ;main.c: 306: delay_count=1800U;
+"306
+[e = F3287 -> -> 1800 `ui `us ]
+[; ;main.c: 307: do delay_count--;
+"307
 [e :U 416 ]
-[; ;main.c: 1004: {
-"1004
-{
-[; ;main.c: 1005: delay_count--;
-"1005
-[e -- F3258 -> -> 1 `i `us ]
-"1006
-}
-[; ;main.c: 1006: }while(delay_count);
-[e $ != -> F3258 `ui -> -> -> 0 `i `us `ui 416  ]
+[e -- F3287 -> -> 1 `i `us ]
+[; ;main.c: 308: while(delay_count);
+"308
+[e $ != -> F3287 `ui -> -> -> 0 `i `us `ui 416  ]
 [e :U 415 ]
-[; ;main.c: 1007: UCONbits.RESUME = 0;
-"1007
+[; ;main.c: 309: UCONbits.RESUME=0;
+"309
 [e = . . _UCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 1009: ;
-"1010
+[; ;main.c: 310: {PIE2bits.USBIE = 1;};
+"310
+{
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+}
+"311
 }
 [e :U 410 ]
-"1011
+"312
 }
 [e :U 409 ]
-[; ;main.c: 1010: }
-[; ;main.c: 1011: }
-[; ;main.c: 1012: }
-"1012
+[; ;main.c: 311: }
+[; ;main.c: 312: }
+[; ;main.c: 313: }
+"313
 [e :UE 408 ]
 }
-"1066
+"315
 [v _USER_USB_CALLBACK_EVENT_HANDLER `(E3 ~T0 @X0 1 ef3`i`*v`us ]
-"1067
+"316
 {
-[; ;main.c: 1066: BOOL USER_USB_CALLBACK_EVENT_HANDLER(int event, void *pdata, WORD size)
-[; ;main.c: 1067: {
+[; ;main.c: 315: BOOL USER_USB_CALLBACK_EVENT_HANDLER(int event, void *pdata, WORD size)
+[; ;main.c: 316: {
 [e :U _USER_USB_CALLBACK_EVENT_HANDLER ]
-"1066
+"315
 [v _event `i ~T0 @X0 1 r1 ]
 [v _pdata `*v ~T0 @X0 1 r2 ]
 [v _size `us ~T0 @X0 1 r3 ]
-"1067
+"316
 [f ]
-[; ;main.c: 1068: switch(event)
-"1068
+[; ;main.c: 317: switch(event)
+"317
 [e $U 419  ]
-[; ;main.c: 1069: {
-"1069
+[; ;main.c: 318: {
+"318
 {
-[; ;main.c: 1070: case EVENT_TRANSFER:
-"1070
+[; ;main.c: 319: case EVENT_TRANSFER:
+"319
 [e :U 420 ]
-[; ;main.c: 1072: break;
-"1072
+[; ;main.c: 321: break;
+"321
 [e $U 418  ]
-[; ;main.c: 1073: case EVENT_SOF:
-"1073
+[; ;main.c: 322: case EVENT_SOF:
+"322
 [e :U 421 ]
-[; ;main.c: 1074: USBCB_SOF_Handler();
-"1074
+[; ;main.c: 323: USBCB_SOF_Handler();
+"323
 [e ( _USBCB_SOF_Handler ..  ]
-[; ;main.c: 1075: break;
-"1075
+[; ;main.c: 324: break;
+"324
 [e $U 418  ]
-[; ;main.c: 1076: case EVENT_SUSPEND:
-"1076
+[; ;main.c: 325: case EVENT_SUSPEND:
+"325
 [e :U 422 ]
-[; ;main.c: 1077: USBCBSuspend();
-"1077
+[; ;main.c: 326: USBCBSuspend();
+"326
 [e ( _USBCBSuspend ..  ]
-[; ;main.c: 1078: break;
-"1078
+[; ;main.c: 327: break;
+"327
 [e $U 418  ]
-[; ;main.c: 1079: case EVENT_RESUME:
-"1079
+[; ;main.c: 328: case EVENT_RESUME:
+"328
 [e :U 423 ]
-[; ;main.c: 1080: USBCBWakeFromSuspend();
-"1080
+[; ;main.c: 329: USBCBWakeFromSuspend();
+"329
 [e ( _USBCBWakeFromSuspend ..  ]
-[; ;main.c: 1081: break;
-"1081
+[; ;main.c: 330: break;
+"330
 [e $U 418  ]
-[; ;main.c: 1082: case EVENT_CONFIGURED:
-"1082
+[; ;main.c: 331: case EVENT_CONFIGURED:
+"331
 [e :U 424 ]
-[; ;main.c: 1083: USBCBInitEP();
-"1083
+[; ;main.c: 332: USBCBInitEP();
+"332
 [e ( _USBCBInitEP ..  ]
-[; ;main.c: 1084: break;
-"1084
+[; ;main.c: 333: break;
+"333
 [e $U 418  ]
-[; ;main.c: 1085: case EVENT_SET_DESCRIPTOR:
-"1085
+[; ;main.c: 334: case EVENT_SET_DESCRIPTOR:
+"334
 [e :U 425 ]
-[; ;main.c: 1086: USBCBStdSetDscHandler();
-"1086
+[; ;main.c: 335: USBCBStdSetDscHandler();
+"335
 [e ( _USBCBStdSetDscHandler ..  ]
-[; ;main.c: 1087: break;
-"1087
+[; ;main.c: 336: break;
+"336
 [e $U 418  ]
-[; ;main.c: 1088: case EVENT_EP0_REQUEST:
-"1088
+[; ;main.c: 337: case EVENT_EP0_REQUEST:
+"337
 [e :U 426 ]
-[; ;main.c: 1089: USBCBCheckOtherReq();
-"1089
+[; ;main.c: 338: USBCBCheckOtherReq();
+"338
 [e ( _USBCBCheckOtherReq ..  ]
-[; ;main.c: 1090: break;
-"1090
+[; ;main.c: 339: break;
+"339
 [e $U 418  ]
-[; ;main.c: 1091: case EVENT_BUS_ERROR:
-"1091
+[; ;main.c: 340: case EVENT_BUS_ERROR:
+"340
 [e :U 427 ]
-[; ;main.c: 1092: USBCBErrorHandler();
-"1092
+[; ;main.c: 341: USBCBErrorHandler();
+"341
 [e ( _USBCBErrorHandler ..  ]
-[; ;main.c: 1093: break;
-"1093
+[; ;main.c: 342: break;
+"342
 [e $U 418  ]
-[; ;main.c: 1094: case EVENT_TRANSFER_TERMINATED:
-"1094
+[; ;main.c: 343: case EVENT_TRANSFER_TERMINATED:
+"343
 [e :U 428 ]
-[; ;main.c: 1103: break;
-"1103
+[; ;main.c: 344: break;
+"344
 [e $U 418  ]
-[; ;main.c: 1104: default:
-"1104
+[; ;main.c: 345: default:
+"345
 [e :U 429 ]
-[; ;main.c: 1105: break;
-"1105
+[; ;main.c: 346: break;
+"346
 [e $U 418  ]
-"1106
+"347
 }
-[; ;main.c: 1106: }
+[; ;main.c: 347: }
 [e $U 418  ]
-"1068
+"317
 [e :U 419 ]
 [e [\ _event , $ -> . `E2627 16 `i 420
  , $ -> . `E2627 17 `i 421
@@ -4265,13 +4264,13 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> . `E2627 33 `i 427
  , $ -> . `E2864 4 `i 428
  429 ]
-"1106
+"347
 [e :U 418 ]
-[; ;main.c: 1107: return TRUE;
-"1107
-[e ) . `E3 1 ]
+[; ;main.c: 348: return 1;
+"348
+[e ) -> -> 1 `i `E3 ]
 [e $UE 417  ]
-[; ;main.c: 1108: }
-"1108
+[; ;main.c: 349: }
+"349
 [e :UE 417 ]
 }

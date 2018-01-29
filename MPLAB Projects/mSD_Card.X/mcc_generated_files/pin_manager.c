@@ -14,7 +14,7 @@
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
         Product Revision  :  MPLAB(c) Code Configurator - 4.35
-        Device            :  PIC16F1619
+        Device            :  PIC16F1936
         Driver Version    :  1.02
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
@@ -41,65 +41,61 @@
     SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
 
- */
+*/
 
 #include <xc.h>
 #include "pin_manager.h"
 #include "stdbool.h"
 
+
+
 void PIN_MANAGER_Initialize(void)
 {
     /**
     LATx registers
-     */
-    LATA=0x00;
-    LATB=0x80;
-    LATC=0x00;
+    */   
+    LATE = 0x00;    
+    LATA = 0x00;    
+    LATB = 0x00;    
+    LATC = 0x2C;    
 
     /**
     TRISx registers
-     */
-    TRISA=0x37;
-    TRISB=0x70;
-    TRISC=0xFF;
+    */    
+    TRISE = 0x08;
+    TRISA = 0xFF;
+    TRISB = 0xFF;
+    TRISC = 0x93;
 
     /**
     ANSELx registers
-     */
-    ANSELC=0xCF;
-    ANSELB=0x50;
-    ANSELA=0x17;
+    */   
+    ANSELB = 0x3F;
+    ANSELA = 0x3F;
 
     /**
     WPUx registers
-     */
-    WPUB=0xA0;
-    WPUA=0x00;
-    WPUC=0x00;
-    OPTION_REGbits.nWPUEN=0;
+    */ 
+    WPUE = 0x00;
+    WPUB = 0x00;
+    OPTION_REGbits.nWPUEN = 1;
 
+    
     /**
-    ODx registers
-     */
-    ODCONA=0x00;
-    ODCONB=0x00;
-    ODCONC=0x00;
+    APFCONx registers
+    */
+    APFCON = 0x00;
 
 
-
-
-
-
-    RXPPS=0x0D; //RB5->EUSART:RX;
-    RB7PPS=0x12; //RB7->EUSART:TX;
-
-}
+   
+    
+}       
 
 void PIN_MANAGER_IOC(void)
-{
+{   
 
 }
 
 /**
  End of File
- */
+*/

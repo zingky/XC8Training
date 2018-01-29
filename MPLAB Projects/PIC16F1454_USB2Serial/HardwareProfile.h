@@ -132,7 +132,7 @@
 //     #define mLED_2              LATCbits.LATC3
 //     #define mLED_3              LATCbits.LATC0
 //     #define mLED_4              LATCbits.LATC1
-    #define mInitAllLEDs()      LATC &= 0xFC; TRISC &= 0xFC;
+    #define mInitAllLEDs()      LATC &= 0xFC; TRISC &= 0xFC
     #define mLED_1              LATCbits.LATC0
     #define mLED_2              LATCbits.LATC1
     #define mLED_3              LATCbits.LATC0
@@ -143,20 +143,20 @@
     #define mGetLED_3()         mLED_3
     #define mGetLED_4()         mLED_4
 
-    #define mLED_1_On()         mLED_1 = 0;
-    #define mLED_2_On()         mLED_2 = 0;
-    #define mLED_3_On()         mLED_3 = 0;
-    #define mLED_4_On()         mLED_4 = 0;
+    #define mLED_1_On()         mLED_1 = 0
+    #define mLED_2_On()         mLED_2 = 0
+    #define mLED_3_On()         mLED_3 = 0
+    #define mLED_4_On()         mLED_4 = 0
     
-    #define mLED_1_Off()        mLED_1 = 1;
-    #define mLED_2_Off()        mLED_2 = 1;
-    #define mLED_3_Off()        mLED_3 = 1;
-    #define mLED_4_Off()        mLED_4 = 1;
+    #define mLED_1_Off()        mLED_1 = 1
+    #define mLED_2_Off()        mLED_2 = 1
+    #define mLED_3_Off()        mLED_3 = 1
+    #define mLED_4_Off()        mLED_4 = 1
     
-    #define mLED_1_Toggle()     mLED_1 = !mLED_1;
-    #define mLED_2_Toggle()     mLED_2 = !mLED_2;
-    #define mLED_3_Toggle()     mLED_3 = !mLED_3;
-    #define mLED_4_Toggle()     mLED_4 = !mLED_4;
+    #define mLED_1_Toggle()     mLED_1 = !mLED_1
+    #define mLED_2_Toggle()     mLED_2 = !mLED_2
+    #define mLED_3_Toggle()     mLED_3 = !mLED_3
+    #define mLED_4_Toggle()     mLED_4 = !mLED_4
     
     /** SWITCH *********************************************************/
     #define mInitSwitch2()      //TRISAbits.TRISA3=1
@@ -164,7 +164,7 @@
     #define mInitSwitch3()      //TRISAbits.TRISA3=1
     #define sw2                 PORTAbits.RA3
     #define sw3                 PORTAbits.RA3
-    #define mInitAllSwitches()  mInitSwitch2();
+    #define mInitAllSwitches()  mInitSwitch2()
 
 	/** RS 232 lines ****************************************************/
     #define UART_ENABLE   RCSTAbits.SPEN
