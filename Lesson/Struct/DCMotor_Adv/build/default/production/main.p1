@@ -56,6 +56,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic16f1936.h: 75: typedef union {
 [; ;pic16f1936.h: 76: struct {
 [; ;pic16f1936.h: 77: unsigned INDF1 :8;
+[; ;pic16f1936.h: 78: };
+[; ;pic16f1936.h: 79: } INDF1bits_t;
 [; ;pic16f1936.h: 80: extern volatile INDF1bits_t INDF1bits @ 0x001;
 [; ;pic16f1936.h: 90: extern volatile unsigned char PCL @ 0x002;
 "92
