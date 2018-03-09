@@ -18,6 +18,9 @@
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
+    <logicalFolder name="f1" displayName="Simulation" projectFiles="true">
+      <itemPath>../Simulation.pdsprj</itemPath>
+    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
@@ -39,6 +42,9 @@
       <itemPath>MyConfig.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>..</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

@@ -4168,10 +4168,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 193 "mcc_generated_files/pin_manager.h"
+# 169 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 205
+# 181
 void PIN_MANAGER_IOC(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
@@ -4311,57 +4311,32 @@ void WDT_Initialize(void);
 
 # 3 "main.c"
 uint16_t DC1_Speed;
-uint8_t DC1_Direction;
+bool DC1_Direction;
 
 
 
 uint16_t DC2_Speed;
-uint8_t DC2_Direction;
+bool DC2_Direction;
 
 
-bool BT_Speed1_Is_Pressed()
+
+bool Prv_Speed1, Prv_Direction1, Prv_Speed2, Prv_Direction2;
+
+
+void Button_Init()
 {
-static bool prv=1;
-bool pre=PORTBbits.RB2;
-if(prv!=pre)
-{
-prv=pre;
-if(pre==0) return 1;
-}
-return 0;
+Prv_Speed1=PORTCbits.RC0;
+Prv_Direction1=PORTCbits.RC1;
+Prv_Speed2=PORTCbits.RC2;
+Prv_Direction2=PORTCbits.RC3;
 }
 
-bool BT_Direct1_Is_Pressed()
+bool BT_Is_Pressed(bool Button, bool *Previous_State)
 {
-static bool prv=1;
-bool pre=PORTBbits.RB3;
-if(prv!=pre)
+bool pre=Button;
+if(*Previous_State!=pre)
 {
-prv=pre;
-if(pre==0) return 1;
-}
-return 0;
-}
-
-bool BT_Speed2_Is_Pressed()
-{
-static bool prv=1;
-bool pre=PORTBbits.RB4;
-if(prv!=pre)
-{
-prv=pre;
-if(pre==0) return 1;
-}
-return 0;
-}
-
-bool BT_Direct2_Is_Pressed()
-{
-static bool prv=1;
-bool pre=PORTBbits.RB5;
-if(prv!=pre)
-{
-prv=pre;
+*Previous_State=pre;
 if(pre==0) return 1;
 }
 return 0;
@@ -4370,16 +4345,16 @@ return 0;
 void DCMotor1_Init()
 {
 DC1_Speed=0;
-DC1_Direction=1;
-LATAbits.LATA5=DC1_Direction;
+DC1_Direction=0;
+LATBbits.LATB1=DC1_Direction;
 PWM4_LoadDutyValue(0);
 }
 
 void DCMotor2_Init()
 {
 DC2_Speed=0;
-DC2_Direction=1;
-LATBbits.LATB1=DC2_Direction;
+DC2_Direction=0;
+LATAbits.LATA5=DC2_Direction;
 PWM5_LoadDutyValue(0);
 }
 
@@ -4388,50 +4363,39 @@ void main(void)
 SYSTEM_Initialize();
 DCMotor1_Init();
 DCMotor2_Init();
+Button_Init();
 while(1)
 {
 asm("clrwdt");
 
-if(BT_Speed1_Is_Pressed()&&(DC1_Direction!=0))
+if(BT_Is_Pressed(PORTCbits.RC0, &Prv_Speed1))
 {
 DC1_Speed+=0x00FF;
 if(DC1_Speed>0x03FF) DC1_Speed=0;
 PWM4_LoadDutyValue(DC1_Speed);
 }
 
-if(BT_Direct1_Is_Pressed())
+if(BT_Is_Pressed(PORTCbits.RC1, &Prv_Direction1))
 {
 PWM4_LoadDutyValue(0);
-DC1_Direction++;
-if(DC1_Direction>2) DC1_Direction=0;
-if(DC1_Direction==0) PWM4_LoadDutyValue(0);
-else
-{
-if(DC1_Direction==1) LATAbits.LATA5=1;
-else LATAbits.LATA5=0;
+DC1_Direction=~DC1_Direction;
+LATBbits.LATB1=DC1_Direction;
 PWM4_LoadDutyValue(DC1_Speed);
 }
-}
 
-if(BT_Speed2_Is_Pressed()&&(DC2_Direction!=0))
+if(BT_Is_Pressed(PORTCbits.RC2, &Prv_Speed2))
 {
 DC2_Speed+=0x00FF;
 if(DC2_Speed>0x03FF) DC2_Speed=0;
 PWM5_LoadDutyValue(DC2_Speed);
 }
 
-if(BT_Direct2_Is_Pressed())
+if(BT_Is_Pressed(PORTCbits.RC3, &Prv_Direction2))
 {
 PWM5_LoadDutyValue(0);
-DC2_Direction++;
-if(DC2_Direction>2) DC2_Direction=0;
-if(DC2_Direction==0) PWM5_LoadDutyValue(0);
-else
-{
-if(DC2_Direction==1) LATBbits.LATB1=1;
-else LATBbits.LATB1=0;
+DC2_Direction=~DC2_Direction;
+LATAbits.LATA5=DC2_Direction;
 PWM5_LoadDutyValue(DC2_Speed);
-}
 }
 }
 }

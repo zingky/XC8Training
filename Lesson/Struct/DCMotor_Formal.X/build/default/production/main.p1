@@ -1,23 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"495 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"494
-[u S30 `S31 1 ]
-[n S30 . . ]
-"506
-[v _PORTBbits `VS30 ~T0 @X0 0 e@13 ]
-"2191
-[s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S110 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"2190
-[u S109 `S110 1 ]
-[n S109 . . ]
-"2202
-[v _LATAbits `VS109 ~T0 @X0 0 e@268 ]
-"123 mcc_generated_files/pwm4.h
-[v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
-"2253 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
+"557 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"556
+[u S32 `S33 1 ]
+[n S32 . . ]
+"568
+[v _PORTCbits `VS32 ~T0 @X0 0 e@14 ]
+"2253
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S112 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
 "2252
@@ -25,6 +15,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S111 . . ]
 "2264
 [v _LATBbits `VS111 ~T0 @X0 0 e@269 ]
+"123 mcc_generated_files/pwm4.h
+[v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
+"2191 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
+[s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S110 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"2190
+[u S109 `S110 1 ]
+[n S109 . . ]
+"2202
+[v _LATAbits `VS109 ~T0 @X0 0 e@268 ]
 "123 mcc_generated_files/pwm5.h
 [v _PWM5_LoadDutyValue `(v ~T0 @X0 0 ef1`ui ]
 [p mainexit ]
@@ -3032,8 +3032,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 193: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 194: extern __bank0 __bit __powerdown;
 [; ;pic.h: 195: extern __bank0 __bit __timeout;
-[; ;pin_manager.h: 193: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 205: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 169: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 181: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -3082,416 +3082,258 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 3: uint16_t DC1_Speed;
 "4
 [v _DC1_Direction `uc ~T0 @X0 1 e ]
-[; ;main.c: 4: uint8_t DC1_Direction;
+[; ;main.c: 4: bool DC1_Direction;
 "8
 [v _DC2_Speed `ui ~T0 @X0 1 e ]
 [; ;main.c: 8: uint16_t DC2_Speed;
 "9
 [v _DC2_Direction `uc ~T0 @X0 1 e ]
-[; ;main.c: 9: uint8_t DC2_Direction;
-"12
-[v _BT_Speed1_Is_Pressed `(uc ~T0 @X0 1 ef ]
+[; ;main.c: 9: bool DC2_Direction;
 "13
-{
-[; ;main.c: 12: bool BT_Speed1_Is_Pressed()
-[; ;main.c: 13: {
-[e :U _BT_Speed1_Is_Pressed ]
-[f ]
-"14
-[v F3233 `uc ~T0 @X0 1 s prv ]
-[i F3233
--> -> 1 `i `uc
-]
-"15
-[v _pre `uc ~T0 @X0 1 a ]
-[; ;main.c: 14: static bool prv=1;
-[; ;main.c: 15: bool pre=PORTBbits.RB2;
-[e = _pre . . _PORTBbits 0 2 ]
-[; ;main.c: 16: if(prv!=pre)
+[v _Prv_Speed1 `uc ~T0 @X0 1 e ]
+[v _Prv_Direction1 `uc ~T0 @X0 1 e ]
+[v _Prv_Speed2 `uc ~T0 @X0 1 e ]
+[v _Prv_Direction2 `uc ~T0 @X0 1 e ]
+[; ;main.c: 13: bool Prv_Speed1, Prv_Direction1, Prv_Speed2, Prv_Direction2;
 "16
-[e $ ! != -> F3233 `i -> _pre `i 350  ]
-[; ;main.c: 17: {
+[v _Button_Init `(v ~T0 @X0 1 ef ]
 "17
 {
-[; ;main.c: 18: prv=pre;
+[; ;main.c: 16: void Button_Init()
+[; ;main.c: 17: {
+[e :U _Button_Init ]
+[f ]
+[; ;main.c: 18: Prv_Speed1=PORTCbits.RC0;
 "18
-[e = F3233 _pre ]
-[; ;main.c: 19: if(pre==0) return 1;
+[e = _Prv_Speed1 . . _PORTCbits 0 0 ]
+[; ;main.c: 19: Prv_Direction1=PORTCbits.RC1;
 "19
-[e $ ! == -> _pre `i -> 0 `i 351  ]
-[e ) -> -> 1 `i `uc ]
-[e $UE 349  ]
-[e :U 351 ]
+[e = _Prv_Direction1 . . _PORTCbits 0 1 ]
+[; ;main.c: 20: Prv_Speed2=PORTCbits.RC2;
 "20
-}
-[e :U 350 ]
-[; ;main.c: 20: }
-[; ;main.c: 21: return 0;
+[e = _Prv_Speed2 . . _PORTCbits 0 2 ]
+[; ;main.c: 21: Prv_Direction2=PORTCbits.RC3;
 "21
-[e ) -> -> 0 `i `uc ]
-[e $UE 349  ]
+[e = _Prv_Direction2 . . _PORTCbits 0 3 ]
 [; ;main.c: 22: }
 "22
 [e :UE 349 ]
 }
 "24
-[v _BT_Direct1_Is_Pressed `(uc ~T0 @X0 1 ef ]
+[v _BT_Is_Pressed `(uc ~T0 @X0 1 ef2`uc`*uc ]
 "25
 {
-[; ;main.c: 24: bool BT_Direct1_Is_Pressed()
+[; ;main.c: 24: bool BT_Is_Pressed(bool Button, bool *Previous_State)
 [; ;main.c: 25: {
-[e :U _BT_Direct1_Is_Pressed ]
+[e :U _BT_Is_Pressed ]
+"24
+[v _Button `uc ~T0 @X0 1 r1 ]
+[v _Previous_State `*uc ~T0 @X0 1 r2 ]
+"25
 [f ]
 "26
-[v F3236 `uc ~T0 @X0 1 s prv ]
-[i F3236
--> -> 1 `i `uc
-]
+[v _pre `uc ~T0 @X0 1 a ]
+[; ;main.c: 26: bool pre=Button;
+[e = _pre _Button ]
+[; ;main.c: 27: if(*Previous_State!=pre)
 "27
-[v _pre `uc ~T0 @X0 1 a ]
-[; ;main.c: 26: static bool prv=1;
-[; ;main.c: 27: bool pre=PORTBbits.RB3;
-[e = _pre . . _PORTBbits 0 3 ]
-[; ;main.c: 28: if(prv!=pre)
+[e $ ! != -> *U _Previous_State `i -> _pre `i 351  ]
+[; ;main.c: 28: {
 "28
-[e $ ! != -> F3236 `i -> _pre `i 353  ]
-[; ;main.c: 29: {
+{
+[; ;main.c: 29: *Previous_State=pre;
 "29
-{
-[; ;main.c: 30: prv=pre;
+[e = *U _Previous_State _pre ]
+[; ;main.c: 30: if(pre==0) return 1;
 "30
-[e = F3236 _pre ]
-[; ;main.c: 31: if(pre==0) return 1;
+[e $ ! == -> _pre `i -> 0 `i 352  ]
+[e ) -> -> 1 `i `uc ]
+[e $UE 350  ]
+[e :U 352 ]
 "31
-[e $ ! == -> _pre `i -> 0 `i 354  ]
-[e ) -> -> 1 `i `uc ]
-[e $UE 352  ]
-[e :U 354 ]
+}
+[e :U 351 ]
+[; ;main.c: 31: }
+[; ;main.c: 32: return 0;
 "32
-}
-[e :U 353 ]
-[; ;main.c: 32: }
-[; ;main.c: 33: return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 350  ]
+[; ;main.c: 33: }
 "33
-[e ) -> -> 0 `i `uc ]
-[e $UE 352  ]
-[; ;main.c: 34: }
-"34
-[e :UE 352 ]
+[e :UE 350 ]
 }
-"36
-[v _BT_Speed2_Is_Pressed `(uc ~T0 @X0 1 ef ]
-"37
-{
-[; ;main.c: 36: bool BT_Speed2_Is_Pressed()
-[; ;main.c: 37: {
-[e :U _BT_Speed2_Is_Pressed ]
-[f ]
-"38
-[v F3239 `uc ~T0 @X0 1 s prv ]
-[i F3239
--> -> 1 `i `uc
-]
-"39
-[v _pre `uc ~T0 @X0 1 a ]
-[; ;main.c: 38: static bool prv=1;
-[; ;main.c: 39: bool pre=PORTBbits.RB4;
-[e = _pre . . _PORTBbits 0 4 ]
-[; ;main.c: 40: if(prv!=pre)
-"40
-[e $ ! != -> F3239 `i -> _pre `i 356  ]
-[; ;main.c: 41: {
-"41
-{
-[; ;main.c: 42: prv=pre;
-"42
-[e = F3239 _pre ]
-[; ;main.c: 43: if(pre==0) return 1;
-"43
-[e $ ! == -> _pre `i -> 0 `i 357  ]
-[e ) -> -> 1 `i `uc ]
-[e $UE 355  ]
-[e :U 357 ]
-"44
-}
-[e :U 356 ]
-[; ;main.c: 44: }
-[; ;main.c: 45: return 0;
-"45
-[e ) -> -> 0 `i `uc ]
-[e $UE 355  ]
-[; ;main.c: 46: }
-"46
-[e :UE 355 ]
-}
-"48
-[v _BT_Direct2_Is_Pressed `(uc ~T0 @X0 1 ef ]
-"49
-{
-[; ;main.c: 48: bool BT_Direct2_Is_Pressed()
-[; ;main.c: 49: {
-[e :U _BT_Direct2_Is_Pressed ]
-[f ]
-"50
-[v F3242 `uc ~T0 @X0 1 s prv ]
-[i F3242
--> -> 1 `i `uc
-]
-"51
-[v _pre `uc ~T0 @X0 1 a ]
-[; ;main.c: 50: static bool prv=1;
-[; ;main.c: 51: bool pre=PORTBbits.RB5;
-[e = _pre . . _PORTBbits 0 5 ]
-[; ;main.c: 52: if(prv!=pre)
-"52
-[e $ ! != -> F3242 `i -> _pre `i 359  ]
-[; ;main.c: 53: {
-"53
-{
-[; ;main.c: 54: prv=pre;
-"54
-[e = F3242 _pre ]
-[; ;main.c: 55: if(pre==0) return 1;
-"55
-[e $ ! == -> _pre `i -> 0 `i 360  ]
-[e ) -> -> 1 `i `uc ]
-[e $UE 358  ]
-[e :U 360 ]
-"56
-}
-[e :U 359 ]
-[; ;main.c: 56: }
-[; ;main.c: 57: return 0;
-"57
-[e ) -> -> 0 `i `uc ]
-[e $UE 358  ]
-[; ;main.c: 58: }
-"58
-[e :UE 358 ]
-}
-"60
+"35
 [v _DCMotor1_Init `(v ~T0 @X0 1 ef ]
-"61
+"36
 {
-[; ;main.c: 60: void DCMotor1_Init()
-[; ;main.c: 61: {
+[; ;main.c: 35: void DCMotor1_Init()
+[; ;main.c: 36: {
 [e :U _DCMotor1_Init ]
 [f ]
-[; ;main.c: 62: DC1_Speed=0;
-"62
+[; ;main.c: 37: DC1_Speed=0;
+"37
 [e = _DC1_Speed -> -> 0 `i `ui ]
-[; ;main.c: 63: DC1_Direction=1;
-"63
-[e = _DC1_Direction -> -> 1 `i `uc ]
-[; ;main.c: 64: LATAbits.LATA5=DC1_Direction;
-"64
-[e = . . _LATAbits 0 5 _DC1_Direction ]
-[; ;main.c: 65: PWM4_LoadDutyValue(0);
-"65
+[; ;main.c: 38: DC1_Direction=0;
+"38
+[e = _DC1_Direction -> -> 0 `i `uc ]
+[; ;main.c: 39: LATBbits.LATB1=DC1_Direction;
+"39
+[e = . . _LATBbits 0 1 _DC1_Direction ]
+[; ;main.c: 40: PWM4_LoadDutyValue(0);
+"40
 [e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `ui ]
-[; ;main.c: 66: }
-"66
-[e :UE 361 ]
+[; ;main.c: 41: }
+"41
+[e :UE 353 ]
 }
-"68
+"43
 [v _DCMotor2_Init `(v ~T0 @X0 1 ef ]
-"69
+"44
 {
-[; ;main.c: 68: void DCMotor2_Init()
-[; ;main.c: 69: {
+[; ;main.c: 43: void DCMotor2_Init()
+[; ;main.c: 44: {
 [e :U _DCMotor2_Init ]
 [f ]
-[; ;main.c: 70: DC2_Speed=0;
-"70
+[; ;main.c: 45: DC2_Speed=0;
+"45
 [e = _DC2_Speed -> -> 0 `i `ui ]
-[; ;main.c: 71: DC2_Direction=1;
-"71
-[e = _DC2_Direction -> -> 1 `i `uc ]
-[; ;main.c: 72: LATBbits.LATB1=DC2_Direction;
-"72
-[e = . . _LATBbits 0 1 _DC2_Direction ]
-[; ;main.c: 73: PWM5_LoadDutyValue(0);
-"73
+[; ;main.c: 46: DC2_Direction=0;
+"46
+[e = _DC2_Direction -> -> 0 `i `uc ]
+[; ;main.c: 47: LATAbits.LATA5=DC2_Direction;
+"47
+[e = . . _LATAbits 0 5 _DC2_Direction ]
+[; ;main.c: 48: PWM5_LoadDutyValue(0);
+"48
 [e ( _PWM5_LoadDutyValue (1 -> -> 0 `i `ui ]
-[; ;main.c: 74: }
-"74
-[e :UE 362 ]
+[; ;main.c: 49: }
+"49
+[e :UE 354 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"76
+"51
 [v _main `(v ~T0 @X0 1 ef ]
-"77
+"52
 {
-[; ;main.c: 76: void main(void)
-[; ;main.c: 77: {
+[; ;main.c: 51: void main(void)
+[; ;main.c: 52: {
 [e :U _main ]
 [f ]
-[; ;main.c: 78: SYSTEM_Initialize();
-"78
+[; ;main.c: 53: SYSTEM_Initialize();
+"53
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 79: DCMotor1_Init();
-"79
+[; ;main.c: 54: DCMotor1_Init();
+"54
 [e ( _DCMotor1_Init ..  ]
-[; ;main.c: 80: DCMotor2_Init();
-"80
+[; ;main.c: 55: DCMotor2_Init();
+"55
 [e ( _DCMotor2_Init ..  ]
-[; ;main.c: 81: while(1)
-"81
-[e :U 365 ]
-[; ;main.c: 82: {
-"82
+[; ;main.c: 56: Button_Init();
+"56
+[e ( _Button_Init ..  ]
+[; ;main.c: 57: while(1)
+"57
+[e :U 357 ]
+[; ;main.c: 58: {
+"58
 {
-[; ;main.c: 83: asm("clrwdt");
-"83
+[; ;main.c: 59: asm("clrwdt");
+"59
 [; <" clrwdt ;# ">
-[; ;main.c: 85: if(BT_Speed1_Is_Pressed()&&(DC1_Direction!=0))
-"85
-[e $ ! && != -> ( _BT_Speed1_Is_Pressed ..  `i -> -> -> 0 `i `uc `i != -> _DC1_Direction `i -> 0 `i 367  ]
-[; ;main.c: 86: {
-"86
+[; ;main.c: 61: if(BT_Is_Pressed(PORTCbits.RC0, &Prv_Speed1))
+"61
+[e $ ! != -> ( _BT_Is_Pressed (2 , . . _PORTCbits 0 0 &U _Prv_Speed1 `i -> -> -> 0 `i `uc `i 359  ]
+[; ;main.c: 62: {
+"62
 {
-[; ;main.c: 87: DC1_Speed+=0x00FF;
-"87
+[; ;main.c: 63: DC1_Speed+=0x00FF;
+"63
 [e =+ _DC1_Speed -> -> 255 `i `ui ]
-[; ;main.c: 88: if(DC1_Speed>0x03FF) DC1_Speed=0;
-"88
-[e $ ! > _DC1_Speed -> -> 1023 `i `ui 368  ]
+[; ;main.c: 64: if(DC1_Speed>0x03FF) DC1_Speed=0;
+"64
+[e $ ! > _DC1_Speed -> -> 1023 `i `ui 360  ]
 [e = _DC1_Speed -> -> 0 `i `ui ]
-[e :U 368 ]
-[; ;main.c: 89: PWM4_LoadDutyValue(DC1_Speed);
-"89
+[e :U 360 ]
+[; ;main.c: 65: PWM4_LoadDutyValue(DC1_Speed);
+"65
 [e ( _PWM4_LoadDutyValue (1 _DC1_Speed ]
-"90
+"66
 }
-[e :U 367 ]
-[; ;main.c: 90: }
-[; ;main.c: 92: if(BT_Direct1_Is_Pressed())
-"92
-[e $ ! != -> ( _BT_Direct1_Is_Pressed ..  `i -> -> -> 0 `i `uc `i 369  ]
-[; ;main.c: 93: {
-"93
+[e :U 359 ]
+[; ;main.c: 66: }
+[; ;main.c: 68: if(BT_Is_Pressed(PORTCbits.RC1, &Prv_Direction1))
+"68
+[e $ ! != -> ( _BT_Is_Pressed (2 , . . _PORTCbits 0 1 &U _Prv_Direction1 `i -> -> -> 0 `i `uc `i 361  ]
+[; ;main.c: 69: {
+"69
 {
-[; ;main.c: 94: PWM4_LoadDutyValue(0);
-"94
+[; ;main.c: 70: PWM4_LoadDutyValue(0);
+"70
 [e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `ui ]
-[; ;main.c: 95: DC1_Direction++;
-"95
-[e ++ _DC1_Direction -> -> 1 `i `uc ]
-[; ;main.c: 96: if(DC1_Direction>2) DC1_Direction=0;
-"96
-[e $ ! > -> _DC1_Direction `i -> 2 `i 370  ]
-[e = _DC1_Direction -> -> 0 `i `uc ]
-[e :U 370 ]
-[; ;main.c: 97: if(DC1_Direction==0) PWM4_LoadDutyValue(0);
-"97
-[e $ ! == -> _DC1_Direction `i -> 0 `i 371  ]
-[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `ui ]
-[e $U 372  ]
-"98
-[e :U 371 ]
-[; ;main.c: 98: else
-[; ;main.c: 99: {
-"99
-{
-[; ;main.c: 100: if(DC1_Direction==1) LATAbits.LATA5=1;
-"100
-[e $ ! == -> _DC1_Direction `i -> 1 `i 373  ]
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-[e $U 374  ]
-"101
-[e :U 373 ]
-[; ;main.c: 101: else LATAbits.LATA5=0;
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-[e :U 374 ]
-[; ;main.c: 102: PWM4_LoadDutyValue(DC1_Speed);
-"102
+[; ;main.c: 71: DC1_Direction=~DC1_Direction;
+"71
+[e = _DC1_Direction -> ~ -> _DC1_Direction `i `uc ]
+[; ;main.c: 72: LATBbits.LATB1=DC1_Direction;
+"72
+[e = . . _LATBbits 0 1 _DC1_Direction ]
+[; ;main.c: 73: PWM4_LoadDutyValue(DC1_Speed);
+"73
 [e ( _PWM4_LoadDutyValue (1 _DC1_Speed ]
-"103
+"74
 }
-[e :U 372 ]
-"104
-}
-[e :U 369 ]
-[; ;main.c: 103: }
-[; ;main.c: 104: }
-[; ;main.c: 106: if(BT_Speed2_Is_Pressed()&&(DC2_Direction!=0))
-"106
-[e $ ! && != -> ( _BT_Speed2_Is_Pressed ..  `i -> -> -> 0 `i `uc `i != -> _DC2_Direction `i -> 0 `i 375  ]
-[; ;main.c: 107: {
-"107
+[e :U 361 ]
+[; ;main.c: 74: }
+[; ;main.c: 76: if(BT_Is_Pressed(PORTCbits.RC2, &Prv_Speed2))
+"76
+[e $ ! != -> ( _BT_Is_Pressed (2 , . . _PORTCbits 0 2 &U _Prv_Speed2 `i -> -> -> 0 `i `uc `i 362  ]
+[; ;main.c: 77: {
+"77
 {
-[; ;main.c: 108: DC2_Speed+=0x00FF;
-"108
+[; ;main.c: 78: DC2_Speed+=0x00FF;
+"78
 [e =+ _DC2_Speed -> -> 255 `i `ui ]
-[; ;main.c: 109: if(DC2_Speed>0x03FF) DC2_Speed=0;
-"109
-[e $ ! > _DC2_Speed -> -> 1023 `i `ui 376  ]
+[; ;main.c: 79: if(DC2_Speed>0x03FF) DC2_Speed=0;
+"79
+[e $ ! > _DC2_Speed -> -> 1023 `i `ui 363  ]
 [e = _DC2_Speed -> -> 0 `i `ui ]
-[e :U 376 ]
-[; ;main.c: 110: PWM5_LoadDutyValue(DC2_Speed);
-"110
+[e :U 363 ]
+[; ;main.c: 80: PWM5_LoadDutyValue(DC2_Speed);
+"80
 [e ( _PWM5_LoadDutyValue (1 _DC2_Speed ]
-"111
+"81
 }
-[e :U 375 ]
-[; ;main.c: 111: }
-[; ;main.c: 113: if(BT_Direct2_Is_Pressed())
-"113
-[e $ ! != -> ( _BT_Direct2_Is_Pressed ..  `i -> -> -> 0 `i `uc `i 377  ]
-[; ;main.c: 114: {
-"114
+[e :U 362 ]
+[; ;main.c: 81: }
+[; ;main.c: 83: if(BT_Is_Pressed(PORTCbits.RC3, &Prv_Direction2))
+"83
+[e $ ! != -> ( _BT_Is_Pressed (2 , . . _PORTCbits 0 3 &U _Prv_Direction2 `i -> -> -> 0 `i `uc `i 364  ]
+[; ;main.c: 84: {
+"84
 {
-[; ;main.c: 115: PWM5_LoadDutyValue(0);
-"115
+[; ;main.c: 85: PWM5_LoadDutyValue(0);
+"85
 [e ( _PWM5_LoadDutyValue (1 -> -> 0 `i `ui ]
-[; ;main.c: 116: DC2_Direction++;
-"116
-[e ++ _DC2_Direction -> -> 1 `i `uc ]
-[; ;main.c: 117: if(DC2_Direction>2) DC2_Direction=0;
-"117
-[e $ ! > -> _DC2_Direction `i -> 2 `i 378  ]
-[e = _DC2_Direction -> -> 0 `i `uc ]
-[e :U 378 ]
-[; ;main.c: 118: if(DC2_Direction==0) PWM5_LoadDutyValue(0);
-"118
-[e $ ! == -> _DC2_Direction `i -> 0 `i 379  ]
-[e ( _PWM5_LoadDutyValue (1 -> -> 0 `i `ui ]
-[e $U 380  ]
-"119
-[e :U 379 ]
-[; ;main.c: 119: else
-[; ;main.c: 120: {
-"120
-{
-[; ;main.c: 121: if(DC2_Direction==1) LATBbits.LATB1=1;
-"121
-[e $ ! == -> _DC2_Direction `i -> 1 `i 381  ]
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-[e $U 382  ]
-"122
-[e :U 381 ]
-[; ;main.c: 122: else LATBbits.LATB1=0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[e :U 382 ]
-[; ;main.c: 123: PWM5_LoadDutyValue(DC2_Speed);
-"123
+[; ;main.c: 86: DC2_Direction=~DC2_Direction;
+"86
+[e = _DC2_Direction -> ~ -> _DC2_Direction `i `uc ]
+[; ;main.c: 87: LATAbits.LATA5=DC2_Direction;
+"87
+[e = . . _LATAbits 0 5 _DC2_Direction ]
+[; ;main.c: 88: PWM5_LoadDutyValue(DC2_Speed);
+"88
 [e ( _PWM5_LoadDutyValue (1 _DC2_Speed ]
-"124
-}
-[e :U 380 ]
-"125
-}
-[e :U 377 ]
-"126
+"89
 }
 [e :U 364 ]
-"81
-[e $U 365  ]
-[e :U 366 ]
-[; ;main.c: 124: }
-[; ;main.c: 125: }
-[; ;main.c: 126: }
-[; ;main.c: 127: }
-"127
-[e :UE 363 ]
+"90
+}
+[e :U 356 ]
+"57
+[e $U 357  ]
+[e :U 358 ]
+[; ;main.c: 89: }
+[; ;main.c: 90: }
+[; ;main.c: 91: }
+"91
+[e :UE 355 ]
 }

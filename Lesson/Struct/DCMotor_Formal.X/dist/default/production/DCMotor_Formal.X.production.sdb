@@ -11,50 +11,46 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"12 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
-[v _BT_Speed1_Is_Pressed BT_Speed1_Is_Pressed `(uc  1 e 1 0 ]
+"16 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
+[v _Button_Init Button_Init `(v  1 e 1 0 ]
 "24
-[v _BT_Direct1_Is_Pressed BT_Direct1_Is_Pressed `(uc  1 e 1 0 ]
-"36
-[v _BT_Speed2_Is_Pressed BT_Speed2_Is_Pressed `(uc  1 e 1 0 ]
-"48
-[v _BT_Direct2_Is_Pressed BT_Direct2_Is_Pressed `(uc  1 e 1 0 ]
-"60
+[v _BT_Is_Pressed BT_Is_Pressed `(uc  1 e 1 0 ]
+"35
 [v _DCMotor1_Init DCMotor1_Init `(v  1 e 1 0 ]
-"68
+"43
 [v _DCMotor2_Init DCMotor2_Init `(v  1 e 1 0 ]
-"76
+"51
 [v _main main `(v  1 e 1 0 ]
-"71 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
+"71 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "82
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "96
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"52 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pin_manager.c
+"52 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"63 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
+"63 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
 "81
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
-"63 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
+"63 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
 [v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
 "81
 [v _PWM5_LoadDutyValue PWM5_LoadDutyValue `(v  1 e 1 0 ]
-"61 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/tmr2.c
+"61 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-[s S186 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
+[s S241 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
 ]
-"506 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
-[u S195 . 1 `S186 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES195  1 e 1 @13 ]
+"568 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1936.h
+[u S250 . 1 `S241 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES250  1 e 1 @14 ]
 [s S84 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -96,7 +92,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
 "1406
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S320 . 1 `uc 1 PS0 1 0 :1:0 
+[s S198 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -106,13 +102,13 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1615
-[s S329 . 1 `uc 1 PS 1 0 :3:0 
+[s S207 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S334 . 1 `S320 1 . 1 0 `S329 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES334  1 e 1 @149 ]
+[u S212 . 1 `S198 1 . 1 0 `S207 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES212  1 e 1 @149 ]
 "1726
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1785
@@ -121,7 +117,7 @@
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "2185
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S207 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S284 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -131,11 +127,11 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "2202
-[u S216 . 1 `S207 1 . 1 0 ]
-[v _LATAbits LATAbits `VES216  1 e 1 @268 ]
+[u S293 . 1 `S284 1 . 1 0 ]
+[v _LATAbits LATAbits `VES293  1 e 1 @268 ]
 "2247
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S229 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S262 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -145,8 +141,8 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2264
-[u S238 . 1 `S229 1 . 1 0 ]
-[v _LATBbits LATBbits `VES238  1 e 1 @269 ]
+[u S271 . 1 `S262 1 . 1 0 ]
+[v _LATBbits LATBbits `VES271  1 e 1 @269 ]
 "2309
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2371
@@ -202,7 +198,7 @@
 [v _CCP5CON CCP5CON `VEuc  1 e 1 @798 ]
 "7754
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
-"3 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
+"3 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
 [v _DC1_Speed DC1_Speed `ui  1 e 2 0 ]
 "4
 [v _DC1_Direction DC1_Direction `uc  1 e 1 0 ]
@@ -210,12 +206,17 @@
 [v _DC2_Speed DC2_Speed `ui  1 e 2 0 ]
 "9
 [v _DC2_Direction DC2_Direction `uc  1 e 1 0 ]
-"76
+"13
+[v _Prv_Speed1 Prv_Speed1 `uc  1 e 1 0 ]
+[v _Prv_Direction1 Prv_Direction1 `uc  1 e 1 0 ]
+[v _Prv_Speed2 Prv_Speed2 `uc  1 e 1 0 ]
+[v _Prv_Direction2 Prv_Direction2 `uc  1 e 1 0 ]
+"51
 [v _main main `(v  1 e 1 0 ]
 {
-"127
+"91
 } 0
-"71 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
+"71 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "80
@@ -225,86 +226,68 @@
 {
 "100
 } 0
-"61 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/tmr2.c
+"61 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "76
 } 0
-"63 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
+"63 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
 [v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"63 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
+"63 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
 [v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"52 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pin_manager.c
+"52 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "92
 } 0
-"82 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
+"82 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "94
 } 0
-"68 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
+"43 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
 [v _DCMotor2_Init DCMotor2_Init `(v  1 e 1 0 ]
 {
-"74
+"49
 } 0
-"81 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
+"81 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm5.c
 [v _PWM5_LoadDutyValue PWM5_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM5_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
 "88
 } 0
-"60 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
+"35 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
 [v _DCMotor1_Init DCMotor1_Init `(v  1 e 1 0 ]
 {
-"66
+"41
 } 0
-"81 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
+"81 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\mcc_generated_files/pwm4.c
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM4_LoadDutyValue@dutyValue dutyValue `ui  1 p 2 0 ]
 "88
 } 0
-"36 F:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
-[v _BT_Speed2_Is_Pressed BT_Speed2_Is_Pressed `(uc  1 e 1 0 ]
+"16 E:\GitHub\XC8Training\Lesson\Struct\DCMotor_Formal.X\main.c
+[v _Button_Init Button_Init `(v  1 e 1 0 ]
 {
-"39
-[v BT_Speed2_Is_Pressed@pre pre `uc  1 a 1 1 ]
-"38
-[v BT_Speed2_Is_Pressed@prv prv `uc  1 s 1 prv ]
-"46
-} 0
-"12
-[v _BT_Speed1_Is_Pressed BT_Speed1_Is_Pressed `(uc  1 e 1 0 ]
-{
-"15
-[v BT_Speed1_Is_Pressed@pre pre `uc  1 a 1 1 ]
-"14
-[v BT_Speed1_Is_Pressed@prv prv `uc  1 s 1 prv ]
 "22
 } 0
-"48
-[v _BT_Direct2_Is_Pressed BT_Direct2_Is_Pressed `(uc  1 e 1 0 ]
-{
-"51
-[v BT_Direct2_Is_Pressed@pre pre `uc  1 a 1 1 ]
-"50
-[v BT_Direct2_Is_Pressed@prv prv `uc  1 s 1 prv ]
-"58
-} 0
 "24
-[v _BT_Direct1_Is_Pressed BT_Direct1_Is_Pressed `(uc  1 e 1 0 ]
+[v _BT_Is_Pressed BT_Is_Pressed `(uc  1 e 1 0 ]
 {
-"27
-[v BT_Direct1_Is_Pressed@pre pre `uc  1 a 1 1 ]
+[v BT_Is_Pressed@Button Button `uc  1 a 1 wreg ]
 "26
-[v BT_Direct1_Is_Pressed@prv prv `uc  1 s 1 prv ]
-"34
+[v BT_Is_Pressed@pre pre `uc  1 a 1 3 ]
+"24
+[v BT_Is_Pressed@Button Button `uc  1 a 1 wreg ]
+[v BT_Is_Pressed@Previous_State Previous_State `*.1uc  1 p 1 0 ]
+"26
+[v BT_Is_Pressed@Button Button `uc  1 a 1 2 ]
+"33
 } 0
