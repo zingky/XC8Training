@@ -1,0 +1,768 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\dungl\AppData\Local\Temp\snoc.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 18 18 2 2
+config CONFIG 0 8007 8007 2 2
+$dist/default/production\QuetLed.X.production.obj
+cinit CODE 0 1A 1A 1F 2
+text1 CODE 0 425 425 C 2
+text2 CODE 0 456 456 4 2
+text3 CODE 0 431 431 C 2
+text4 CODE 0 3EA 3EA 1D 2
+text5 CODE 0 449 449 7 2
+text6 CODE 0 1F7 1F7 D6 2
+text7 CODE 0 395 395 2C 2
+text8 CODE 0 332 332 34 2
+text9 CODE 0 2CD 2CD 65 2
+text10 CODE 0 39 39 E4 2
+text11 CODE 0 366 366 2F 2
+text12 CODE 0 3C1 3C1 29 2
+text13 CODE 0 43D 43D C 2
+text15 CODE 0 407 407 12 2
+maintext CODE 0 11D 11D DA 2
+cstackCOMMON COMMON 1 70 70 D 1
+cstackBANK0 BANK0 1 48 48 1C 1
+stringtext1 STRCODE 0 419 419 C 2
+intentry CODE 0 4 4 14 2
+bssBANK0 BANK0 1 20 20 28 1
+bssBANK1 BANK1 1 A0 A0 21 1
+idataBANK0 CODE 0 45A 45A 3 2
+dataBANK0 BANK0 1 64 64 3 1
+clrtext CODE 0 450 450 6 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 67-6F 1
+RAM C1-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-32F 1
+BANK0 67-6F 1
+BANK1 C1-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-32F 1
+CONST 2-3 2
+CONST 45D-1FFF 2
+ENTRY 2-3 2
+ENTRY 45D-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-56F 1
+SFR11 580-5EF 1
+SFR12 600-66F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 2071-21EF 1
+CODE 2-3 2
+CODE 45D-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-3EF 1
+SFR8 400-46F 1
+SFR9 480-4EF 1
+BIGRAM 2000-21EF 1
+COMMON 7D-7D 1
+EEDATA F000-F0FF 2
+STRCODE 2-3 2
+STRCODE 45D-1FFF 2
+STRING 2-3 2
+STRING 45D-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\QuetLed.X.production.obj
+1A cinit CODE >2174:C:\Users\dungl\AppData\Local\Temp\snoc.
+1A cinit CODE >2177:C:\Users\dungl\AppData\Local\Temp\snoc.
+1A cinit CODE >2239:C:\Users\dungl\AppData\Local\Temp\snoc.
+1D cinit CODE >2240:C:\Users\dungl\AppData\Local\Temp\snoc.
+1E cinit CODE >2241:C:\Users\dungl\AppData\Local\Temp\snoc.
+21 cinit CODE >2242:C:\Users\dungl\AppData\Local\Temp\snoc.
+22 cinit CODE >2243:C:\Users\dungl\AppData\Local\Temp\snoc.
+25 cinit CODE >2244:C:\Users\dungl\AppData\Local\Temp\snoc.
+26 cinit CODE >2261:C:\Users\dungl\AppData\Local\Temp\snoc.
+27 cinit CODE >2262:C:\Users\dungl\AppData\Local\Temp\snoc.
+28 cinit CODE >2263:C:\Users\dungl\AppData\Local\Temp\snoc.
+29 cinit CODE >2264:C:\Users\dungl\AppData\Local\Temp\snoc.
+2A cinit CODE >2265:C:\Users\dungl\AppData\Local\Temp\snoc.
+2B cinit CODE >2266:C:\Users\dungl\AppData\Local\Temp\snoc.
+2E cinit CODE >2270:C:\Users\dungl\AppData\Local\Temp\snoc.
+2F cinit CODE >2271:C:\Users\dungl\AppData\Local\Temp\snoc.
+30 cinit CODE >2272:C:\Users\dungl\AppData\Local\Temp\snoc.
+31 cinit CODE >2273:C:\Users\dungl\AppData\Local\Temp\snoc.
+32 cinit CODE >2274:C:\Users\dungl\AppData\Local\Temp\snoc.
+33 cinit CODE >2275:C:\Users\dungl\AppData\Local\Temp\snoc.
+35 cinit CODE >2281:C:\Users\dungl\AppData\Local\Temp\snoc.
+35 cinit CODE >2283:C:\Users\dungl\AppData\Local\Temp\snoc.
+36 cinit CODE >2284:C:\Users\dungl\AppData\Local\Temp\snoc.
+37 cinit CODE >2285:C:\Users\dungl\AppData\Local\Temp\snoc.
+4 intentry CODE >51:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+9 intentry CODE >54:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+11 intentry CODE >56:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+13 intentry CODE >62:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+407 text15 CODE >34:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+407 text15 CODE >37:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+409 text15 CODE >38:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+40A text15 CODE >39:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+40B text15 CODE >42:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+43D text13 CODE >44:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+43E text13 CODE >46:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+443 text13 CODE >47:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+448 text13 CODE >48:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+3C1 text12 CODE >23:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3C1 text12 CODE >25:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3C8 text12 CODE >26:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3CF text12 CODE >27:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3D1 text12 CODE >28:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3D8 text12 CODE >29:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3DA text12 CODE >30:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+3E1 text12 CODE >31:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+366 text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+366 text11 CODE >119:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+36E text11 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+370 text11 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+378 text11 CODE >123:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+37F text11 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+386 text11 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+38C text11 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+39 text10 CODE >4:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+3B text10 CODE >6:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+47 text10 CODE >7:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+4D text10 CODE >9:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+58 text10 CODE >10:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+8B text10 CODE >12:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+D7 text10 CODE >13:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+118 text10 CODE >15:F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+2CD text9 CODE >3:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2CF text9 CODE >5:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2D0 text9 CODE >8:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2DF text9 CODE >10:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2E8 text9 CODE >11:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2ED text9 CODE >13:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2F4 text9 CODE >14:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2F5 text9 CODE >17:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2F8 text9 CODE >20:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+2FD text9 CODE >21:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+302 text9 CODE >23:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+303 text9 CODE >26:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+306 text9 CODE >28:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+30B text9 CODE >29:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+310 text9 CODE >34:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+313 text9 CODE >36:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+318 text9 CODE >37:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+320 text9 CODE >40:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+321 text9 CODE >5:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+330 text9 CODE >41:F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+332 text8 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+332 text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+334 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+338 text8 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+33A text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+33C text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+341 text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+345 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+346 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+34B text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+353 text8 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+357 text8 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+358 text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+35D text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+361 text8 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+395 text7 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+395 text7 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+399 text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+39B text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+39D text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3A2 text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3A6 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3A7 text7 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3AF text7 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3B3 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3B8 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+3BC text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1F7 text6 CODE >19:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1F7 text6 CODE >26:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+204 text6 CODE >28:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+205 text6 CODE >29:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+209 text6 CODE >30:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+20D text6 CODE >32:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+229 text6 CODE >33:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+234 text6 CODE >34:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+240 text6 CODE >35:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+244 text6 CODE >36:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+254 text6 CODE >37:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+25C text6 CODE >40:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+260 text6 CODE >41:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+270 text6 CODE >40:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+271 text6 CODE >48:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+273 text6 CODE >49:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+277 text6 CODE >50:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+278 text6 CODE >51:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+27B text6 CODE >52:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+27C text6 CODE >55:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+27E text6 CODE >56:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+282 text6 CODE >57:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+283 text6 CODE >58:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+288 text6 CODE >59:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+289 text6 CODE >62:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+28B text6 CODE >63:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+28F text6 CODE >64:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+290 text6 CODE >65:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+295 text6 CODE >66:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+296 text6 CODE >69:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+298 text6 CODE >70:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+29C text6 CODE >71:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+29D text6 CODE >72:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2A2 text6 CODE >73:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2A3 text6 CODE >76:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2B7 text6 CODE >77:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2BD text6 CODE >79:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2BE text6 CODE >45:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+2CC text6 CODE >81:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+449 text5 CODE >79:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+449 text5 CODE >82:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+44C text5 CODE >84:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+44D text5 CODE >86:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+44D text5 CODE >88:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+3EA text4 CODE >52:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3EA text4 CODE >57:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3EC text4 CODE >58:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3ED text4 CODE >59:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3EF text4 CODE >60:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3F0 text4 CODE >65:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3F3 text4 CODE >66:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3F5 text4 CODE >67:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3F7 text4 CODE >68:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3F8 text4 CODE >73:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3FB text4 CODE >74:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+3FD text4 CODE >79:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+400 text4 CODE >80:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+402 text4 CODE >81:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+404 text4 CODE >87:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+406 text4 CODE >92:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+431 text3 CODE >6:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+431 text3 CODE >9:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+434 text3 CODE >11:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+435 text3 CODE >13:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+436 text3 CODE >15:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+437 text3 CODE >17:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+438 text3 CODE >19:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+43A text3 CODE >20:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+43C text3 CODE >21:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+456 text2 CODE >91:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+456 text2 CODE >94:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+459 text2 CODE >95:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+425 text1 CODE >70:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+425 text1 CODE >73:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+428 text1 CODE >74:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+42B text1 CODE >75:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+42E text1 CODE >76:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+430 text1 CODE >77:F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+11D maintext CODE >83:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+11D maintext CODE >85:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+120 maintext CODE >86:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+121 maintext CODE >87:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+122 maintext CODE >89:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+124 maintext CODE >90:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+128 maintext CODE >91:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+129 maintext CODE >93:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+12B maintext CODE >94:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+12D maintext CODE >95:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+131 maintext CODE >96:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+135 maintext CODE >97:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+139 maintext CODE >98:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+13D maintext CODE >100:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+13D maintext CODE >102:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+13E maintext CODE >103:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+157 maintext CODE >105:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+166 maintext CODE >106:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+168 maintext CODE >109:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+181 maintext CODE >111:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+18C maintext CODE >112:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+190 maintext CODE >115:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1A6 maintext CODE >116:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1A8 maintext CODE >119:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1BE maintext CODE >121:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1C5 maintext CODE >122:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1C6 maintext CODE >125:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1CA maintext CODE >127:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1D9 maintext CODE >129:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1E8 maintext CODE >130:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1EA maintext CODE >134:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+1F6 maintext CODE >100:F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+450 clrtext CODE >2250:C:\Users\dungl\AppData\Local\Temp\snoc.
+450 clrtext CODE >2251:C:\Users\dungl\AppData\Local\Temp\snoc.
+451 clrtext CODE >2252:C:\Users\dungl\AppData\Local\Temp\snoc.
+451 clrtext CODE >2253:C:\Users\dungl\AppData\Local\Temp\snoc.
+452 clrtext CODE >2254:C:\Users\dungl\AppData\Local\Temp\snoc.
+453 clrtext CODE >2255:C:\Users\dungl\AppData\Local\Temp\snoc.
+454 clrtext CODE >2256:C:\Users\dungl\AppData\Local\Temp\snoc.
+455 clrtext CODE >2257:C:\Users\dungl\AppData\Local\Temp\snoc.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+Display@pre_val 64 0 BANK0 1 dataBANK0 dist/default/production\QuetLed.X.production.obj
+___lwmod@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 8009 0 ABS 0 - -
+__Hspace_1 C1 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_Button_Is_Pressed 664 0 CODE 0 text9 dist/default/production\QuetLed.X.production.obj
+Display@Lat_Val 20 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_T1CONbits 18 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of_Display 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__end_of_WDT_Initialize 8B4 0 CODE 0 text2 dist/default/production\QuetLed.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_BtUp 2B 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+_LATA 10C 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_LATB 10D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_LATC 10E 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_LATE 110 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_PLLR 4D6 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_WPUB 20D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_WPUE 210 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\snoc.obj
+_main 23A 0 CODE 0 maintext dist/default/production\QuetLed.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+start 30 0 CODE 0 init C:\Users\dungl\AppData\Local\Temp\snoc.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_segment_code 832 0 STRCODE 0 stringtext1 dist/default/production\QuetLed.X.production.obj
+?___lmul 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+Display@Val 5A 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+_OPTION_REGbits 95 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+Button_Is_Pressed@BT 61 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+Button_Is_Pressed@edge 5B 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+__size_of_TMR1_Initialize 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+Display@pre_dot_idx 66 0 BANK0 1 dataBANK0 dist/default/production\QuetLed.X.production.obj
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+Tick_Is_Over@ms 48 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\dungl\AppData\Local\Temp\snoc.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+Button_Is_Pressed@signal 5A 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+_AutoCount 2A 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+_ANSELA 18C 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_ANSELB 18D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_APFCON 11D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_Button_Is_Pressed 59A 0 CODE 0 text9 dist/default/production\QuetLed.X.production.obj
+__end_of_INTERRUPT_InterruptManager 30 0 CODE 0 intentry dist/default/production\QuetLed.X.production.obj
+_BtAuto AB 0 BANK1 1 bssBANK1 dist/default/production\QuetLed.X.production.obj
+_BtDown B6 0 BANK1 1 bssBANK1 dist/default/production\QuetLed.X.production.obj
+__end_of___lmul 72A 0 CODE 0 text11 dist/default/production\QuetLed.X.production.obj
+__end_of_Display 59A 0 CODE 0 text6 dist/default/production\QuetLed.X.production.obj
+_DotIdx 29 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__end_of_segment_code 84A 0 STRCODE 0 stringtext1 dist/default/production\QuetLed.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+___lwmod@divisor 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__end_of___lwdiv 6CC 0 CODE 0 text8 dist/default/production\QuetLed.X.production.obj
+__end_of___lwmod 782 0 CODE 0 text7 dist/default/production\QuetLed.X.production.obj
+___lwdiv@quotient 76 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+___lwmod@dividend 73 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+_PIN_MANAGER_Initialize 7D4 0 CODE 0 text4 dist/default/production\QuetLed.X.production.obj
+start_initialization 34 0 CODE 0 cinit dist/default/production\QuetLed.X.production.obj
+_OSCCON 99 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__end_of_SYSTEM_Initialize 862 0 CODE 0 text1 dist/default/production\QuetLed.X.production.obj
+clear_ram0 8A0 0 CODE 0 clrtext dist/default/production\QuetLed.X.production.obj
+__pcstackBANK0 48 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+_T1GCON 19 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__end_of_Button_Init 892 0 CODE 0 text13 dist/default/production\QuetLed.X.production.obj
+Tick_Is_Over@pre 55 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+__size_of_TMR1_ReadTimer 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_WDTCON 97 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\dungl\AppData\Local\Temp\snoc.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 BANK7 1 bank7 -
+__Hbank8 0 0 BANK8 1 bank8 -
+__Hbank9 0 0 BANK9 1 bank9 -
+__Hcinit 72 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 78 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__Hbank10 0 0 BANK10 1 bank10 -
+__Hbank11 0 0 BANK11 1 bank11 -
+__Hbank12 0 0 BANK12 1 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+Display@i 5E 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 0 config -
+TMR1_ReadTimer@readVal 75 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 BANK7 1 bank7 -
+__Lbank8 0 0 BANK8 1 bank8 -
+__Lbank9 0 0 BANK9 1 bank9 -
+__Lcinit 34 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+_PORTAbits C 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 30 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 30 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 832 0 STRCODE 0 stringtext1 dist/default/production\QuetLed.X.production.obj
+___lmul 6CC 0 CODE 0 text11 dist/default/production\QuetLed.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+int$flags 7E 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__S0 8009 0 ABS 0 - -
+__S1 C1 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__size_of_TMR1_ISR 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__CFG_PLLEN$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_SYSTEM_Initialize 84A 0 CODE 0 text1 dist/default/production\QuetLed.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+Button_Is_Pressed@detect_time 5C 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\dungl\AppData\Local\Temp\snoc.obj
+__pdataBANK0 64 0 BANK0 1 dataBANK0 dist/default/production\QuetLed.X.production.obj
+__size_of___lmul 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\QuetLed.X.production.obj
+_Tick_Is_Over 72 0 CODE 0 text10 dist/default/production\QuetLed.X.production.obj
+_Display 3EE 0 CODE 0 text6 dist/default/production\QuetLed.X.production.obj
+_PIE1bits 91 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_Tick_Is_Over$448 54 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+_TMR1_ISR 80E 0 CODE 0 text15 dist/default/production\QuetLed.X.production.obj
+__ptext10 72 0 CODE 0 text10 dist/default/production\QuetLed.X.production.obj
+__ptext11 6CC 0 CODE 0 text11 dist/default/production\QuetLed.X.production.obj
+__ptext12 782 0 CODE 0 text12 dist/default/production\QuetLed.X.production.obj
+__ptext13 87A 0 CODE 0 text13 dist/default/production\QuetLed.X.production.obj
+__ptext15 80E 0 CODE 0 text15 dist/default/production\QuetLed.X.production.obj
+_BtDotIdx A0 0 BANK1 1 bssBANK1 dist/default/production\QuetLed.X.production.obj
+__end_of_PIN_MANAGER_Initialize 80E 0 CODE 0 text4 dist/default/production\QuetLed.X.production.obj
+___lwdiv 664 0 CODE 0 text8 dist/default/production\QuetLed.X.production.obj
+___lwmod 72A 0 CODE 0 text7 dist/default/production\QuetLed.X.production.obj
+__Lbank10 0 0 BANK10 1 bank10 -
+__Lbank11 0 0 BANK11 1 bank11 -
+__Lbank12 0 0 BANK12 1 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 23A 0 CODE 0 maintext dist/default/production\QuetLed.X.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+___lmul@multiplier 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__end_of_TMR1_ISR 832 0 CODE 0 text15 dist/default/production\QuetLed.X.production.obj
+_LATBbits 10D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of_Button_Init 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+___lwdiv@divisor 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+Tick_Is_Over@tick 59 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+Button_Init@BT 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+stackhi 21EF 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\snoc.obj
+stacklo 2071 0 ABS 0 - C:\Users\dungl\AppData\Local\Temp\snoc.obj
+_OSCTUNE 98 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of_Tick_Is_Over 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits 11 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lend_init 30 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 6A 0 CODE 0 cinit dist/default/production\QuetLed.X.production.obj
+__Hintentry 30 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 73 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+?___lwdiv 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+?___lwmod 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+Display@Dot_Idx 5C 0 BANK0 1 cstackBANK0 dist/default/production\QuetLed.X.production.obj
+__end_of_Tick_Is_Over 23A 0 CODE 0 text10 dist/default/production\QuetLed.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__ptext1 84A 0 CODE 0 text1 dist/default/production\QuetLed.X.production.obj
+__ptext2 8AC 0 CODE 0 text2 dist/default/production\QuetLed.X.production.obj
+__ptext3 862 0 CODE 0 text3 dist/default/production\QuetLed.X.production.obj
+__ptext4 7D4 0 CODE 0 text4 dist/default/production\QuetLed.X.production.obj
+__ptext5 892 0 CODE 0 text5 dist/default/production\QuetLed.X.production.obj
+__ptext6 3EE 0 CODE 0 text6 dist/default/production\QuetLed.X.production.obj
+__ptext7 72A 0 CODE 0 text7 dist/default/production\QuetLed.X.production.obj
+__ptext8 664 0 CODE 0 text8 dist/default/production\QuetLed.X.production.obj
+__ptext9 59A 0 CODE 0 text9 dist/default/production\QuetLed.X.production.obj
+Display@next 28 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__size_of_Button_Is_Pressed 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_TMR1_Initialize 87A 0 CODE 0 text3 dist/default/production\QuetLed.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TMR1_ReadTimer 782 0 CODE 0 text12 dist/default/production\QuetLed.X.production.obj
+__CFG_WDTE$ON 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__end_of__initialization 6A 0 CODE 0 cinit dist/default/production\QuetLed.X.production.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+_CountTick 36 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__pidataBANK0 8B4 0 CODE 0 idataBANK0 dist/default/production\QuetLed.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+___lmul@product 79 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+___lmul@multiplicand 75 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+__Hend_init 34 0 CODE 0 end_init -
+__end_of_main 3EE 0 CODE 0 maintext dist/default/production\QuetLed.X.production.obj
+_Count 24 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+_T1CON 18 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TMR1H 17 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TMR1L 16 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TRISA 8C 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TRISB 8D 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TRISC 8E 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_TRISE 90 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_TMR1_Initialize 862 0 CODE 0 text3 dist/default/production\QuetLed.X.production.obj
+_count 26 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_WDT_Initialize 8AC 0 CODE 0 text2 dist/default/production\QuetLed.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\QuetLed.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__end_of_OSCILLATOR_Initialize 8A0 0 CODE 0 text5 dist/default/production\QuetLed.X.production.obj
+__end_of_TMR1_ReadTimer 7D4 0 CODE 0 text12 dist/default/production\QuetLed.X.production.obj
+__initialization 34 0 CODE 0 cinit dist/default/production\QuetLed.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+_LedTick 3F 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\QuetLed.X.production.obj
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\QuetLed.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\QuetLed.X.production.obj
+?_TMR1_ReadTimer 71 0 COMMON 1 cstackCOMMON dist/default/production\QuetLed.X.production.obj
+_Button_Init 87A 0 CODE 0 text13 dist/default/production\QuetLed.X.production.obj
+_OSCILLATOR_Initialize 892 0 CODE 0 text5 dist/default/production\QuetLed.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text1 0 425 84A 38 2
+cstackCOMMON 1 70 70 D 1
+stringtext1 0 419 832 C 2
+intentry 0 4 8 415 2
+reset_vec 0 0 0 2 2
+bssBANK0 1 20 20 47 1
+bssBANK1 1 A0 A0 21 1
+config 0 8007 1000E 2 2
