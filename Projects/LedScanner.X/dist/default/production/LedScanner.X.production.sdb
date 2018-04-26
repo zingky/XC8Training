@@ -3,14 +3,14 @@
 [d edition pro ]
 [d chip 16F1936 ]
 [d frameptr 6 ]
-"17 F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+"17 F:\GitHub\XC8Training\Projects\LedScanner.X\main.c
 [e E3223 BUTTON_TASKS `uc
 BT_UNPRESSED 0
 BT_CHECK_AGAIN 1
 BT_CHECK_NOISE 2
 BT_PRESSED 3
 ]
-"4 F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+"4 F:\GitHub\XC8Training\Projects\LedScanner.X\Buttons.c
 [e E3204 BUTTON_TASKS `uc
 BT_UNPRESSED 0
 BT_CHECK_AGAIN 1
@@ -35,27 +35,27 @@ BT_PRESSED 3
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"19 F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+"19 F:\GitHub\XC8Training\Projects\LedScanner.X\main.c
 [v _Display Display `(v  1 e 1 0 ]
 "83
 [v _main main `(v  1 e 1 0 ]
-"51 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+"51 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"70 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+"70 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "79
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "91
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"52 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+"52 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"6 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+"6 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "23
 [v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
 "34
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
-"4 F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+"4 F:\GitHub\XC8Training\Projects\LedScanner.X\Tick_timer.c
 [v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
 [s S198 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -197,7 +197,7 @@ BT_PRESSED 3
 [v _WPUE WPUE `VEuc  1 e 1 @528 ]
 "7754
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
-"5 F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+"5 F:\GitHub\XC8Training\Projects\LedScanner.X\main.c
 [v _segment_code segment_code `DC[12]uc  1 e 12 0 ]
 "13
 [v _AutoCount AutoCount `uc  1 e 1 0 ]
@@ -215,14 +215,14 @@ BT_PRESSED 3
 [v _BtDown BtDown `S279  1 e 11 0 ]
 [v _BtAuto BtAuto `S279  1 e 11 0 ]
 [v _BtDotIdx BtDotIdx `S279  1 e 11 0 ]
-"4 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+"4 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/tmr1.c
 [v _count count `VEui  1 e 2 0 ]
-"83 F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+"83 F:\GitHub\XC8Training\Projects\LedScanner.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "136
 } 0
-"70 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+"70 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "77
@@ -232,22 +232,22 @@ BT_PRESSED 3
 {
 "95
 } 0
-"6 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+"6 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
 "21
 } 0
-"52 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/pin_manager.c
+"52 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "92
 } 0
-"79 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/mcc.c
+"79 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "89
 } 0
-"19 F:\GitHub\XC8Training\Projects\QuetLed.X\main.c
+"19 F:\GitHub\XC8Training\Projects\LedScanner.X\main.c
 [v _Display Display `(v  1 e 1 0 ]
 {
 "28
@@ -287,7 +287,7 @@ BT_PRESSED 3
 [v ___lwdiv@dividend dividend `ui  1 p 2 3 ]
 "31
 } 0
-"3 F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+"3 F:\GitHub\XC8Training\Projects\LedScanner.X\Buttons.c
 [v _Button_Is_Pressed Button_Is_Pressed `(uc  1 e 1 0 ]
 {
 [s S270 . 9 `uc 1 timeout 1 0 `ul 1 start 4 1 `ul 1 stop 4 5 ]
@@ -300,7 +300,7 @@ BT_PRESSED 3
 [v Button_Is_Pressed@BT BT `*.4S279  1 a 1 25 ]
 "42
 } 0
-"4 F:\GitHub\XC8Training\Projects\QuetLed.X\Tick_timer.c
+"4 F:\GitHub\XC8Training\Projects\LedScanner.X\Tick_timer.c
 [v _Tick_Is_Over Tick_Is_Over `(uc  1 e 1 0 ]
 {
 [s S270 . 9 `uc 1 timeout 1 0 `ul 1 start 4 1 `ul 1 stop 4 5 ]
@@ -325,14 +325,14 @@ BT_PRESSED 3
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 5 ]
 "129
 } 0
-"23 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+"23 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/tmr1.c
 [v _TMR1_ReadTimer TMR1_ReadTimer `(ul  1 e 4 0 ]
 {
 "25
 [v TMR1_ReadTimer@readVal readVal `ul  1 a 4 5 ]
 "32
 } 0
-"44 F:\GitHub\XC8Training\Projects\QuetLed.X\Buttons.c
+"44 F:\GitHub\XC8Training\Projects\LedScanner.X\Buttons.c
 [v _Button_Init Button_Init `(v  1 e 1 0 ]
 {
 [s S270 . 9 `uc 1 timeout 1 0 `ul 1 start 4 1 `ul 1 stop 4 5 ]
@@ -344,12 +344,12 @@ BT_PRESSED 3
 [v Button_Init@BT BT `*.4S279  1 a 1 1 ]
 "48
 } 0
-"51 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/interrupt_manager.c
+"51 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "62
 } 0
-"34 F:\GitHub\XC8Training\Projects\QuetLed.X\mcc_generated_files/tmr1.c
+"34 F:\GitHub\XC8Training\Projects\LedScanner.X\mcc_generated_files/tmr1.c
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
 {
 "43
